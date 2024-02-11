@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +26,12 @@ SECRET_KEY = 'django-insecure-d3l*-#0yg_^82fy5ob=%&x)#6sl-d-fb-b0%77+4m7@iyn5%4g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+EMAIL_HOST = 'smtp-relay.brevo.com'
+EMAIL_HOST_USER = 'anurag6569201@gmail.com'
+EMAIL_HOST_PASSWORD = 'BG3KhIQHmgYZzbja'
+EMAIL_PORT = '587'
 
 # Application definition
 
@@ -37,6 +42,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # custom apps
+    'home',
+    'map',
+    'notification',
+    'plofile',
+    'creation',
+
+    # authentication app
+    'userauths',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +62,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # render.com middleware
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'sanitasprj.urls'
@@ -54,7 +72,7 @@ ROOT_URLCONF = 'sanitasprj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templete')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,8 +134,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+JAZZMIN_SETTINGS = {
+    'site_header':"Plog-Payouts",
+    'site_brand':"Plog-Payouts",
+    'site_logo':'assets/images/logo.png',
+    'copyright':"PlogPayouts.com",
+}
+
+AUTH_USER_MODEL='userauths.User'
