@@ -1,11 +1,11 @@
 :root {
-    --background: #9c88ff;
+    --background: #f5f6fa;
     --navbar-width: 256px;
     --navbar-width-min: 80px;
     --navbar-dark-primary: #18283b;
     --navbar-dark-secondary: #2c3e50;
     --navbar-light-primary: #f5f6fa;
-    --navbar-light-secondary: #8392a5;
+    --navbar-light-secondary: #cbd5e2;
 }
 
 html,
@@ -13,7 +13,9 @@ body {
     margin: 0;
     background: var(--background);
 }
-
+body #nav-bar:nth-child(2){
+    display: none;
+}
 #nav-toggle:checked~#nav-header {
     width: calc(var(--navbar-width-min) - 16px);
 }
@@ -200,7 +202,7 @@ label[for=nav-toggle] {
 
 #nav-content::-webkit-scrollbar-thumb {
     border-radius: 99px;
-    background-color: #D62929;
+    background-color: #54dedf;
 }
 
 #nav-content::-webkit-scrollbar-button {
@@ -218,7 +220,20 @@ label[for=nav-toggle] {
     border-radius: 16px 0 0 16px;
     transition: top 0.2s;
 }
-
+#nav-footer-content-highlight{
+    position: absolute;
+    left: 16px;
+    top: 0px;
+    width: calc(100% - 16px);
+    height: 54px;
+    background: var(--background);
+    background-attachment: fixed;
+    border-radius: 16px 0 0 16px;
+    transition: top 0.2s;
+    display: none;
+}
+#nav-footer-content-highlight:before,
+#nav-footer-content-highlight:after,
 #nav-content-highlight:before,
 #nav-content-highlight:after {
     content: "";
@@ -230,7 +245,7 @@ label[for=nav-toggle] {
     border-radius: 50%;
     box-shadow: 16px 16px var(--background);
 }
-
+#nav-footer-content-highlight:after,
 #nav-content-highlight:after {
     top: 100%;
     box-shadow: 16px -16px var(--background);
@@ -261,7 +276,10 @@ label[for=nav-toggle] {
 .nav-button:nth-of-type(1):hover {
     color: var(--navbar-dark-primary);
 }
-
+.nav-button:nth-of-type(1):hover~#nav-footer-content-highlight{
+    top: 54px;
+    display: block;
+}
 .nav-button:nth-of-type(1):hover~#nav-content-highlight {
     top: 16px;
 }
@@ -269,7 +287,10 @@ label[for=nav-toggle] {
 .nav-button:nth-of-type(2):hover {
     color: var(--navbar-dark-primary);
 }
-
+.nav-button:nth-of-type(2):hover~#nav-footer-content-highlight{
+    top: 108px;
+    display: block;
+}
 .nav-button:nth-of-type(2):hover~#nav-content-highlight {
     top: 70px;
 }
@@ -277,7 +298,10 @@ label[for=nav-toggle] {
 .nav-button:nth-of-type(3):hover {
     color: var(--navbar-dark-primary);
 }
-
+.nav-button:nth-of-type(3):hover~#nav-footer-content-highlight{
+    top: 162px;
+    display: block;
+}
 .nav-button:nth-of-type(3):hover~#nav-content-highlight {
     top: 124px;
 }
@@ -414,5 +438,6 @@ label[for=nav-footer-toggle] {
 
 #nav-footer-content::-webkit-scrollbar-thumb {
     border-radius: 99px;
-    background-color: #D62929;
+    background-color: #54dedf;
 }
+

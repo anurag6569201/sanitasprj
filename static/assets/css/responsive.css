@@ -1,0 +1,21 @@
+@media (max-width:500px){
+    body #nav-bar:nth-child(1){
+        display: none;
+    }
+    body #nav-bar:nth-child(2){
+        display: flex;
+    }
+    #nav-bar {
+        left: 1vw;
+        bottom: 1vw;
+        width: calc(100% - 2vw);
+        flex-direction: row;
+    }
+    label[for=nav-toggle] {
+        position: absolute;
+        right: 0;
+        height: 3rem;
+        width: 100%;
+    }
+    
+}
