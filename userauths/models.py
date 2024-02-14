@@ -1,15 +1,17 @@
 from enum import unique
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.db import models
 
 class User(AbstractUser):
     email = models.EmailField(unique=True)
     username = models.CharField(max_length=100)
-    verified =  models.BooleanField(default=False)
+    bio = models.CharField(max_length=100)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 
+    # Add related_name to avoid clashes with auth.User
     groups = models.ManyToManyField(
         "auth.Group",
         related_name="userauths_user_set",
@@ -28,22 +30,3 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
-    
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='userprofile')
-    name = models.CharField(max_length=100, default="user")
-    surname = models.CharField(max_length=100, default="1234")
-    mobile_number = models.CharField(max_length=15, default="XXXXXXXXXX")
-    address = models.CharField(max_length=255, default="No Address Provided")
-    postcode = models.CharField(max_length=20, default="XXXXXX")
-    area = models.CharField(max_length=100, default="Unknown Area")
-    email = models.EmailField(default="example@example.com")
-    education = models.CharField(max_length=255, default="No Education Information")
-    country = models.CharField(max_length=100, default="Unknown Country")
-    state_region = models.CharField(max_length=100, default="Unknown Region")
-    profile_image = models.ImageField(upload_to='profile_images/', null=True, blank=True)
-
-    captcha_score=models.FloatField(default=0.0)
-
-    def __str__(self):
-        return self.user.username
