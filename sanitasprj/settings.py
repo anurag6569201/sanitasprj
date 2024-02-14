@@ -52,6 +52,9 @@ INSTALLED_APPS = [
 
     # authentication app
     'userauths',
+
+    # third party app
+    'fontawesomefree'
 ]
 
 MIDDLEWARE = [
