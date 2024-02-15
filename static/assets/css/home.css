@@ -1,0 +1,69 @@
+.home{
+    padding: 1vw;
+    overflow-x: hidden;
+}
+.home .btn{
+    border: 1px solid var(--navbar-dark-primary);
+    color: var(--navbar-dark-primary);
+    font-weight: 600;
+}
+.home .btn:hover{
+    background-color: var(--navbar-dark-primary);
+    color: var(--navbar-light-secondary);
+}
+.home .form-control:focus {
+    color: var(--navbar-dark-primary);
+    border-color: var(--navbar-dark-primary);
+    outline: 0;
+    box-shadow: none;
+}
+.home form a{
+    margin-left: 1vw;
+}
+.home hr{
+    margin: 0;
+    padding: 0;
+}
+
+/* recent blogs */
+.recent-map,
+.recent-blog{
+    margin-top: 1vw;
+    width: 100%;
+}
+.recent-map span:nth-child(1),
+.recent-blog span:nth-child(1){
+    font-weight: 600;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    color: var(--navbar-light-secondary);
+    background-color: var(--navbar-dark-primary);
+}
+.featured-carousel{
+    width: 100%;
+}
+.owl-stage-outer{
+    width: 100%;
+}
+.featured-carousel .card{
+    background-color: var(--navbar-dark-primary);
+    color: var(--navbar-light-secondary);
+}
+.featured-carousel .card a{
+    border: 1px solid var(--navbar-light-secondary);
+    color: var(--navbar-light-secondary);
+}
+.featured-carousel .card a:hover{
+    background-color: var(--navbar-light-secondary);
+    color: var(--navbar-dark-primary);
+}
+.featured-carousel .card{
+    border-top-left-radius: 0;
+}
+.recent-blog .view-blog{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 1vw;
+}
