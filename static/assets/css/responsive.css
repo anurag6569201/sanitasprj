@@ -1,8 +1,8 @@
 @media (max-width:500px){
-    body #nav-bar:nth-child(1){
+    body .nav-bar:nth-child(1){
         display: none;
     }
-    body #nav-bar:nth-child(2){
+    body .nav-bar:nth-child(2){
         display: flex;
         width: calc(100%-2vw);
         height: 54px;
@@ -11,6 +11,11 @@
         bottom: 10vh;
         left: 1vw;
         right: 1vw;
+        background: var(--navbar-dark-primary);
+        color: var(--navbar-light-primary);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        overflow: hidden;
+        user-select: none;
     }
     .contain-itmes {
         display: flex;

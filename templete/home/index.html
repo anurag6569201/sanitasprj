@@ -19,6 +19,9 @@
                 <img src="../../static/assets/images/blogs/sample.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <span class="cat">{{ p.title }}</span>
+                    <time datetime="{{ p.date_posted }}">
+                        <i class="fas fa-calendar-alt mr-2"></i><span style="margin-left: .2em;">12/3/2422</span>
+                    </time>
                     <div class="col-md-12">
                         <a href="#" class="btn">Read More</a>
                         <a href="#" class="btn"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>

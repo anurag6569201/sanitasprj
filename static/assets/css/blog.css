@@ -1,0 +1,26 @@
+.blog .blogs_head{
+    font-size: 1em;
+    font-weight: 600;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    color: var(--navbar-light-secondary);
+    background-color: var(--navbar-dark-primary);
+}
+.blog .item:first-child .card{
+    border-top-left-radius: 0;
+    background-color: var(--navbar-dark-primary);
+    color: var(--navbar-light-secondary);
+}
+.blog .card a{
+    border: 1px solid var(--navbar-light-secondary);
+    color: var(--navbar-light-secondary);
+}
+.blog .card a:hover{
+    background-color: var(--navbar-light-secondary);
+    color: var(--navbar-dark-primary);
+}
+.blog .cat{
+    font-size: 1.4em;
+    font-weight: 600;
+}

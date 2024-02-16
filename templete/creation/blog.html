@@ -4,53 +4,30 @@
 {% block content %}
 
 <section class="light">
-    <div class="container py-4">
-        <div class="blogs_head" style="margin-top: 7.5em;">
-            <strong>Blogs</strong>
-        </div>
-
-        {% for p in posts %}
-        <article class="postcard light blue col-md-12" style="margin-top: 1em;min-height: 30em;">
-            
-            <div class="postcard__text">
-                <h1 class="postcard__title blue">
-                    <a href="{% url 'creation:blog-detail' p.id %}">
-                        <img src="{{ p.authorProfile.profile_image.url }}" style="width: 50px;height: 50px;border-radius: 50%;border: 1px solid #9aa62d;">
-                        {{ p.title }}
-                    </a>
-                </h1>
-                <div class="postcard__subtitle small">
-                    <time datetime="{{ p.date_posted }}" style="font-size: 1.2em;">
-                        <i class="fas fa-calendar-alt mr-2"></i>{{ p.date_posted }}
-                    </time>
+    <div class="container blog">
+        <span class="btn blogs_head">Blogs</span>
+        <div class="row">
+            {% for p in posts %}
+            <div class="col-md-4 mb-3">
+                <div class="item">
+                    <div class="card">
+                        <img src="../../static/assets/images/blogs/sample.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="cat">{{ p.title }}</span><br>
+                            <time datetime="{{ p.date_posted }}">
+                                <i class="fas fa-calendar-alt mr-2"></i><span style="margin-left: .2em;">{{ p.date_posted }}</span>
+                            </time>
+                            <div class="col-md-12">
+                                <a href="#" class="btn">Read More</a>
+                                <a href="#" class="btn"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>
+                                <a href="#" class="btn"><i class="fa-solid fa-message"></i><span style="margin-left: .2em;">{{ comments.count }}</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt ck ck-content" style="max-height: 5em;">{{ p.content|safe }}</div>
-                <span style="box-shadow: 0 0 20px 10px #aeb94c;"></span>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item">
-                        <a href="{% url 'creation:like-post' pk=p.id %}">
-                            <i class="fas fa-thumbs-up mr-2"></i>
-                            <span style="font-size:1.2em;" class="material-symbols-outlined">thumb_up</span>
-                            <span style="margin-left: .2em;font-size: 1.2em;">{{ p.likes.count }}</span>
-                        </a>
-                    </li>
-                    <li class="tag__item">
-                        <a href="{% url 'creation:blog-detail' p.id %}">
-                            <i class="fas fa-comment mr-2"></i>
-                            <span style="font-size:1.2em;" class="material-symbols-outlined">comment</span>
-                            <span style="margin-left: .2em;font-size: 1.2em;">{{ comments.count }}</span>
-                        </a>
-                    </li>
-                    <li class="tag__item play blue">
-                        <a href="{% url 'creation:blog-detail' p.id %}">
-                            <i class="fas fa-play mr-2"></i>Read Blog
-                        </a>
-                    </li>
-                </ul>
             </div>
-        </article>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 </section>
 

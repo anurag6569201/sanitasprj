@@ -14,7 +14,7 @@ body {
     background: var(--background);
 }
 /* mini navbar */
-body #nav-bar:nth-child(2){
+body .navbar{
     display: none;
 }
 
