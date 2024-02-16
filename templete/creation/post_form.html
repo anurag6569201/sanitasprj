@@ -4,136 +4,111 @@
 {% block content %}
 
 
-<div class="container-fluid rounded bg-white mt-5 mb-5 verifier-profile">
-    <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.media }}    
-    <div class="row" style="margin-top: 6em;">
-            <div class="col-md-3 border-right profile-image-section">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    {% if user_profile.profile_image.url is not null %}
-                        <img class="rounded-circle mt-5" width="150px" height="150px" src="{{ user_profile.profile_image.url }}" alt="User Profile Image">
-                    {% else %}
-                        <img class="rounded-circle mt-5" width="150px" height="150px" src="{% static 'assets/images/profile/avtar.jpeg' %}" alt="Default Image">
-                    {% endif %}
-                    <span class="font-weight-bold" style="font-size: 2.5em;font-weight: 700;">{{ user_profile.name }} {{ user_profile.surname }}</span>
-                    <span class="text-black-600" style="font-size: 1.8em;">{{ user_profile.email }}</span>
-                </div>
-                <div class="profile-edit-btn">
-                    <a class="btn btn-primary profile-button" href="">Edit Profile</a>
-                </div>
-               
-            </div>
+<div class="container-fluid rounded verifier-profile">
+    
+    <div class="row">
 
-            <div class="col-md-9 border-right">
-                <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right" style="font-size: 5em; font-weight: 600;color: #9aa62d;">Write Blog
-                        </h4>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="labels">{{ form.title.label_tag }}</label> <br>
-                                
-                                {{ form.title }}
-                                {% if form.title.errors %}
-                                    <small class="text-danger">{{ form.title.errors.0 }}</small>
-                                {% endif %}
-                            </div> <br><br>
-                             <br><br>
+            <div class="col-md-12">
+            
+                <br>
+                <h4 class="blogs_head">Write Blog</h4><hr>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                <div class="row mt-2">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="labels">{{ form.title.label_tag }}</label> <br>
+                            
+                            {{ form.title }}
+                            {% if form.title.errors %}
+                                <small class="text-danger">{{ form.title.errors.0 }}</small>
+                            {% endif %}
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="labels">{{ form.content.label_tag }}</label>
-                                
-                                {{ form.content }}
-                                {% if form.content.errors %}
-                                    <small class="text-danger">{{ form.content.errors.0 }}</small>
-                                {% endif %}
-                            </div><br><br>
-                        </div> 
-                        <button type="submit" class="btn btn-primary profile-button mx-3" style="width: 10em;">Post Blog</button>
-                        <style>
-                            #id_title{
-                                font-size: 1.6em;
-                                background-color: #cbd477;
-                                border: none;
-                                outline: none;
-                                border-radius: .2em;
-                                border: 2px solid #cbd477;
-                                width: 100%;
-                            }
-                            #id_title:focus{
-                                border: none;
-                                border: 2px solid #9aa62d;
-                                border-color: rgb(214, 230, 74);
-                            }
-                            #id_title::placeholder{
-                                color: #f6fad1;
-                                font-weight: 600;
-                            }
-                            #id_content{
-                                width: 100%;
-                                height: 9em;
-                                font-size: 1.6em;
-                                overflow-y: auto;
-                                border-radius: .2em;
-                                padding: .3em;
-                                background-color: #cbd477;
-                            }
-                        </style>
                     </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="labels">{{ form.content.label_tag }}</label>
+                            
+                            <div class="ck ck-content">
+                                {{form.media}}
+                                {{form.content|safe}}
+                            </div>
+                        </div><br>
+                        <button type="submit" class="btn" style="width: 10em;">Post Blog</button>
+                    </div>
+                    <style>
+                        #id_title{
+                            font-size: 1.2em;
+                            border: none;
+                            outline: none;
+                            border-radius: .2em;
+                            width: 100%;
+                        }
+                        #id_title:focus{
+                            border: 1px solid var(--navbar-dark-primary);
+                            border-color: none;
+                        }
+                        #id_title::placeholder{
+                            color: #f6fad1;
+                            font-weight: 600;
+                        }
+                        .labels{
+                            font-size: 1.2;
+                            font-weight: 600;
+                        }
+                    </style>
                 </div>
+                </form>
             </div>
 
             <div class="col-md-12">
-                <div class="p-3 py-5">
-                    <div class="mb-3 d-flex justify-content-between align-items-center experience">
-                        <span style="font-size: 5em; font-weight: 600;color: #9aa62d;">Your Posts</span>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-md-12">
-                            {% if userposts %}
-                            {% for p in userposts %}
-                            <article class="postcard light col-md-12" style="margin-top: 1em;">
-                                <div class="postcard__text">
-                                    <h1 class="postcard__title blue"><a href="{% url 'creation:blog-detail' p.id %}"><img src="{{ p.authorProfile.profile_image.url }}" style="width: 50px;height: 50px;border-radius: 50%;border: 1px solid #9aa62d;"> {{ p.title }}</a></h1>
-                                    <div class="postcard__subtitle small">
-                                        <time datetime="{{ p.date_posted }}" style="font-size: 1.2em;">
-                                            <i class="fas fa-calendar-alt mr-2"></i>{{ p.date_posted }}
-                                        </time>
-                                    </div>
-                                    <div class="postcard__bar"></div>
-                                    <div style="font-size: 28px;"class="ck ck-content">{{ p.content | safe }}</div>
-                                    <ul class="postcard__tagbox">
-                                        <li class="tag__item">
-                                            <a>
-                                                <i class="fas fa-thumbs-up mr-2"></i><span style="font-size:1.2em;" class="material-symbols-outlined">thumb_up</span><span style="margin-left: .2em;font-size: 1.2em;">{{ p.likes.count }}</span>
-                                            </a>
-                                        </li>
-                                        <li class="tag__item">
-                                            <a href="{% url 'creation:blog-detail' p.id %}">
-                                                <i class="fas fa-comment mr-2"></i><span style="font-size:1.2em;" class="material-symbols-outlined">comment</span><span style="margin-left: .2em;font-size: 1.2em;"></span>
-                                            </a>
-                                        </li>
-                                        <li class="tag__item play blue">
-                                            <a href="{% url 'creation:blog-detail' p.id %}"><i class="fas fa-play mr-2"></i>Read Blog</a>
-                                        </li>
-                                        <li class="tag__item play blue">
-                                            <a href="{% url 'creation:blog-delete' p.id %}"><i class="fas fa-play mr-2"></i>Delete Blog</a>
-                                        </li>
-                                        <li class="tag__item play blue">
-                                            <a href="{% url 'creation:blog-update' p.id %}"><i class="fas fa-play mr-2"></i>Edit Blog</a>
-                                        </li>
-                                    </ul>
+                <br>
+                <hr>
+                <br>
+                <span class="blogs_head">Your Posts</span>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        {% if userposts %}
+                        {% for p in userposts %}
+                        <article class="postcard light blue">
+                            <hr><br>
+                            <div class="postcard__text">
+                                <div class="postcard__title blue">
+                                    <img src="{{ p.authorProfile.profile_image.url }}" style="width: 40px;height: 40px;border-radius: 50%;">
+                                    <p>
+                                        <span class="posttitle">{{ p.title }}</span><br><span class="timedate">{{ p.date_posted }}</span>
+                                    </p>
                                 </div>
-                            </article>
-                            {% endfor %}
-                            {% else %}
-                            <h1>No Post yet made by you !!</h1>
-                            {% endif %}
-                        </div>
+                                <div class="maincontent my-3">
+                                    <div class="ck ck-content">{{ p.content|safe }}</div>
+                                </div>
+                                <ul class="postcard__tagbox">
+                                    <li class="tag__item">
+                                        <span style="font-size:1.2em;" class="material-symbols-outlined">thumb_up</span>
+                                        <span style="font-size: 1.2em;">{{ p.likes.count }}</span>
+                                    </li>
+                                    <li class="tag__item">
+                                        <span style="font-size:1.2em;" class="material-symbols-outlined">comment</span>
+                                        <span style="font-size: 1.2em;">{{ comments.count }}</span>
+                                    </li>
+                                    <li class="tag__item play blue">
+                                        <a style="text-decoration: none;color: var(--navbar-dark-secondary);" href="{% url 'creation:blog-detail' p.id %}"><span><i style="margin-right: .2em;"class="fa-brands fa-readme"></i>Read</span></a>
+                                    </li>
+                                    <li class="tag__item play blue">
+                                        <a style="text-decoration: none;color: var(--navbar-dark-secondary);" href="{% url 'creation:blog-delete' p.id %}"><span><i style="margin-right: .2em;"class="fa-solid fa-trash"></i>Delete</span></a>
+                                    </li>
+                                    <li class="tag__item play blue">
+                                        <a style="text-decoration: none;color: var(--navbar-dark-secondary);" href="{% url 'creation:blog-update' p.id %}"><span><i style="margin-right: .2em;"class="fa-solid fa-pen-to-square"></i>Edit</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        {% endfor %}
+                        {% else %}
+                        <br>
+                        <h5>No Post yet made by you yet!!</h5>
+                        {% endif %}
                     </div>
                 </div>
             </div>

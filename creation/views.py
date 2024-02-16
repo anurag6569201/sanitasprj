@@ -42,7 +42,7 @@ class PostDetailView(LoginRequiredMixin,DetailView):
         userposts= Post.objects.filter(author=self.request.user)
         context = {'post': post, 'comments': comments, 'comment_form': comment_form,'userposts':userposts,'user_profile':user_profile}
         return render(request, self.template_name, context)
-
+    
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content']
@@ -77,6 +77,7 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        form.instance.authorProfile = UserProfile.objects.get(user=self.request.user)
         return super().form_valid(form)
 
     def get_context_data(self, **kwargs):

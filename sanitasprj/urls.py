@@ -34,7 +34,7 @@ urlpatterns = [
     path('user/',include('userauths.urls')),
 
     # ckeditor
-    path("ckeditor5/", include('django_ckeditor_5.urls')),
+    path("ckeditor5/", include('django_ckeditor_5.urls'), name="ck_editor_5_upload_file"),
 ]
 
 if settings.DEBUG:

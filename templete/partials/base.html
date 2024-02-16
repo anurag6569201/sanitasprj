@@ -70,10 +70,10 @@
                 <input id="nav-footer-toggle" type="checkbox" />
                 <div id="nav-footer">
                     <div id="nav-footer-heading">
-                        <div id="nav-footer-avatar"><img src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547" />
+                        <div id="nav-footer-avatar"><img src="{{user_profile.profile_image.url}}" />
                         </div>
-                        <div id="nav-footer-titlebox"><a id="nav-footer-title" href="#">Anurag</a><span
-                                id="nav-footer-subtitle">Admin</span></div>
+                        <div id="nav-footer-titlebox">{{ user_profile.name }}{{ user_profile.surname }}<span
+                                id="nav-footer-subtitle">Online</span></div>
                         <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
                     </div>
                     <div id="nav-footer-content nav-content">

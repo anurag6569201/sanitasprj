@@ -4,34 +4,36 @@
 {% block content %}
 
 <div class="col-md-12 recent-blog">
-    <span class="maintext">Recent Blogs</span>
+    <span class="blogs_head">Blogs</span><hr><br>
     <div class="featured-carousel owl-carousel">
-        
-        <div class="item">
+        {% for p in posts %}
+        <div class="item mx-1">
             <div class="card">
-                <img src="../../static/assets/images/blogs/sample.jpeg" class="card-img-top" alt="...">
+                <a href="{% url 'creation:blog-detail' p.id %}">
+                    <img src="../../static/assets/images/blogs/sample.jpeg" class="card-img-top" alt="...">
+                </a>
                 <div class="card-body">
                     <span class="cat">{{ p.title }}</span><br>
                     <time datetime="{{ p.date_posted }}">
-                        <i class="fas fa-calendar-alt mr-2"></i><span style="margin-left: .2em;">12/3/2422</span>
+                        <i class="fas fa-calendar-alt mr-2"></i><span style="margin-left: .2em;">{{ p.date_posted }}</span>
                     </time>
                     <div class="col-md-12">
-                        <br>
-                        <a href="#" class="btn">Read More</a>
-                        <a href="#" class="btn"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>
-                        <a href="#" class="btn"><i class="fa-solid fa-message"></i><span style="margin-left: .2em;">{{ comments.count }}</span></a>
+                        <a href="{% url 'creation:blog-detail' p.id %}" class="btn">Read More</a>
+                        <a href="{% url 'creation:like-post' pk=p.id %}" class="btn"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>
+                        <a href="{% url 'creation:blog-detail' p.id %}" class="btn"><i class="fa-solid fa-message"></i><span style="margin-left: .2em;">{{ comments.count }}</span></a>
                     </div>
                 </div>
             </div>
         </div>
-
+        {% endfor %}
     </div>
+    <br>
     <div class="col-md-12 view-blog">
         <a href="{% url 'creation:blog' %}"><button class="btn">View All</button></a>
     </div>
 </div>
 <div class="col-md-12 recent-map">
-    <span class="maintext">Sanitas Map</span>
+    <span class="blogs_head">Sanitas Map</span><hr><br>
     <div class="featured-map">
         
     </div>

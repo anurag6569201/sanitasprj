@@ -7,37 +7,25 @@
 <form method="post">
     {% csrf_token %}
     <section class="light">
-        <div class="container py-4">
-            <div class="container-fluid" style="margin-top: 6.5em;">
+            <div class="container-fluid" style="padding-left: 0;">
                 <div class="be-comment-block">
-                    <h1 class="comments-title"
-                        style="font-size: 3em;color: white;border-radius: .2em;font-weight: 700; padding: .5em;background-color: #cbd477;">
-                        Edit Your Comment</h1>
+                    <span class="blogs_head">Edit Your Comment <hr></span>
                     <div class="be-comment" style="padding: 1em 0;">
                         <div class="be-img-comment">
-                            <a>
-                                <img src="{{ post.authorProfile.profile_image.url }}" alt="" class="be-ava-comment">
-                            </a>
+                            <img src="{{ post.authorProfile.profile_image.url }}" alt="" class="be-ava-comment">
                         </div>
                         <div class="be-comment-content">
 
-                            <span class="be-comment-name">
-                                <a>{{ comment.author }}</a>
-                            </span>
+                            <span class="comment-user">{{ comment.author }}</span>                            </span>
                             <span class="be-comment-time">
-                                <i class="fa fa-clock-o"></i>
+                                <i class="fas fa-calendar-alt"></i>
                                 {{ comment.created_at }}
                             </span>
 
-                            <p class="be-comment-text" style="border: 2px solid #cbd477;">
+                            <p>
                                 {{ form.text }}
                             </p>
-                            <script>
-                                var inputTest = document.getElementById('id_text');
-                                if (inputTest) {
-                                    inputTest.focus();
-                                }
-                            </script>
+                            
                             <button class="comment-btn" type="submit">Save Changes</button>
                         </div>
                         <style>
@@ -48,26 +36,32 @@
                                 overflow-y: auto;
                                 border-radius: .5em;
                                 padding: .3em;
-                                border: none;
-                                background-color: transparent;
+                                border-color: var(--navbar-light-primary);
+                                color: white;
+                                background: var(--navbar-light-secondary);
+                            }
+                            #id_text:focus-visible {
+                                outline: none;
+                                border: 1px solid var(--navbar-dark-primary);
                             }
                             .comment-btn{
-                                font-size: 1.8em;
-                                background: #cbd477;
+                                font-size: 1em;
+                                background: transparent;
+                                color: var(--navbar-dark-primary);
                                 padding: .2em 2em;
                                 box-shadow: none;
-                                border: none;
+                                border: 1px solid var(--navbar-dark-primary);
                                 border-radius: .4em;
                             }
                             .comment-btn:hover {
-                                background: #d9e565;
+                                background: var(--navbar-dark-secondary);
                             }
                             .comment-btn:focus{
-                                background: #d9e565;
+                                background: var(--navbar-dark-secondary);
                                 box-shadow: none
                             }
                             .comment-btn:active {
-                                background: #d9e565;
+                                background: var(--navbar-dark-secondary);
                                 box-shadow: none
                             }
                         </style>
@@ -75,7 +69,6 @@
                     <hr>
                 </div>
             </div>
-        </div>
     </section>
     
 </form>
