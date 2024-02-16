@@ -38,12 +38,12 @@
     <link rel="stylesheet" href="{% static 'assets/css/home.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/blog.css' %}">
 
+    <!-- global stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/global.css' %}">
 
     <!-- respnsive.css -->
     <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
 
-    <!-- global stylesheet -->
-    <link rel="stylesheet" href="{% static 'assets/css/global.css' %}">
 
 </head>
 
@@ -102,6 +102,13 @@
         </nav>
         <div class="container-fluid home">
             <div class="row">
+                <div class="col-md-12 search-box">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                        <a href="{% url 'creation:blog-new' %}" class="btn"><i class="fa-solid fa-plus"></i></a>
+                    </form>
+                </div>
                 {% block content %}
                 {% endblock content %}
             </div>

@@ -1,11 +1,7 @@
-.blog .blogs_head{
-    font-size: 1em;
-    font-weight: 600;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom: none;
-    color: var(--navbar-light-secondary);
-    background-color: var(--navbar-dark-primary);
+.light{
+    margin-top: 1vw;
+    margin-left: 0;
+    padding: 0;
 }
 .blog .item:first-child .card{
     border-top-left-radius: 0;
