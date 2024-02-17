@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/home.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/blog.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/map.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/updates.css' %}">
 
     <!-- global stylesheet -->
     <link rel="stylesheet" href="{% static 'assets/css/global.css' %}">
@@ -60,11 +61,11 @@
                     <hr />
                 </div>
                 <div id="nav-content">
-                    <div class="nav-button"><i class="fas fa-home"></i><span>Home</span></div>
-                    <div class="nav-button"><i class="fas fa-map"></i><span>Map</span></div>
-                    <div class="nav-button"><i class="fas fa-thumbtack"></i><span>Materials</span></div>
-                    <div class="nav-button"><i class="fas fa-heart"></i><span>Notifications</span></div>
-                    <div class="nav-button"><i class="fas fa-user"></i><span>Profile</span></div>
+                    <div class="nav-button {% if request.path == '/' %}active{% endif %}"><a href="{% url 'home:index' %}"><i class="fas fa-home"></i><span>Home</span></a></div>
+                    <div class="nav-button {% if request.path == '/map/' %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span>Map</span></a></div>
+                    <div class="nav-button"><a href=""><i class="fas fa-thumbtack"></i><span>Materials</span></a></div>
+                    <div class="nav-button"><a href=""><i class="fas fa-heart"></i><span>Notifications</span></a></div>
+                    <div class="nav-button"><a href=""><i class="fas fa-user"></i><span>Profile</span></a></div>
         
                     <div id="nav-content-highlight"></div>
                 </div>
@@ -164,15 +165,15 @@
                         btn.classList.remove('active');
                     });
                     this.classList.add('active');
-
                     var translateX = (index - 8) * 100;
-
+                    
                     highlight.style.transform = 'translateX(' + translateX + '%)';
                 });
             });
         });
     </script>
 
+    <script src="{% static 'assets/js/basics.js' %}"></script>
     <script src="{% static 'assets/js/userauth.js' %}"></script>
 </body>
 

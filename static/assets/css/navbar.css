@@ -84,6 +84,8 @@
 .nav-bar a {
     color: inherit;
     text-decoration: inherit;
+    display: flex;
+    align-items: center;
 }
 
 .nav-bar input[type=checkbox] {
@@ -190,7 +192,7 @@ label[for=nav-toggle] {
 
 #nav-content::-webkit-scrollbar-thumb {
     border-radius: 99px;
-    background-color: #54dedf;
+    background-color: white;
 }
 
 #nav-content::-webkit-scrollbar-button {
@@ -426,6 +428,25 @@ label[for=nav-footer-toggle] {
 
 #nav-footer-content::-webkit-scrollbar-thumb {
     border-radius: 99px;
-    background-color: #54dedf;
+    background-color: white;
 }
-
+#bignav .nav-button:nth-of-type(1).active,
+#bignav .nav-button:nth-of-type(2).active, 
+#bignav .nav-button:nth-of-type(3).active, 
+#bignav .nav-button:nth-of-type(4).active,
+#bignav .nav-button:nth-of-type(5).active,
+#bignav .nav-button:nth-of-type(6).active,
+#bignav .nav-button:nth-of-type(7).active,
+#bignav .nav-button:nth-of-type(8).active {
+    color: white;
+}
+#bignav .nav-button:nth-of-type(1):hover,
+#bignav .nav-button:nth-of-type(2):hover,
+#bignav .nav-button:nth-of-type(3):hover,
+#bignav .nav-button:nth-of-type(4):hover,
+#bignav .nav-button:nth-of-type(5):hover,
+#bignav .nav-button:nth-of-type(6):hover,
+#bignav .nav-button:nth-of-type(7):hover,
+#bignav .nav-button:nth-of-type(8):hover{
+    color: var(--navbar-dark-primary);
+}

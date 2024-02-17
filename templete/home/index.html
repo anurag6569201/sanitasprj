@@ -3,21 +3,43 @@
 
 {% block content %}
 <div class="col-md-12 recent-updates">
+    <br>
     <span class="blogs_head">Latest Updates</span><hr><br>
-    
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-          <img src="..." class="rounded me-2" alt="...">
-          <strong class="me-auto">Bootstrap</strong>
-          <small class="text-body-secondary">11 mins ago</small>
-          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="cont" onload="changePos()">
+                <ul class="ultra">
+                    <li class="tab-0">
+                        <strong>PAYMENTS</strong> <span class="date">JULY 9 </span></br>
+                        <p>Radar will now automatically allow any payment that is protected from being disputed for fraud due to a liability shift. For example, if the payment is verified by 3D Secure.</p>
+                    </li>
+                    <li class="tab-1">
+                        <strong>DASHBOARD</strong> <span class="date">JULY 9 </span></br>
+                        <p>Upgrade to version 2.0 of our iOS Dashboard app, which includes a new design, an updated home screen, and iPhone X support.</p>
+                    </li>
+                    <li class="tab-2"> 
+                        <strong>RADAR</strong> <span class="date">JULY 9 </span></br>
+                        <p>Rules can now compare numerical metadata. For example, reviews could trigger if <strong><code>::customer_age:: < 21 </code></strong> (if you pass in custom metadata for a customer's age). </p>
+                    </li>
+                    <li class="tab-3">
+                        <strong>DASHBOARD</strong> <span class="date">JULY 9 </span></br>
+                        <p>Upgrade to version 2.0 of our iOS Dashboard app, which includes a new design, an updated home screen, and iPhone X support.</p>
+                    </li>
+                    <li class="tab-4"> 
+                        <strong>RADAR</strong> <span class="date">JULY 9 </span></br>
+                        <p>Rules can now compare numerical metadata. For example, reviews could trigger if <strong><code>::customer_age:: < 21 </code></strong> (if you pass in custom metadata for a customer's age). </p>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="toast-body">
-          Hello, world! This is a toast message.
+        <div class="col-md-6">
+            <span class="blogs_head">About Us</span><hr><br>
+            <p style="color: var(--navbar-dark-secondary);">Imagine having access to a real-time map that not only visualizes disease hotspots but also predicts future outbreaks, all at your fingertips. The Disease Heatmap, a groundbreaking mapping system, is set to revolutionize how we monitor and respond to health threats in our communities. </p>
         </div>
     </div>
     
 </div>
+
 <div class="col-md-12 recent-map">
     <span class="blogs_head">Sanitas Map</span><hr><br>
     <div class="featured-map">

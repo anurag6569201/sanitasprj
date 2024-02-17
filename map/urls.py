@@ -4,5 +4,5 @@ from map import views
 app_name="map"
 
 urlpatterns=[
-
+    path('',views.index_map,name='index-map'),
 ]
