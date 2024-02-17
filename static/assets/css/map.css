@@ -1,0 +1,7 @@
+.featured-map .map-home img{
+    border-radius: .3em;
+    object-fit: contain;
+}
+.featured-map .map-hometext{
+    color: var(--navbar-dark-secondary);
+}

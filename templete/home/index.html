@@ -2,7 +2,54 @@
 {% load static %}
 
 {% block content %}
-
+<div class="col-md-12 recent-updates">
+    <span class="blogs_head">Latest Updates</span><hr><br>
+    
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="..." class="rounded me-2" alt="...">
+          <strong class="me-auto">Bootstrap</strong>
+          <small class="text-body-secondary">11 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+    </div>
+    
+</div>
+<div class="col-md-12 recent-map">
+    <span class="blogs_head">Sanitas Map</span><hr><br>
+    <div class="featured-map">
+        <div class="map-home">
+            <div class="row">
+                <p class="col-md-12 map-hometext">
+                    In today's interconnected world, understanding health trends and disease outbreaks in our vicinity is crucial for timely response and preventive measures. To address this need, a cutting-edge mapping system has been developed, integrating advanced technology to display both real-time disease data and predictive analytics. This innovative map not only provides users with a visual representation of disease hotspots but also offers insights into the top five prevalent diseases in the area.
+                </p>
+                <div class="col-md-4 mb-4">
+                    <span class="blogs_head">Sanitas Heat-Map</span>
+                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <span class="blogs_head">Sanitas Heat-Map</span>
+                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <span class="blogs_head">Sanitas Heat-Map</span>
+                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <span class="blogs_head">Sanitas Heat-Map</span>
+                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <span class="blogs_head">Sanitas Heat-Map</span>
+                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="col-md-12 recent-blog">
     <span class="blogs_head">Blogs</span><hr><br>
     <div class="featured-carousel owl-carousel">
@@ -30,12 +77,6 @@
     <br>
     <div class="col-md-12 view-blog">
         <a href="{% url 'creation:blog' %}"><button class="btn">View All</button></a>
-    </div>
-</div>
-<div class="col-md-12 recent-map">
-    <span class="blogs_head">Sanitas Map</span><hr><br>
-    <div class="featured-map">
-        
     </div>
 </div>
 
