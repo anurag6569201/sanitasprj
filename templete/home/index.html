@@ -48,35 +48,46 @@
                 <p class="col-md-12 map-hometext">
                     In today's interconnected world, understanding health trends and disease outbreaks in our vicinity is crucial for timely response and preventive measures. To address this need, a cutting-edge mapping system has been developed, integrating advanced technology to display both real-time disease data and predictive analytics. This innovative map not only provides users with a visual representation of disease hotspots but also offers insights into the top five prevalent diseases in the area.
                 </p>
-                <div class="col-md-4 mb-4">
+                <style>
+                    .mapimage{
+                        max-height: 15em;
+                    }
+                </style>
+                <div class="col-md-6 mb-4">
                     <span class="blogs_head">Sanitas Heat-Map</span>
-                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
+                    <a href="{% url 'map:heat-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/heat-map.png" alt=""></a>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 mb-4">
                     <span class="blogs_head">Sanitas Heat-Map</span>
-                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
+                    <a href="{% url 'map:heat-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/heat-map.png" alt=""></a>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 mb-4">
                     <span class="blogs_head">Sanitas Heat-Map</span>
-                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
+                    <a href="{% url 'map:heat-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/heat-map.png" alt=""></a>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 mb-4">
                     <span class="blogs_head">Sanitas Heat-Map</span>
-                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
+                    <a href="{% url 'map:heat-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/heat-map.png" alt=""></a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <span class="blogs_head">Sanitas Heat-Map</span>
-                    <img class="col-md-12" src="../../static/assets/images/blogs/sample.jpeg" alt="">
-                </div>
+            </div>
+            <style>
+                .view-blog{
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                }
+            </style>
+            <div class="col-md-12 view-blog">
+                <a href="{% url 'map:index-map' %}"><button class="btn">View All Maps</button></a>
             </div>
         </div>
     </div>
 </div>
 <div class="col-md-12 recent-blog">
     <span class="blogs_head">Blogs</span><hr><br>
-    <div class="featured-carousel owl-carousel">
+    <div class="featured-carousel owl-carousel col-md-12">
         {% for p in posts %}
-        <div class="item mx-1">
+        <div class="item mx-1 col-md-12">
             <div class="card">
                 <a href="{% url 'creation:blog-detail' p.id %}">
                     <img src="../../static/assets/images/blogs/sample.jpeg" class="card-img-top" alt="...">

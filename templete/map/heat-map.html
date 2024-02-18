@@ -1,0 +1,121 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+<script src="https://apis.mapmyindia.com/advancedmaps/v1/9440dc184957cb68062acbd0187f20f5/map_load?v=1.5&plugins=heatmap"></script>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    #map {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    html,
+    body {
+        background: transparent;
+    }
+
+    .search-box {
+        z-index: 1000;
+    }
+    #diseaseSelection,
+    #bignav {
+        z-index: 1000;
+    }
+    #diseaseSelection{
+        margin-top: .5em;
+        color: var(--navbar-dark-primary);
+    }
+    #diseaseSelection button{
+        font-size: .8em;
+        border: 1px solid var(--navbar-dark-primary);
+        background-color: var(--navbar-light-secondary);
+        border-radius: .3em;
+    }
+    #diseaseSelection select{
+        font-size: .8em;
+        padding: .1em 1em;
+        border: 1px solid var(--navbar-dark-primary);
+        background-color: var(--navbar-light-secondary);
+    }
+    #diseaseSelection label{
+        font-weight: 700;
+    }
+    .search-box input {
+        background-color: var(--navbar-light-secondary);
+        border: 1px solid var(--navbar-dark-primary);
+    }
+
+    .search-box .btn {
+        background-color: var(--navbar-light-secondary);
+    }
+
+    #flsc_dv {
+        margin-top: 5em;
+        margin-right: .4em;
+    }
+</style>
+<div id="map"></div>
+<div id="diseaseSelection" class="col-md-12">
+    <label for="disease">Select Disease:</label>
+    <select id="disease">
+        <option value="malaria">Malaria</option>
+        <option value="dengue">Dengue</option>
+    </select>
+    <button onclick="updateHeatmap()">Show Heatmap</button>
+</div>
+
+<script>
+
+    var map = new MapmyIndia.Map('map', { center: [20.293944, 85.744450], zoom: 14, search: true ,hybrid: true});
+    
+    var diseaseData = {
+        "malaria": [
+            [20.293944, 85.744450, 0.8],
+            [20.289718, 85.754729, 0.7],
+            [20.286558, 85.749643, 0.6],
+            [20.283841, 85.740030, 0.5],
+            [20.284042, 85.758977, 0.4],
+            [20.275362, 85.765781, 0.3]
+        ],
+        "dengue": [
+            [22.897916, 79.671862, 0.8],
+            [22.897916, 79.671362, 0.7],
+            [22.897916, 79.671762, 0.6],
+            [22.897916, 79.671062, 0.5],
+            [22.897916, 79.671162, 0.4],
+            [22.897916, 79.671462, 0.3],
+            [20.293944, 85.744450, 0.8],
+            [20.289718, 85.754729, 0.7],
+            [20.286558, 85.749643, 0.6],
+            [20.283841, 85.740030, 0.5],
+            [20.284042, 85.758977, 0.4],
+            [20.275362, 85.765781, 0.3]
+        ]
+    };
+    
+    function updateHeatmap() {
+        var selectedDisease = document.getElementById("disease").value;
+        var data = diseaseData[selectedDisease];
+        
+        map.eachLayer(function (layer) {
+            if (layer instanceof L.TileLayer)
+                return;
+            map.removeLayer(layer);
+        });
+        
+        var heat = L.heatLayer(data, { minOpacity: .5, radius: 25, gradient: { 0.3: 'yellow', 0.6: 'orange', 0.8: 'red' } });
+        map.addLayer(heat);
+    }
+</script>
+
+{% endblock content %}
