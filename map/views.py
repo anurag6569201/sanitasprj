@@ -11,3 +11,5 @@ def index_map(request):
 def heat_map(request):
     return render(request,"map/heat-map.html")
 
+def cluster_map(request):
+    return render(request,"map/cluster-map.html")

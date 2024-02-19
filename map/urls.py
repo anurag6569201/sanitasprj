@@ -6,4 +6,5 @@ app_name="map"
 urlpatterns=[
     path('',views.index_map,name='index-map'),
     path('heat-map',views.heat_map,name='heat-map'),
+    path('cluster-map',views.cluster_map,name='cluster-map'),
 ]
