@@ -13,3 +13,6 @@ def heat_map(request):
 
 def cluster_map(request):
     return render(request,"map/cluster-map.html")
+
+def env_map(request):
+    return render(request,"map/env-map.html")

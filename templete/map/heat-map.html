@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block content %}
-<script src="https://apis.mapmyindia.com/advancedmaps/v1/9440dc184957cb68062acbd0187f20f5/map_load?v=1.5&plugins=heatmap"></script>
+<script
+    src="https://apis.mapmyindia.com/advancedmaps/v1/9440dc184957cb68062acbd0187f20f5/map_load?v=1.5&plugins=heatmap"></script>
 
 <style>
     body {
@@ -23,30 +24,36 @@
     body {
         background: transparent;
     }
+
     .search-box,
     #diseaseSelection,
     #bignav {
         z-index: 1000;
     }
-    #diseaseSelection{
+
+    #diseaseSelection {
         margin-top: .5em;
         color: var(--navbar-dark-primary);
     }
-    #diseaseSelection button{
+
+    #diseaseSelection button {
         font-size: .8em;
         border: 1px solid var(--navbar-dark-primary);
         background-color: var(--navbar-light-secondary);
         border-radius: .3em;
     }
-    #diseaseSelection select{
+
+    #diseaseSelection select {
         font-size: .8em;
         padding: .1em 1em;
         border: 1px solid var(--navbar-dark-primary);
         background-color: var(--navbar-light-secondary);
     }
-    #diseaseSelection label{
+
+    #diseaseSelection label {
         font-weight: 700;
     }
+
     .search-box input {
         background-color: var(--navbar-light-secondary);
         border: 1px solid var(--navbar-dark-primary);
@@ -64,8 +71,10 @@
 <div id="map"></div>
 <div id="diseaseSelection" class="col-md-12">
     <label for="disease">Select Disease:</label>
-    <select id="disease">
+    <select id="disease" onchange="updateHeatmap()">
+        <option value="all">Show All</option>
         <option value="malaria">Malaria</option>
+        <option value="cholera">Cholera</option>
         <option value="dengue">Dengue</option>
     </select>
     <button onclick="updateHeatmap()">Show Heatmap</button>
@@ -73,8 +82,8 @@
 
 <script>
 
-    var map = new MapmyIndia.Map('map', { center: [20.293944, 85.744450], zoom: 14, search: true ,hybrid: true});
-    
+    var map = new MapmyIndia.Map('map', { center: [20.293944, 85.744450], zoom: 4, search: true, hybrid: true });
+
     var diseaseData = {
         "malaria": [
             [20.293944, 85.744450, 0.8],
@@ -90,28 +99,34 @@
             [22.897916, 79.671762, 0.6],
             [22.897916, 79.671062, 0.5],
             [22.897916, 79.671162, 0.4],
-            [22.897916, 79.671462, 0.3],
-            [20.293944, 85.744450, 0.8],
-            [20.289718, 85.754729, 0.7],
-            [20.286558, 85.749643, 0.6],
-            [20.283841, 85.740030, 0.5],
-            [20.284042, 85.758977, 0.4],
-            [20.275362, 85.765781, 0.3]
+            [22.897916, 79.671462, 0.3]
         ]
     };
-    
+
     function updateHeatmap() {
         var selectedDisease = document.getElementById("disease").value;
-        var data = diseaseData[selectedDisease];
-        
+        var gradients = {
+            "malaria": { 0.3: 'yellow', 0.6: 'orange', 0.8: 'red' },
+            "cholera": { 0.3: 'green', 0.6: 'blue', 0.8: 'purple' },
+            "dengue": { 0.3: 'pink', 0.6: 'brown', 0.8: 'black' }
+        };
+
         map.eachLayer(function (layer) {
-            if (layer instanceof L.TileLayer)
-                return;
-            map.removeLayer(layer);
+            if (!(layer instanceof L.TileLayer)) {
+                map.removeLayer(layer);
+            }
         });
-        
-        var heat = L.heatLayer(data, { minOpacity: .5, radius: 25, gradient: { 0.3: 'yellow', 0.6: 'orange', 0.8: 'red' } });
-        map.addLayer(heat);
+
+        if (selectedDisease === "all") {
+            for (var disease in diseaseData) {
+                var heat = L.heatLayer(diseaseData[disease], { minOpacity: .5, radius: 25, gradient: gradients[disease] });
+                map.addLayer(heat);
+            }
+        } else {
+            var data = diseaseData[selectedDisease];
+            var heat = L.heatLayer(data, { minOpacity: .5, radius: 25, gradient: gradients[selectedDisease] });
+            map.addLayer(heat);
+        }
     }
 </script>
 

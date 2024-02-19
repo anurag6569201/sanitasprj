@@ -1,0 +1,68 @@
+Sanitas project:
+fully going to made by anurag !!
+
+
+So basically it have some features 
+
+
+--> admin panel (from where hospitals will update data)
+--> interactive data via charts or graphs (on disease analysis section)
+--> user registration and login system (for personalized health records or interests)
+--> Localized information according to thier geographical locations (for updated by near disease disasters)
+--> Chatbot for healthcare queries (for getting self help)
+--> Community Forums or discussion boards (its like twitter comment type on a thread it will work so that everyone get valuable pov from doctors or experts)
+--> educationsal modules or cources on health and disease prevention (for slef knowledge)
+--> notifications for alerting the user for health update new blog post and so on
+--> multi language suport for reaching diverse Communities (everyone not comfort with english so we will provide on multi language like amazon and flipkarts)
+--> feedback forms (for getting general quaries and flaws)
+--> online consultation with doctors (for instant consultation nearby hospital or doctors){future update can be}
+--> social media integration (to share news about diseases)
+--> mobile app support (android,ios){for future}
+--> provides a heatmap using the data of disease nearby
+--> we will provide of heatmap of 5 top disease cases in the area
+
+
+whats the idea basically ??
+Its a platform that provides all kind of disease or health related services. It is designed in such way that any hospital can register itself with this platform and import thier daily data of disease of pateience come just what type of pateience coming in thier hospital not any other details 
+
+
+what the data contains for now :
+number of cases;
+preventions;
+symptoms;
+disease name;
+
+
+what we will do:
+we will examine the data by basic machine learning and data analysis and then we will go through the NLP(natural language processing) for producing the blogs or any contents related to targeted platforms ;
+
+
+what will be the benifits of using this:
+1. It is a platform that provides accurate and up-to-date information about various diseases.
+2. This platform will also provide a way to track down the spread of diseases.
+3. The users who are interested in knowing more about diseases can use this platform as their source of learning.
+3. The platform will give you a way to get your own health status.
+4. You can use our chatbot to get any kind of query regarding health care.
+5. We are providing educational resources that will make you aware of different diseases.
+6. Our notification service will keep you up-to-date with latest news about diseases.
+7. Feedback form will let us know if there's anything wrong with our services.
+8. Social Media Integration will allow you to share news about diseases.
+9. Mobile App Support will enable users to access our services from anywhere at any time.
+10. we will provide user to shedule virtual consultation with healthcare professionals.
+
+
+How it can become income or business:
+1. Advertisement space in the application.
+2. Sell data analytics reports.
+3. Provide consultancy services.
+4. Offer premium content like exclusive articles, videos etc.
+5. Partner with medical institutions/hospitals.
+6. Host webinars and workshops.
+7. Collaborate with influencers and brands.
+8. sell service to news channel
+
+
+problems we will face:
+1. Data collection process may not be 100% accurate.
+2. If doctor become greedy if that model works well then probably hospitals will give us wrong information.
+3. There might be some fake data coming into system which will affect accuracy of results.
