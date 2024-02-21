@@ -16,3 +16,7 @@ def cluster_map(request):
 
 def env_map(request):
     return render(request,"map/env-map.html")
+
+def analyze(request):
+    return render(request,"map/analyze.html")
+

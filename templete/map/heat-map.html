@@ -128,6 +128,27 @@
             map.addLayer(heat);
         }
     }
+    var diseaseColors = {
+        "malaria": "yellow",
+        "cholera": "green",
+        "dengue": "pink"
+    };
+
+    var legend = L.control({ position: 'bottomright' });
+
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'info legend');
+        div.style.backdropFilter = 'blur(3px)';
+        div.style.border = '1px solid #12372a';
+        div.style.padding = '4px';
+        div.innerHTML += '<h4>Disease Legend</h4>';
+        for (var disease in diseaseColors) {
+            div.innerHTML += '<i style="font-size:14px;background:' + diseaseColors[disease] + '; border-radius: 50%; display: inline-block; width: 10px; height: 10px;"></i> ' + disease + '<br>';
+        }
+        return div;
+    };
+
+    legend.addTo(map);
 </script>
 
 {% endblock content %}

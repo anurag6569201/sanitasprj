@@ -68,35 +68,43 @@
 <link rel="stylesheet" href="css/MarkerCluster.css" />
 <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
 <script>
-    // Updated array to include details for each hospital
     var hospitals = [
-        { lat: 20.286186559784422, lng: 85.78248361820786, name: "Hospital A", address: "Address A, City, State", contact: "1234567890", services: "General Medicine, Pediatrics" },
-        { lat: 20.29198294302376, lng: 85.79758981819967, name: "Clinic B", address: "Address B, City, State", contact: "0987654321", services: "Dermatology" },
+        { lat: 20.286186559784422, lng: 85.78248361820786, name: "Hospital A", address: "Address A, City, State", contact: "1234567890", services: "General Medicine, Pediatrics", image: "../../static/assets/images/sanitizers/san1.jpg" },
+        { lat: 20.29198294302376, lng: 85.79758981819967, name: "Clinic B", address: "Address B, City, State", contact: "0987654321", services: "Dermatology", image: "../../static/assets/images/sanitizers/san1.jpg" },
         // Add more hospitals/clinics here
     ];
 
     var map = null;
-    var markerClusters;
+    var markersLayer;
 
     window.onload = function () {
         map = new MapmyIndia.Map('map-container', { center: [20.293944, 85.744450], zoomControl: true, hybrid: true, zoom: 10 });
-        markerClusters = L.markerClusterGroup({ chunkedLoading: true, maxClusterRadius: 100, disableClusteringAtZoom: 26, singleMarkerMode: false });
+        markersLayer = L.layerGroup();
 
-        var markers = hospitals.map(function(hospital, index) {
+        hospitals.forEach(function(hospital) {
             var pt = new L.LatLng(hospital.lat, hospital.lng);
-            var marker = new L.marker(pt, { draggable: true });
-            var popupContent = `<b>${hospital.name}</b><br>${hospital.address}<br>Contact: ${hospital.contact}<br>Services: ${hospital.services}`;
+            var markerIcon = L.icon({
+                iconUrl: '../../static/assets/images/sanitizers/icon.png',
+                iconSize: [30, 36],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+            });
+            var marker = new L.marker(pt, { icon: markerIcon, draggable: true });
+            var popupContent = `<b>${hospital.name}</b><br><img src="${hospital.image}" alt="Hospital Image" style="max-width: 100%; height: auto;border-radius:.3em;min-width:10em;z-index:0;">${hospital.address}<br>Contact: ${hospital.contact}<br>Services: ${hospital.services}<br>`;
             marker.bindPopup(popupContent);
-            return marker;
+            markersLayer.addLayer(marker);
         });
 
-        markerClusters.addLayers(markers);
-        map.addLayer(markerClusters);
+        var cluster = L.markerClusterGroup({ spiderfyOnMaxZoom: false, showCoverageOnHover: false, zoomToBoundsOnClick: false, disableClusteringAtZoom: 15, maxClusterRadius: 50, iconCreateFunction: function(cluster) {
+            return L.divIcon({ html: '<div style="background-color: #ef6356; border-radius: 50%;height:14px;width:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 5px 5px #ef6356;"><span style="color:white;font-weight:600;">' + cluster.getChildCount() + '</span></div>', className: 'marker-cluster-custom', iconSize: [40, 40] });
+        } });
+        cluster.addLayer(markersLayer);
+
+        map.addLayer(cluster);
     };
 
     // Functions for adding or removing markers can be updated or extended as needed
 </script>
-<div id="map-container"></div>
 <div id="map-container"></div>
 
 {% endblock content %}
