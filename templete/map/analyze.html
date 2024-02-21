@@ -63,12 +63,64 @@
         margin-top: 5em;
         margin-right: .4em;
     }
+    .circleOfTop{
+        height: 12em;
+        width: 12em;
+        border-radius: 50%;
+        border: 2em solid #436850;
+        border-bottom-color: rgb(233, 184, 120);
+        border-right-color: rgb(199, 150, 86);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .circleOfTop span{
+        color: #12372a;
+        font-weight: 600;
+        font-size: 1em;
+        text-align: center;
+    }
+    .measure-btns{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: .5em;
+    }
 </style>
 <div>
-    <canvas id="firstChart"></canvas>
+    <div class="col-md-12">
+        <br>
+        <span class="blogs_head">Today's Cases of Top 5 Diseases!!</span><hr><br>
+        <div class="row" style="justify-content: space-around;">
+            <div class="circleOfTop col-md-3"><span>today <br>590 cases <br> of dengue</span></div>
+            <div class="circleOfTop col-md-3"><span>today <br>590 cases <br> of dengue</span></div>
+            <div class="circleOfTop col-md-3"><span>today <br>590 cases <br> of dengue</span></div>
+            <div class="circleOfTop col-md-3"><span>today <br>590 cases <br> of dengue</span></div>
+            <div class="circleOfTop col-md-3"><span>today <br>590 cases <br> of dengue</span></div>
+        </div>
+        <br>
+
+        <div class="col-md-12 measure-btns">
+            <a href="" class="btn">Preventives</a>
+            <a href="" class="btn">Consult</a>
+            <a href="" class="btn">See Your Area</a>
+        </div>
+        <br><hr><br>
+    </div>
     <div style="position: relative;">
-        <canvas id="secondChart"></canvas>
+        <canvas id="secondChart" style="position:sticky;min-width: 100%;"></canvas>
         <select id="disease" style="position: absolute; top: 0; right: 0;">
+            <option value="dengue">Dengue</option>
+            <option value="malaria">Malaria</option>
+            <option value="chikungunya">Chikungunya</option>
+        </select>
+    </div><br>
+    <hr><br>
+    <canvas id="firstChart"></canvas><br>
+    <hr><br>
+    <div style="position: relative;">
+        <canvas id="horizontalChart" style="position:sticky;min-width: 100%;"></canvas>
+        <select id="diseaseSelect" onchange="updateChart()" style="position: absolute; top: 0; right: 0;">
             <option value="dengue">Dengue</option>
             <option value="malaria">Malaria</option>
             <option value="chikungunya">Chikungunya</option>
@@ -121,7 +173,7 @@
                 data: [3, 5, 2, 4, 1, 2, 6, 7, 5, 3, 4, 6, 8, 2, 5],
                 borderColor: 'blue',
                 borderWidth: 1,
-                fill: false
+                fill: true
             }]
         },
         options: {
@@ -144,5 +196,53 @@
         }
         secondChart.update();
     });
+
+    const ctx = document.getElementById('horizontalChart').getContext('2d');
+    let horizontalChart;
+
+    function updateChart() {
+        const selectedDisease = document.getElementById('diseaseSelect').value;
+        const data = getDataForDisease(selectedDisease);
+
+        if (horizontalChart) {
+            horizontalChart.destroy();
+        }
+
+        horizontalChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Andhra Pradesh (' + data[0] + ')', 'Arunachal Pradesh (' + data[1] + ')', 'Assam (' + data[2] + ')', 'Bihar (' + data[3] + ')', 'Chhattisgarh (' + data[4] + ')', 'Goa (' + data[5] + ')', 'Gujarat (' + data[6] + ')', 'Haryana (' + data[7] + ')', 'Himachal Pradesh (' + data[8] + ')', 'Jharkhand (' + data[9] + ')', 'Karnataka (' + data[10] + ')', 'Kerala (' + data[11] + ')', 'Madhya Pradesh (' + data[12] + ')', 'Maharashtra (' + data[13] + ')', 'Manipur (' + data[14] + ')', 'Meghalaya (' + data[15] + ')', 'Mizoram (' + data[16] + ')', 'Nagaland (' + data[17] + ')', 'Odisha (' + data[18] + ')', 'Punjab (' + data[19] + ')', 'Rajasthan (' + data[20] + ')', 'Sikkim (' + data[21] + ')', 'Tamil Nadu (' + data[22] + ')', 'Telangana (' + data[23] + ')', 'Tripura (' + data[24] + ')', 'Uttar Pradesh (' + data[25] + ')'],
+                datasets: [{
+                    label: selectedDisease.charAt(0).toUpperCase() + selectedDisease.slice(1) + ' Cases',
+                    data: data,
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    function getDataForDisease(disease) {
+        if (disease === 'dengue') {
+            return [100, 150, 80, 120, 200, 90, 140, 70, 110, 180, 95, 130, 170, 60, 100, 150, 80, 120, 200, 90, 140, 70, 110, 180, 95, 130, 170, 60]; // Update with actual data
+        } else if (disease === 'malaria') {
+            return [50, 70, 40, 90, 60, 30, 60, 35, 80, 45, 70, 55, 75, 40, 50, 70, 40, 90, 60, 30, 60, 35, 80, 45, 70, 55, 75, 40]; // Update with actual data
+        } else if (disease === 'chikungunya') {
+            return [30, 40, 20, 50, 35, 15, 25, 10, 30, 20, 40, 30, 45, 20, 30, 40, 20, 50, 35, 15, 25, 10, 30, 20, 40, 30, 45, 20]; // Update with actual data
+        } else {
+            return Array(29).fill(0); // Update with actual data for all 29 states
+        }
+    }
+
+    updateChart();
 </script>
 {% endblock content %}
