@@ -64,7 +64,7 @@
                 <div id="nav-content">
                     <div class="nav-button {% if request.path == '/' %}active{% endif %}"><a href="{% url 'home:index' %}"><i class="fas fa-home"></i><span>Home</span></a></div>
                     <div class="nav-button {% if '/map/' in request.path %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span>Map</span></a></div>
-                    <div class="nav-button"><a href=""><i class="fas fa-thumbtack"></i><span>Materials</span></a></div>
+                    <div class="nav-button {% if '/material/' in request.path %}active{% endif %}"><a href="{% url 'material:index-material' %}"><i class="fas fa-thumbtack"></i><span>Materials</span></a></div>
                     <div class="nav-button"><a href=""><i class="fas fa-heart"></i><span>Notifications</span></a></div>
                     <div class="nav-button"><a href=""><i class="fas fa-user"></i><span>Profile</span></a></div>
         
@@ -179,6 +179,7 @@
 
     <!-- user scripts -->
     <script src="{% static 'assets/js/defiendChart.js' %}"></script>
+    <script src="{% static 'assets/js/donut.js' %}"></script>
     <script src="{% static 'assets/js/basics.js' %}"></script>
     <script src="{% static 'assets/js/userauth.js' %}"></script>
 </body>

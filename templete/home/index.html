@@ -10,24 +10,29 @@
             <div class="cont" onload="changePos()">
                 <ul class="ultra">
                     <li class="tab-0">
-                        <strong>PAYMENTS</strong> <span class="date">JULY 9 </span></br>
-                        <p>Radar will now automatically allow any payment that is protected from being disputed for fraud due to a liability shift. For example, if the payment is verified by 3D Secure.</p>
+                        <strong>SANITAS DISEASE</strong> <span class="date">JULY 9 </span></br>
+                        <span>New updates on Sanitas Disease. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br>
+                        <a href="" class="btn">Know More</a>
                     </li>
                     <li class="tab-1">
-                        <strong>DASHBOARD</strong> <span class="date">JULY 9 </span></br>
-                        <p>Upgrade to version 2.0 of our iOS Dashboard app, which includes a new design, an updated home screen, and iPhone X support.</p>
+                        <strong>EDUCATIONAL VIDEOS</strong> <span class="date">JULY 9 </span></br>
+                        <span>Check out our latest educational videos covering a wide range of topics. Don't miss out!</span><br>
+                        <a href="" class="btn">Know More</a>
                     </li>
                     <li class="tab-2"> 
-                        <strong>RADAR</strong> <span class="date">JULY 9 </span></br>
-                        <p>Rules can now compare numerical metadata. For example, reviews could trigger if <strong><code>::customer_age:: < 21 </code></strong> (if you pass in custom metadata for a customer's age). </p>
+                        <strong>RECOMMENDED BOOKS</strong> <span class="date">JULY 9 </span></br>
+                        <span>Explore our curated list of recommended books for further reading and knowledge enhancement.</span><br>
+                        <a href="" class="btn">Know More</a>
                     </li>
                     <li class="tab-3">
-                        <strong>DASHBOARD</strong> <span class="date">JULY 9 </span></br>
-                        <p>Upgrade to version 2.0 of our iOS Dashboard app, which includes a new design, an updated home screen, and iPhone X support.</p>
+                        <strong>EDUCATIONAL VIDEOS</strong> <span class="date">JULY 9 </span></br>
+                        <span>More educational videos added to our collection. Stay informed and educated!</span><br>
+                        <a href="" class="btn">Know More</a>
                     </li>
                     <li class="tab-4"> 
-                        <strong>RADAR</strong> <span class="date">JULY 9 </span></br>
-                        <p>Rules can now compare numerical metadata. For example, reviews could trigger if <strong><code>::customer_age:: < 21 </code></strong> (if you pass in custom metadata for a customer's age). </p>
+                        <strong>RECOMMENDED BOOKS</strong> <span class="date">JULY 9 </span></br>
+                        <span>Discover new books in our recommended list. Expand your reading horizons with us.</span><br>
+                        <a href="" class="btn">Know More</a>
                     </li>
                 </ul>
             </div>
@@ -35,82 +40,177 @@
         <div class="col-md-6">
             <span class="blogs_head">About Us</span><hr><br>
             <p style="color: var(--navbar-dark-secondary);">Imagine having access to a real-time map that not only visualizes disease hotspots but also predicts future outbreaks, all at your fingertips. The Disease Heatmap, a groundbreaking mapping system, is set to revolutionize how we monitor and respond to health threats in our communities. </p>
+            <a href="#" class="btn">Know More</a>
         </div>
     </div>
     
 </div>
-
-<div class="col-md-12 recent-map">
-    <span class="blogs_head">Sanitas Map</span><hr><br>
-    <div class="featured-map">
-        <div class="map-home">
-            <div class="row">
-                <p class="col-md-12 map-hometext">
-                    In today's interconnected world, understanding health trends and disease outbreaks in our vicinity is crucial for timely response and preventive measures. To address this need, a cutting-edge mapping system has been developed, integrating advanced technology to display both real-time disease data and predictive analytics. This innovative map not only provides users with a visual representation of disease hotspots but also offers insights into the top five prevalent diseases in the area.
-                </p>
-                <style>
-                    .mapimage{
-                        max-height: 15em;
-                    }
-                </style>
-                <div class="col-md-6 mb-4">
-                    <span class="blogs_head">Sanitas Heat-Map</span>
-                    <a href="{% url 'map:heat-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/heat-map.png" alt=""></a>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <span class="blogs_head">Sanitas Sanitizers-Map</span>
-                    <a href="{% url 'map:cluster-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/cluster-map.png" alt=""></a>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <span class="blogs_head">Sanitas Env Health-Map</span>
-                    <a href="{% url 'map:env-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/env-map.png" alt=""></a>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <span class="blogs_head">Sanitas Analytics</span>
-                    <a href="{% url 'map:analyze' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/analyze.png" alt=""></a>
-                </div>
-            </div>
-            <style>
-                .view-blog{
-                    display: flex;
-                    align-items: center;
-                    justify-content: right;
-                }
-            </style>
-            <div class="col-md-12 view-blog">
-                <a href="{% url 'map:index-map' %}"><button class="btn">View All Maps</button></a>
+<div class="col-md-12">
+    <br>
+    <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><br>
+    <div class="row">
+        <div class="col-md-3 donuts">
+            <canvas id="donutChart1" width="100" height="100"></canvas>
+            <span class="donutsText">400<span class="material-symbols-outlined">straight </span></span>
+        </div>
+        <div class="col-md-3 donuts">
+            <canvas id="donutChart2" width="100" height="100"></canvas>
+            <span class="donutsText">300<span class="material-symbols-outlined">straight </span></span>
+        </div>
+        <div class="col-md-3 donuts">
+            <canvas id="donutChart3" width="100" height="100"></canvas>
+            <span class="donutsText">500<span class="material-symbols-outlined">straight </span></span>
+        </div>
+        <div class="col-md-3 donuts">
+            <canvas id="donutChart4" width="100" height="100"></canvas>
+            <span class="donutsText">250<span class="material-symbols-outlined">straight </span></span>
+        </div>
+        <div class="col-md-3 donuts">
+            <canvas id="donutChart5" width="100" height="100"></canvas>
+            <span class="donutsText">350<span class="material-symbols-outlined">straight </span></span>
+        </div>
+        <div class="col-md-3 donuts">
+            <canvas id="donutChart6" width="100" height="100"></canvas>
+            <span class="donutsText">350<span class="material-symbols-outlined">straight </span></span>
+        </div>
+        <div class="col-md-3 donuts">
+            <canvas id="donutChart7" width="100" height="100"></canvas>
+            <span class="donutsText">350<span class="material-symbols-outlined">straight </span></span>
+        </div>
+        <div class="col-md-3 donuts">
+            <div class="measure-btns">
+                <a href="" class="btn"><i class="material-symbols-outlined">home_health</i> Preventives</a>
+                <a href="" class="btn"><i class="material-symbols-outlined">headset_mic</i> Consult</a>
+                <a href="" class="btn"><i class="material-symbols-outlined">Travel_Explore</i> See Your Area</a>
             </div>
         </div>
     </div>
+    <br>
+
+    <br>
 </div>
+
 <div class="col-md-12 recent-blog">
     <span class="blogs_head">Blogs</span><hr><br>
-    <div class="featured-carousel owl-carousel col-md-12">
-        {% for p in posts %}
+        {% for p in blogs %}
         <div class="item mx-1 col-md-12">
-            <div class="card">
-                <a href="{% url 'creation:blog-detail' p.id %}">
-                    <img src="../../static/assets/images/blogs/sample.jpeg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <span class="cat">{{ p.title }}</span><br>
-                    <time datetime="{{ p.date_posted }}">
-                        <i class="fas fa-calendar-alt mr-2"></i><span style="margin-left: .2em;">{{ p.date_posted }}</span>
-                    </time>
-                    <div class="col-md-12">
-                        <a href="{% url 'creation:blog-detail' p.id %}" class="btn">Read More</a>
-                        <a href="{% url 'creation:like-post' pk=p.id %}" class="btn"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>
-                        <a href="{% url 'creation:blog-detail' p.id %}" class="btn"><i class="fa-solid fa-message"></i><span style="margin-left: .2em;">{{ comments.count }}</span></a>
+            <div class="card" style="overflow: hidden;">
+                <div class="row col-md-12">
+                    <a class="col-md-4" href="{% url 'creation:blog-detail' p.id %}">
+                        <img class="col-md-4" src="{{ p.image.url }}" class="card-img-top" alt="..." style="min-width: 100%;max-height: 260px;object-fit: cover;">
+                    </a>
+                    <div class="card-body col-md-8" style="padding: 10px;">
+                        <div class="my-1">
+                            <div class="ck ck-content" style="max-height: 100px;overflow: hidden;">{{ p.content|safe }}</div>
+                        </div>
+                        <time datetime="{{ p.date_posted }}" style="color: var(--navbar-dark-primary); font-size: 0.9em;">
+                            <i class="fas fa-calendar-alt mr-2"></i><span style="margin-left: .2em;">{{ p.date_posted }}</span>
+                        </time>
+                        <div class="col-md-12" style="margin-top: 10px;">
+                            <a href="{% url 'creation:blog-detail' p.id %}" class="btn btn-primary">Read More</a>
+                            <a href="{% url 'creation:like-post' pk=p.id %}" class="btn btn-secondary"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>
+                            <a href="{% url 'creation:blog-detail' p.id %}" class="btn btn-secondary"><i class="fa-solid fa-message"></i><span style="margin-left: .2em;">{{ comments.count }}</span></a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
-        </div>
+        </div><br>
         {% endfor %}
-    </div>
-    <br>
-    <div class="col-md-12 view-blog">
-        <a href="{% url 'creation:blog' %}"><button class="btn">View All</button></a>
-    </div>
 </div>
+
+<style>
+    .pagination-outer {
+        text-align: center;
+    }
+
+    .pagination {
+        display: inline-flex;
+        position: relative;
+    }
+
+    .pagination:before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #e8e8e8;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .pagination li a.page-link {
+        padding: 5px 15px;
+        margin-right: 15px;
+        background: var(--navbar-light-secondary);
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        box-shadow: 0 8px 6px -9px #5b5f5f;
+        font-size: 17px;
+        color: #686c6c;
+    }
+
+    .pagination li:first-child a.page-link {
+        margin-right: 30px;
+    }
+
+    .pagination li:last-child a.page-link {
+        margin: 0 0 0 15px;
+    }
+
+    .pagination li.active a.page-link,
+    .pagination li a.page-link:hover {
+        background: var(--navbar-dark-secondary);
+        border-color: var(--navbar-dark-primary);
+        color: #fff;
+    }
+
+    @media only screen and (max-width: 479px) {
+        .pagination {
+            display: block;
+            overflow: auto;
+        }
+
+        .pagination:before {
+            display: none;
+        }
+
+        .pagination li {
+            display: inline-block;
+        }
+    }
+</style>
+
+<div class="demo">
+    <nav class="pagination-outer" aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item">
+                {% if blogs.has_previous %}
+                <a href="?page={{ blogs.previous_page_number }}" class="page-link" aria-label="Previous">
+                    <span aria-hidden="true">Prev</span>
+                </a>
+                {% endif %}
+            </li>
+            <li>
+                {% for page in paginator.page_range %}
+                {% if page == paginator.number %}
+                <li class="page-item active"><a class="page-link">{{ page }}</a></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{page}}">{{ page }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </li>
+            <li>
+                {% if blogs.has_next %}
+                <a href="?page={{ blogs.next_page_number }}" class="page-link" aria-label="Next">
+                    <span aria-hidden="true">Next</span>
+                </a>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+</div>
+
 
 {% endblock content %}

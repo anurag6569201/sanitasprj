@@ -161,9 +161,10 @@ JAZZMIN_SETTINGS = {
 
 AUTH_USER_MODEL='userauths.User'
 
+
 # ckeditor
 CKEDITOR_UPLOAD_PATH = "uploads/"
-
+CKEDITOR_5_FILE_STORAGE = "sanitasprj.storage.CustomStorage"
 customColorPalette = [
         {
             'color': 'hsl(4, 90%, 58%)',

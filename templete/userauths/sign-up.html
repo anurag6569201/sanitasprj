@@ -5,15 +5,36 @@
 <div class="container">
     <div class="main-container">
         <div class="main-content">
-            <div class="slide-container" style="background-image: url(../../static/assets/images/userauths/laptopframe.png);">
-                <div class="slide-content" id="slide-content">
-                    <img src="{% static 'assets/images/userauths/slide (1).jpg' %}" alt="slide image" class="active">
-                    <img src="{% static 'assets/images/userauths/slide (2).jpg' %}" alt="slide image">
-                    <img src="{% static 'assets/images/userauths/slide (3).jpg' %}" alt="slide image">
-                    <img src="{% static 'assets/images/userauths/slide (4).jpg' %}" alt="slide image">
-                    <img src="{% static 'assets/images/userauths/slide (5).jpg' %}" alt="slide image">
+            <div class="computer-frame">
+                <div class="computer">
+                    <img src="https://www.bebold.ch/img/home/macbook-white.png" alt="MacBook Computer Apple">
+                    <div class="slide-content">
+                        <div class="gif gif1" style="background-position-y: 50%;"></div>
+                        <div class="gif gif2" style="background-position-y: 50%;"></div>
+                        <div class="gif gif3" style="background-position-y: 50%;"></div>
+                        <div class="gif gif4" style="background-position-y: 50%;"></div>
+                        <div class="gif gif5" style="background-position-y: 50%;"></div>
+                    </div>
                 </div>
             </div>
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("gif");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.opacity = "0";
+                        slides[i].style.visibility = "hidden";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}
+                    slides[slideIndex-1].style.opacity = "1";
+                    slides[slideIndex-1].style.visibility = "visible";
+                    setTimeout(showSlides, 2000);
+                }
+            </script>
             <div class="form-container">
                 <div class="form-content box">
                     <div class="logo">
@@ -86,7 +107,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="footer">
+    <div class="footer">
         <div class="links">
             <a href="#">About</a>
             <a href="#">Blog</a>
@@ -103,6 +124,6 @@
         <div class="copyright">c
             © 2021 Instagram from Facebook
         </div>
-    </div> -->
+    </div>
 </div>
 {% endblock content %}

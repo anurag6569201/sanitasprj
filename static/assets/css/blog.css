@@ -6,7 +6,6 @@
 
 .blog .item:first-child .card {
     border-top-left-radius: 0;
-    background-color: var(--navbar-dark-secondary);
     color: var(--navbar-light-secondary);
 }
 
@@ -187,9 +186,10 @@
     color: var(--navbar-dark-primary);
 }
 .maincontent{
+    border: 1px solid var(--navbar-light-secondary);
+    background-color: white;
     width: 100%;
-    background-color: var(--navbar-light-secondary);
-    padding: .3em;
+    padding: 1.3em;
     border-radius: .2em;
 }
 .postcard__tagbox{

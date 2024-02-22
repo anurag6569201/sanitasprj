@@ -29,6 +29,7 @@ urlpatterns = [
     path('notify/', include('notification.urls')),
     path('creation/', include('creation.urls')),
     path('profile/', include('plofile.urls')),
+    path('material/', include('material.urls')),
 
     # authentication urls
     path('user/',include('userauths.urls')),

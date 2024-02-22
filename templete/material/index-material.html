@@ -1,0 +1,45 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="col-md-12 full-page">
+    <br>
+    <span class="blogs_head">Sanitas Project Overview</span><hr><br>
+    <div class="col-md-12 card-container">
+        <!-- Card 1: Disease Information -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="path_to_disease_image" class="card-img-top" alt="Disease Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Disease Information</h5>
+                        <p class="card-text">Information about different diseases.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="path_to_video_image" class="card-img-top" alt="Video Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Educational Videos</h5>
+                        <p class="card-text">Watch informative videos on various topics.</p>
+                        <a href="#" class="btn btn-primary">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="path_to_book_image" class="card-img-top" alt="Book Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Recommended Books</h5>
+                        <p class="card-text">Explore recommended books for further reading.</p>
+                        <a href="#" class="btn btn-primary">View Books</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -6,6 +6,7 @@ from django_ckeditor_5.fields import CKEditor5Field
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
+    image=models.ImageField(upload_to="blog_images",default="../../static/assets/images/blogs/sample.jpeg")
     content=CKEditor5Field(config_name='extends')
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)

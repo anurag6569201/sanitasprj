@@ -6,7 +6,6 @@
 <section class="light">
     <div class="container-fluid">
         <div class="blogs_head">
-            Blogs <hr>
         </div>
         <article class="postcard light blue">
             <div class="postcard__text">
@@ -16,7 +15,7 @@
                         <span class="posttitle">{{ post.title }}</span><br><span class="timedate">{{ post.date_posted }}</span>
                     </p>
                 </div>
-                <div class="maincontent my-3">
+                <div class="maincontent my-3" style="overflow: hidden;">
                     <div class="ck ck-content">{{ post.content|safe }}</div>
                 </div>
                 <ul class="postcard__tagbox">

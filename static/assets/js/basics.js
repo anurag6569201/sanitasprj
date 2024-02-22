@@ -35,7 +35,6 @@ function changePos(){
     return a.className !== undefined;
   })
   
-  console.log(y)
   let z = findValue(y,"tab-1");
   
   function findValue(arr, str){

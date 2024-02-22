@@ -65,7 +65,16 @@
     justify-content: right;
     align-items: center;
 }
-
+.recent-blog .card{
+    display: flex;
+    border: 1px solid var(--navbar-light-secondary); 
+    border-radius: 5px; 
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    gap: 1em;
+}
 .search-box input{
     background-color: transparent;
     border: 1px solid var(--navbar-dark-primary);
