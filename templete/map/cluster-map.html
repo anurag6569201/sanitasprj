@@ -2,76 +2,13 @@
 {% load static %}
 
 {% block content %}
-<style type="text/css">
-    html {
-        height: 100%;
-    }
-
-    body {
-        height: 100%;
-        font-family: Verdana, sans-serif, Arial;
-        color: #000;
-        margin: 0;
-        font-size: 14px;
-        padding: 0;
-    }
-
-    #map-container {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        border: 1px solid #cccccc;
-    }
-
-    #result {
-        position: absolute;
-        left: 2px;
-        top: 46px;
-        width: 306px;
-        bottom: 2px;
-        border: 1px solid #cccccc;
-        background-color: #FAFAFA;
-        overflow: auto;
-        font-family: Verdana, sans-serif, Arial;
-    }
-
-    button {
-        width: 220px;
-        font-family: Verdana, sans-serif, Arial;
-        font-size: 12px;
-        padding: 2px 0;
-        color: #333
-    }
-    .search-box,
-    #bignav {
-        z-index: 1000;
-    }
-    .search-box input {
-        background-color: var(--navbar-light-secondary);
-        border: 1px solid var(--navbar-dark-primary);
-    }
-
-    .search-box .btn {
-        background-color: var(--navbar-light-secondary);
-    }
-
-    #flsc_dv {
-        margin-top: 5em;
-        margin-right: .4em;
-    }
-</style>
-
-<script
-    src="https://apis.mapmyindia.com/advancedmaps/v1/9440dc184957cb68062acbd0187f20f5/map_load?v=1.5&plugin=cluster"></script>
+<script src="https://apis.mapmyindia.com/advancedmaps/v1/9440dc184957cb68062acbd0187f20f5/map_load?v=1.5&plugin=cluster"></script>
 <link rel="stylesheet" href="css/MarkerCluster.css" />
 <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
 <script>
     var hospitals = [
         { lat: 20.286186559784422, lng: 85.78248361820786, name: "Hospital A", address: "Address A, City, State", contact: "1234567890", services: "General Medicine, Pediatrics", image: "../../static/assets/images/sanitizers/san1.jpg" },
         { lat: 20.29198294302376, lng: 85.79758981819967, name: "Clinic B", address: "Address B, City, State", contact: "0987654321", services: "Dermatology", image: "../../static/assets/images/sanitizers/san1.jpg" },
-        // Add more hospitals/clinics here
     ];
 
     var map = null;
@@ -103,7 +40,6 @@
         map.addLayer(cluster);
     };
 
-    // Functions for adding or removing markers can be updated or extended as needed
 </script>
 <div id="map-container"></div>
 

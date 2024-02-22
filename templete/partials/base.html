@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/blog.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/map.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/updates.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/analyze.css' %}">
 
     <!-- global stylesheet -->
     <link rel="stylesheet" href="{% static 'assets/css/global.css' %}">
@@ -55,14 +56,14 @@
         <nav id="bignav">
             <div class="nav-bar">
                 <input id="nav-toggle" type="checkbox" />
-                <div id="nav-header"><a id="nav-title" href="#"><img src="../../static/assets/images/userauths/favicon.png"
-                            alt=""><span>Sanitas</span></a>
+                <div id="nav-header"><span id="nav-title" href="#"><img src="../../static/assets/images/userauths/favicon.png"
+                            alt=""><span>Sanitas</span></span>
                     <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
                     <hr />
                 </div>
                 <div id="nav-content">
                     <div class="nav-button {% if request.path == '/' %}active{% endif %}"><a href="{% url 'home:index' %}"><i class="fas fa-home"></i><span>Home</span></a></div>
-                    <div class="nav-button {% if request.path == '/map/' %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span>Map</span></a></div>
+                    <div class="nav-button {% if '/map/' in request.path %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span>Map</span></a></div>
                     <div class="nav-button"><a href=""><i class="fas fa-thumbtack"></i><span>Materials</span></a></div>
                     <div class="nav-button"><a href=""><i class="fas fa-heart"></i><span>Notifications</span></a></div>
                     <div class="nav-button"><a href=""><i class="fas fa-user"></i><span>Profile</span></a></div>
@@ -173,6 +174,11 @@
         });
     </script>
 
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- user scripts -->
+    <script src="{% static 'assets/js/defiendChart.js' %}"></script>
     <script src="{% static 'assets/js/basics.js' %}"></script>
     <script src="{% static 'assets/js/userauth.js' %}"></script>
 </body>

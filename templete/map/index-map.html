@@ -1,6 +1,44 @@
 {% extends 'partials/base.html' %}
 {% load static %}
-
 {% block content %}
+
+<div class="col-md-12 recent-map">
+    <span class="blogs_head">Sanitas Map</span><hr><br>
+    <div class="featured-map">
+        <div class="map-home">
+            <div class="row">
+                <p class="col-md-12 map-hometext">
+                    In today's interconnected world, understanding health trends and disease outbreaks in our vicinity is crucial for timely response and preventive measures. To address this need, a cutting-edge mapping system has been developed, integrating advanced technology to display both real-time disease data and predictive analytics. This innovative map not only provides users with a visual representation of disease hotspots but also offers insights into the top five prevalent diseases in the area.
+                </p>
+                <style>
+                    .mapimage{
+                        max-height: 15em;
+                    }
+                </style>
+                <div class="col-md-6 mb-4">
+                    <span class="blogs_head">Sanitas Heat-Map</span>
+                    <p>Explore the current heat map of diseases in your area. This map provides real-time data on the prevalence of diseases, helping you stay informed and take necessary precautions.</p>
+                    <a href="{% url 'map:heat-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/heat-map.png" alt=""></a>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <span class="blogs_head">Sanitas Sanitizers-Map</span>
+                    <p>Find the nearest sanitization stations in your area. This map displays the locations of sanitization stations, helping you maintain hygiene and prevent the spread of diseases.</p>
+                    <a href="{% url 'map:cluster-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/cluster-map.png" alt=""></a>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <span class="blogs_head">Sanitas Env Health-Map</span>
+                    <p>Check the environmental health of your area. This map provides insights into the environmental factors that may contribute to the spread of diseases, helping you make informed decisions.</p>
+                    <a href="{% url 'map:env-map' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/env-map.png" alt=""></a>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <span class="blogs_head">Sanitas Data Visualization</span>
+                    <p>Explore the Sanitas data in a more interactive way. This visualization provides a dynamic representation of the disease data, helping you understand the trends and patterns more effectively.</p>
+                    <a href="{% url 'map:analyze' %}"><img class="col-md-12 mapimage" src="../../static/assets/images/map/analyze.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock content %}

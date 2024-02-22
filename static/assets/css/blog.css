@@ -6,7 +6,7 @@
 
 .blog .item:first-child .card {
     border-top-left-radius: 0;
-    background-color: var(--navbar-dark-primary);
+    background-color: var(--navbar-dark-secondary);
     color: var(--navbar-light-secondary);
 }
 

@@ -1,8 +1,8 @@
-let slide_content = document.querySelector('#slide-content')
-let signin_form = document.querySelector('#signin-form')
-let signin_btn = document.querySelector('#signin-btn')
-let darkmode_toggle = document.querySelector('#darkmode-toggle')
-let slide_index = 0
+const slide_content = document.querySelector('#slide-content')
+const signin_form = document.querySelector('#signin-form')
+const signin_btn = document.querySelector('#signin-btn')
+const darkmode_toggle = document.querySelector('#darkmode-toggle')
+const slide_index = 0
 
 slide = () => {
     let slide_items = slide_content.querySelectorAll('img')

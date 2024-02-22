@@ -82,6 +82,7 @@
 }
 
 .nav-bar a {
+    width: 100%;
     color: inherit;
     text-decoration: inherit;
     display: flex;

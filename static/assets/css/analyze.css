@@ -1,0 +1,168 @@
+#map-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #cccccc;
+}
+#map {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#result {
+    position: absolute;
+    left: 2px;
+    top: 46px;
+    width: 306px;
+    bottom: 2px;
+    border: 1px solid #cccccc;
+    background-color: #FAFAFA;
+    overflow: auto;
+    font-family: Verdana, sans-serif, Arial;
+}
+
+button {
+    width: 220px;
+    font-family: Verdana, sans-serif, Arial;
+    font-size: 12px;
+    padding: 2px 0;
+    color: #333
+}
+#diseaseSelection,
+#dataTypeSelector,
+.search-box,
+#stateSelector,
+#bignav {
+    z-index: 1000;
+}
+
+.search-box input {
+    background-color: var(--navbar-light-secondary);
+    border: 1px solid var(--navbar-dark-primary);
+}
+
+.search-box .btn {
+    background-color: var(--navbar-light-secondary);
+}
+#diseaseSelection {
+    margin-top: .5em;
+    color: var(--navbar-dark-primary);
+}
+
+#diseaseSelection button {
+    font-size: .8em;
+    border: 1px solid var(--navbar-dark-primary);
+    background-color: var(--navbar-light-secondary);
+    border-radius: .3em;
+}
+
+#diseaseSelection select {
+    font-size: .8em;
+    padding: .1em 1em;
+    border: 1px solid var(--navbar-dark-primary);
+    background-color: var(--navbar-light-secondary);
+}
+
+#diseaseSelection label {
+    font-weight: 700;
+}
+
+
+#flsc_dv {
+    margin-top: 5em;
+    margin-right: .4em;
+}
+
+#stateSelector select {
+    font-size: .8em;
+    padding: .1em 1em;
+    border: 1px solid var(--navbar-dark-primary);
+    background-color: var(--navbar-light-secondary);
+}
+
+#dataTypeSelector,
+#stateSelector {
+    margin-top: .5em;
+    color: var(--navbar-dark-primary);
+    margin-left: 1vw;
+    border-radius: .3em;
+    max-width: 10em;
+    font-size: .8em;
+    border: 1px solid var(--navbar-dark-primary);
+    background-color: var(--navbar-light-secondary);
+    border-radius: .3em;
+}
+
+.circleOfTop {
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+    border: 2em solid #436850;
+    border-bottom-color: rgb(233, 184, 120);
+    border-right-color: rgb(199, 150, 86);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.circleOfTop span {
+    color: #12372a;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+}
+
+.measure-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.measure-btns a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donuts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.donuts .donutsText {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    color: #12372a;
+    font-size: 1.4em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#disease,
+#diseaseSelect {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#secondChart,
+#horizontalChart {
+    position: sticky;
+    min-width: 100%;
+}
