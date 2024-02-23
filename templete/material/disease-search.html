@@ -2,6 +2,36 @@
 {% load static %}
 
 {% block content %}
-{{ data | safe | escape }}
+
+<div class="col-md-12">
+    <div class="creditXML">
+        <div class="col-md-12">
+            <br>
+            <span>Reference : </span>
+            <a href="https://medlineplus.gov/">MedlinePlus.gov</a>
+        </div><hr>
+        <div class="col-md-12">
+            <span>About MedlinePlus : </span>
+            <span>MedlinePlus is an online health information resource for patients and their families and friends. It is a service of the National Library of Medicine (NLM), the world's largest medical library, which is part of the National Institutes of Health (NIH).</span>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <form class="d-flex search-box" role="search" method="get" action="{% url 'material:disease' %}">
+                    {% csrf_token %}
+                    <input class="form-control me-2" type="search" placeholder="Search diseases..." aria-label="Search" name="q">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="outputxml">
+        {% autoescape off %}
+        {{ data.description }}
+        {% endautoescape %}
+    </div>
+</div>
 
 {% endblock content %}
