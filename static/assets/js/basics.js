@@ -4,7 +4,6 @@ function changePos(){
   var x = document.getElementsByClassName("ultra")[0].childNodes;
   x = Array.from(x)
    
-  // console.log(x);
   for(var i=1; i<x.length;i+=2){  
     if(x[i].classList.contains("tab-0")){
       x[i].classList.remove("tab-0");
