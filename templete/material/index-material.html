@@ -24,27 +24,17 @@
                     <div class="card-body">
                         <h5 class="card-title">Nutrients & Calories</h5>
                         <p class="card-text">To Know a balanced diet and calculate your workout calories</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <a href="{% url 'material:calorie' %}" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="path_to_book_image" class="card-img-top" alt="Book Image">
+                    <img src="../../static/assets/images/material/resource.png" style="max-height: 10em;object-fit: contain;" class="card-img-top" alt="Disease Image">
                     <div class="card-body">
-                        <h5 class="card-title">Recommended Books</h5>
-                        <p class="card-text">Discover recommended books to enhance your knowledge and understanding.</p>
-                        <a href="#" class="btn btn-primary">View Books</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="path_to_tool_image" class="card-img-top" alt="Tool Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Useful Tools</h5>
-                        <p class="card-text">Explore useful tools to enhance your experience and knowledge.</p>
-                        <a href="#" class="btn btn-primary">Explore Tools</a>
+                        <h5 class="card-title">Resources</h5>
+                        <p class="card-text">Discover recommended books and educational clips</p>
+                        <a href="{% url 'material:resource' %}" class="btn btn-primary">View More</a>
                     </div>
                 </div>
             </div>

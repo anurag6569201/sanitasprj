@@ -37,3 +37,29 @@ def disease(request):
     }
 
     return render(request, "material/disease-search.html", context)
+
+
+def calorie(request):
+    input_dish = request.GET.get('q','2egg')
+    print(input_dish)
+    url = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
+    headers = {
+        'Content-Type': 'application/json',
+        'x-app-id': '86805170',
+        'x-app-key': '4dea52376db1086b8ab3b5d0cdcc53c5'
+    }
+    data = {
+        'query': 'egg'
+    }
+
+    response = requests.post(url, headers=headers, json=data)
+    calorie_data=response.json()
+    print(calorie_data)
+
+    context={
+        'calorie_data':calorie_data,
+    }
+    return render(request,"material/calorie.html",context)
+
+def resource(request):        
+    return render(request,"material/resource.html")
