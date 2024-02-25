@@ -1,0 +1,91 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/profile.css' %}">
+<div class="col-md-12 profile">
+    <div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top: 1em;margin-bottom: 0;padding: .5em;">
+        <strong>Hello {{userprofile.name}} {{userprofile.surname}}!!</strong> Wanted to be Sanitizer!! <button class="alertbtn">Yes</button><button class="alertbtn" type="button" data-bs-dismiss="alert" aria-label="Close">No</button>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="col-md-12">
+        <br>
+        <div class="background-image">
+            <img src="{{userprofile.profile_image.url}}" alt="" class="profile-background">
+            <div class="profile-image">
+                <img src="{{userprofile.profile_image.url}}" alt="">
+            </div>
+            <a href="{% url 'plofile:verifier_edit' %}" class="edit-profile"><span class="material-symbols-outlined">edit</span>Edit Profile</a>
+        </div>
+        <div class="col-md-12">
+            <br>
+            <div class="row text-center basicInfo px-3 g-3">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">{{ userprofile.name }} {{ userprofile.surname }}</div>
+                <div class="col-md-3">{{ userprofile.email }}</div>
+                <div class="col-md-3">{{ userprofile.state_region }}</div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <br>
+            <div class="col-md-12">
+                <div class="row postProfile px-3 gx-3">
+                    <div class="col-md-3 active postProfilesub">Basic Info</div>
+                    <div class="col-md-9 postProfilesub">Post ({{userposts.count}})</div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row postProfileDetail mx-2 active">
+                    <span><b>Phone No : </b>{{ userprofile.mobile_number }}</span><hr>
+                    <span><b>Address : </b>{{ userprofile.address }} ( {{userprofile.postcode}} )</span><hr>
+                    <span><b>Education : </b>{{ userprofile.education }}</span><hr>
+                    <span><b>Country : </b>{{ userprofile.country }}/{{ userprofile.state_region }}</span>
+                </div>
+                <div class="row postProfileDetail mx-2">
+                    <span class="col-md-12"><b>Total Post :</b> {{userposts.count}}</span>
+                    {% for p in blogs %}
+                    <div class="item px-2 my-2 col-md-12">
+                        <div class="card" style="overflow: hidden;background-color: transparent;">
+                            <div class="row col-md-12">
+                                <a class="col-md-4" href="{% url 'creation:blog-detail' p.id %}">
+                                    <img class="col-md-4" src="{{ p.image.url }}" class="card-img-top" alt="..." style="min-width: 100%;max-height: 260px;object-fit: cover;">
+                                </a>
+                                <div class="card-body col-md-8" style="padding: 10px;">
+                                    <div class="my-1">
+                                        <div class="ck ck-content" style="max-height: 100px;overflow: hidden;">{{ p.content|safe }}</div>
+                                    </div>
+                                    <time datetime="{{ p.date_posted }}" style="color: var(--navbar-dark-primary); font-size: 0.9em;">
+                                        <i class="fas fa-calendar-alt mr-2"></i><span style="margin-left: .2em;">{{ p.date_posted }}</span>
+                                    </time>
+                                    <div class="col-md-12" style="margin-top: 10px;">
+                                        <a href="{% url 'creation:blog-detail' p.id %}" class="btn btn-primary">Read More</a>
+                                        <a href="{% url 'creation:like-post' pk=p.id %}" class="btn btn-secondary"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>
+                                        <a href="{% url 'creation:blog-detail' p.id %}" class="btn btn-secondary"><i class="fa-solid fa-message"></i><span style="margin-left: .2em;">{{ comments.count }}</span></a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <script>
+            const postProfile = document.querySelectorAll('.postProfile .postProfilesub');
+            const postProfileDetail = document.querySelectorAll('.postProfileDetail');
+
+            postProfile.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    postProfile.forEach(item => item.classList.remove('active'));
+                    postProfileDetail.forEach(item => item.classList.remove('active'));
+
+                    this.classList.add('active');
+                    postProfileDetail[index].classList.add('active');
+                });
+            });
+        </script>
+    </div>
+</div>
+
+{% endblock content %}

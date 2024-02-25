@@ -68,7 +68,7 @@
                     <div class="nav-button {% if '/map/' in request.path %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span>Map</span></a></div>
                     <div class="nav-button {% if '/material/' in request.path %}active{% endif %}"><a href="{% url 'material:index-material' %}"><i class="fas fa-thumbtack"></i><span>Materials</span></a></div>
                     <div class="nav-button"><a href=""><i class="fas fa-heart"></i><span>Notifications</span></a></div>
-                    <div class="nav-button"><a href=""><i class="fas fa-user"></i><span>Profile</span></a></div>
+                    <div class="nav-button {% if '/profile/' in request.path %}active{% endif %}"><a href="{% url 'plofile:index-profile' %}"><i class="fas fa-user"></i><span>Profile</span></a></div>
         
                     <div id="nav-content-highlight"></div>
                 </div>

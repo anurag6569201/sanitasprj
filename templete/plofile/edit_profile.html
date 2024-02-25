@@ -1,0 +1,69 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/profile.css' %}">
+<div class="col-md-12 profile">
+    <form method="post" enctype="multipart/form-data" id="profileForm">
+    {% csrf_token %}
+    <div class="col-md-12">
+        <br>
+        <div class="background-image">
+            <img src="{{userprofile.profile_image.url}}" alt="" class="profile-background">
+            <div class="profile-image">
+                <img src="{{userprofile.profile_image.url}}" alt="">
+            </div>
+            <div class="form-group choosingImage" style="margin-top: 1em;">
+                <input style="padding: .2em 1em;font-size: 1.em;width: 200px;color: #12372a;" type="file" name="profile_image" accept="image/*" id="id_profile_image">
+            </div>
+            <button class="edit-profile"><span class="material-symbols-outlined">save</span>Save Profile</button>
+        </div>
+        <div class="col-md-12">
+            <br>
+            <div class="row text-center px-3 g-3">
+                <div class="col-md-3"></div>
+                <div class="col-md-1">{{ form.name }}</div>
+                <div class="col-md-1">{{ form.surname }}</div>
+                <div class="col-md-3">{{ form.email }}</div>
+                <div class="col-md-3">{{ form.state_region }}</div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <br>
+            <div class="col-md-12">
+                <div class="row postProfile px-3 gx-3">
+                    <div class="col-md-3 active postProfilesub">Basic Info</div>
+                    <div class="col-md-9 postProfilesub" style="pointer-events: none;">Post ({{userposts.count}})</div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row postProfileDetail mx-2 active">
+                    <span><b>Phone No : </b>{{ form.mobile_number }}</span><hr>
+                    <span><b>Address : </b>{{ form.address }}</span><hr>
+                    <span><b>Postcode : </b>{{form.postcode}}</span><hr>
+                    <span><b>Area : </b>{{form.area}}</span><hr>
+                    <span><b>Education : </b>{{ form.education }}</span><hr>
+                    <span><b>Country : </b>{{ form.country }}</span><hr>
+                    <span><b>State Region : </b>{{ form.state_region }}</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            const postProfile = document.querySelectorAll('.postProfile .postProfilesub');
+            const postProfileDetail = document.querySelectorAll('.postProfileDetail');
+
+            postProfile.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    postProfile.forEach(item => item.classList.remove('active'));
+                    postProfileDetail.forEach(item => item.classList.remove('active'));
+
+                    this.classList.add('active');
+                    postProfileDetail[index].classList.add('active');
+                });
+            });
+        </script>
+    </div>
+    </form>
+</div>
+
+{% endblock content %}

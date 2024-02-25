@@ -9,14 +9,30 @@ def index_map(request):
     return render(request,"map/index-map.html",context)
 
 def heat_map(request):
-    return render(request,"map/heat-map.html")
+    user_profile = UserProfile.objects.get(user=request.user)
+    context = {
+        'user_profile': user_profile,
+    }
+    return render(request,"map/heat-map.html",context)
 
 def cluster_map(request):
-    return render(request,"map/cluster-map.html")
+    user_profile = UserProfile.objects.get(user=request.user)
+    context = {
+        'user_profile': user_profile,
+    }
+    return render(request,"map/cluster-map.html",context)
 
 def env_map(request):
-    return render(request,"map/env-map.html")
+    user_profile = UserProfile.objects.get(user=request.user)
+    context = {
+        'user_profile': user_profile,
+    }
+    return render(request,"map/env-map.html",context)
 
 def analyze(request):
-    return render(request,"map/analyze.html")
+    user_profile = UserProfile.objects.get(user=request.user)
+    context = {
+        'user_profile': user_profile,
+    }
+    return render(request,"map/analyze.html",context)
 
