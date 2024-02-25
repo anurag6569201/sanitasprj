@@ -12,85 +12,97 @@
             <form role="search" method="get" action="{% url 'material:calorie' %}">
                 <p>Enter a query like <span style="color: blueviolet;font-weight: 700;">" 1 cup mashed potatoes and 2
                         tbsp gravy "</span> to see how it works. We support tens of thousands of foods, including
-                    international dishes.</p>
+                    international dishes. <br><span style="color: blueviolet;font-weight: 700;">Use "And" connector!!</span></p>
                 {% csrf_token %}
-                <textarea name="dishes" id="dishes" cols="10" rows="6" class="col-md-12"></textarea>
-                <button class="btn">Calculate Foods</button>
+                <textarea name="dishes" id="dishes" cols="10" rows="6" class="col-md-12">eggs</textarea>
+                <button class="btn" type="submit">Calculate Foods</button>
+                <table class="list_dishes">
+                    <thead>
+                      <tr class="col-md-12">
+                        <div class="row">
+                            <th class="col-md-3">image</th>
+                            <th class="col-md-5">Item</th>
+                            <th class="col-md-2">Measure</th>
+                            <th class="col-md-2">Quantity</th>
+                        </div>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for food in calorie_data.foods %}
+                        <tr class="col-md-12">
+                            <div class="row">
+                                <td class="col-md-3"><img src="https://nix-tag-images.s3.amazonaws.com/{{ food.tags.tag_id }}_thumb.jpg" style="width: 70px;" alt=""></td>
+                                <td class="col-md-5">{{ food.tags.item }}</td>
+                                <td class="col-md-2">{{ food.tags.measure }}</td>
+                                <td class="col-md-2">{{ food.tags.quantity }}</td>
+                            </div>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="5">No foods found.</td></tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
             </form>
         </div>
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <style>
-                        tr{
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                        }
-                        table{
-                            width: 100%;
-                        }
-                    </style>
                     <span class="blogs_head" style="font-weight: 700;">Nutrition Facts</span>
                     <hr style="border: 2px solid black;">
                     <span>Amount Per Serving</span><br>
                     <span style="display: flex;align-items: center;justify-content: space-between;font-weight: 700;font-size: 1.2em;">
                         <span>Calories</span>
-                        <span>{{calorie_data.foods.nf_calories}}</span>
+                        <span>{{calories.nf_calories}}cal</span>
                     </span>
                     <hr style="border: 2px solid black;">
-                    <table>
+                    <table class="calorie-data">
                         <tr style="font-weight: 700;">
                             <td>Total Fat</td>
-                            <td>14g (22%)</td>
+                            <td>{{calories.nf_total_fat}}g</td>
                         </tr>
                         <tr>
                             <td>Saturated Fat</td>
-                            <td>3.3g (16%)</td>
-                        </tr>
-                        <tr>
-                            <td>Trans Fat</td>
-                            <td>1.1g (63%)</td>
+                            <td>{{calories.nf_saturated_fat}}g</td>
                         </tr>
                         <tr style="font-weight: 700;">
                             <td>Cholesterol</td>
-                            <td>190mg (63%)</td>
+                            <td>{{calories.nf_cholesterol}}mg</td>
                         </tr>
                         <tr style="font-weight: 700;">
                             <td>Sodium</td>
-                            <td>881mg (36%)</td>
+                            <td>{{calories.nf_sodium}}mg</td>
                         </tr>
                         <tr style="font-weight: 700;">
                             <td>Total Carbohydrates</td>
-                            <td>37g (12%)</td>
+                            <td>{{calories.nf_total_carbohydrate}}g</td>
                         </tr>
                         <tr>
                             <td>Dietary Fiber</td>
-                            <td>3.2g (13%)</td>
+                            <td>{{calories.nf_dietary_fiber}}g</td>
                         </tr>
                         <tr>
                             <td>Sugars</td>
-                            <td>3.2g</td>
+                            <td>{{calories.nf_sugars}}g</td>
                         </tr>
                         <tr style="font-weight: 700;">
                             <td>Protein</td>
-                            <td>11g</td>
+                            <td>{{calories.nf_protein}}g</td>
                         </tr>
                         <tr>
                             <td>Vitamin D</td>
-                            <td>1.4mcg (7%)</td>
+                            <td>{{calories.nf_vitaminD}}mcg</td>
                         </tr>
                         <tr>
                             <td>Calcium</td>
-                            <td>75mg (6%)</td>
+                            <td>{{calories.nf_calcium}}mg</td>
                         </tr>
                         <tr>
                             <td>Iron</td>
-                            <td>1.4mg (8%)</td>
+                            <td>{{calories.nf_iron}}mg</td>
                         </tr>
                         <tr style="font-weight: 700;">
                             <td>Potassium</td>
-                            <td>765.6mg (16%)</td>
+                            <td>{{calories.nf_potassium}}mg</td>
                         </tr>
                     </table>
                 </div>

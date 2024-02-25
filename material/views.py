@@ -39,27 +39,51 @@ def disease(request):
     return render(request, "material/disease-search.html", context)
 
 
+import requests
+from django.shortcuts import render
+
 def calorie(request):
-    input_dish = request.GET.get('q','2egg')
-    print(input_dish)
+    if request.method == 'GET':
+        input_dish = request.GET.get('dishes','egg')
+
     url = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
     headers = {
         'Content-Type': 'application/json',
         'x-app-id': '86805170',
-        'x-app-key': '4dea52376db1086b8ab3b5d0cdcc53c5'
+        'x-app-key': '4dea52376db1086b8ab3b5d0cdcc53c5',
     }
     data = {
-        'query': 'egg'
+        'query': input_dish,
     }
 
     response = requests.post(url, headers=headers, json=data)
-    calorie_data=response.json()
+    calorie_data = response.json()
     print(calorie_data)
 
-    context={
-        'calorie_data':calorie_data,
-    }
-    return render(request,"material/calorie.html",context)
+    if 'foods' in calorie_data:
+        foods = calorie_data['foods']
+        tags = calorie_data['foods'][0]['tags']
+
+        if len(foods) > 0:
+            calories = foods[0]
+            context = {
+                'tags':tags,
+                'calorie_data': calorie_data,
+                'calories': calories,
+            }
+            return render(request, "material/calorie.html", context)
+        else:
+            context = {
+                'calorie_data': calorie_data,
+                'error_message': 'No food found for the given query.',
+            }
+            return render(request, "material/calorie.html", context)
+    else:
+        context = {
+            'calorie_data': calorie_data,
+            'error_message': 'Error fetching data from Nutritionix API.',
+        }
+        return render(request, "material/calorie.html", context)
 
 def resource(request):        
     return render(request,"material/resource.html")
