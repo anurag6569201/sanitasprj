@@ -1,0 +1,62 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-12">
+    <div class="row" style="align-items: center;">
+        <div class="col-md-12">
+            <br>
+            <span class="blogs_head">Welcome to our Registration of Becoming a Sanitizer!</span><hr><br>
+            <p>We're excited to have you join our community of sanitizer providers. By becoming a registered sanitizer, you'll be able to share your services with a wider audience and help promote healthy and safe environments. <br><br>
+                To get started, please complete the registration form below. We'll need some basic information about your Hospital, including name, contact information and other.</p>
+        </div>
+        <div class="col-md-6">
+            <img style="object-fit: contain;" src="../../static/assets/images/sanitizers/sanitizerForm.svg" alt="">
+        </div>
+        <div class="col-md-6">
+            <form>
+                {% csrf_token %}
+                <style>
+                    input{
+                        width: 100%;
+                    }
+                    .checkTC{
+                        display: flex;
+                        align-items: center;
+                        margin-top: 1em;
+                    }
+                    .checkTC input{
+                        width: 1em;
+                        height: 1em;
+                        margin-right: .3em;
+                    }
+                </style>
+                <label for="hospitalName"><b>Sanitizer Name:</b></label><br>
+                <input type="text" id="hospitalName" name="hospitalName" placeholder="Enter Hospital Name"><br>
+            
+                <label for="address"><b>Address:</b></label><br>
+                <div>
+                    <input type="text" id="street" name="street" placeholder="Enter Street"><br>
+                    <input type="text" id="city" name="city" placeholder="Enter City"><br>
+                    <input type="text" id="state" name="state" placeholder="Enter State"><br>
+                    <input type="text" id="zip" name="zip" placeholder="Enter Zip"><br>
+                </div>
+                <label for="SanitizerContact">Contact Person:</label><br>
+                <input type="text" id="SanitizerContact" name="SanitizerContact" placeholder="Enter Contact Person"><br>
+                <label for="contactEmail">Sanitizer Email:</label><br>
+                <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter Email"><br>
+                <label for="contactPhone">Sanitizer Contact:</label><br>
+                <input type="text" id="contactPhone" name="contactPhone" placeholder="Enter Phone"><br>
+            
+                <div class="checkTC">
+                    <input type="checkbox" id="agreement" name="agreement" value="agreement">
+                    <label for="agreement">I have read and agreed to the data sharing agreement<a href="{% url 'plofile:t&c' %}" target="_blank">T&C</a>.</label><br>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

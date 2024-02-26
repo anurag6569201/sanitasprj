@@ -51,3 +51,9 @@ class UserProfileUpdateView(FormView):
             self.success_url = reverse_lazy('plofile:index-profile')
 
         return super(UserProfileUpdateView, self).dispatch(request, *args, **kwargs)
+    
+def sanitizer(request):
+    return render(request,"plofile/sanitizer.html")
+
+def tc(request):
+    return render(request,"plofile/t&c.html")

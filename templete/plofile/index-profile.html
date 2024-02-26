@@ -4,10 +4,6 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'assets/css/profile.css' %}">
 <div class="col-md-12 profile">
-    <div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top: 1em;margin-bottom: 0;padding: .5em;">
-        <strong>Hello {{userprofile.name}} {{userprofile.surname}}!!</strong> Wanted to be Sanitizer!! <button class="alertbtn">Yes</button><button class="alertbtn" type="button" data-bs-dismiss="alert" aria-label="Close">No</button>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
     <div class="col-md-12">
         <br>
         <div class="background-image">
@@ -15,7 +11,10 @@
             <div class="profile-image">
                 <img src="{{userprofile.profile_image.url}}" alt="">
             </div>
-            <a href="{% url 'plofile:verifier_edit' %}" class="edit-profile"><span class="material-symbols-outlined">edit</span>Edit Profile</a>
+            <div class="grp-btns">
+                <a href="{% url 'plofile:sanitizer' %}" class="edit-profile"><span class="material-symbols-outlined">edit</span>Become Sanitizer!!</a>
+                <a href="{% url 'plofile:verifier_edit' %}" class="edit-profile"><span class="material-symbols-outlined">edit</span>Edit Profile</a>
+            </div>
         </div>
         <div class="col-md-12">
             <br>
