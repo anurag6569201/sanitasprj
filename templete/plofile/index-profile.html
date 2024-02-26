@@ -12,7 +12,9 @@
                 <img src="{{userprofile.profile_image.url}}" alt="">
             </div>
             <div class="grp-btns">
+                {% if not sanitizer_obj.is_verified %}
                 <a href="{% url 'plofile:sanitizer' %}" class="edit-profile"><span class="material-symbols-outlined">edit</span>Become Sanitizer!!</a>
+                {% endif %}
                 <a href="{% url 'plofile:verifier_edit' %}" class="edit-profile"><span class="material-symbols-outlined">edit</span>Edit Profile</a>
             </div>
         </div>
@@ -75,9 +77,19 @@
                 </div>
                 {% else %}
                 <div class="row postData mx-2 postProfileDetail">
+                    {% if not last_post_time > 0 %}
                     <form method="post">
                         {% csrf_token %}
+                        <label for="id_disease_name">Disease Name:</label><br>
+                        <input type="text" id="id_disease_name" name="disease_name"><br>
+                        <label for="id_number_of_cases">Number of Cases:</label><br>
+                        <input type="number" id="id_number_of_cases" name="number_of_cases"><br><br>
+                        <button type="submit">Submit</button>
                     </form>
+                
+                    {% else %}
+                    <span class="blogs_head">You have already posted trending data within the last 24 hours.</span>
+                    {% endif %}
                 </div>
                 {% endif %}
             </div>

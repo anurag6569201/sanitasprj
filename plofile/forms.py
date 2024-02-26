@@ -1,6 +1,7 @@
 from django import forms
 from django.forms.widgets import ClearableFileInput
 from .models import UserProfile,Sanitizer
+from .models import TrendingData
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
@@ -25,3 +26,11 @@ class SanitizerForm(forms.ModelForm):
     class Meta:
         model = Sanitizer
         fields ='name','street','city','state','zip','contactperson','phone','email','certificate','isChecked'
+
+from django import forms
+from .models import TrendingData
+
+class TrendingDataForm(forms.ModelForm):
+    class Meta:
+        model = TrendingData
+        fields = ['disease_name', 'number_of_cases']

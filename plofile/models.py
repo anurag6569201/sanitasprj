@@ -35,3 +35,14 @@ class Sanitizer(models.Model):
     isSubmitted=models.BooleanField(default=False)
 
     is_verified=models.BooleanField(default=False)
+
+from django.db import models
+
+class TrendingData(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    disease_name = models.CharField(max_length=100)
+    number_of_cases = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def _str_(self):
+        return f"{self.disease_name} - {self.number_of_cases}"
