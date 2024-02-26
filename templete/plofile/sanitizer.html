@@ -14,7 +14,7 @@
             <img style="object-fit: contain;" src="../../static/assets/images/sanitizers/sanitizerForm.svg" alt="">
         </div>
         <div class="col-md-6">
-            <form>
+            <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <style>
                     input{
@@ -32,24 +32,27 @@
                     }
                 </style>
                 <label for="hospitalName"><b>Sanitizer Name:</b></label><br>
-                <input type="text" id="hospitalName" name="hospitalName" placeholder="Enter Hospital Name"><br>
+                {{ sform.name }}<br>
             
                 <label for="address"><b>Address:</b></label><br>
-                <div>
-                    <input type="text" id="street" name="street" placeholder="Enter Street"><br>
-                    <input type="text" id="city" name="city" placeholder="Enter City"><br>
-                    <input type="text" id="state" name="state" placeholder="Enter State"><br>
-                    <input type="text" id="zip" name="zip" placeholder="Enter Zip"><br>
+                <div style="display: flex;gap: .2em;">
+                    {{ sform.street }}<br>
+                    {{ sform.zip }}<br>
+                    {{ sform.city }}<br>
+                    {{ sform.state }}<br>
                 </div>
-                <label for="SanitizerContact">Contact Person:</label><br>
-                <input type="text" id="SanitizerContact" name="SanitizerContact" placeholder="Enter Contact Person"><br>
-                <label for="contactEmail">Sanitizer Email:</label><br>
-                <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter Email"><br>
-                <label for="contactPhone">Sanitizer Contact:</label><br>
-                <input type="text" id="contactPhone" name="contactPhone" placeholder="Enter Phone"><br>
-            
+                <label for="SanitizerContact"><b>Contact Person:</b></label><br>
+                {{ sform.contactperson }}<br>
+                <label for="contactEmail"><b>Sanitizer Email:</b></label><br>
+                {{ sform.email }}<br>
+                <label for="contactPhone"><b>Sanitizer Contact:</b></label><br>
+                {{ sform.phone }}<br>
+                <div class="certifiy">
+                    <label for="certification"><b>Accreditation Certificate : </b></label>
+                    {{ sform.certificate }}
+                </div>
                 <div class="checkTC">
-                    <input type="checkbox" id="agreement" name="agreement" value="agreement">
+                    {{ sform.isChecked }}
                     <label for="agreement">I have read and agreed to the data sharing agreement<a href="{% url 'plofile:t&c' %}" target="_blank">T&C</a>.</label><br>
                 </div>
                 <input type="submit" value="Submit">

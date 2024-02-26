@@ -1,6 +1,6 @@
 from django import forms
 from django.forms.widgets import ClearableFileInput
-from .models import UserProfile
+from .models import UserProfile,Sanitizer
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
@@ -20,3 +20,8 @@ class UserProfileForm(forms.ModelForm):
             'state_region': forms.TextInput(attrs={'class': 'form-control'}),
             'profile_image': ClearableFileInput(attrs={'class': 'form-control', 'type': 'file'}),
         }
+
+class SanitizerForm(forms.ModelForm):
+    class Meta:
+        model = Sanitizer
+        fields ='name','street','city','state','zip','contactperson','phone','email','certificate','isChecked'
