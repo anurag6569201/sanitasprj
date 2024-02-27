@@ -41,36 +41,35 @@ def profile(request):
     }
     return render(request,"plofile/index-profile.html",context)
 
-class UserProfileUpdateView(FormView):
+def UserProfileUpdateView(request):
     template_name = 'plofile/edit_profile.html'
-
-    form_class = UserProfileForm
     success_url = reverse_lazy('plofile:index-profile')
 
-    def get_form_kwargs(self):
-        kwargs = super(UserProfileUpdateView, self).get_form_kwargs()
-        kwargs['instance'] = UserProfile.objects.get(user=self.request.user)
-        return kwargs
+    user_profile = UserProfile.objects.get(user=request.user)
+    sanitizer_obj = Sanitizer.objects.get(user=request.user)
 
-    def form_valid(self, form):
-        form.save()
-        return super(UserProfileUpdateView, self).form_valid(form)
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=user_profile)
+        form1 = SanitizerForm(request.POST, instance=sanitizer_obj)
+        if form.is_valid():
+            form.save()
+            return redirect(success_url)
+        if form1.is_valid():
+            form1.save()
+            return redirect(success_url)
+    else:
+        form = UserProfileForm(instance=user_profile)
+        form1 = SanitizerForm(instance=sanitizer_obj)
 
-    def get_context_data(self, **kwargs):
-        context = super(UserProfileUpdateView, self).get_context_data(**kwargs)
-        context['userprofile'] = UserProfile.objects.get(user=self.request.user)
-        context['user_profile']=UserProfile.objects.get(user=self.request.user)
-        return context
+    context = {
+        'form': form,
+        'sanitizer_form': form1,
+        'userprofile': user_profile,
+        'user_profile': user_profile,
+        'sanitizer_obj':sanitizer_obj,
+    }
 
-    def dispatch(self, request, *args, **kwargs):
-        if not self.request.user:
-            self.template_name = 'plofile/edit_profile.html'
-            self.success_url = reverse_lazy('plofile:index-profile')
-        else:
-            self.template_name = 'plofile/edit_profile.html'
-            self.success_url = reverse_lazy('plofile:index-profile')
-
-        return super(UserProfileUpdateView, self).dispatch(request, *args, **kwargs)
+    return render(request, template_name, context)
     
 def sanitizer(request):
     sanitizer_obj, created = Sanitizer.objects.get_or_create(user=request.user)

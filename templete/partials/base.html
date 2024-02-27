@@ -75,7 +75,11 @@
                 <input id="nav-footer-toggle" type="checkbox" />
                 <div id="nav-footer">
                     <div id="nav-footer-heading">
+                        {% if not sanitizer_obj.is_verified %}
                         <div id="nav-footer-avatar"><img src="{{user_profile.profile_image.url}}" />
+                        {% else %}
+                        <div id="nav-footer-avatar"><img src="{{sanitizer_obj.profile_image.url}}" />
+                        {% endif %}
                         </div>
                         <div id="nav-footer-titlebox">{{ user_profile.name }}{{ user_profile.surname }}<span
                                 id="nav-footer-subtitle">Online</span></div>

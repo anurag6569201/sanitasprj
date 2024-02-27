@@ -2,49 +2,6 @@
 {% load static %}
 
 {% block content %}
-<div class="col-md-12 recent-updates">
-    <br>
-    <span class="blogs_head">Latest Updates</span><hr><br>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="cont" onload="changePos()">
-                <ul class="ultra">
-                    <li class="tab-0">
-                        <strong>SANITAS DISEASE</strong> <span class="date">JULY 9 </span></br>
-                        <span>New updates on Sanitas Disease. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br>
-                        <a href="" class="btn">Know More</a>
-                    </li>
-                    <li class="tab-1">
-                        <strong>EDUCATIONAL VIDEOS</strong> <span class="date">JULY 9 </span></br>
-                        <span>Check out our latest educational videos covering a wide range of topics. Don't miss out!</span><br>
-                        <a href="" class="btn">Know More</a>
-                    </li>
-                    <li class="tab-2"> 
-                        <strong>RECOMMENDED BOOKS</strong> <span class="date">JULY 9 </span></br>
-                        <span>Explore our curated list of recommended books for further reading and knowledge enhancement.</span><br>
-                        <a href="" class="btn">Know More</a>
-                    </li>
-                    <li class="tab-3">
-                        <strong>EDUCATIONAL VIDEOS</strong> <span class="date">JULY 9 </span></br>
-                        <span>More educational videos added to our collection. Stay informed and educated!</span><br>
-                        <a href="" class="btn">Know More</a>
-                    </li>
-                    <li class="tab-4"> 
-                        <strong>RECOMMENDED BOOKS</strong> <span class="date">JULY 9 </span></br>
-                        <span>Discover new books in our recommended list. Expand your reading horizons with us.</span><br>
-                        <a href="" class="btn">Know More</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <span class="blogs_head">About Us</span><hr><br>
-            <p style="color: var(--navbar-dark-secondary);">Imagine having access to a real-time map that not only visualizes disease hotspots but also predicts future outbreaks, all at your fingertips. The Disease Heatmap, a groundbreaking mapping system, is set to revolutionize how we monitor and respond to health threats in our communities. </p>
-            <a href="#" class="btn">Know More</a>
-        </div>
-    </div>
-    
-</div>
 <div class="col-md-12">
     <br>
     <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><br>
@@ -89,7 +46,49 @@
 
     <br>
 </div>
-
+<div class="col-md-12 recent-updates">
+    <br>
+    <span class="blogs_head">Latest Updates</span><hr><br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="cont" onload="changePos()">
+                <ul class="ultra">
+                    <li class="tab-0">
+                        <strong>SANITAS DISEASE</strong> <span class="date">JULY 9 </span></br>
+                        <span>New updates on Sanitas Disease. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br>
+                        <a href="" class="btn">Know More</a>
+                    </li>
+                    <li class="tab-1">
+                        <strong>EDUCATIONAL VIDEOS</strong> <span class="date">JULY 9 </span></br>
+                        <span>Check out our latest educational videos covering a wide range of topics. Don't miss out!</span><br>
+                        <a href="" class="btn">Know More</a>
+                    </li>
+                    <li class="tab-2"> 
+                        <strong>RECOMMENDED BOOKS</strong> <span class="date">JULY 9 </span></br>
+                        <span>Explore our curated list of recommended books for further reading and knowledge enhancement.</span><br>
+                        <a href="" class="btn">Know More</a>
+                    </li>
+                    <li class="tab-3">
+                        <strong>EDUCATIONAL VIDEOS</strong> <span class="date">JULY 9 </span></br>
+                        <span>More educational videos added to our collection. Stay informed and educated!</span><br>
+                        <a href="" class="btn">Know More</a>
+                    </li>
+                    <li class="tab-4"> 
+                        <strong>RECOMMENDED BOOKS</strong> <span class="date">JULY 9 </span></br>
+                        <span>Discover new books in our recommended list. Expand your reading horizons with us.</span><br>
+                        <a href="" class="btn">Know More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <span class="blogs_head">About Us</span><hr><br>
+            <p style="color: var(--navbar-dark-secondary);">Imagine having access to a real-time map that not only visualizes disease hotspots but also predicts future outbreaks, all at your fingertips. The Disease Heatmap, a groundbreaking mapping system, is set to revolutionize how we monitor and respond to health threats in our communities. </p>
+            <a href="#" class="btn">Know More</a>
+        </div>
+    </div>
+    
+</div>
 <div class="col-md-12 recent-blog">
     <span class="blogs_head">Blogs</span><hr><br>
         {% for p in blogs %}
