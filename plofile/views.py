@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from plofile.models import UserProfile,Sanitizer
+from plofile.models import UserProfile,Sanitizer,TrendingData
 
 from userauths.models import UserProfile
 from django.views.generic.edit import FormView
@@ -10,22 +10,34 @@ from creation.models import Post
 from django.contrib import messages
 from django.shortcuts import redirect
 
-from django.utils import timezone
-from django.db.models import Count,Q
-from .forms import TrendingDataForm
-from .models import TrendingData
+from .forms import DiseaseFormSet
 # Create your views here.
 def profile(request):
     userprofile=UserProfile.objects.get(user=request.user)
     userposts= Post.objects.filter(author=request.user)
     blogs=Post.objects.filter(author=request.user)
     sanitizer_obj, created = Sanitizer.objects.get_or_create(user=request.user)
+    if request.method == 'POST':
+        formset = DiseaseFormSet(request.POST)
+        if formset.is_valid():
+            trending_data = TrendingData.objects.create(user=request.user)
+            for form in formset:
+                if form.has_changed():
+                    disease = form.save(commit=False)
+                    disease.trending_data = trending_data  
+                    disease.save()
+                    messages.success(request, f"Data submitted successfully!!")
+            return redirect('plofile:index-profile') 
+    else:
+        formset = DiseaseFormSet()
+
     context={
         "blogs":blogs,
         'userposts':userposts,
         'userprofile':userprofile,
         'user_profile':userprofile,
         'sanitizer_obj':sanitizer_obj,
+        'formset': formset
     }
     return render(request,"plofile/index-profile.html",context)
 
@@ -84,18 +96,3 @@ def tc(request):
 
 def success(request):
     return render(request,"plofile/success.html")
-
-def post_trending_data(request):
-    user = request.user
-    last_post_time = TrendingData.objects.filter(user=user).aggregate(last_post_time=Count('created_at', filter=Q(created_at__gte=timezone.now() - timezone.timedelta(days=1))))
-    
-    if request.method == 'POST':
-        form = TrendingDataForm(request.POST)
-        if form.is_valid():
-            trending_data = form.save(commit=False)
-            trending_data.user = request.user
-            trending_data.save()
-            return redirect('plofile:index-profile')
-    else:
-        form = TrendingDataForm()
-    return redirect('plofile:index-profile', {'form': form,'last_post_time':last_post_time['last_post_time']})

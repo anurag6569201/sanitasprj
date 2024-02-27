@@ -7,10 +7,17 @@
     <div class="col-md-12">
         <br>
         <div class="background-image">
+            {% if not sanitizer_obj.is_verified %}
             <img src="{{userprofile.profile_image.url}}" alt="" class="profile-background">
             <div class="profile-image">
                 <img src="{{userprofile.profile_image.url}}" alt="">
             </div>
+            {% else %}
+            <img src="{{sanitizer_obj.profile_image.url}}" alt="" class="profile-background">
+            <div class="profile-image">
+                <img src="{{sanitizer_obj.profile_image.url}}" alt="">
+            </div>
+            {% endif %}
             <div class="grp-btns">
                 {% if not sanitizer_obj.is_verified %}
                 <a href="{% url 'plofile:sanitizer' %}" class="edit-profile"><span class="material-symbols-outlined">edit</span>Become Sanitizer!!</a>
@@ -20,12 +27,21 @@
         </div>
         <div class="col-md-12">
             <br>
+            {% if not sanitizer_obj.is_verified %}
             <div class="row text-center basicInfo px-3 g-3">
                 <div class="col-md-3"></div>
                 <div class="col-md-3">{{ userprofile.name }} {{ userprofile.surname }}</div>
                 <div class="col-md-3">{{ userprofile.email }}</div>
                 <div class="col-md-3">{{ userprofile.state_region }}</div>
             </div>
+            {% else %}
+            <div class="row text-center basicInfo px-3 g-3">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">{{ sanitizer_obj.name }}</div>
+                <div class="col-md-3">{{ sanitizer_obj.email }}</div>
+                <div class="col-md-3">{{ sanitizer_obj.phone }}</div>
+            </div>
+            {% endif %}
         </div>
         <div class="col-md-12">
             <br>
@@ -40,12 +56,21 @@
                 </div>
             </div>
             <div class="col-md-12">
+                {% if not sanitizer_obj.is_verified %}
                 <div class="row postProfileDetail mx-2 active">
                     <span><b>Phone No : </b>{{ userprofile.mobile_number }}</span><hr>
                     <span><b>Address : </b>{{ userprofile.address }} ( {{userprofile.postcode}} )</span><hr>
                     <span><b>Education : </b>{{ userprofile.education }}</span><hr>
                     <span><b>Country : </b>{{ userprofile.country }}/{{ userprofile.state_region }}</span>
                 </div>
+                {% else %}
+                <div class="row postProfileDetail mx-2 active">
+                    <span><b>Address : </b>{{ sanitizer_obj.street }} ( {{sanitizer_obj.zip}} ) {{sanitizer_obj.city}} {{sanitizer_obj.state}} </span><hr>
+                    <span><b>Contact Person : </b>{{ sanitizer_obj.contactperson }}</span><hr>
+                    <span><b>Contact Person Phone: </b>{{ sanitizer_obj.CPphone }}</span><hr>
+                    <span><b>Contact Person Email: </b>{{ sanitizer_obj.CPemail }}</span><hr>
+                </div>
+                {% endif %}
                 {% if not sanitizer_obj.is_verified %}
                 <div class="row postProfileDetail mx-2">
                     <span class="col-md-12"><b>Total Post :</b> {{userposts.count}}</span>
@@ -80,11 +105,33 @@
                     {% if not last_post_time > 0 %}
                     <form method="post">
                         {% csrf_token %}
-                        <label for="id_disease_name">Disease Name:</label><br>
-                        <input type="text" id="id_disease_name" name="disease_name"><br>
-                        <label for="id_number_of_cases">Number of Cases:</label><br>
-                        <input type="number" id="id_number_of_cases" name="number_of_cases"><br><br>
-                        <button type="submit">Submit</button>
+                        {{ formset.management_form }}
+                        <br>
+                        <div class="row">
+                            <table class="col-md-7" style="overflow: hidden;">
+                                <thead>
+                                    <tr class="col-md-12 row text-center mb-3">
+                                        <th class="col-md-4" style="border-bottom: 1px solid grey;">Serial Number</th>
+                                        <th class="col-md-4" style="border-bottom: 1px solid grey;">Disease Name</th>
+                                        <th class="col-md-4" style="border-bottom: 1px solid grey;">Cases</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for form in formset %}
+                                    <tr class="col-md-12 row text-center mb-2">
+                                        <td class="col-md-4">{{ forloop.counter }}.</td>
+                                        <td class="col-md-4">{{ form.name }}</td>
+                                        <td class="col-md-4">{{ form.cases }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            <div class="col-md-5">
+                                <img src="../../static/assets/images/sanitizers/dataSub.svg" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <button style="padding: .2em 0em;" class="btn mb-3" type="submit">Submit</button>
                     </form>
                 
                     {% else %}

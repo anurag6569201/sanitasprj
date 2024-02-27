@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Sanitizer,TrendingData
+from .models import Sanitizer,Disease,TrendingData
 
 # Register your models here.
 
@@ -8,7 +8,6 @@ class SanitizerAdmin(admin.ModelAdmin):
 
 admin.site.register(Sanitizer,SanitizerAdmin)
 
-class TrendingDataAdmin(admin.ModelAdmin):
-    list_display=['user','created_at']
 
-admin.site.register(TrendingData,TrendingDataAdmin)
+admin.site.register(Disease)
+admin.site.register(TrendingData)

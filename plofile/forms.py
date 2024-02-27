@@ -25,12 +25,16 @@ class UserProfileForm(forms.ModelForm):
 class SanitizerForm(forms.ModelForm):
     class Meta:
         model = Sanitizer
-        fields ='name','street','city','state','zip','contactperson','phone','email','certificate','isChecked'
+        fields ='name','street','city','state','zip','contactperson','phone','email','certificate','isChecked','profile_image','CPphone','CPemail'
 
-from django import forms
-from .models import TrendingData
+from .models import Disease
 
-class TrendingDataForm(forms.ModelForm):
+from django.forms import formset_factory
+from .models import Disease
+
+class DiseaseForm(forms.ModelForm):
     class Meta:
-        model = TrendingData
-        fields = ['disease_name', 'number_of_cases']
+        model = Disease
+        fields = ['name', 'cases']
+
+DiseaseFormSet = formset_factory(DiseaseForm, extra=10)  # Adjust 'extra' as needed

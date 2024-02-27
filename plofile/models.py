@@ -29,8 +29,12 @@ class Sanitizer(models.Model):
     contactperson=models.CharField(max_length=100,default="Virju")
     phone = models.CharField(max_length=10, default="XXXXXXXXXX")
     email = models.EmailField(default="example@example.com")
-
-    certificate=models.ImageField(upload_to='sanitizerDoc/', null=True, blank=True)
+    profile_image = models.ImageField(upload_to='Sanitizerprofile/')
+    
+    CPphone = models.CharField(max_length=10, default="XXXXXXXXXX")
+    CPemail = models.EmailField(default="example@example.com")
+    
+    certificate=models.ImageField(upload_to='sanitizerDoc/')
     isChecked=models.BooleanField(default=True)
     isSubmitted=models.BooleanField(default=False)
 
@@ -40,9 +44,11 @@ from django.db import models
 
 class TrendingData(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    disease_name = models.CharField(max_length=100)
-    number_of_cases = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def _str_(self):
-        return f"{self.disease_name} - {self.number_of_cases}"
+class Disease(models.Model):
+    trending_data = models.ForeignKey(TrendingData, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    cases = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True,null=True,blank=True)
+    updated_at = models.DateTimeField(auto_now=True,null=True,blank=True)
