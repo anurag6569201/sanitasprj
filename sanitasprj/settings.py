@@ -90,6 +90,7 @@ TEMPLATES = [
 
                 # custom
                 'plofile.context_process.sanitizer_glb',
+                'plofile.context_process.dataCalculation',
             ],
         },
     },

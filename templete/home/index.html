@@ -6,34 +6,13 @@
     <br>
     <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><br>
     <div class="row">
+        {% for disease_name, disease_cases in top_diseases %}
         <div class="col-md-3 donuts">
-            <canvas id="donutChart1" width="100" height="100"></canvas>
-            <span class="donutsText">400<span class="material-symbols-outlined">straight </span></span>
+            <canvas id="donutChart{{ forloop.counter }}" width="100" height="100"></canvas>
+            <span class="donutsText"><span style="display: flex;align-items: center;flex-direction: column;line-height: .7em;justify-content: center;">{{ disease_cases }} <span style="font-size: .5em;color: rgb(216, 78, 78);">cases</span></span><span class="material-symbols-outlined" style="font-size: 1em;color: rgb(216, 78, 78);">straight </span><br></span>
+            <span style="top: 0%;position: absolute;left: 0%;right: 0%;text-align: center;font-size: 1.3em;display: flex;align-items: center;justify-content: center;"><span class="material-symbols-outlined"> microbiology </span>{{disease_name}}</span>
         </div>
-        <div class="col-md-3 donuts">
-            <canvas id="donutChart2" width="100" height="100"></canvas>
-            <span class="donutsText">300<span class="material-symbols-outlined">straight </span></span>
-        </div>
-        <div class="col-md-3 donuts">
-            <canvas id="donutChart3" width="100" height="100"></canvas>
-            <span class="donutsText">500<span class="material-symbols-outlined">straight </span></span>
-        </div>
-        <div class="col-md-3 donuts">
-            <canvas id="donutChart4" width="100" height="100"></canvas>
-            <span class="donutsText">250<span class="material-symbols-outlined">straight </span></span>
-        </div>
-        <div class="col-md-3 donuts">
-            <canvas id="donutChart5" width="100" height="100"></canvas>
-            <span class="donutsText">350<span class="material-symbols-outlined">straight </span></span>
-        </div>
-        <div class="col-md-3 donuts">
-            <canvas id="donutChart6" width="100" height="100"></canvas>
-            <span class="donutsText">350<span class="material-symbols-outlined">straight </span></span>
-        </div>
-        <div class="col-md-3 donuts">
-            <canvas id="donutChart7" width="100" height="100"></canvas>
-            <span class="donutsText">350<span class="material-symbols-outlined">straight </span></span>
-        </div>
+        {% endfor %}
         <div class="col-md-3 donuts">
             <div class="measure-btns">
                 <a href="" class="btn"><i class="material-symbols-outlined">home_health</i> Preventives</a>
@@ -44,7 +23,6 @@
     </div>
     <br>
 
-    <br>
 </div>
 <div class="col-md-12 recent-updates">
     <br>
@@ -54,30 +32,17 @@
             <div class="cont" onload="changePos()">
                 <ul class="ultra">
                     <li class="tab-0">
-                        <strong>SANITAS DISEASE</strong> <span class="date">JULY 9 </span></br>
-                        <span>New updates on Sanitas Disease. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br>
-                        <a href="" class="btn">Know More</a>
+                        <strong>Feature Updates</strong> <span class="date">12/02/2024</span></br>
+                        <span>A forthcoming feature update heralds advancements in technology, promising enhanced functionalities and improved user experiences, </span><br>
+                        <a href="#" class="btn">Know More</a>
                     </li>
-                    <li class="tab-1">
-                        <strong>EDUCATIONAL VIDEOS</strong> <span class="date">JULY 9 </span></br>
-                        <span>Check out our latest educational videos covering a wide range of topics. Don't miss out!</span><br>
-                        <a href="" class="btn">Know More</a>
+                    {% for ru in recentUpdate %}
+                    <li class="tab-{{ forloop.counter }}">
+                        <strong>{{ru.title}}</strong> <span class="date">{{ru.date}} </span></br>
+                        <span>{{ru.content}}</span><br>
+                        <a href="{{ru.visitingLink}}" class="btn">Know More</a>
                     </li>
-                    <li class="tab-2"> 
-                        <strong>RECOMMENDED BOOKS</strong> <span class="date">JULY 9 </span></br>
-                        <span>Explore our curated list of recommended books for further reading and knowledge enhancement.</span><br>
-                        <a href="" class="btn">Know More</a>
-                    </li>
-                    <li class="tab-3">
-                        <strong>EDUCATIONAL VIDEOS</strong> <span class="date">JULY 9 </span></br>
-                        <span>More educational videos added to our collection. Stay informed and educated!</span><br>
-                        <a href="" class="btn">Know More</a>
-                    </li>
-                    <li class="tab-4"> 
-                        <strong>RECOMMENDED BOOKS</strong> <span class="date">JULY 9 </span></br>
-                        <span>Discover new books in our recommended list. Expand your reading horizons with us.</span><br>
-                        <a href="" class="btn">Know More</a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

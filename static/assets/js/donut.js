@@ -1,6 +1,5 @@
 const donutChart1 = document.getElementById('donutChart1').getContext('2d');
 const donutChart1Data = {
-    labels: ['Today Dengue Cases'],
     datasets: [{
         label: 'Dataset 1',
         data: [300, 100],
@@ -22,7 +21,6 @@ new Chart(donutChart1, donutChart1Config);
 
 const donutChart2 = document.getElementById('donutChart2').getContext('2d');
 const donutChart2Data = {
-    labels: ['Today Dengue Cases'],
     datasets: [{
         label: 'Dataset 1',
         data: [300, 100],
@@ -43,7 +41,6 @@ const donutChart2Config = {
 new Chart(donutChart2, donutChart2Config);
 const donutChart3 = document.getElementById('donutChart3').getContext('2d');
 const donutChart3Data = {
-    labels: ['Today Dengue Cases'],
     datasets: [{
         label: 'Dataset 1',
         data: [300, 100],
@@ -64,7 +61,6 @@ const donutChart3Config = {
 new Chart(donutChart3, donutChart3Config);
 const donutChart4 = document.getElementById('donutChart4').getContext('2d');
 const donutChart4Data = {
-    labels: ['Today Dengue Cases'],
     datasets: [{
         label: 'Dataset 1',
         data: [300, 100],
@@ -85,7 +81,6 @@ const donutChart4Config = {
 new Chart(donutChart4, donutChart4Config);
 const donutChart5 = document.getElementById('donutChart5').getContext('2d');
 const donutChart5Data = {
-    labels: ['Today Dengue Cases'],
     datasets: [{
         label: 'Dataset 1',
         data: [300, 100],
@@ -106,7 +101,6 @@ const donutChart5Config = {
 new Chart(donutChart5, donutChart5Config);
 const donutChart6 = document.getElementById('donutChart6').getContext('2d');
 const donutChart6Data = {
-    labels: ['Today Dengue Cases'],
     datasets: [{
         label: 'Dataset 1',
         data: [300, 100],
@@ -127,7 +121,6 @@ const donutChart6Config = {
 new Chart(donutChart6, donutChart6Config);
 const donutChart7 = document.getElementById('donutChart7').getContext('2d');
 const donutChart7Data = {
-    labels: ['Today Dengue Cases'],
     datasets: [{
         label: 'Dataset 1',
         data: [300, 100],

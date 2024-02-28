@@ -2,7 +2,7 @@ from django.shortcuts import render
 from creation.models import Post
 from userauths.models import UserProfile
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
-# Create your views here.
+from home.models import recentUpdates
 
 from django.contrib.auth.decorators import login_required
 
@@ -13,6 +13,7 @@ def index(request):
     if request.user.is_authenticated:
         user_profile = UserProfile.objects.get(user=request.user)
         blogs=Post.objects.all()
+        recentUpdate=recentUpdates.objects.all()
         page=request.GET.get('page')
         num_of_items=2
         paginator=Paginator(blogs,num_of_items)
@@ -31,5 +32,6 @@ def index(request):
         "paginator":paginator,
         'posts': posts,
         'user_profile': user_profile,
+        'recentUpdate':recentUpdate,
     }
     return render(request, "home/index.html", context)
