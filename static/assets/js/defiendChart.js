@@ -30,40 +30,6 @@ const firstChart = new Chart(ctx4, {
     }
 });
 
-const ctx5 = document.getElementById('secondChart').getContext('2d');
-const secondChart = new Chart(ctx5, {
-    type: 'line',
-    data: {
-        labels: ['15 days ago', '14 days ago', '13 days ago', '12 days ago', '11 days ago', '10 days ago', '9 days ago', '8 days ago', '7 days ago', '6 days ago', '5 days ago', '4 days ago', '3 days ago', '2 days ago', '1 day ago'],
-        datasets: [{
-            label: 'Daily Cases',
-            data: [3, 5, 2, 4, 1, 2, 6, 7, 5, 3, 4, 6, 8, 2, 5],
-            borderColor: 'blue',
-            borderWidth: 1,
-            fill: true
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-
-document.getElementById('disease').addEventListener('change', function () {
-    var selectedDisease = document.getElementById('disease').value;
-    if (selectedDisease === 'dengue') {
-        secondChart.data.datasets[0].data = [10, 15, 5, 8, 3, 5, 12, 14, 10, 6, 8, 12, 16, 4, 10];
-    } else if (selectedDisease === 'malaria') {
-        secondChart.data.datasets[0].data = [5, 8, 3, 6, 2, 3, 8, 9, 7, 5, 6, 9, 12, 3, 6];
-    } else if (selectedDisease === 'chikungunya') {
-        secondChart.data.datasets[0].data = [2, 4, 1, 3, 1, 2, 5, 6, 4, 2, 3, 5, 7, 1, 4];
-    }
-    secondChart.update();
-});
-
 const ctx = document.getElementById('horizontalChart').getContext('2d');
 let horizontalChart;
 

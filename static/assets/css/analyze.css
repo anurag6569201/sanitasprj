@@ -139,8 +139,10 @@ button {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 1em;
-    padding-top:1em;
+    padding-top:1.6em;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+    padding-bottom: 1.6em;
 }
 
 .donuts .donutsText {

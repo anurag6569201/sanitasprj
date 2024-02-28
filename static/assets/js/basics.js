@@ -1,5 +1,5 @@
 setInterval(changePos,5000)
-
+var elem=document.querySelectorAll(".ultra li");
 function changePos(){
   var x = document.getElementsByClassName("ultra")[0].childNodes;
   x = Array.from(x)
@@ -27,6 +27,14 @@ function changePos(){
     else if(x[i].classList.contains("tab-4")){
       x[i].classList.remove("tab-4");
       x[i].classList.add("tab-3");
+    }
+    else if(x[i].classList.contains("tab-5")){
+      x[i].classList.remove("tab-5");
+      x[i].classList.add("tab-4");
+    }
+    else if(x[i].classList.contains("tab-6")){
+      x[i].classList.remove("tab-6");
+      x[i].classList.add("tab-5");
     }
   }
   

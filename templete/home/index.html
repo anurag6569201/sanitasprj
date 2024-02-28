@@ -6,13 +6,39 @@
     <br>
     <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><br>
     <div class="row">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         {% for disease_name, disease_cases in top_diseases %}
         <div class="col-md-3 donuts">
             <canvas id="donutChart{{ forloop.counter }}" width="100" height="100"></canvas>
-            <span class="donutsText"><span style="display: flex;align-items: center;flex-direction: column;line-height: .7em;justify-content: center;">{{ disease_cases }} <span style="font-size: .5em;color: rgb(216, 78, 78);">cases</span></span><span class="material-symbols-outlined" style="font-size: 1em;color: rgb(216, 78, 78);">straight </span><br></span>
-            <span style="top: 0%;position: absolute;left: 0%;right: 0%;text-align: center;font-size: 1.3em;display: flex;align-items: center;justify-content: center;"><span class="material-symbols-outlined"> microbiology </span>{{disease_name}}</span>
+            <span class="donutsText">
+                <span style="display: flex;align-items: center;flex-direction: column;line-height: .7em;justify-content: center;">
+                    {{ disease_cases }}
+                    <span style="font-size: .5em;color: rgb(216, 78, 78);">cases</span>
+                </span>
+                <span class="material-symbols-outlined" style="font-size: 1em;color: rgb(216, 78, 78);">straight </span>
+                <br>
+            </span>
+            <span style="top: 0%;position: absolute;left: 0%;right: 0%;text-align: center;font-size: 1.3em;display: flex;align-items: center;justify-content: center;">
+                <span class="material-symbols-outlined"> microbiology </span>{{disease_name}}
+            </span>
         </div>
+        <script>
+            const donutChart{{ forloop.counter }} = document.getElementById('donutChart{{ forloop.counter }}').getContext('2d');
+            const donutChart{{ forloop.counter }}Data = {
+                datasets: [{
+                    data: [{{ disease_cases }}, 100],
+                    backgroundColor: ['#12372a', '#adbc9f']
+                }]
+            };
+            const donutChart{{ forloop.counter }}Config = {
+                type: 'doughnut',
+                data: donutChart{{ forloop.counter }}Data,
+                options: {}
+            };
+            new Chart(donutChart{{ forloop.counter }}, donutChart{{ forloop.counter }}Config);
+        </script>
         {% endfor %}
+
         <div class="col-md-3 donuts">
             <div class="measure-btns">
                 <a href="" class="btn"><i class="material-symbols-outlined">home_health</i> Preventives</a>
@@ -31,11 +57,6 @@
         <div class="col-md-6">
             <div class="cont" onload="changePos()">
                 <ul class="ultra">
-                    <li class="tab-0">
-                        <strong>Feature Updates</strong> <span class="date">12/02/2024</span></br>
-                        <span>A forthcoming feature update heralds advancements in technology, promising enhanced functionalities and improved user experiences, </span><br>
-                        <a href="#" class="btn">Know More</a>
-                    </li>
                     {% for ru in recentUpdate %}
                     <li class="tab-{{ forloop.counter }}">
                         <strong>{{ru.title}}</strong> <span class="date">{{ru.date}} </span></br>
