@@ -65,6 +65,8 @@
                 </div>
                 {% else %}
                 <div class="row postProfileDetail mx-2 active">
+                    <span><b>Longitude : </b>{{ sanitizer_obj.longitude }}</span><hr>
+                    <span><b>Latitude : </b>{{ sanitizer_obj.latitude }}</span><hr>
                     <span><b>Address : </b>{{ sanitizer_obj.street }} ( {{sanitizer_obj.zip}} ) {{sanitizer_obj.city}} {{sanitizer_obj.state}} </span><hr>
                     <span><b>Contact Person : </b>{{ sanitizer_obj.contactperson }}</span><hr>
                     <span><b>Contact Person Phone: </b>{{ sanitizer_obj.CPphone }}</span><hr>

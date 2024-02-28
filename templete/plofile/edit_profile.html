@@ -75,6 +75,8 @@
                 </div>
                 {% else %}
                 <div class="row postProfileDetail mx-2 active">
+                    <span><b>Longitude : </b>{{ sanitizer_form.longitude }}</span><hr>
+                    <span><b>Latitude : </b>{{ sanitizer_form.latitude }}</span><hr>
                     <span><b>Address : </b>{{ sanitizer_form.street }}  {{sanitizer_form.zip}}  {{sanitizer_form.city}} {{sanitizer_form.state}} </span><hr>
                     <span><b>Contact Person : </b>{{ sanitizer_form.contactperson }}</span><hr>
                     <span><b>Contact Person Phone: </b>{{ sanitizer_form.CPphone }}</span><hr>
@@ -84,18 +86,29 @@
             </div>
         </div>
         <script>
-            const postProfile = document.querySelectorAll('.postProfile .postProfilesub');
-            const postProfileDetail = document.querySelectorAll('.postProfileDetail');
+            window.onload = function() {
+                const postProfile = document.querySelectorAll('.postProfile .postProfilesub');
+                const postProfileDetail = document.querySelectorAll('.postProfileDetail');
 
-            postProfile.forEach((item, index) => {
-                item.addEventListener('click', function() {
-                    postProfile.forEach(item => item.classList.remove('active'));
-                    postProfileDetail.forEach(item => item.classList.remove('active'));
+                postProfile.forEach((item, index) => {
+                    item.addEventListener('click', function() {
+                        postProfile.forEach(item => item.classList.remove('active'));
+                        postProfileDetail.forEach(item => item.classList.remove('active'));
 
-                    this.classList.add('active');
-                    postProfileDetail[index].classList.add('active');
+                        this.classList.add('active');
+                        postProfileDetail[index].classList.add('active');
+                    });
                 });
-            });
+                
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                    document.getElementById("id_latitude").value = position.coords.latitude;
+                    document.getElementById("id_longitude").value = position.coords.longitude;
+                    });
+                } else {
+                    alert("Geolocation is not supported by this browser.");
+                }
+            };
         </script>
     </div>
     </form>

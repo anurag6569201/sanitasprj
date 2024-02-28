@@ -25,7 +25,7 @@ class UserProfileForm(forms.ModelForm):
 class SanitizerForm(forms.ModelForm):
     class Meta:
         model = Sanitizer
-        fields ='name','street','city','state','zip','contactperson','phone','email','certificate','isChecked','profile_image','CPphone','CPemail'
+        fields ='name','street','city','state','zip','contactperson','phone','email','certificate','isChecked','profile_image','CPphone','CPemail','longitude','latitude'
 
 from .models import Disease
 

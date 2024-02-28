@@ -33,6 +33,9 @@ class Sanitizer(models.Model):
     
     CPphone = models.CharField(max_length=10, default="XXXXXXXXXX")
     CPemail = models.EmailField(default="example@example.com")
+
+    longitude=models.CharField(max_length=20)
+    latitude=models.CharField(max_length=20)
     
     certificate=models.ImageField(upload_to='sanitizerDoc/')
     isChecked=models.BooleanField(default=True)

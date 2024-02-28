@@ -16,6 +16,7 @@ def dataCalculation(request):
     last_24_hours = timezone.now() - timezone.timedelta(hours=24)
     last_7_days = timezone.now() - timezone.timedelta(hours=168)
 
+    sanit=Sanitizer.objects.all()
     unique_disease_24hr = Disease.objects.filter(created_at__gte=last_24_hours).values('name').annotate(total_cases=Sum('cases'))
     unique_disease_24hr = {disease_case['name']: disease_case['total_cases'] for disease_case in unique_disease_24hr}
 
@@ -27,4 +28,5 @@ def dataCalculation(request):
     return {
         'top_diseases': top_diseases_24hr,
         'top_diseases_7days': top_diseases_7days,
+        'sanit': sanit,
     }

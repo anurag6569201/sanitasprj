@@ -65,10 +65,11 @@
             map.addLayer(heat);
         }
     }
+    var colors = ["yellow", "green", "pink", "blue", "red", "grey", "voilet"];
     var diseaseColors = {
-        "malaria": "yellow",
-        "cholera": "green",
-        "dengue": "pink"
+        {% for disease_name, disease_cases in top_diseases %}
+        "{{ disease_name }}": colors[{{ forloop.counter0 }}],
+        {% endfor %}
     };
 
     var legend = L.control({ position: 'bottomright' });
