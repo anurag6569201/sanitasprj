@@ -54,17 +54,16 @@
     <div style="position: relative;">
         <span class="blogs_head">Last 7 Days Cases of Top 7 Diseases!!</span><hr><br>
         <canvas id="secondChart"></canvas>
-        <select id="disease">
-            {% for disease_name, disease_cases in top_diseases %}
-            <option value="{{disease_name}}">{{disease_name}}</option>
-            {% endfor %}
-        </select>
         <script>
             const ctx5 = document.getElementById('secondChart').getContext('2d');
             const secondChart = new Chart(ctx5, {
                 type: 'line',
                 data: {
-                    labels: ['1 day ago','2 days ago', '3 days ago', '4 days ago', '5 days ago', '6 days ago', '7 days ago' ],
+                    labels: [
+                    {% for disease_name, disease_cases in top_diseases %}
+                    '{{disease_name}}',
+                    {% endfor %}
+                    ],
                     datasets: [{
                         label: 'Daily Cases',
                         data: [
@@ -73,7 +72,7 @@
                             {% endfor %}
                         ],
                         borderColor: 'blue',
-                        borderWidth: 1,
+                        borderWidth: 2,
                         fill: true
                     }]
                 },
