@@ -41,6 +41,7 @@ def disease(request):
     context = {
         "data": data,
         'user_profile': user_profile,
+        'input_disease':input_disease,
     }
 
     return render(request, "material/disease-search.html", context)
@@ -126,5 +127,6 @@ def medicine(request):
     context = {
         "data": data,
         'user_profile': user_profile,
+        'input_medicine':input_medicine,
     }
     return render(request,"material/medicine.html",context)
