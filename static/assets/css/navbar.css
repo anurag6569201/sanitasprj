@@ -381,7 +381,6 @@ label[for=nav-toggle] {
 #nav-footer-titlebox {
     position: relative;
     margin-left: 16px;
-    width: 10px;
     display: flex;
     flex-direction: column;
     transition: opacity 1s;

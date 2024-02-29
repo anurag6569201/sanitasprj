@@ -53,7 +53,7 @@
 </head>
 
 <body>
-
+    
     <div class="base-container">
         <nav id="bignav">
             <div class="nav-bar">
@@ -81,8 +81,13 @@
                         <div id="nav-footer-avatar"><img src="{{sanitizer_obj.profile_image.url}}" />
                         {% endif %}
                         </div>
+                        {% if not sanitizer_obj.is_verified %}
                         <div id="nav-footer-titlebox">{{ user_profile.name }}{{ user_profile.surname }}<span
                                 id="nav-footer-subtitle">Online</span></div>
+                        {% else %}
+                        <div id="nav-footer-titlebox">{{ sanitizer_obj.name }}<span
+                            id="nav-footer-subtitle">Online</span></div>
+                        {% endif %}
                         <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
                     </div>
                     <div id="nav-footer-content nav-content">
