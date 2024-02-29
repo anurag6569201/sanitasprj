@@ -24,11 +24,14 @@ def dataCalculation(request):
     unique_disease_7days = {disease_case['name']: disease_case['total_cases'] for disease_case in unique_disease_7days}
 
     total_cases_24hr = sum(unique_disease_24hr.values())
+
     top_diseases_24hr = sorted(unique_disease_24hr.items(), key=lambda x: x[1], reverse=True)[:7]
+    All_diseases_24hr = sorted(unique_disease_24hr.items(), key=lambda x: x[1], reverse=True)
     top_diseases_7days = sorted(unique_disease_7days.items(), key=lambda x: x[1], reverse=True)[:7]
     return {
         'top_diseases': top_diseases_24hr,
         'top_diseases_7days': top_diseases_7days,
         'sanit': sanit,
         'total_cases_24hr': total_cases_24hr,
+        'All_diseases_24hr':All_diseases_24hr,
     }

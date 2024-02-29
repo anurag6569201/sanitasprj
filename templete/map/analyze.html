@@ -53,6 +53,42 @@
         <br>
     </div>
     <div style="position: relative;">
+        <span class="blogs_head">All diseases in last 24hrs</span><hr><br>
+        <canvas id="horizDiseaseData"></canvas>
+        <script>
+            const ctx6 = document.getElementById('horizDiseaseData').getContext('2d');
+            new Chart(ctx6, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        {% for disease_name, disease_cases in All_diseases_24hr %}
+                            '{{disease_name}}',
+                        {% endfor %}
+                    ],
+                    datasets: [{
+                        label: 'Daily Cases',
+                        data: [
+                            {% for disease_name, disease_cases in All_diseases_24hr %}
+                            {{disease_cases}},
+                            {% endfor %}
+                        ],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    <div style="position: relative;">
         <span class="blogs_head">Last 7 Days Cases of Top 7 Diseases!!</span><hr><br>
         <canvas id="secondChart"></canvas>
         <script>
@@ -100,9 +136,6 @@
             <option value="chikungunya">Chikungunya</option>
         </select>
     </div>
-    <br>
-    
-    
 </div>
 
 {% endblock content %}
