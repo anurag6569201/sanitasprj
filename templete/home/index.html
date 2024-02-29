@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block content %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="col-md-12">
     <br>
     <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><br>
     <div class="row">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         {% for disease_name, disease_cases in top_diseases %}
         <div class="col-md-3 donuts">
             <canvas id="donutChart{{ forloop.counter }}" width="100" height="100"></canvas>

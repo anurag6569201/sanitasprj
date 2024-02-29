@@ -14,13 +14,13 @@ def sanitizer_glb(request):
 
 def dataCalculation(request):
     last_24_hours = timezone.now() - timezone.timedelta(hours=24)
-    last_7_days = timezone.now() - timezone.timedelta(hours=168)
-
-    sanit=Sanitizer.objects.all()
-    unique_disease_24hr = Disease.objects.filter(created_at__gte=last_24_hours).values('name').annotate(total_cases=Sum('cases'))
+    last_7_days = timezone.now() - timezone.timedelta(days=7)
+    
+    sanit = Sanitizer.objects.all()
+    unique_disease_24hr = Disease.objects.filter(trending_data__created_at__gte=last_24_hours).values('name').annotate(total_cases=Sum('cases'))
     unique_disease_24hr = {disease_case['name']: disease_case['total_cases'] for disease_case in unique_disease_24hr}
 
-    unique_disease_7days = Disease.objects.filter(created_at__gte=last_7_days).values('name').annotate(total_cases=Sum('cases'))
+    unique_disease_7days = Disease.objects.filter(trending_data__created_at__gte=last_7_days).values('name').annotate(total_cases=Sum('cases'))
     unique_disease_7days = {disease_case['name']: disease_case['total_cases'] for disease_case in unique_disease_7days}
 
     top_diseases_24hr = sorted(unique_disease_24hr.items(), key=lambda x: x[1], reverse=True)[:7]
