@@ -26,7 +26,7 @@
             const donutChart{{ forloop.counter }} = document.getElementById('donutChart{{ forloop.counter }}').getContext('2d');
             const donutChart{{ forloop.counter }}Data = {
                 datasets: [{
-                    data: [{{ disease_cases }}, 100],
+                    data: [{{ disease_cases }},{{total_cases_24hr}}],
                     backgroundColor: ['#12372a', '#adbc9f']
                 }]
             };

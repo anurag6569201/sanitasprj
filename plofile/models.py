@@ -47,7 +47,7 @@ from django.db import models
 
 class TrendingData(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(null=True)
+    created_at = models.DateTimeField(null=True,auto_now_add=True)
 
 class Disease(models.Model):
     trending_data = models.ForeignKey(TrendingData, on_delete=models.CASCADE)

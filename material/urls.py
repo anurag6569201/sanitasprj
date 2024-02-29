@@ -8,4 +8,5 @@ urlpatterns=[
     path('disease',views.disease,name='disease'),
     path('calorie',views.calorie,name='calorie'),
     path('resource',views.resource,name='resource'),
+    path('medic',views.medicine,name='medicine'),
 ]

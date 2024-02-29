@@ -23,10 +23,12 @@ def dataCalculation(request):
     unique_disease_7days = Disease.objects.filter(trending_data__created_at__gte=last_7_days).values('name').annotate(total_cases=Sum('cases'))
     unique_disease_7days = {disease_case['name']: disease_case['total_cases'] for disease_case in unique_disease_7days}
 
+    total_cases_24hr = sum(unique_disease_24hr.values())
     top_diseases_24hr = sorted(unique_disease_24hr.items(), key=lambda x: x[1], reverse=True)[:7]
     top_diseases_7days = sorted(unique_disease_7days.items(), key=lambda x: x[1], reverse=True)[:7]
     return {
         'top_diseases': top_diseases_24hr,
         'top_diseases_7days': top_diseases_7days,
         'sanit': sanit,
+        'total_cases_24hr': total_cases_24hr,
     }

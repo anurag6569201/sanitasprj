@@ -100,3 +100,31 @@ def resource(request):
         'user_profile': user_profile,
     }   
     return render(request,"material/resource.html",context)
+
+def medicine(request):
+    user_profile = UserProfile.objects.get(user=request.user)
+    input_medicine = request.GET.get('q', 'paracetamol')
+    api_call_url = f"https://wsearch.nlm.nih.gov/ws/query?db=healthTopics&term={input_medicine}&retmax=2"
+    response = requests.get(api_call_url)
+    xml_content = response.content.decode("utf-8")
+
+    root = ET.fromstring(xml_content)
+
+    data = {
+        "description": [],
+        "prevention": [],
+    }
+
+    for summary in root.findall(".//content[@name='FullSummary']"):
+        data["description"].append(summary.text)
+
+    for group in root.findall(".//content[@name='groupName']"):
+        data["prevention"].append(group.text)
+
+    data["description"] = " ".join(data["description"])
+
+    context = {
+        "data": data,
+        'user_profile': user_profile,
+    }
+    return render(request,"material/medicine.html",context)
