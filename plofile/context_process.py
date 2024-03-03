@@ -37,3 +37,38 @@ def dataCalculation(request):
         'total_cases_24hr': total_cases_24hr,
         'All_diseases_24hr':All_diseases_24hr,
     }
+
+
+import json
+import requests
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
+def send_message(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        message = data.get('message', '')
+
+        if message:
+            try:
+                api_key = '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'  # Replace this with your OpenAI API key
+                response = requests.post('https://api.openai.com/v1/chat/completions',
+                                         headers={'Authorization': f'Bearer {api_key}',
+                                                  'Content-Type': 'application/json'},
+                                         json={
+                                             'model': 'gpt-3.5-turbo-0125',
+                                             'messages': [
+                                                 {'role': 'system', 'content': 'Doctor'},
+                                                 {'role': 'user', 'content': message}
+                                             ]
+                                         })
+                data = response.json()
+                assistant_reply = data['choices'][0]['message']['content']
+                return JsonResponse({'reply': assistant_reply})
+            except Exception as e:
+                return JsonResponse({'error': str(e)}, status=500)
+        else:
+            return JsonResponse({'error': 'No message provided'}, status=400)
+    else:
+        return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)

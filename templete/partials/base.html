@@ -57,15 +57,95 @@
     <div class="chatbot_btn" onclick="turnChat()">
         <span class="material-symbols-outlined" style="font-size: 1.7em;"> contact_support </span>
     </div>
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+                <div class="col-md-4">
+    
+                    <div class="box box-warning direct-chat direct-chat-warning">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Assistant</h3>
+    
+                            <div class="box-tools pull-right">
+                                <span onclick="offChat()" type="button" class="btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                                </span>
+                            </div>
+                        </div>
+    
+                        <div class="box-body">
+    
+                            <div class="direct-chat-messages">
+    
+                                <div class="direct-chat-msg">
+                                    <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name pull-left">Assistant</span>
+                                    </div>
+    
+                                    <img class="direct-chat-img"
+                                        src="../../static/assets/images/userauths/bot.png"
+                                        alt="message user image">
+    
+                                    <div class="chat-display">
+                                        <div class="direct-chat-text-ai direct-chat-text">
+                                            Thank you for your believe in our supports
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="direct-chat-msg right">
+                                    <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name pull-right">{{ sanitizer_obj.name }}</span>
+                                    </div>
+    
+                                    <img class="direct-chat-img"
+                                        src="{{sanitizer_obj.profile_image.url}}"
+                                        alt="message user image">
+    
+                                    <div class="chat-display">
+                                        <div class="direct-chat-text-user direct-chat-text">
+                                            Thank you for your believe in our supports
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="box-footer">
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" id="user-input"  name="message" placeholder="Type Message ..." class="form-control">
+                                    <span class="input-group-btn">
+                                        <button type="button" onclick="sendMessage()" class="btn btn-warning btn-flat" style="width: 5em;">Send</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+    <!-- <div class="chatbot_btn" onclick="turnChat()">
+        <span class="material-symbols-outlined" style="font-size: 1.7em;"> contact_support </span>
+    </div>
     <div class="chatbot">
         <div class="closeBtn" onclick="offChat()" style="cursor: pointer;">X</div>
         <div id="chat-container">
+            <input type="text" id="user-input" placeholder="Type your message">
+            <button id="send_btn" onclick="sendMessage()">Send</button>
             <div id="chat-display"></div>
-            <input type="text" id="user-input" placeholder="Type your message...">
         </div>
-    </div>
+    </div> -->
     <script>
-        const chatToggle=document.querySelector('.chatbot');
+        const chatToggle=document.querySelector('.page-content');
         const chatbtnToggle=document.querySelector('.chatbot_btn');
     
         function turnChat(){
@@ -74,97 +154,25 @@
         }
         function offChat(){
             chatToggle.style.display="none";
-            chatbtnToggle.style.display="flex";
+            chatbtnToggle.style.display="block";
         }
-        const apiKey = "{{Chatapi}}";
-    
-        const chatDisplay = document.getElementById('chat-display');
-        const userInput = document.getElementById('user-input');
-    
-        function appendSystemMessage(message) {
-          const systemMessage = document.createElement('div');
-          systemMessage.className = 'message system';
-          systemMessage.innerText = message;
-          chatDisplay.appendChild(systemMessage);
-        }
-        
-        function appendUserMessage(message) {
-          const userMessage = document.createElement('div');
-          userMessage.className = 'message user';
-        
-          // Create the user profile image element
-          const userProfileImage = document.createElement('img');
-          userProfileImage.src = '{% if not sanitizer_obj.is_verified %}{{user_profile.profile_image.url}}{% else %}{{sanitizer_obj.profile_image.url}}{% endif %}';
-          userProfileImage.alt = 'User Profile';
-          userProfileImage.className = 'profile-image';
-        
-          // Create the message content element
-          const messageContent = document.createElement('div');
-          messageContent.className = 'message-content';
-          messageContent.innerText = message;
-        
-          // Append elements to the user message div
-          userMessage.appendChild(userProfileImage);
-          userMessage.appendChild(messageContent);
-        
-          chatDisplay.appendChild(userMessage);
-        }
-        
-        function appendAssistantMessage(message) {
-          const assistantMessage = document.createElement('div');
-          assistantMessage.className = 'message assistant';
-        
-          // Create the AI profile image element
-          const aiProfileImage = document.createElement('img');
-          aiProfileImage.src = '../../static/assets/images/userauths/bot.png'; // Update with the AI's image URL
-          aiProfileImage.alt = 'AI Profile';
-          aiProfileImage.className = 'profile-image';
-        
-          // Create the message content element
-          const messageContent = document.createElement('div');
-          messageContent.className = 'message-content';
-          messageContent.innerText = message;
-        
-          // Append elements to the AI message div
-          assistantMessage.appendChild(aiProfileImage);
-          assistantMessage.appendChild(messageContent);
-        
-          chatDisplay.appendChild(assistantMessage);
-          
-        }
-        
-        function sendUserMessage(message) {
-          appendUserMessage(message);
-        
-          fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${apiKey}`,
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              model: 'gpt-3.5-turbo-0125',
-              messages: [
-                { role: 'system', content: 'Doctor' },
-                { role: 'user', content: message }
-              ]
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            const userInputtext = document.getElementById('user-input');
+            fetch('/send-message/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({message: userInput})
             })
-          })
             .then(response => response.json())
             .then(data => {
-              const assistantReply = data.choices[0].message.content;
-              appendAssistantMessage(assistantReply);
+                const chatDisplay = document.querySelector('.chat-display');
+                chatDisplay.innerHTML += `<div class="direct-chat-text-ai direct-chat-text">${data.reply}</div>`;
             })
             .catch(error => console.error('Error:', error));
         }
-        
-        userInput.addEventListener('keydown', (event) => {
-          if (event.key === 'Enter') {
-            const userMessage = userInput.value;
-            userInput.value = '';
-            sendUserMessage(userMessage);
-          }
-        });
     </script>
     <div class="base-container">
         <nav id="bignav">
