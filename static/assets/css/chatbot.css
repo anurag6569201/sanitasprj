@@ -1,18 +1,11 @@
 #page-content{
     display: none;
+    position: fixed;
+    bottom: .5em;
+    right: .5em;
+    z-index: 1000;
+    width: 25em;
 }
-.stretch-card>.card {
-    width: 100%;
-    min-width: 100%
-}
-
-
-.flex {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto
-}
-
 @media (max-width:991.98px) {
     .padding {
         padding: 1.5rem
@@ -25,9 +18,6 @@
     }
 }
 
-.padding {
-    padding: 3rem
-}
 
 .box.box-warning {
     border-top-color: #adbc9f;
@@ -287,11 +277,23 @@
 
 .btn-warning {
     color: #fff;
-    background-color: #f0ad4e;
-    border-color: #eea236;
+    background-color: #113529;
+    border-color: #113529;
 } 
 
+.chatbot_btn span{
+    border: 1px solid #97a0b3;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    padding: .13em;
+    z-index: 1000;
+    border-radius: .3em;
+    background-color: #adbc9f;
+    cursor: pointer;
+}
 
-
-
-
+.btn-warning:hover{
+    background-color: #adbc9f;
+    border: 1px solid #113529;
+}

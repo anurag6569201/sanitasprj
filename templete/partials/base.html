@@ -58,11 +58,11 @@
         <span class="material-symbols-outlined" style="font-size: 1.7em;"> contact_support </span>
     </div>
     <div class="page-content page-container" id="page-content">
-        <div class="padding">
+        <div>
             <div class="row container d-flex justify-content-center">
-                <div class="col-md-4">
+                <div class="col-md-12">
     
-                    <div class="box box-warning direct-chat direct-chat-warning">
+                    <div class="box box-warning direct-chat direct-chat-warning" style="border-radius: .4em;">
                         <div class="box-header with-border">
                             <h3 class="box-title">Assistant</h3>
     
@@ -87,24 +87,7 @@
     
                                     <div class="chat-display">
                                         <div class="direct-chat-text-ai direct-chat-text">
-                                            Thank you for your believe in our supports
-                                        </div>
-                                    </div>
-    
-                                </div>
-    
-                                <div class="direct-chat-msg right">
-                                    <div class="direct-chat-info clearfix">
-                                        <span class="direct-chat-name pull-right">{{ sanitizer_obj.name }}</span>
-                                    </div>
-    
-                                    <img class="direct-chat-img"
-                                        src="{{sanitizer_obj.profile_image.url}}"
-                                        alt="message user image">
-    
-                                    <div class="chat-display">
-                                        <div class="direct-chat-text-user direct-chat-text">
-                                            Thank you for your believe in our supports
+                                            Welcome to Sanitas , How may i help you!
                                         </div>
                                     </div>
     
@@ -115,14 +98,13 @@
                         </div>
     
                         <div class="box-footer">
-                            <form action="#" method="post">
+                            
                                 <div class="input-group">
                                     <input type="text" id="user-input"  name="message" placeholder="Type Message ..." class="form-control">
                                     <span class="input-group-btn">
                                         <button type="button" onclick="sendMessage()" class="btn btn-warning btn-flat" style="width: 5em;">Send</button>
                                     </span>
                                 </div>
-                            </form>
                         </div>
     
                     </div>
@@ -133,17 +115,7 @@
         </div>
     
     </div>
-    <!-- <div class="chatbot_btn" onclick="turnChat()">
-        <span class="material-symbols-outlined" style="font-size: 1.7em;"> contact_support </span>
-    </div>
-    <div class="chatbot">
-        <div class="closeBtn" onclick="offChat()" style="cursor: pointer;">X</div>
-        <div id="chat-container">
-            <input type="text" id="user-input" placeholder="Type your message">
-            <button id="send_btn" onclick="sendMessage()">Send</button>
-            <div id="chat-display"></div>
-        </div>
-    </div> -->
+
     <script>
         const chatToggle=document.querySelector('.page-content');
         const chatbtnToggle=document.querySelector('.chatbot_btn');
@@ -159,6 +131,23 @@
         function sendMessage() {
             const userInput = document.getElementById('user-input').value;
             const userInputtext = document.getElementById('user-input');
+            const chatDisplay = document.querySelector('.chat-display');
+                chatDisplay.innerHTML += `
+                <div class="direct-chat-msg right">
+                    <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-right">{{ sanitizer_obj.name }}</span>
+                    </div>
+
+                    <img class="direct-chat-img"
+                        src="{{sanitizer_obj.profile_image.url}}"
+                        alt="message user image">
+
+                    <div class="chat-display">
+                        <div class="direct-chat-text">${userInput}</div>
+                    </div>
+
+                </div>`;
+
             fetch('/send-message/', {
                 method: 'POST',
                 headers: {
@@ -169,7 +158,21 @@
             .then(response => response.json())
             .then(data => {
                 const chatDisplay = document.querySelector('.chat-display');
-                chatDisplay.innerHTML += `<div class="direct-chat-text-ai direct-chat-text">${data.reply}</div>`;
+                chatDisplay.innerHTML += `
+                <div class="direct-chat-msg">
+                    <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-left">Assistant</span>
+                    </div>
+
+                    <img class="direct-chat-img"
+                        src="../../static/assets/images/userauths/bot.png"
+                        alt="message user image">
+
+                    <div class="chat-display">
+                        <div class="direct-chat-text">${data.reply}</div>
+                    </div>
+
+                </div>`;
             })
             .catch(error => console.error('Error:', error));
         }
