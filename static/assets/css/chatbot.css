@@ -5,6 +5,7 @@
     right: .5em;
     z-index: 1000;
     width: 25em;
+    background-color: #adbc9f;
 }
 @media (max-width:991.98px) {
     .padding {

@@ -30,7 +30,9 @@
     <div class="outputxml">
         <span class="blogs_head"><span style="font-weight: 600;">Medicine : </span>{{ input_medicine }}</span><hr><br>
         {% autoescape off %}
-        {{ data.description }}
+        {% for desc in data.description %}
+            <p>{{ desc|linebreaks }}</p>
+        {% endfor %}
         {% endautoescape %}
     </div>
 </div>

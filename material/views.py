@@ -105,7 +105,7 @@ def resource(request):
 def medicine(request):
     user_profile = UserProfile.objects.get(user=request.user)
     input_medicine = request.GET.get('q', 'paracetamol')
-    api_call_url = f"https://wsearch.nlm.nih.gov/ws/query?db=healthTopics&term={input_medicine}&retmax=2"
+    api_call_url = f"https://connect.medlineplus.gov/service?mainSearchCriteria.v.cs=2.16.840.1.113883.6.69&mainSearchCriteria.v.dn={input_medicine}&informationRecipient.languageCode.c=en"
     response = requests.get(api_call_url)
     xml_content = response.content.decode("utf-8")
 
@@ -114,19 +114,26 @@ def medicine(request):
     data = {
         "description": [],
         "prevention": [],
+        "title": [],
+        "updated": [],
     }
 
-    for summary in root.findall(".//content[@name='FullSummary']"):
-        data["description"].append(summary.text)
+    for entry in root.findall(".//{http://www.w3.org/2005/Atom}entry"):
+        title = entry.find(".//{http://www.w3.org/2005/Atom}title").text
+        data["title"].append(title)
 
-    for group in root.findall(".//content[@name='groupName']"):
-        data["prevention"].append(group.text)
+        summary = entry.find(".//{http://www.w3.org/2005/Atom}summary[@type='html']").text
+        data["description"].append(summary)
 
-    data["description"] = " ".join(data["description"])
+        updated = entry.find(".//{http://www.w3.org/2005/Atom}updated").text
+        data["updated"].append(updated)
+
+        for group in entry.findall(".//{http://www.w3.org/2005/Atom}content[@name='groupName']"):
+            data["prevention"].append(group.text)
 
     context = {
         "data": data,
         'user_profile': user_profile,
-        'input_medicine':input_medicine,
+        'input_medicine': input_medicine,
     }
-    return render(request,"material/medicine.html",context)
+    return render(request, "material/medicine.html", context)
