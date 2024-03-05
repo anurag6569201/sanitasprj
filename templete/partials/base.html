@@ -190,7 +190,7 @@
                     <div class="nav-button {% if request.path == '/' %}active{% endif %}"><a href="{% url 'home:index' %}"><i class="fas fa-home"></i><span>Home</span></a></div>
                     <div class="nav-button {% if '/map/' in request.path %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span>Map</span></a></div>
                     <div class="nav-button {% if '/material/' in request.path %}active{% endif %}"><a href="{% url 'material:index-material' %}"><i class="fas fa-thumbtack"></i><span>Materials</span></a></div>
-                    <div class="nav-button"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-heart"></i><span>Notifications</span></a></div>
+                    <div class="nav-button"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><div class="position-relative" style="margin: 0;"><i class="fas fa-heart"></i><span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle" style="opacity: 1;"><span class="visually-hidden">New alerts</span></span></div><span>Notifications</span></a></div>
                     <div class="nav-button {% if '/profile/' in request.path %}active{% endif %}"><a href="{% url 'plofile:index-profile' %}"><i class="fas fa-user"></i><span>Profile</span></a></div>
         
                     <div id="nav-content-highlight"></div>

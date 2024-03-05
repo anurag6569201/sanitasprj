@@ -49,6 +49,7 @@
     opacity: 0;
     transition: opacity 0.1s;
     pointer-events: none;
+    display: none;
 }
 #bignav{
     height: 100vh;
@@ -477,4 +478,7 @@ label[for=nav-footer-toggle] {
     color: white;
     border: 1px solid white;
     background-color: #adbc9f;
+}
+.translate-middle {
+    transform: translate(-130%, -30%) !important;
 }
