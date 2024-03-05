@@ -1,6 +1,7 @@
 from plofile.models import Sanitizer,Disease
 from django.db.models import Sum
 from django.utils import timezone
+from home.models import Notification
 
 def sanitizer_glb(request):
     sanitizer_obj = None 
@@ -72,3 +73,17 @@ def send_message(request):
             return JsonResponse({'error': 'No message provided'}, status=400)
     else:
         return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)
+    
+
+def notification(request):
+    last_24_hours = timezone.now() - timezone.timedelta(hours=24)
+    notify_24hr = Notification.objects.filter(timestamp__gte=last_24_hours)
+
+    return {
+        'notify_24hr':notify_24hr,
+    }
+
+def mark_notification_as_read(request, notification_id):
+    notification = Notification.objects.get(id=notification_id)
+    notification.is_read = True
+    notification.save()

@@ -1,10 +1,10 @@
 #page-content{
     display: none;
     position: fixed;
-    bottom: .5em;
-    right: .5em;
+    bottom: 1vw;
+    right: 1vw;
     z-index: 1000;
-    width: 25em;
+    max-width: 20em;
 }
 @media (max-width:991.98px) {
     .padding {
@@ -140,6 +140,7 @@
 
 .direct-chat-msg, .direct-chat-text {
     display: block;
+    font-size: .9em;
 }
 
 .direct-chat-info {
@@ -284,8 +285,8 @@
 .chatbot_btn span{
     border: 1px solid #97a0b3;
     position: fixed;
-    bottom: 1em;
-    right: 1em;
+    bottom: 1vw;
+    right: 1vw;
     padding: .13em;
     z-index: 1000;
     border-radius: .3em;

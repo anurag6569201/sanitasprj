@@ -58,11 +58,9 @@
         <span class="material-symbols-outlined" style="font-size: 1.7em;"> contact_support </span>
     </div>
     <div class="page-content page-container" id="page-content">
-        <div>
-            <div class="row container d-flex justify-content-center">
                 <div class="col-md-12">
     
-                    <div class="box box-warning direct-chat direct-chat-warning" style="border-radius: .4em;">
+                    <div class="box box-warning direct-chat direct-chat-warning" style="border-radius: .4em;margin: 0;">
                         <div class="box-header with-border">
                             <h3 class="box-title">Assistant</h3>
     
@@ -110,9 +108,7 @@
                     </div>
     
                 </div>
-            </div>
-    
-        </div>
+           
     
     </div>
 
@@ -135,12 +131,21 @@
                 chatDisplay.innerHTML += `
                 <div class="direct-chat-msg right">
                     <div class="direct-chat-info clearfix">
+                        {% if not sanitizer_obj.is_verified %}
+                        <span class="direct-chat-name pull-right">{{ user_profile.name }} {{ user_profile.surname }}</span>
+                        {% else %}
                         <span class="direct-chat-name pull-right">{{ sanitizer_obj.name }}</span>
+                        {% endif %}
                     </div>
-
+                    {% if not sanitizer_obj.is_verified %}
+                    <img class="direct-chat-img"
+                        src="{{user_profile.profile_image.url}}"
+                        alt="message user image">
+                    {% else %}
                     <img class="direct-chat-img"
                         src="{{sanitizer_obj.profile_image.url}}"
                         alt="message user image">
+                    {% endif %}
 
                     <div class="chat-display">
                         <div class="direct-chat-text">${userInput}</div>
@@ -190,7 +195,7 @@
                     <div class="nav-button {% if request.path == '/' %}active{% endif %}"><a href="{% url 'home:index' %}"><i class="fas fa-home"></i><span>Home</span></a></div>
                     <div class="nav-button {% if '/map/' in request.path %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span>Map</span></a></div>
                     <div class="nav-button {% if '/material/' in request.path %}active{% endif %}"><a href="{% url 'material:index-material' %}"><i class="fas fa-thumbtack"></i><span>Materials</span></a></div>
-                    <div class="nav-button"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><div class="position-relative" style="margin: 0;"><i class="fas fa-heart"></i><span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle" style="opacity: 1;"><span class="visually-hidden">New alerts</span></span></div><span>Notifications</span></a></div>
+                    <div class="nav-button"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><div class="position-relative" style="margin: 0;"><i class="fas fa-heart"></i><span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle" style="opacity: 1;"><span class="visually-hidden">New alerts</span></span></div><span>Notifications</span></a></div>
                     <div class="nav-button {% if '/profile/' in request.path %}active{% endif %}"><a href="{% url 'plofile:index-profile' %}"><i class="fas fa-user"></i><span>Profile</span></a></div>
         
                     <div id="nav-content-highlight"></div>
@@ -205,7 +210,7 @@
                         {% endif %}
                         </div>
                         {% if not sanitizer_obj.is_verified %}
-                        <div id="nav-footer-titlebox">{{ user_profile.name }}{{ user_profile.surname }}<span
+                        <div id="nav-footer-titlebox">{{ user_profile.name }} {{ user_profile.surname }}<span
                                 id="nav-footer-subtitle">Online</span></div>
                         {% else %}
                         <div id="nav-footer-titlebox">{{ sanitizer_obj.name }}<span
@@ -231,7 +236,16 @@
                 </div>
                 <hr style="margin: 0;">
                 <div class="offcanvas-body">
-                    ...
+                    <span class="blogs_head" style="font-size: 1em;">Today</span><hr style="margin: 0;">
+                    <ul>
+                        {% for notification in notify_24hr %}
+                            <li>
+                                <strong>Message:</strong> {{ notification.message }}<br>
+                                <strong>Timestamp:</strong> {{ notification.timestamp }}<br>
+                                <strong>Read:</strong> {% if notification.is_read %}Yes{% else %}No{% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
         </nav>
