@@ -190,7 +190,7 @@
                     <div class="nav-button {% if request.path == '/' %}active{% endif %}"><a href="{% url 'home:index' %}"><i class="fas fa-home"></i><span>Home</span></a></div>
                     <div class="nav-button {% if '/map/' in request.path %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span>Map</span></a></div>
                     <div class="nav-button {% if '/material/' in request.path %}active{% endif %}"><a href="{% url 'material:index-material' %}"><i class="fas fa-thumbtack"></i><span>Materials</span></a></div>
-                    <div class="nav-button"><a href=""><i class="fas fa-heart"></i><span>Notifications</span></a></div>
+                    <div class="nav-button"><a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-heart"></i><span>Notifications</span></a></div>
                     <div class="nav-button {% if '/profile/' in request.path %}active{% endif %}"><a href="{% url 'plofile:index-profile' %}"><i class="fas fa-user"></i><span>Profile</span></a></div>
         
                     <div id="nav-content-highlight"></div>
@@ -224,6 +224,16 @@
                     </div>
                 </div>
             </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel"><span class="material-symbols-outlined"> notifications </span> Notifications</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <hr style="margin: 0;">
+                <div class="offcanvas-body">
+                    ...
+                </div>
+            </div>
         </nav>
         <nav class="navbar fixed-bottom" class="nav-bar">
             <div class="container-fluid">
@@ -239,7 +249,7 @@
         </nav>
         <div class="container-fluid home">
             <div class="row">
-                <div class="col-md-12 search-box">
+                <div class="col-md-12 search-box" style="z-index: 999;">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-dark" type="submit">Search</button>

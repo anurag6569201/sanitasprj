@@ -450,3 +450,31 @@ label[for=nav-footer-toggle] {
 #bignav .nav-button:nth-of-type(8):hover{
     color: var(--navbar-dark-primary);
 }
+
+/* notifications */
+
+.offcanvas{
+    margin-top: 1vw;
+    margin-right: 1vw;
+    height: calc(100% - 2vw);
+    background: var(--navbar-dark-primary);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    color: var(--navbar-light-primary);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    user-select: none;
+    z-index: 10000!important;
+}
+.offcanvas-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+.btn-close{
+    color: white;
+    border: 1px solid white;
+    background-color: #adbc9f;
+}
