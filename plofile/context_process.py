@@ -2,6 +2,7 @@ from plofile.models import Sanitizer,Disease
 from django.db.models import Sum
 from django.utils import timezone
 from home.models import Notification
+from django.shortcuts import redirect
 
 def sanitizer_glb(request):
     sanitizer_obj = None 
@@ -77,13 +78,8 @@ def send_message(request):
 
 def notification(request):
     last_24_hours = timezone.now() - timezone.timedelta(hours=24)
-    notify_24hr = Notification.objects.filter(timestamp__gte=last_24_hours)
+    notify_24hr = Notification.objects.filter(timestamp__gte=last_24_hours).order_by('-timestamp')
 
     return {
         'notify_24hr':notify_24hr,
     }
-
-def mark_notification_as_read(request, notification_id):
-    notification = Notification.objects.get(id=notification_id)
-    notification.is_read = True
-    notification.save()

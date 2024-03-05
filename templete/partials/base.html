@@ -236,16 +236,27 @@
                 </div>
                 <hr style="margin: 0;">
                 <div class="offcanvas-body">
-                    <span class="blogs_head" style="font-size: 1em;">Today</span><hr style="margin: 0;">
-                    <ul>
+                    <span class="blogs_head" style="font-size: 1em;display: flex;justify-content: space-between;align-items: center;">Today <span class="markas"><a href="{% url 'home:mark_all_as_read' %}">Mark as read</a></span></span><hr style="margin: 0;">
+                    <br>
+                    <span class="blogs_head" style="font-size: 1em;">You have 
+                        {% if not notif.is_read %}
+                        {{notify_24hr.count}}
+                        {% endif %}
+                        unread message
+                    </span>
+                    <div class="notify_24hr" style="margin-top: .5em;">
                         {% for notification in notify_24hr %}
-                            <li>
-                                <strong>Message:</strong> {{ notification.message }}<br>
-                                <strong>Timestamp:</strong> {{ notification.timestamp }}<br>
-                                <strong>Read:</strong> {% if notification.is_read %}Yes{% else %}No{% endif %}
-                            </li>
+                        <div id="nav-footer-heading" class="notify-msg" {% if not notification.is_read %} style="background-color: #adbc9f9a;" {% endif %}>
+                            {% if not sanitizer_obj.is_verified %}
+                            <div id="nav-footer-avatar"><img src="{{user_profile.profile_image.url}}" />
+                            {% else %}
+                            <div id="nav-footer-avatar"><img src="{{sanitizer_obj.profile_image.url}}" />
+                            {% endif %}
+                            </div>
+                            <div id="nav-footer-titlebox">{{ notification.message }}<span id="nav-footer-subtitle">{{ notification.timestamp}}</span></div>
+                        </div>
                         {% endfor %}
-                    </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -286,35 +297,10 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <!--owl crousal cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $(document).ready(function(){
-            $('.featured-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                nav:true,
-                autoplay:true,
-                autoplayTimeout:3000,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:2
-                    },
-                    1000:{
-                        items:3
-                    }
-                }
-            });
-        });
-    </script>
-
     <!-- apps js -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            
             var buttons = document.querySelectorAll('.nav-button');
             var highlight = document.getElementById('nav-highlight');
 

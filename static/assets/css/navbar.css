@@ -482,3 +482,22 @@ label[for=nav-footer-toggle] {
 .translate-middle {
     transform: translate(-180%, -10%) !important;
 }
+.notify-msg{
+    border-radius: .5em;
+    margin-bottom: .4em;
+}
+.markas {
+    font-size: .7em;
+    cursor: pointer;
+    background-color: #adbc9f9a;
+    padding: .2em .5em;
+    border-radius: .3em;
+}
+.markas a{
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+.markas:hover{
+    background-color: #adbc9f;
+}
