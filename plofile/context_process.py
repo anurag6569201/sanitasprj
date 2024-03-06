@@ -1,3 +1,7 @@
+import json
+import requests
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from plofile.models import Sanitizer,Disease
 from django.db.models import Sum
 from django.utils import timezone
@@ -41,10 +45,6 @@ def dataCalculation(request):
     }
 
 
-import json
-import requests
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def send_message(request):
@@ -79,7 +79,8 @@ def send_message(request):
 def notification(request):
     last_24_hours = timezone.now() - timezone.timedelta(hours=24)
     notify_24hr = Notification.objects.filter(timestamp__gte=last_24_hours).order_by('-timestamp')
-
+    has_unread_notifications = any(notif.is_read == False for notif in notify_24hr)
     return {
         'notify_24hr':notify_24hr,
+        'has_unread_notifications':has_unread_notifications,
     }
