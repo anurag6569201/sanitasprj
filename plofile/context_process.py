@@ -2,11 +2,12 @@ import json
 import requests
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from plofile.models import Sanitizer,Disease
+from plofile.models import Sanitizer,Disease,TrendingData
 from django.db.models import Sum
 from django.utils import timezone
 from home.models import Notification
 from django.shortcuts import redirect
+from django.shortcuts import render
 
 def sanitizer_glb(request):
     sanitizer_obj = None 
@@ -20,12 +21,20 @@ def sanitizer_glb(request):
         'Chatapi':Chatapi,
     }
 
+
 def dataCalculation(request):
+    if 'city' in request.GET and 'state' in request.GET:
+        city = request.GET.get('city')
+        state = request.GET.get('state')
+    else:
+        city = "Bhubaneswar"
+        state = "Odisha"
+
     last_24_hours = timezone.now() - timezone.timedelta(hours=24)
     last_7_days = timezone.now() - timezone.timedelta(days=7)
-    
     sanit = Sanitizer.objects.all()
-    unique_disease_24hr = Disease.objects.filter(trending_data__created_at__gte=last_24_hours).values('name').annotate(total_cases=Sum('cases'))
+    
+    unique_disease_24hr = Disease.objects.filter(trending_data__created_at__gte=last_24_hours, trending_data__city=city, trending_data__state=state).values('name').annotate(total_cases=Sum('cases'))
     unique_disease_24hr = {disease_case['name']: disease_case['total_cases'] for disease_case in unique_disease_24hr}
 
     unique_disease_7days = Disease.objects.filter(trending_data__created_at__gte=last_7_days).values('name').annotate(total_cases=Sum('cases'))
@@ -36,15 +45,15 @@ def dataCalculation(request):
     top_diseases_24hr = sorted(unique_disease_24hr.items(), key=lambda x: x[1], reverse=True)[:7]
     All_diseases_24hr = sorted(unique_disease_24hr.items(), key=lambda x: x[1], reverse=True)
     top_diseases_7days = sorted(unique_disease_7days.items(), key=lambda x: x[1], reverse=True)[:7]
-    return {
+
+    response_data = {
         'top_diseases': top_diseases_24hr,
         'top_diseases_7days': top_diseases_7days,
         'sanit': sanit,
         'total_cases_24hr': total_cases_24hr,
-        'All_diseases_24hr':All_diseases_24hr,
+        'All_diseases_24hr': All_diseases_24hr,
     }
-
-
+    return response_data
 
 @csrf_exempt
 def send_message(request):

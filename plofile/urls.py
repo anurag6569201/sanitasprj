@@ -1,6 +1,7 @@
 from django.urls import path
 from plofile import views
 from .views import UserProfileUpdateView
+from .context_process import dataCalculation
 app_name="plofile"
 
 urlpatterns=[
@@ -8,5 +9,6 @@ urlpatterns=[
     path("t&c",views.tc,name="t&c"),
     path("success",views.success,name="success"),
     path("sanitizer/",views.sanitizer,name="sanitizer"),
+    path('dataCalculation', dataCalculation, name='dataCalculation'),
     path('profile/edit', views.UserProfileUpdateView, name='verifier_edit'),
 ]

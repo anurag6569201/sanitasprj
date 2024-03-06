@@ -6,7 +6,29 @@
 
 <div class="col-md-12">
     <br>
-    <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><br>
+    <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr>
+    <br>
+    <form id="cityStateForm" method="GET" style="display: flex;align-items: center;gap: .3em;">
+        <label for="city" style="font-weight: 500;">Select City:</label>
+        <select id="city" name="city" style="border: 1px solid #12372a;border-radius: .3em;">
+            <option value="">Select City</option>
+            {% for city in sanitizer_obj.CITY_CHOICES %}
+            <option value="{{ city.0 }}">{{ city.0 }}</option>
+            {% endfor %}
+        </select>
+        
+        <label for="state" style="font-weight: 500;">Select State:</label>
+        <select id="state" name="state" style="width: 10em;border:1px solid #12372a;border-radius: .3em;">
+            <option value="">Select State</option>
+            {% for state in sanitizer_obj.STATE_CHOICES %}
+            <option value="{{ state.0 }}">{{ state.0 }}</option>
+            {% endfor %}
+        </select>
+        
+        <button type="submit" class="btn" style="width: auto;padding: 0em .5em;">Show results</button>
+    </form>
+    <br>
+
     <div class="row">
         {% for disease_name, disease_cases in top_diseases %}
         <div class="col-md-3 donuts">
