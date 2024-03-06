@@ -38,7 +38,6 @@ def login_view(request):
         messages.warning(request,f"Hey, You are already Logged in")
         return redirect('home:index')
     else:
-    
         if request.method=="POST":
             email=request.POST.get("email")
             password=request.POST.get("password")

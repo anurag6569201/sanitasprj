@@ -86,10 +86,14 @@ def send_message(request):
     
 
 def notification(request):
-    last_24_hours = timezone.now() - timezone.timedelta(hours=24)
-    notify_24hr = Notification.objects.filter(timestamp__gte=last_24_hours).order_by('-timestamp')
-    has_unread_notifications = any(notif.is_read == False for notif in notify_24hr)
-    return {
-        'notify_24hr':notify_24hr,
-        'has_unread_notifications':has_unread_notifications,
-    }
+    if request.user.is_authenticated:
+        current_user = request.user
+        last_24_hours = timezone.now() - timezone.timedelta(hours=24)
+        notify_24hr = Notification.objects.filter(recipient=current_user, timestamp__gte=last_24_hours).order_by('-timestamp')
+        has_unread_notifications = any(notif.is_read == False for notif in notify_24hr)
+        return {
+            'notify_24hr': notify_24hr,
+            'has_unread_notifications': has_unread_notifications,
+        }
+    else:
+        return {} 
