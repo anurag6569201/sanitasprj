@@ -48,11 +48,11 @@
             <div class="col-md-12">
                 <div class="row postProfile px-3 gx-3">
                     <div class="col-md-3 active postProfilesub">Basic Info</div>
-                    {% if not sanitizer_obj.is_verified %}
-                    <div class="col-md-9 postProfilesub">Post ({{userposts.count}})</div>
-                    {% else %}
-                    <div class="col-md-9 postProfilesub">Data Submission</div>
+                    <div class="col-md-3 postProfilesub">Post ({{userposts.count}})</div>
+                    {% if sanitizer_obj.is_verified %}
+                    <div class="col-md-3 postProfilesub">Data Submission</div>
                     {% endif %}
+                    <div class="col-md-3" style="background-color: transparent;border: none;border-bottom: 1px solid #516d64;"></div>
                 </div>
             </div>
             <div class="col-md-12">
@@ -73,7 +73,6 @@
                     <span><b>Contact Person Email: </b>{{ sanitizer_obj.CPemail }}</span><hr>
                 </div>
                 {% endif %}
-                {% if not sanitizer_obj.is_verified %}
                 <div class="row postProfileDetail mx-2">
                     <span class="col-md-12"><b>Total Post :</b> {{userposts.count}}</span>
                     {% for p in blogs %}
@@ -102,7 +101,7 @@
                     </div><br>
                     {% endfor %}
                 </div>
-                {% else %}
+                {% if sanitizer_obj.is_verified %}
                 <div class="row postData mx-2 postProfileDetail">
                     {% if not last_post_time > 0 %}
                     <form method="post">

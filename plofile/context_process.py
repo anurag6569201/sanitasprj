@@ -22,6 +22,7 @@ def sanitizer_glb(request):
     }
 
 
+
 def dataCalculation(request):
     if 'city' in request.GET and 'state' in request.GET:
         city = request.GET.get('city')
@@ -97,3 +98,41 @@ def notification(request):
         }
     else:
         return {} 
+    
+
+from opencage.geocoder import OpenCageGeocode
+from pprint import pprint
+import requests
+
+def get_location():
+    try:
+        response = requests.get('https://ipinfo.io/json')
+        data = response.json()
+        if 'loc' in data:
+            latitude, longitude = data['loc'].split(',')
+            return float(latitude), float(longitude)
+        else:
+            return None
+    except Exception as e:
+        print("Error:", e)
+        return None
+
+def location_context(request):
+    key = '3313e90e58b54045a71c161530e9cb01'
+    geocoder = OpenCageGeocode(key)
+
+    location = get_location()
+
+    city = ''
+    state = ''
+    if location:
+        results = geocoder.reverse_geocode(location[0], location[1])
+        if results and len(results):
+            components = results[0]['components']
+            city = components.get('city', '')
+            state = components.get('state', '')
+
+    return {
+        'current_city': city,
+        'current_state': state,
+    }

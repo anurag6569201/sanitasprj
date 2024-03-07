@@ -6,11 +6,11 @@
 <div>
     <div class="col-md-12">
         <br>
-        <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><br>
+        <span class="blogs_head" style="display: flex;align-items: center;">Today's Cases of Top 7 Diseases!! (<i class="material-symbols-outlined">Location_on</i> <span id="selected_city">{{ current_city }}</span>)</span><hr><br>
         <form id="cityStateForm" method="GET" style="display: flex;align-items: center;gap: .3em;">
             <label for="city" style="font-weight: 500;">Select City:</label>
             <select id="city" name="city" style="border: 1px solid #12372a;border-radius: .3em;">
-                <option value="">Select City</option>
+                <option id="cityyy" value="">Select City</option>
                 {% for city in sanitizer_obj.CITY_CHOICES %}
                 <option value="{{ city.0 }}">{{ city.0 }}</option>
                 {% endfor %}
@@ -18,7 +18,7 @@
             
             <label for="state" style="font-weight: 500;">Select State:</label>
             <select id="state" name="state" style="width: 10em;border:1px solid #12372a;border-radius: .3em;">
-                <option value="">Select State</option>
+                <option id="stateee" value="">Select State</option>
                 {% for state in sanitizer_obj.STATE_CHOICES %}
                 <option value="{{ state.0 }}">{{ state.0 }}</option>
                 {% endfor %}
@@ -26,6 +26,19 @@
             
             <button type="submit" class="btn" style="width: auto;padding: 0em .5em;">Show results</button>
         </form>
+        <br>
+        
+        <script>
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
+            var currentCityFromUrl = getUrlParameter('city');
+            document.getElementById('selected_city').innerText = currentCityFromUrl || "{{ current_city }}";
+        </script>
+
         <br>
         <div class="row">
             
@@ -73,7 +86,17 @@
         <br>
     </div>
     <div style="position: relative;">
-        <span class="blogs_head">All diseases in last 24hrs</span><hr><br>
+        <span class="blogs_head" style="display: flex;align-items: center;">All diseases in last 24hrs (<i class="material-symbols-outlined">Location_on</i> <span id="selected_cityy">{{ current_city }}</span>)</span><hr><br>
+        <script>
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
+            var currentCityFromUrl = getUrlParameter('city');
+            document.getElementById('selected_cityy').innerText = currentCityFromUrl || "{{ current_city }}";
+        </script>
         <canvas id="horizDiseaseData"></canvas>
         <script>
             const ctx6 = document.getElementById('horizDiseaseData').getContext('2d');

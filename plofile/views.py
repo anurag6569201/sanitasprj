@@ -11,6 +11,7 @@ from django.contrib import messages
 from django.shortcuts import redirect
 
 from .forms import DiseaseFormSet
+    
 # Create your views here.
 def profile(request):
     userprofile=UserProfile.objects.get(user=request.user)

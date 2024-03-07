@@ -92,6 +92,7 @@ TEMPLATES = [
                 'plofile.context_process.sanitizer_glb',
                 'plofile.context_process.dataCalculation',
                 'plofile.context_process.notification',
+                'plofile.context_process.location_context',
             ],
         },
     },
