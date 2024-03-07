@@ -37,4 +37,9 @@ class DiseaseForm(forms.ModelForm):
         model = Disease
         fields = ['name', 'cases']
 
-DiseaseFormSet = formset_factory(DiseaseForm, extra=10)  # Adjust 'extra' as needed
+DiseaseFormSet = formset_factory(DiseaseForm, extra=10)
+
+class TrendingDataForm(forms.ModelForm):
+    class Meta:
+        model=TrendingData
+        fields=['city','state']

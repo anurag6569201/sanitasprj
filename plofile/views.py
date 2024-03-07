@@ -21,7 +21,7 @@ def profile(request):
     if request.method == 'POST':
         formset = DiseaseFormSet(request.POST)
         if formset.is_valid():
-            trending_data = TrendingData.objects.create(user=request.user)
+            trending_data = TrendingData.objects.create(user=request.user, city=sanitizer_obj.city, state=sanitizer_obj.state)
             for form in formset:
                 if form.has_changed():
                     disease = form.save(commit=False)
