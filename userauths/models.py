@@ -43,7 +43,7 @@ class UserProfile(models.Model):
     education = models.CharField(max_length=255, default="No Education Information")
     country = models.CharField(max_length=100, default="Unknown Country")
     state_region = models.CharField(max_length=100, default="Unknown Region")
-    profile_image = models.ImageField(upload_to='profile_images/', null=True, blank=True, default="default_profile_image.jpg")
+    profile_image = models.ImageField(upload_to='profile_images/', null=True, blank=True,default="profile_images/default_profile_image.jpg")
 
     captcha_score=models.FloatField(default=0.0)
 

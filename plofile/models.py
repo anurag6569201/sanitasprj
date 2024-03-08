@@ -14,7 +14,7 @@ class UserProfile(models.Model):
     education = models.CharField(max_length=255, default="No Education Information")
     country = models.CharField(max_length=100, default="Unknown Country")
     state_region = models.CharField(max_length=100, default="Unknown Region")
-    profile_image = models.ImageField(upload_to='profile/', null=True, blank=True,default="default_profile_image.jpg")
+    profile_image = models.ImageField(upload_to='profile/', null=True, blank=True,default="profile_images/default_profile_image.jpg")
 
     def __str__(self):
         return self.user.username
@@ -81,7 +81,7 @@ class Sanitizer(models.Model):
     contactperson = models.CharField(max_length=100, default="Virju")
     phone = models.CharField(max_length=10, default="XXXXXXXXXX")
     email = models.EmailField(default="example@example.com")
-    profile_image = models.ImageField(upload_to='Sanitizerprofile/',default="default_profile_image.jpg")
+    profile_image = models.ImageField(upload_to='Sanitizerprofile/')
     
     CPphone = models.CharField(max_length=10, default="XXXXXXXXXX")
     CPemail = models.EmailField(default="example@example.com")
