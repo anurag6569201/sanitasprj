@@ -33,16 +33,16 @@
     var map = new MapmyIndia.Map('map', { center: [20.293944, 85.744450], zoom: 4, search: true, hybrid: true });
 
     var diseaseData = {
-        {% for sn_verified in sanit %}
-        {% if sn_verified.is_verified %}
         {% for disease_name, disease_cases in top_diseases %}
         "{{ disease_name }}": [
+            {% for sn_verified in sanit %}
+            {% if sn_verified.is_verified %}
             {% for disease_case in top_diseases %}
             generateRandomCoordinates({{ sn_verified.latitude }}, {{ sn_verified.longitude }}, 10),
             {% endfor %}
+            {% endif %}
+            {% endfor %}
         ],
-        {% endfor %}
-        {% endif %}
         {% endfor %}
     };
 

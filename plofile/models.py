@@ -64,13 +64,13 @@ class Sanitizer(models.Model):
     contactperson = models.CharField(max_length=100, default="Virju")
     phone = models.CharField(max_length=10, default="XXXXXXXXXX")
     email = models.EmailField(default="example@example.com")
-    profile_image = models.ImageField(upload_to='Sanitizerprofile/')
+    profile_image = models.ImageField(upload_to='Sanitizerprofile/',null=True, blank=True,default="Sanitizerprofile/default_profile_image.jpg")
     
     CPphone = models.CharField(max_length=10, default="XXXXXXXXXX")
     CPemail = models.EmailField(default="example@example.com")
 
-    longitude = models.CharField(max_length=20)
-    latitude = models.CharField(max_length=20)
+    longitude = models.CharField(max_length=20,default="XX.XXXXXX")
+    latitude = models.CharField(max_length=20,default="XX.XXXXXX")
     
     certificate = models.ImageField(upload_to='sanitizerDoc/',blank=True)
     isChecked = models.BooleanField(default=True)

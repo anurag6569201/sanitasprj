@@ -5,7 +5,7 @@ from userauths.models import UserProfile
 from userauths.models import UserProfile
 from django.views.generic.edit import FormView
 from django.urls import reverse_lazy
-from plofile.forms import UserProfileForm,SanitizerForm
+from plofile.forms import UserProfileForm,SanitizerForm,SanitizerForm1
 
 from creation.models import Post
 from django.contrib import messages
@@ -49,19 +49,21 @@ def UserProfileUpdateView(request):
 
     user_profile = UserProfile.objects.get(user=request.user)
     sanitizer_obj = Sanitizer.objects.get(user=request.user)
-
+    form1=None
     if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=user_profile)
-        form1 = SanitizerForm(request.POST, instance=sanitizer_obj)
+        form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
+        form1 = SanitizerForm(request.POST, request.FILES, instance=sanitizer_obj)
         if form.is_valid():
             form.save()
             return redirect(success_url)
-        if form1.is_valid():
-            form1.save()
-            return redirect(success_url)
+        if sanitizer_obj.isSubmitted:
+            if form1.is_valid():
+                form1.save()
+                return redirect(success_url)
     else:
         form = UserProfileForm(instance=user_profile)
-        form1 = SanitizerForm(instance=sanitizer_obj)
+        if sanitizer_obj.isSubmitted:
+            form1 = SanitizerForm(instance=sanitizer_obj)
 
     context = {
         'form': form,
@@ -76,9 +78,9 @@ def UserProfileUpdateView(request):
 def sanitizer(request):
     sanitizer_obj, created = Sanitizer.objects.get_or_create(user=request.user)
     if not sanitizer_obj.isSubmitted:
-        Sform = SanitizerForm(instance=sanitizer_obj)
+        Sform = SanitizerForm1(request.POST, request.FILES,instance=sanitizer_obj)
         if request.method == "POST":
-            form = SanitizerForm(request.POST,instance=sanitizer_obj)
+            form = SanitizerForm1(request.POST, request.FILES,instance=sanitizer_obj)
             if form.is_valid():
                 sanitizer_obj.isSubmitted=True
                 form.save()

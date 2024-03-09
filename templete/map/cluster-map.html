@@ -9,9 +9,9 @@
 <script>
     var hospitals = [
         {% for sn in sanit %}
-        {% if sn.is_verified %}
-        { lat: {{sn.latitude}}, lng: {{sn.longitude}}, name: "{{sn.name}}", address: "{{sn.street}} {{sn.zip}} {{sn.city}} {{sn.state}}", contact: "{{sn.phone}}", image: "{{sn.profile_image.url}}" }
-        {% endif %}
+            {% if sn.is_verified %}
+            { lat: {{sn.latitude}}, lng: {{sn.longitude}}, name: "{{sn.name}}", address: "{{sn.street}} {{sn.zip}} {{sn.city}} {{sn.state}}", contact: "{{sn.phone}}", image: "{{sn.profile_image.url}}" },
+            {% endif %}
         {% endfor %}
     ];
 

@@ -28,6 +28,11 @@ class SanitizerForm(forms.ModelForm):
         model = Sanitizer
         fields ='name','street','city','state','zip','contactperson','phone','email','certificate','isChecked','profile_image','CPphone','CPemail','longitude','latitude'
 
+class SanitizerForm1(forms.ModelForm):
+    class Meta:
+        model = Sanitizer
+        fields ='name','street','city','state','zip','contactperson','phone','email','certificate','isChecked'
+
 from .models import Disease
 
 from django.forms import formset_factory

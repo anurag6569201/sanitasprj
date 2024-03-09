@@ -48,11 +48,11 @@
             <div class="col-md-12">
                 <div class="row postProfile px-3 gx-3">
                     <div class="col-md-3 active postProfilesub">Basic Info</div>
-                    <div class="col-md-3 postProfilesub">Post ({{userposts.count}})</div>
+                    <div class="col-md-{% if sanitizer_obj.is_verified %}3{% else %}9{% endif %} postProfilesub">Post ({{userposts.count}})</div>
                     {% if sanitizer_obj.is_verified %}
                     <div class="col-md-3 postProfilesub">Data Submission</div>
-                    {% endif %}
                     <div class="col-md-3" style="background-color: transparent;border: none;border-bottom: 1px solid #516d64;"></div>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-md-12">
@@ -94,7 +94,6 @@
                                         <a href="{% url 'creation:like-post' pk=p.id %}" class="btn btn-secondary"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>
                                         <a href="{% url 'creation:blog-detail' p.id %}" class="btn btn-secondary"><i class="fa-solid fa-message"></i><span style="margin-left: .2em;">{{ comments.count }}</span></a>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>

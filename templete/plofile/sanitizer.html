@@ -30,6 +30,9 @@
                         height: 1em;
                         margin-right: .3em;
                     }
+                    #certificate-upload {
+                        display: none;
+                    }
                 </style>
                 <label for="hospitalName"><b>Sanitizer Name:</b></label><br>
                 {{ sform.name }}<br>
@@ -49,7 +52,7 @@
                 {{ sform.phone }}<br>
                 <div class="certifiy">
                     <label for="certification"><b>Accreditation Certificate : </b></label>
-                    {{ sform.certificate }}
+                    <input type="file" name="certificate" accept="image/*" id="id_certificate">
                 </div>
                 <div class="checkTC">
                     {{ sform.isChecked }}
