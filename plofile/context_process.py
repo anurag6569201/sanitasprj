@@ -8,20 +8,31 @@ from django.utils import timezone
 from home.models import Notification
 from django.shortcuts import redirect
 from django.shortcuts import render
+from userauths.models import UserProfile
+from django.contrib.auth.decorators import login_required
+from django.db import IntegrityError
 
 def sanitizer_glb(request):
     sanitizer_obj = None 
+    userProf = None 
     Chatapi="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"
     
     if request.user.is_authenticated:
         sanitizer_obj, created = Sanitizer.objects.get_or_create(user=request.user)
+        try:
+            userProf = UserProfile.objects.get(user=request.user)
+        except UserProfile.DoesNotExist:
+            profile_image_url = "profile_images/default_profile_image.jpg"
+            userProf = UserProfile.objects.create(user=request.user, profile_image=profile_image_url)
+        except IntegrityError:
+            userProf = UserProfile.objects.get(user=request.user)
+
     
     return {
         'sanitizer_obj': sanitizer_obj,
         'Chatapi':Chatapi,
+        'user_profile':userProf,
     }
-
-
 
 def dataCalculation(request):
     if 'city' in request.GET and 'state' in request.GET:

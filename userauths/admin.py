@@ -1,6 +1,6 @@
 from django.contrib import admin
 from userauths.models import User
-from userauths.models import UserProfile
+from .models import UserProfile
 # Register your models here.
 
 class UserAdmin(admin.ModelAdmin):

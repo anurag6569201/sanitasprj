@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.conf import settings
 from django.contrib.auth import logout
 from home.models import Notification
+from .models import UserProfile
 # from userauths.models import User
 
 User=settings.AUTH_USER_MODEL
@@ -62,7 +63,7 @@ def login_view(request):
     context={
 
     }
-    return render(request,"userauths/sign-in.html",context)
+    return render(request,"userauths/sign-in.html")
 
 def logout_view(request):
     notification_message = "You Logged-Out, successfully"

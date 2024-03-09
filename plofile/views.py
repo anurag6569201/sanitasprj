@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from plofile.models import UserProfile,Sanitizer,TrendingData
+from plofile.models import Sanitizer,TrendingData
+from userauths.models import UserProfile
 
 from userauths.models import UserProfile
 from django.views.generic.edit import FormView
@@ -77,7 +78,7 @@ def sanitizer(request):
     if not sanitizer_obj.isSubmitted:
         Sform = SanitizerForm(instance=sanitizer_obj)
         if request.method == "POST":
-            form = SanitizerForm(request.POST, instance=sanitizer_obj)
+            form = SanitizerForm(request.POST,instance=sanitizer_obj)
             if form.is_valid():
                 sanitizer_obj.isSubmitted=True
                 form.save()

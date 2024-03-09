@@ -1,7 +1,8 @@
 from django import forms
 from django.forms.widgets import ClearableFileInput
-from .models import UserProfile,Sanitizer
+from .models import Sanitizer
 from .models import TrendingData
+from userauths.models import UserProfile
 
 class UserProfileForm(forms.ModelForm):
     class Meta:

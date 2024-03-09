@@ -14,7 +14,6 @@ def index(request):
     posts = Post.objects.all()
     user_profile = None
     if request.user.is_authenticated:
-        user_profile = UserProfile.objects.get(user=request.user)
         blogs=Post.objects.all()
         recentUpdate=recentUpdates.objects.all()
         page=request.GET.get('page')
@@ -34,7 +33,6 @@ def index(request):
         "blogs":blogs,
         "paginator":paginator,
         'posts': posts,
-        'user_profile': user_profile,
         'recentUpdate':recentUpdate,
     }
     return render(request, "home/index.html", context)
