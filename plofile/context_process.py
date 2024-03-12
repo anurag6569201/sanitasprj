@@ -114,19 +114,18 @@ def notification(request):
 from opencage.geocoder import OpenCageGeocode
 from pprint import pprint
 import requests
+import geocoder
+
 
 def get_location():
     try:
-        response = requests.get('https://ipinfo.io/json')
-        data = response.json()
-        if 'loc' in data:
-            latitude, longitude = data['loc'].split(',')
-            return float(latitude), float(longitude)
-        else:
-            return None
+        g = geocoder.ip('me')
+        latitude = g.latlng[0]
+        longitude = g.latlng[1]
+        return float(latitude), float(longitude)
     except Exception as e:
         print("Error:", e)
-        return None
+        return None, None
 
 def location_context(request):
     key = '3313e90e58b54045a71c161530e9cb01'
