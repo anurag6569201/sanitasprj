@@ -51,9 +51,6 @@
         font-size: .7em;
         padding: 0 .5em;
     }
-    .measure-btns .btn:first-child{
-        display: none;
-    }
     .cityLocate{
         display: block;
     }
