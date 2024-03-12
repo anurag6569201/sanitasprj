@@ -41,5 +41,35 @@
     .nav-button{
         margin-left: 0;
     }
-    
+    .blogs_head{
+        font-size: 1em;
+    }
+    .donuts .donutsText{
+        font-size: 1.4em;
+    }
+    .home .btn{
+        font-size: .7em;
+        padding: 0 .5em;
+    }
+    .measure-btns .btn:first-child{
+        display: none;
+    }
+    .cityLocate{
+        display: block;
+    }
+    .ultra li span,
+    .ultra li a,
+    .ultra li strong{
+        font-size: .7em;
+    }
+    .about-us-para p{
+        font-size: .7em;
+    }
+    .space-filler{
+        height: 54px;
+        width: 100%;
+    }
+    .pagination li a.page-link {
+        font-size: 12px;
+    }
 }

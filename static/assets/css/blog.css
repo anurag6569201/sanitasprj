@@ -26,6 +26,9 @@
 .blogs_head{
     font-size: 1.4em;
 }
+.cityLocate{
+    display: none;
+}
 /* comments */
 .be-comment-block {
     margin-bottom: 50px !important;
