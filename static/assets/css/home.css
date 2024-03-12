@@ -2,6 +2,7 @@
     padding: 1vw;
     overflow-x: hidden;
 }
+.home .add-btn,
 .home .btn{
     border: 1px solid var(--navbar-dark-primary);
     color: var(--navbar-dark-primary);

@@ -69,4 +69,77 @@
     .pagination li a.page-link {
         font-size: 12px;
     }
+    .nav-button a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-button a {
+        color: var(--navbar-light-secondary);
+    }
+    .nav-button.active a {
+        color: white;
+    }
+    .featured-map .map-hometext{
+        font-size: .8em;
+    }
+    .map-home .row .col-12 p{
+        font-size: .8em;
+    }
+    .full-page .col-md-12 .row .card .card-title{
+        font-size: 1em;
+    }
+    .full-page .col-md-12 .row .card .card-text{
+        font-size: .8em;
+    }
+    .profile-background{
+        height: 14em;
+    }
+    .profile-image {
+        width: 8em;
+        height: 8em;
+        top: 9em;
+        margin-left: 1em;
+    }
+    .grp-btns {
+        bottom: .5em;
+        right: .5em;
+        flex-direction: column;
+    }
+    .edit-profile{
+        font-size: .8em;
+    }
+    .basicInfo .col-6{
+        font-size: .8em;
+    }
+    .postProfile .col-9,
+    .postProfile .col-6,
+    .postProfile .col-3{
+        font-size: .8em;
+    }
+    .postProfile .col-3:last-child{
+        display: none;
+    }
+    .postProfileDetail span{
+        font-size: .8em;
+    }
+    .postProfileDetail table th{
+        font-size: .8em;
+    }
+    .choosingImage{
+        left:0em;
+    }
+    .choosingImage input{
+        width: 150px;
+    }
+    .add-btn{
+        font-size: 1em;
+        padding: em;
+    }
+    #cityStateForm{
+        font-size: .8em;
+    }
+    .computer-frame{
+        display: none;
+    }
 }

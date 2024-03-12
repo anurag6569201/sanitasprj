@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'assets/css/profile.css' %}">
+
 <div class="col-md-12 profile">
     <div class="col-md-12">
         <br>
@@ -23,35 +23,36 @@
                 <a href="{% url 'plofile:sanitizer' %}" class="edit-profile"><span class="material-symbols-outlined">edit</span>Become Sanitizer!!</a>
                 {% endif %}
                 <a href="{% url 'plofile:verifier_edit' %}" class="edit-profile"><span class="material-symbols-outlined">edit</span>Edit Profile</a>
+                <a href="{% url 'userauths:sign-out' %}" class="edit-profile"><i class="fa-solid fa-right-from-bracket"></i>Log-out</a>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 col-12">
             <br>
             {% if not sanitizer_obj.is_verified %}
             <div class="row text-center basicInfo px-3 g-3">
-                <div class="col-md-3"></div>
-                <div class="col-md-3">{{ userprofile.name }} {{ userprofile.surname }}</div>
-                <div class="col-md-3">{{ userprofile.email }}</div>
-                <div class="col-md-3">{{ userprofile.state_region }}</div>
+                <div class="col-md-3 col-6"></div>
+                <div class="col-md-3 col-6">{{ userprofile.name }} {{ userprofile.surname }}</div>
+                <div class="col-md-3 col-6">{{ userprofile.email }}</div>
+                <div class="col-md-3 col-6">{{ userprofile.state_region }}</div>
             </div>
             {% else %}
             <div class="row text-center basicInfo px-3 g-3">
-                <div class="col-md-3"></div>
-                <div class="col-md-3">{{ sanitizer_obj.name }}</div>
-                <div class="col-md-3">{{ sanitizer_obj.email }}</div>
-                <div class="col-md-3">{{ sanitizer_obj.phone }}</div>
+                <div class="col-md-3 col-6"></div>
+                <div class="col-md-3 col-6">{{ sanitizer_obj.name }}</div>
+                <div class="col-md-3 col-6">{{ sanitizer_obj.email }}</div>
+                <div class="col-md-3 col-6">{{ sanitizer_obj.phone }}</div>
             </div>
             {% endif %}
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 col-12">
             <br>
-            <div class="col-md-12">
+            <div class="col-md-12 col-12">
                 <div class="row postProfile px-3 gx-3">
-                    <div class="col-md-3 active postProfilesub">Basic Info</div>
-                    <div class="col-md-{% if sanitizer_obj.is_verified %}3{% else %}9{% endif %} postProfilesub">Post ({{userposts.count}})</div>
+                    <div class="col-md-3 col-3 active postProfilesub">Basic Info</div>
+                    <div class="col-md-{% if sanitizer_obj.is_verified %}3{% else %}9{% endif %} postProfilesub col-{% if sanitizer_obj.is_verified %}3{% else %}9{% endif %} postProfilesub">Post ({{userposts.count}})</div>
                     {% if sanitizer_obj.is_verified %}
-                    <div class="col-md-3 postProfilesub">Data Submission</div>
-                    <div class="col-md-3" style="background-color: transparent;border: none;border-bottom: 1px solid #516d64;"></div>
+                    <div class="col-md-3 col-6 postProfilesub">Data Submission</div>
+                    <div class="col-md-3 col-3" style="background-color: transparent;border: none;border-bottom: 1px solid #516d64;"></div>
                     {% endif %}
                 </div>
             </div>
@@ -74,15 +75,15 @@
                 </div>
                 {% endif %}
                 <div class="row postProfileDetail mx-2">
-                    <span class="col-md-12"><b>Total Post :</b> {{userposts.count}}</span>
+                    <span class="col-md-12 col-12"><b>Total Post :</b> {{userposts.count}}</span>
                     {% for p in blogs %}
-                    <div class="item px-2 my-2 col-md-12">
-                        <div class="card" style="overflow: hidden;background-color: transparent;">
-                            <div class="row col-md-12">
+                    <div class="item mx-1 col-md-12">
+                        <div class="card" style="overflow: hidden;">
+                            <div class="row col-md-12 col-12">
                                 <a class="col-md-4" href="{% url 'creation:blog-detail' p.id %}">
-                                    <img class="col-md-4" src="{{ p.image.url }}" class="card-img-top" alt="..." style="min-width: 100%;max-height: 260px;object-fit: cover;">
+                                    <img class="col-md-4 col-4" src="{{ p.image.url }}" class="card-img-top" alt="..." style="min-width: 100%;max-height: 260px;object-fit: cover;">
                                 </a>
-                                <div class="card-body col-md-8" style="padding: 10px;">
+                                <div class="card-body col-md-8 col-8" style="padding: 10px;">
                                     <div class="my-1">
                                         <div class="ck ck-content" style="max-height: 100px;overflow: hidden;">{{ p.content|safe }}</div>
                                     </div>
@@ -94,6 +95,7 @@
                                         <a href="{% url 'creation:like-post' pk=p.id %}" class="btn btn-secondary"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>
                                         <a href="{% url 'creation:blog-detail' p.id %}" class="btn btn-secondary"><i class="fa-solid fa-message"></i><span style="margin-left: .2em;">{{ comments.count }}</span></a>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -108,25 +110,25 @@
                         {{ formset.management_form }}
                         <br>
                         <div class="row">
-                            <table class="col-md-7" style="overflow: hidden;">
+                            <table class="col-md-7 col-12" style="overflow: hidden;">
                                 <thead>
                                     <tr class="col-md-12 row text-center mb-3">
-                                        <th class="col-md-4" style="border-bottom: 1px solid grey;">Serial Number</th>
-                                        <th class="col-md-4" style="border-bottom: 1px solid grey;">Disease Name</th>
-                                        <th class="col-md-4" style="border-bottom: 1px solid grey;">Cases</th>
+                                        <th class="col-md-4 col-4" style="border-bottom: 1px solid grey;">Serial Number</th>
+                                        <th class="col-md-4 col-4" style="border-bottom: 1px solid grey;">Disease Name</th>
+                                        <th class="col-md-4 col-4" style="border-bottom: 1px solid grey;">Cases</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {% for form in formset %}
-                                    <tr class="col-md-12 row text-center mb-2">
-                                        <td class="col-md-4">{{ forloop.counter }}.</td>
-                                        <td class="col-md-4">{{ form.name }}</td>
-                                        <td class="col-md-4">{{ form.cases }}</td>
+                                    <tr class="col-md-12 col-12 row text-center mb-2">
+                                        <td class="col-md-4 col-2">{{ forloop.counter }}.</td>
+                                        <td class="col-md-4 col-5">{{ form.name }}</td>
+                                        <td class="col-md-4 col-5">{{ form.cases }}</td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>
                             </table>
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-12">
                                 <img src="../../static/assets/images/sanitizers/dataSub.svg" alt="">
                             </div>
                         </div>

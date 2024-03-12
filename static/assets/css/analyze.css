@@ -29,7 +29,7 @@
 }
 
 button {
-    width: 220px;
+    width: auto;
     font-family: Verdana, sans-serif, Arial;
     font-size: 12px;
     padding: 2px 0;

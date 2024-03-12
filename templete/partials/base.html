@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/calorie.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/resource.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/chatbot.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/profile.css' %}">
 
     <!-- global stylesheet -->
     <link rel="stylesheet" href="{% static 'assets/css/global.css' %}">
@@ -275,12 +276,24 @@
         <nav class="navbar fixed-bottom" class="nav-bar">
             <div class="container-fluid">
                 <div class="contain-itmes">
-                    <div class="nav-button active"><i class="fas fa-home"></i></div>
-                    <div class="nav-button"><i class="fas fa-map"></i></div>
-                    <div class="nav-button"><i class="fas fa-thumbtack"></i></div>
-                    <div class="nav-button"><i class="fas fa-heart"></i></div>
-                    <div class="nav-button"><i class="fas fa-user"></i></div>
-                    <div id="nav-highlight"></div>
+                    <div class="nav-button {% if request.path == '/' %}active{% endif %}"><a href="{% url 'home:index' %}"><i class="fas fa-home"></i><span></span></a></div>
+                    <div class="nav-button {% if '/map/' in request.path %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span></span></a></div>
+                    <div class="nav-button {% if '/material/' in request.path %}active{% endif %}"><a href="{% url 'material:index-material' %}"><i class="fas fa-thumbtack"></i><span></span></a></div>
+                    <div class="nav-button">
+                        <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <div class="position-relative" style="margin: 0;">
+                                <i class="fas fa-heart"></i>
+                                {% if has_unread_notifications %}
+                                    <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle" style="opacity: 1;">
+                                        <span class="visually-hidden">New alerts</span>
+                                    </span>
+                                {% endif %}
+                            </div>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="nav-button {% if '/profile/' in request.path %}active{% endif %}"><a href="{% url 'plofile:index-profile' %}"><i class="fas fa-user"></i><span></span></a></div>
+                    <!-- <div id="nav-highlight"></div> -->
                 </div>
             </div>
         </nav>
@@ -290,12 +303,13 @@
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-dark" type="submit">Search</button>
-                        <a href="{% url 'creation:blog-new' %}" class="btn"><i class="fa-solid fa-plus"></i></a>
+                        <a href="{% url 'creation:blog-new' %}" class="btn" style="display: flex;align-items: center;justify-content: center;"><i class="fa-solid fa-plus"></i></a>
                     </form>
                 </div>
                 {% block content %}
                 {% endblock content %}
             </div>
+            <div class="space-filler"></div>
         </div>
     </div>
 

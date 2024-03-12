@@ -6,7 +6,7 @@
 <div>
     <div class="col-md-12">
         <br>
-        <span class="blogs_head" style="display: flex;align-items: center;">Today's Cases of Top 7 Diseases!! (<i class="material-symbols-outlined">Location_on</i> <span id="selected_city">{{ current_city }}</span>)</span><hr><br>
+        <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><span class="blogs_head cityLocate" style="display: flex;align-items: center;font-size: .7em;"><i class="material-symbols-outlined" style="font-size: 1em;">Location_on</i>{{current_city}}</span>
         <form id="cityStateForm" method="GET" style="display: flex;align-items: center;gap: .3em;">
             <label for="city" style="font-weight: 500;">Select City:</label>
             <select id="city" name="city" style="border: 1px solid #12372a;border-radius: .3em;">
@@ -43,7 +43,7 @@
         <div class="row">
             
             {% for disease_name, disease_cases in top_diseases %}
-            <div class="col-md-3 donuts">
+            <div class="col-md-3 col-6 donuts">
                 <canvas id="donutChart{{ forloop.counter }}" width="100" height="100"></canvas>
                 <span class="donutsText">
                     <span style="display: flex;align-items: center;flex-direction: column;line-height: .7em;justify-content: center;">
@@ -74,7 +74,7 @@
             </script>
             {% endfor %}
 
-            <div class="col-md-3 donuts">
+            <div class="col-md-3 col-6 donuts">
                 <div class="measure-btns">
                     <a href="" class="btn"><i class="material-symbols-outlined">home_health</i> Preventives</a>
                     <a href="" class="btn"><i class="material-symbols-outlined">headset_mic</i> Consult</a>
@@ -86,7 +86,7 @@
         <br>
     </div>
     <div style="position: relative;">
-        <span class="blogs_head" style="display: flex;align-items: center;">All diseases in last 24hrs (<i class="material-symbols-outlined">Location_on</i> <span id="selected_cityy">{{ current_city }}</span>)</span><hr><br>
+        <span class="blogs_head">All diseases in last 24hrs </span><hr><span class="blogs_head cityLocate" style="display: flex;align-items: center;font-size: .7em;"><i class="material-symbols-outlined" style="font-size: 1em;">Location_on</i>{{current_city}}</span>
         <script>
             function getUrlParameter(name) {
                 name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
