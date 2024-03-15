@@ -37,6 +37,7 @@ def index(request):
     }
     return render(request, "home/index.html", context)
 
+@login_required(login_url='userauths:sign-in')
 def mark_all_as_read(request):
     notifications = Notification.objects.filter(recipient=request.user)
     for notification in notifications:

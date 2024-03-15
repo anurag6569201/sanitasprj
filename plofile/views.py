@@ -12,8 +12,10 @@ from django.contrib import messages
 from django.shortcuts import redirect
 
 from .forms import DiseaseFormSet
-    
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
+@login_required(login_url='userauths:sign-in')
 def profile(request):
     userprofile=UserProfile.objects.get(user=request.user)
     userposts= Post.objects.filter(author=request.user)
@@ -43,6 +45,7 @@ def profile(request):
     }
     return render(request,"plofile/index-profile.html",context)
 
+@login_required(login_url='userauths:sign-in')
 def UserProfileUpdateView(request):
     template_name = 'plofile/edit_profile.html'
     success_url = reverse_lazy('plofile:index-profile')
@@ -75,6 +78,7 @@ def UserProfileUpdateView(request):
 
     return render(request, template_name, context)
     
+@login_required(login_url='userauths:sign-in')
 def sanitizer(request):
     sanitizer_obj, created = Sanitizer.objects.get_or_create(user=request.user)
     if not sanitizer_obj.isSubmitted:
@@ -94,8 +98,10 @@ def sanitizer(request):
         return redirect("plofile:success")
     return render(request, "plofile/sanitizer.html", context)
 
+@login_required(login_url='userauths:sign-in')
 def tc(request):
     return render(request,"plofile/t&c.html")
 
+@login_required(login_url='userauths:sign-in')
 def success(request):
     return render(request,"plofile/success.html")

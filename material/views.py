@@ -6,8 +6,10 @@ from django.http import JsonResponse
 
 import xml.etree.ElementTree as ET
 import requests
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url='userauths:sign-in')
 def material_index(request):
     user_profile = UserProfile.objects.get(user=request.user)
     context = {
@@ -15,6 +17,7 @@ def material_index(request):
     }
     return render(request,"material/index-material.html",context)
 
+@login_required(login_url='userauths:sign-in')
 def disease(request):
     user_profile = UserProfile.objects.get(user=request.user)
     input_disease = request.GET.get('q', 'diabetes')
@@ -50,6 +53,7 @@ def disease(request):
 import requests
 from django.shortcuts import render
 
+@login_required(login_url='userauths:sign-in')
 def calorie(request):
     user_profile = UserProfile.objects.get(user=request.user)
     if request.method == 'GET':
@@ -95,6 +99,7 @@ def calorie(request):
         }
         return render(request, "material/calorie.html", context)
 
+@login_required(login_url='userauths:sign-in')
 def resource(request):     
     user_profile = UserProfile.objects.get(user=request.user)
     context = {
@@ -102,6 +107,7 @@ def resource(request):
     }   
     return render(request,"material/resource.html",context)
 
+@login_required(login_url='userauths:sign-in')
 def medicine(request):
     user_profile = UserProfile.objects.get(user=request.user)
     input_medicine = request.GET.get('q', 'paracetamol')
