@@ -112,20 +112,16 @@ def notification(request):
     
 
 from opencage.geocoder import OpenCageGeocode
-from pprint import pprint
-import requests
 import geocoder
-
 
 def get_location():
     try:
         g = geocoder.ip('me')
-        latitude = g.latlng[0]
-        longitude = g.latlng[1]
-        return float(latitude), float(longitude)
+        if g.ok:
+            return g.latlng[0], g.latlng[1]
     except Exception as e:
         print("Error:", e)
-        return None, None
+    return None, None
 
 def location_context(request):
     key = '3313e90e58b54045a71c161530e9cb01'
@@ -136,11 +132,14 @@ def location_context(request):
     city = ''
     state = ''
     if location:
-        results = geocoder.reverse_geocode(location[0], location[1])
-        if results and len(results):
-            components = results[0]['components']
-            city = components.get('city', '')
-            state = components.get('state', '')
+        try:
+            results = geocoder.reverse_geocode(location[0], location[1])
+            if results and len(results):
+                components = results[0]['components']
+                city = components.get('city', '')
+                state = components.get('state', '')
+        except Exception as e:
+            print("Error:", e)
 
     return {
         'current_city': city,
