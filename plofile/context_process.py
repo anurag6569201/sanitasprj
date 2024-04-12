@@ -136,11 +136,14 @@ def location_context(request):
     city = ''
     state = ''
     if location:
-        results = geocoder.reverse_geocode(location[0], location[1])
-        if results and len(results):
-            components = results[0]['components']
-            city = components.get('city', '')
-            state = components.get('state', '')
+        try:
+            results = geocoder.reverse_geocode(location[0], location[1])
+            if results and len(results):
+                components = results[0]['components']
+                city = components.get('city', '')
+                state = components.get('state', '')
+        except Exception as e:
+            print("Error:", e)
 
     return {
         'current_city': city,
