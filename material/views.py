@@ -8,11 +8,34 @@ import xml.etree.ElementTree as ET
 import requests
 from django.contrib.auth.decorators import login_required
 
+from creation.models import Post
+from home.models import recentUpdates
+from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
+
 # Create your views here.
 @login_required(login_url='userauths:sign-in')
 def material_index(request):
     user_profile = UserProfile.objects.get(user=request.user)
+    posts = Post.objects.all()
+    if request.user.is_authenticated:
+        blogs=Post.objects.all()
+        page=request.GET.get('page')
+        num_of_items=2
+        paginator=Paginator(blogs,num_of_items)
+
+        try:
+            blogs=paginator.page(page)
+        except PageNotAnInteger:
+            page=1
+            blogs=paginator.page(page)
+        except EmptyPage:
+            page=paginator.num_pages
+            blogs=paginator.page(page)
+
     context = {
+        "blogs":blogs,
+        "paginator":paginator,
+        'posts': posts,
         'user_profile': user_profile,
     }
     return render(request,"material/index-material.html",context)
