@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d3l*-#0yg_^82fy5ob=%&x)#6sl-d-fb-b0%77+4m7@iyn5%4g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://sanitas.azurewebsites.net/','*']
 
 EMAIL_HOST = 'smtp-relay.brevo.com'
 EMAIL_HOST_USER = 'anurag6569201@gmail.com'
