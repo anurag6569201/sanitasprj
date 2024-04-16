@@ -2,6 +2,7 @@
     padding: 1vw;
     overflow-x: hidden;
 }
+.threads .btn,
 .home .add-btn,
 .home .btn{
     border: 1px solid var(--navbar-dark-primary);
@@ -9,6 +10,7 @@
     background-color: transparent;
     font-weight: 600;
 }
+.threads .btn:hover,
 .home .btn:hover{
     background-color: var(--navbar-light-secondary);
     color: var(--navbar-dark-primary);

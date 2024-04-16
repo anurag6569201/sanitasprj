@@ -20,7 +20,7 @@ def material_index(request):
     if request.user.is_authenticated:
         blogs=Post.objects.all()
         page=request.GET.get('page')
-        num_of_items=2
+        num_of_items=3
         paginator=Paginator(blogs,num_of_items)
 
         try:
