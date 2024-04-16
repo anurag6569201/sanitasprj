@@ -1,0 +1,29 @@
+.head_sphere{
+    width: 100%;
+    background-color: #12372a;
+    border-radius: .7em;
+}
+.head_sphere #nav-footer-titlebox{
+    color: #e9edee;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.sphere_post{
+    width: 100%;
+    background-color: #adbc9f;
+    border-radius: .7em;
+}
+.sphere_post_buttons{
+    padding: .5em;
+    padding-top: 0;
+}
+
+
+/* void area */
+.head_void_area{
+    height: 100vh;
+    width: 100%;
+    background-color: #12372a;
+    border-radius: .7em;
+}

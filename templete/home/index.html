@@ -80,6 +80,70 @@
 <div class="col-md-12 threads">
     <br>
     <span class="blogs_head">Sanitas Sphere</span><hr><br>
+    <div class="row">
+        <div class="col-md-8 sphere_area">
+            <div class="head_sphere">
+                <div id="nav-footer-heading">
+                    {% if not sanitizer_obj.is_verified %}
+                    <div id="nav-footer-avatar"><img src="{{user_profile.profile_image.url}}" />
+                    {% else %}
+                    <div id="nav-footer-avatar"><img src="{{sanitizer_obj.profile_image.url}}" />
+                    {% endif %}
+                    </div>
+                    {% if not sanitizer_obj.is_verified %}
+                    <div id="nav-footer-titlebox">{{ user_profile.name }} {{ user_profile.surname }}<span
+                            id="nav-footer-subtitle"></span></div>
+                    {% else %}
+                    <div id="nav-footer-titlebox">{{ sanitizer_obj.name }}<span
+                        id="nav-footer-subtitle"></span></div>
+                    {% endif %}
+                </div>
+                <div class="sphere_post">
+                    <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="ck ck-content">
+                                {{sphereform.media}}
+                                {{sphereform.content|safe}}
+                            </div>
+                            <hr style="padding: .3em;">
+                        </div>
+                        <div class="sphere_post_buttons">
+                            <div class="sphere_it_button">
+                                <button type="submit" class="btn">Sphere It</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                    <style>
+                        .sphere_post textarea{
+                            width: 100%;
+                        }
+                        #id_content{
+                            font-size: 1em;
+                            border: none;
+                            outline: none;
+                            border-radius: .2em;
+                            width: 100%;
+                            padding: .3em;
+                            background-color: transparent;
+                            padding-left: .5em;
+                            color: #12372a;
+                        }
+                        #id_content:focus{
+                            border-color: none;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding-left: 0;">
+            <div class="head_void_area">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem porro reprehenderit obcaecati nisi, laborum vero maiores hic qui est? Delectus alias maiores placeat dolor nobis quo suscipit provident esse accusantium?
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}

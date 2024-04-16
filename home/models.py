@@ -1,5 +1,6 @@
 from django.db import models
 from userauths.models import User
+from django_ckeditor_5.fields import CKEditor5Field
 
 # Create your models here.
 class recentUpdates(models.Model):
@@ -13,3 +14,6 @@ class Notification(models.Model):
     message = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     is_read = models.BooleanField(default=False)
+
+class spherepost(models.Model):
+    content=CKEditor5Field(config_name='extends')
