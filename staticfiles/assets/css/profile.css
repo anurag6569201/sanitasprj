@@ -1,0 +1,113 @@
+.background-image{
+    width: 100%;
+    position: relative;
+}
+.profile-background{
+    object-fit: cover;
+    height: 20em;
+    width: 100%;
+    border-radius: .5em;
+}
+.profile-image{
+    width: 15em;
+    height: 15em;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10em;
+    margin-left: 2em;
+    padding: 2em;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+}
+.profile-image img{
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px #12372a;
+}
+.grp-btns{
+    position: absolute;
+    bottom: 1em;
+    right: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
+}
+.edit-profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #12372a;
+    border: 1px solid #12372a;
+    background-color: #adbc9f;
+    padding: .3em 1em;
+    font-weight: 500;
+    border-radius: .3em;
+}
+.postProfile .col-md-9,
+.postProfile .col-md-3,
+.basicInfo .col-md-3{
+    border: 1px solid #12372a;
+    background-color: #adbc9f;
+    padding: .5em .5em;
+    color: #12372a;
+    font-weight: 600;
+    border-radius: .3em;
+}
+.postProfile .col-md-9,
+.postProfile .col-md-3{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+}
+.basicInfo .col-md-3:first-child{
+    opacity: 0;
+}
+.postProfileDetail{
+    border: 1px solid #12372a;
+    color: #12372a;
+    border-top: 1px solid transparent;
+}
+.postProfileDetail span{
+    padding: .4em;
+}
+.postProfile .col-md-9.active,
+.postProfile .col-md-3.active{
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+}
+.postProfileDetail{
+    display: none;
+}
+.postProfileDetail.active{
+    display: flex;
+}
+.choosingImage{
+    position: absolute;
+    left: 3em;
+    background-color: white;
+    border-radius: .4em;
+}
+.choosingImage input {
+    padding: .2em 1em;
+    font-size: 1.em;
+    width: 200px;
+    color: #12372a;
+}
+.alertbtn{
+    padding: .2em;
+    width: 6em;border: 1px solid #12372a;
+    border-radius: .2em;
+    background-color: #adbc9f;
+    color: white;
+    font-size: 1em;
+    margin-left: 1em;
+}
+.checkTC{
+    display: flex;
+}

@@ -1,0 +1,24 @@
+:root {
+    --background: #f5f6fa;
+    --navbar-width: 256px;
+    --navbar-width-min: 80px;
+    --navbar-dark-primary: #12372A;
+    --navbar-dark-secondary: #436850;
+    --navbar-light-primary: #f5f6fa;
+    --navbar-light-secondary: #ADBC9F;
+}
+
+html,
+body {
+    margin: 0;
+    background: var(--background);
+}
+/* mini navbar */
+body .navbar{
+    display: none;
+}
+
+/* main page layout */
+.base-container{
+    display: flex;
+}
