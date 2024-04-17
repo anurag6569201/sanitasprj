@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'notification',
     'plofile',
     'creation',
+    'advertise',
 
     # authentication app
     'userauths',

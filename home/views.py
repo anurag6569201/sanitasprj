@@ -6,6 +6,7 @@ from home.models import Notification,spherepost
 from django.shortcuts import redirect
 from django.urls import reverse
 from home.forms import sphereForm
+from advertise.models import advertisement,sponsor,partnership
 
 @login_required(login_url='userauths:sign-in')
 def index(request):
@@ -19,10 +20,16 @@ def index(request):
         sphere_form = sphereForm()
     recentUpdate = recentUpdates.objects.all()
     topsphere = spherepost.objects.all()
+    advertise=advertisement.objects.all()
+    partner=partnership.objects.all()
+    spnsr=sponsor.objects.all()
     context = {
         'sphereform': sphere_form,
         'recentUpdate': recentUpdate,
         'topsphere': topsphere,
+        'advertisement': advertise,
+        'partner': partner,
+        'sponsor': spnsr,
     }
     return render(request, "home/index.html", context)
 
