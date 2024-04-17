@@ -2,7 +2,7 @@ from django.shortcuts import render
 from home.models import recentUpdates
 
 from django.contrib.auth.decorators import login_required
-from home.models import Notification
+from home.models import Notification,spherepost
 from django.shortcuts import redirect
 from django.urls import reverse
 from home.forms import sphereForm
@@ -10,16 +10,19 @@ from home.forms import sphereForm
 @login_required(login_url='userauths:sign-in')
 def index(request):
     if request.method == 'POST':
-        sphereform = sphereForm(request.POST, request.FILES)
-        if sphereform.is_valid():
-            post = sphereform.save(commit=False)
+        sphere_form = sphereForm(request.POST, request.FILES)
+        if sphere_form.is_valid():
+            post = sphere_form.save(commit=False)
+            post.author = request.user
             post.save()
     else:
-        sphereform = sphereForm()
-    recentUpdate=recentUpdates.objects.all()
+        sphere_form = sphereForm()
+    recentUpdate = recentUpdates.objects.all()
+    topsphere = spherepost.objects.all()
     context = {
-        'sphereform':sphereform,
-        'recentUpdate':recentUpdate,
+        'sphereform': sphere_form,
+        'recentUpdate': recentUpdate,
+        'topsphere': topsphere,
     }
     return render(request, "home/index.html", context)
 

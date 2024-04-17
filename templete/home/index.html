@@ -86,22 +86,18 @@
     <span class="blogs_head">Sanitas Sphere</span><hr><br>
     <div class="row sphere_area">
         <div class="col-md-8">
-            <div style="background-color: #f5f6fa;padding-top: 1vw;padding-bottom: 1vw;position: sticky;top: 0vw;">
+            <div style="background-color: #f5f6fa;padding-top: 1vw;position: sticky;top: 0vw;box-shadow: 0 0 1vw 1vw #f5f6fa;">
                 <div id="nav-footer-heading" style="background-color: #12372a;border-radius: .7em;">
                     {% if not sanitizer_obj.is_verified %}
-                    <div id="nav-footer-avatar"><img src="{{user_profile.profile_image.url}}" /></div>
-                        {% else %}
-                        <div id="nav-footer-avatar"><img src="{{sanitizer_obj.profile_image.url}}" />
-                        {% endif %}
-                    </div>
+                        <div id="nav-footer-avatar"><img src="{{user_profile.profile_image.url}}" /></div>
+                    {% else %}
+                        <div id="nav-footer-avatar"><img src="{{sanitizer_obj.profile_image.url}}" /></div>
+                    {% endif %}
+
                     {% if not sanitizer_obj.is_verified %}
-                        <div id="nav-footer-titlebox">{{ user_profile.name }} {{ user_profile.surname }}<span
-                                id="nav-footer-subtitle"></span>
-                        </div>
-                        {% else %}
-                        <div id="nav-footer-titlebox">{{ sanitizer_obj.name }}<span
-                            id="nav-footer-subtitle"></span>
-                        </div>
+                        <div id="nav-footer-titlebox">{{ user_profile.name }} {{ user_profile.surname }}</div>
+                    {% else %}
+                        <div id="nav-footer-titlebox">{{ sanitizer_obj.name }}</div>
                     {% endif %}
                 </div>
             </div>
@@ -146,6 +142,42 @@
                 </div>
             </div>
             <div class="content_sphere">
+                {% for sphere in topsphere %}
+                    <div class="post">
+                        <div class="post_profile-image">
+                            {% if not sphere.author.sanitizer.is_verified %}
+                                <div id="sphere_author_profile"><img src="{{sphere.author.userprofile.profile_image.url}}" /></div>
+                            {% else %}
+                                <div id="sphere_author_profile"><img src="{{sphere.author.sanitizer.profile_image.url}}" /></div>
+                            {% endif %}
+                        </div>
+            
+                        <div class="post_body">
+                            <div class="post_header">
+                                <div class="post_header-text">
+                                    {% if not sphere.author.sanitizer.is_verified %}
+                                        <div class="header-icon-section">{{ sphere.author.userprofile.name }} {{ sphere.author.userprofile.surname }}</div>
+                                    {% else %}
+                                        <div class="header-icon-section">{{ sphere.author.sanitizer.name }}</div>
+                                    {% endif %}
+                                </div>
+            
+                                <div class="post_header-discription">
+                                    <p>{{ sphere.content|safe }}</p>
+                                </div>
+                                
+                                <div class="post_footer">
+                                    <span class="material-symbols-outlined"> comment </span>
+                                    <span class="material-symbols-outlined"> favorite </span>
+                                    <span class="material-symbols-outlined"> refresh </span>
+                                    <span class="material-symbols-outlined"> more_vert </span>
+                                </div>
+                            </div>
+            
+                        </div>
+            
+                    </div>
+                {% endfor %}
             </div>
         </div>
         <div class="col-md-4" style="padding-left: 0;position: sticky;top: 1vw;">

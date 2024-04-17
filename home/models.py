@@ -1,6 +1,7 @@
 from django.db import models
-from userauths.models import User
+from userauths.models import User,UserProfile
 from django_ckeditor_5.fields import CKEditor5Field
+from plofile.models import Sanitizer
 
 # Create your models here.
 class recentUpdates(models.Model):
@@ -17,3 +18,4 @@ class Notification(models.Model):
 
 class spherepost(models.Model):
     content=CKEditor5Field(config_name='extends')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sphere_author')

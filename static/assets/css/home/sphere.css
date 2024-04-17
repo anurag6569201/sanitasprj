@@ -2,6 +2,7 @@
     width: 100%;
     background-color: #12372a;
     border-radius: .7em;
+    margin-top: 1vw;
 }
 .sphere_area{
     position: sticky;
@@ -27,13 +28,46 @@
     height: 200vh;
 }
 
+
+/* sphere post */
+
+.post{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 1vw;
+    border-bottom: 1px solid var(--twitter-background-color);
+}
+#sphere_author_profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 1vw;
+}
+.post_body{
+    width: 100%;
+    margin-left: 1vw;
+}
+.post_header{
+    border-radius: .7em;
+    background-color: #adbc9f;
+    padding: 1vw;
+}
+.header-icon-section{
+    color: #12372a;
+    font-weight: 500;
+}
+.post_footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /* void area */
 .head_void_area{
     position: sticky;
     top: 1vw;
     height: calc(100vh - 2vw);
     width: 100%;
-    background-color: #12372a;
+    background-color: transparent;
     border-radius: .7em;
 }
 .sphere_it_button button{
