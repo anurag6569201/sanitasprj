@@ -1,89 +1,9 @@
 {% extends 'partials/base.html' %}
 {% load static %}
 
-{% block content %}
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<div class="col-md-12 col-sm-12">
-    <br>
-    <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><span class="blogs_head cityLocate" style="display: flex;align-items: center;font-size: .7em;"><i class="material-symbols-outlined" style="font-size: 1em;">Location_on</i>{{current_city}}</span>
-    <br>
-    <div class="row">
-        {% for disease_name, disease_cases in top_diseases %}
-        <div class="col-md-3 col-6 donuts">
-            <canvas id="donutChart{{ forloop.counter }}" width="100" height="100"></canvas>
-            <span class="donutsText">
-                <span style="display: flex;align-items: center;flex-direction: column;line-height: .7em;justify-content: center;">
-                    {{ disease_cases }}
-                    <span style="font-size: .5em;color: rgb(216, 78, 78);">cases</span>
-                </span>
-                <span class="material-symbols-outlined" style="font-size: 1em;color: rgb(216, 78, 78);">straight </span>
-                <br>
-            </span>
-            <span style="top: 0%;position: absolute;left: 0%;right: 0%;text-align: center;font-size: 1.3em;display: flex;align-items: center;justify-content: center;">
-                <span class="material-symbols-outlined"> microbiology </span>{{disease_name}}
-            </span>
-        </div>
-        <script>
-            const donutChart{{ forloop.counter }} = document.getElementById('donutChart{{ forloop.counter }}').getContext('2d');
-            const donutChart{{ forloop.counter }}Data = {
-                datasets: [{
-                    data: [{{ disease_cases }},{{total_cases_24hr}}],
-                    backgroundColor: ['#12372a', '#adbc9f']
-                }]
-            };
-            const donutChart{{ forloop.counter }}Config = {
-                type: 'doughnut',
-                data: donutChart{{ forloop.counter }}Data,
-                options: {}
-            };
-            new Chart(donutChart{{ forloop.counter }}, donutChart{{ forloop.counter }}Config);
-        </script>
-        {% endfor %}
-
-        <div class="col-md-3 col-6 donuts">
-            <div class="measure-btns">
-                <a href="" class="btn"><i class="material-symbols-outlined">home_health</i> Preventives</a>
-                <a href="" class="btn"><i class="material-symbols-outlined">headset_mic</i> Consult</a>
-                <a href="" class="btn"><i class="material-symbols-outlined">Travel_Explore</i> See Your Area</a>
-            </div>
-        </div>
-    </div>
-    <br>
-
-</div>
-<div class="col-md-12 recent-updates">
-    <span class="blogs_head">Latest Updates</span><hr><br>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="cont" onload="changePos()">
-                <ul class="ultra">
-                    {% for ru in recentUpdate %}
-                    <li class="tab-{{ forloop.counter }}">
-                        <strong>{{ru.title}}</strong> <span class="date">{{ru.date}} </span></br>
-                        <span>{{ru.content}}</span><br>
-                        <a href="{{ru.visitingLink}}" class="btn">Know More</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-6 about-us-para">
-            <span class="blogs_head">About Us</span><hr><br>
-            <p style="color: var(--navbar-dark-secondary);">Imagine having access to a real-time map that not only visualizes disease hotspots but also predicts future outbreaks, all at your fingertips. The Disease Heatmap, a groundbreaking mapping system, is set to revolutionize how we monitor and respond to health threats in our communities. </p>
-            <a href="#" class="btn">Know More</a>
-        </div>
-    </div>
-    
-</div>
-
-{% endblock content %}
-
 {% block content1 %}
+
 <div class="col-md-12 threads" style="display: block;">
-    <br>
-    <span class="blogs_head">Sanitas Sphere</span><hr><br>
     <div class="row sphere_area">
         <div class="col-md-8">
             <div style="background-color: #f5f6fa;padding-top: 1vw;position: sticky;top: 0vw;box-shadow: 0 0 1vw 1vw #f5f6fa;">
@@ -184,7 +104,7 @@
                                             border: none;
                                         }
                                         .like-event-btn i{
-                                            font-size: .9em;
+                                            font-size: .7em;
                                         }
                                     </style>
                                     <span class="material-symbols-outlined"> refresh </span>
@@ -228,4 +148,6 @@
         </div>
     </div>
 </div>
+
+
 {% endblock content1 %}

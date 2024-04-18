@@ -298,18 +298,18 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
-                <div class="row home">
-                    <div class="col-md-12 search-box" style="z-index: 999;">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-dark" type="submit">Search</button>
-                            <a href="{% url 'creation:blog-new' %}" class="btn" style="display: flex;align-items: center;justify-content: center;"><i class="fa-solid fa-plus"></i></a>
-                        </form>
-                    </div>
-                    {% block content %}
-                    {% endblock content %}
+        <div class="container-fluid" style="{% if '/material/' in request.path %}overflow-x:hidden{% endif %};">
+            <div class="row home" style="{% if '/sphere' in request.path %}padding: 0;{% endif %}">
+                <div class="col-md-12 search-box" style="z-index: 999;{% if '/sphere' in request.path %}display: none;{% endif %}">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                        <a href="{% url 'creation:blog-new' %}" class="btn" style="display: flex;align-items: center;justify-content: center;"><i class="fa-solid fa-plus"></i></a>
+                    </form>
                 </div>
+                {% block content %}
+                {% endblock content %}
+            </div>
             <div class="space-filler"></div>
             {% block content1 %}
             {% endblock content1 %}

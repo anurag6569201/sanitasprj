@@ -19,3 +19,11 @@ class Notification(models.Model):
 class spherepost(models.Model):
     content=CKEditor5Field(config_name='extends')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sphere_author')
+
+    likes = models.ManyToManyField(User, related_name='event_likes', blank=True)
+
+    def like(self, user):
+        if user in self.likes.all():
+            self.likes.remove(user)
+        else:
+            self.likes.add(user)
