@@ -13,4 +13,6 @@ urlpatterns=[
 
     # like dislike
     path('like/<int:event_id>/', LikeEvent.as_view(), name='like_event'),
+    
+    path('poll/vote/', views.poll_vote, name='poll-vote'),
 ]

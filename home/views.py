@@ -12,6 +12,8 @@ from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.views import View
 
+from django.db.models import Sum
+
 @login_required(login_url='userauths:sign-in')
 def index(request):
     if request.method == 'POST':
@@ -24,9 +26,8 @@ def index(request):
         sphere_form = sphereForm()
     recentUpdate = recentUpdates.objects.all()
     topsphere = spherepost.objects.all()
-    advertise=advertisement.objects.all()
-    partner=partnership.objects.all()
-    spnsr=sponsor.objects.all()
+    
+    question = Question.objects.all()
 
     liked_events = []
     liked_events = spherepost.objects.filter(likes=request.user)
@@ -35,10 +36,8 @@ def index(request):
         'sphereform': sphere_form,
         'recentUpdate': recentUpdate,
         'topsphere': topsphere,
-        'advertisement': advertise,
-        'partner': partner,
-        'sponsor': spnsr,
         'liked_events': liked_events,
+        'questions':question,
     }
     return render(request, "home/index.html", context)
 
@@ -67,3 +66,16 @@ def sphere_comment(request, event_id):
         'sponsor': spnsr,
     }
     return render(request, "home/comment.html",context)
+
+from .models import Question, Choice
+from django.http import JsonResponse
+
+def poll_vote(request):
+    if request.method == 'POST' and request.is_ajax():
+        choice_id = request.POST.get('choice')
+        choice = Choice.objects.get(id=choice_id)
+        choice.votes += 1
+        choice.save()
+        return JsonResponse({'message': 'Thank you for your vote!'}, status=200)
+    else:
+        return JsonResponse({'error': 'Invalid request'}, status=400)
