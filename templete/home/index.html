@@ -167,10 +167,10 @@
                                 </div>
                                 
                                 <div class="post_footer">
-                                    <a href="{% url 'home:sphere_comment' event_id=sphere.id %}"><span class="material-symbols-outlined" style="color: #12372a;font-size: .9em;"> comment </span></a>
+                                    <a href="{% url 'home:sphere_comment' event_id=sphere.id %}"><span class="material-symbols-outlined" style="color: #12372a;"> comment </span></a>
                                     <form class="like-form" action="{% url 'home:like_event' event_id=sphere.id %}" method="post">
                                         {% csrf_token %}
-                                        <button type="submit" class="like-event-btn" data-event-id="{{ sphere.id }}">
+                                        <button type="submit" class="like-event-btn" data-event-id="{{ sphere.id }}" style="font-size: 16px;">
                                             {% if sphere in liked_events %}
                                                 <span><i class="fas fa-heart"></i> {{ sphere.likes.count }}</span>
                                             {% else %}

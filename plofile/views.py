@@ -14,12 +14,19 @@ from django.shortcuts import redirect
 from .forms import DiseaseFormSet
 from django.contrib.auth.decorators import login_required
 
+from home.models import spherepost
+
 # Create your views here.
 @login_required(login_url='userauths:sign-in')
 def profile(request):
     userprofile=UserProfile.objects.get(user=request.user)
     userposts= Post.objects.filter(author=request.user)
     blogs=Post.objects.filter(author=request.user)
+    topsphere = spherepost.objects.filter(author=request.user)
+    
+    liked_events = []
+    liked_events = spherepost.objects.filter(likes=request.user)
+
     sanitizer_obj, created = Sanitizer.objects.get_or_create(user=request.user)
     if request.method == 'POST':
         formset = DiseaseFormSet(request.POST)
@@ -41,7 +48,9 @@ def profile(request):
         'userprofile':userprofile,
         'user_profile':userprofile,
         'sanitizer_obj':sanitizer_obj,
-        'formset': formset
+        'formset': formset,
+        'topsphere':topsphere,
+        'liked_events': liked_events,
     }
     return render(request,"plofile/index-profile.html",context)
 

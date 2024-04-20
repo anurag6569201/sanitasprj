@@ -49,10 +49,12 @@
             <div class="col-md-12 col-12">
                 <div class="row postProfile px-3 gx-3">
                     <div class="col-md-3 col-3 active postProfilesub">Basic Info</div>
-                    <div class="col-md-{% if sanitizer_obj.is_verified %}3{% else %}9{% endif %} postProfilesub col-{% if sanitizer_obj.is_verified %}3{% else %}9{% endif %} postProfilesub">Post ({{userposts.count}})</div>
+                    <div class="col-md-3 col-3 postProfilesub">Sphere ({{topsphere.count}})</div>
+                    <div class="col-md-3 col-3 postProfilesub">Post ({{userposts.count}})</div>
                     {% if sanitizer_obj.is_verified %}
                     <div class="col-md-3 col-6 postProfilesub">Data Submission</div>
-                    <div class="col-md-3 col-3" style="background-color: transparent;border: none;border-bottom: 1px solid #516d64;"></div>
+                    {% else %}
+                    <div class="col-md-3" style="border: none;border-bottom: 1px solid #12372a;background-color: transparent;"></div>
                     {% endif %}
                 </div>
             </div>
@@ -74,6 +76,55 @@
                     <span><b>Contact Person Email: </b>{{ sanitizer_obj.CPemail }}</span><hr>
                 </div>
                 {% endif %}
+                <div class="row postProfileDetail mx-2">
+                    <span class="col-md-12 col-12"><b>Total Sphere Post :</b> {{topsphere.count}}</span>
+                    <div class="item mx-1 col-md-12">
+                        {% for sphere in topsphere %}
+                            <div class="post">
+                                <div class="post_profile-image">
+                                    {% if not sphere.author.sanitizer.is_verified %}
+                                        <div id="sphere_author_profile"><img src="{{sphere.author.userprofile.profile_image.url}}" /></div>
+                                    {% else %}
+                                        <div id="sphere_author_profile"><img src="{{sphere.author.sanitizer.profile_image.url}}" /></div>
+                                    {% endif %}
+                                </div>
+                                <div class="post_body">
+                                    <div class="post_header">
+                                        <div class="post_header-text">
+                                            {% if not sphere.author.sanitizer.is_verified %}
+                                                <div class="header-icon-section">{{ sphere.author.userprofile.name }} {{ sphere.author.userprofile.surname }}</div>
+                                            {% else %}
+                                                <div class="header-icon-section">{{ sphere.author.sanitizer.name }}</div>
+                                            {% endif %}
+                                        </div>
+                    
+                                        <div class="post_header-discription">
+                                            <p style="margin: 0;">{{ sphere.content|safe }}</p>
+                                        </div>
+                                        
+                                        <div class="post_footer">
+                                            <a href="{% url 'home:sphere_comment' event_id=sphere.id %}"><span class="material-symbols-outlined" style="color: #12372a;"> comment </span></a>
+                                            <form class="like-form" action="{% url 'home:like_event' event_id=sphere.id %}" method="post">
+                                                {% csrf_token %}
+                                                <button type="submit" class="like-event-btn" data-event-id="{{ sphere.id }}">
+                                                    {% if sphere in liked_events %}
+                                                        <span><i class="fas fa-heart"></i> {{ sphere.likes.count }}</span>
+                                                    {% else %}
+                                                        <span><i class="far fa-heart" style="color:#12372a;"></i> {{ sphere.likes.count }}</span>
+                                                    {% endif %}
+                                                </button>
+                                            </form>
+                                            <a href="" style="color: #12372a;"><span class="material-symbols-outlined"> delete </span></a>
+                                            <span class="material-symbols-outlined"> refresh </span>
+                                            <span class="material-symbols-outlined"> more_vert </span>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
                 <div class="row postProfileDetail mx-2">
                     <span class="col-md-12 col-12"><b>Total Post :</b> {{userposts.count}}</span>
                     {% for p in blogs %}
