@@ -2,10 +2,10 @@ from django.shortcuts import render
 from home.models import recentUpdates
 
 from django.contrib.auth.decorators import login_required
-from home.models import Notification,spherepost
+from home.models import Notification,spherepost,sphereComment
 from django.shortcuts import redirect
 from django.urls import reverse
-from home.forms import sphereForm
+from home.forms import sphereForm,CommentForm
 from advertise.models import advertisement,sponsor,partnership
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
@@ -26,8 +26,9 @@ def index(request):
         sphere_form = sphereForm()
     recentUpdate = recentUpdates.objects.all()
     topsphere = spherepost.objects.all()
-    
-    question = Question.objects.all()
+    advertise=advertisement.objects.all()
+    partner=partnership.objects.all()
+    spnsr=sponsor.objects.all()
 
     liked_events = []
     liked_events = spherepost.objects.filter(likes=request.user)
@@ -36,8 +37,10 @@ def index(request):
         'sphereform': sphere_form,
         'recentUpdate': recentUpdate,
         'topsphere': topsphere,
+        'advertisement': advertise,
+        'partner': partner,
+        'sponsor': spnsr,
         'liked_events': liked_events,
-        'questions':question,
     }
     return render(request, "home/index.html", context)
 
@@ -60,22 +63,37 @@ def sphere_comment(request, event_id):
     advertise=advertisement.objects.all()
     partner=partnership.objects.all()
     spnsr=sponsor.objects.all()
+    topsphere = spherepost.objects.filter(pk=event_id)
+
+    post = get_object_or_404(spherepost, pk=event_id)
+    comments = sphereComment.objects.filter(post=post)
+    comment_form = CommentForm()
+    
+    liked_events = []
+    liked_events = spherepost.objects.filter(likes=request.user)
+
     context = {
         'advertisement': advertise,
         'partner': partner,
         'sponsor': spnsr,
+        'topsphere':topsphere,
+        'comments': comments, 
+        'comment_form': comment_form,
+        'post_id':event_id,
+        'liked_events': liked_events,
     }
     return render(request, "home/comment.html",context)
 
-from .models import Question, Choice
-from django.http import JsonResponse
 
-def poll_vote(request):
-    if request.method == 'POST' and request.is_ajax():
-        choice_id = request.POST.get('choice')
-        choice = Choice.objects.get(id=choice_id)
-        choice.votes += 1
-        choice.save()
-        return JsonResponse({'message': 'Thank you for your vote!'}, status=200)
-    else:
-        return JsonResponse({'error': 'Invalid request'}, status=400)
+class CommentCreateView(LoginRequiredMixin, View):
+    def post(self, request, *args, **kwargs):
+        post = get_object_or_404(spherepost, pk=self.kwargs['event_id'])
+        form = CommentForm(request.POST)
+
+        if form.is_valid(): 
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.author = request.user
+            comment.save()
+        
+        return redirect('home:sphere_comment', event_id=post.id)

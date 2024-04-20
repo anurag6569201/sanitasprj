@@ -22,44 +22,7 @@
                 </div>
             </div>
             <div class="head_sphere">
-                <div class="sphere_post">
-                    <form method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <div class="ck ck-content">
-                                    {{sphereform.media}}
-                                    {{sphereform.content|safe}}
-                                </div>
-                                <hr style="padding: .3em;">
-                            </div>
-                            <div class="sphere_post_buttons">
-                                <div class="sphere_it_button">
-                                    <button type="submit" class="sphereit">Sphere It</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <style>
-                        .sphere_post textarea{
-                            width: 100%;
-                        }
-                        #id_content{
-                            font-size: 1em;
-                            border: none;
-                            outline: none;
-                            border-radius: .2em;
-                            width: 100%;
-                            padding: .3em;
-                            background-color: transparent;
-                            padding-left: .5em;
-                            color: #12372a;
-                        }
-                        #id_content:focus{
-                            border-color: none;
-                        }
-                    </style>
-                </div>
+
             </div>
             <div class="content_sphere">
                 {% for sphere in topsphere %}
@@ -87,7 +50,7 @@
                                 </div>
                                 
                                 <div class="post_footer">
-                                    <span class="material-symbols-outlined"> comment </span>
+                                    <a href="{% url 'home:sphere_comment' event_id=sphere.id %}"><span class="material-symbols-outlined" style="color: #12372a;font-size: .9em;"> comment </span></a>
                                     <form class="like-form" action="{% url 'home:like_event' event_id=sphere.id %}" method="post">
                                         {% csrf_token %}
                                             <button type="submit" class="like-event-btn" data-event-id="{{ sphere.id }}">
@@ -98,15 +61,6 @@
                                                 {% endif %}
                                             </button>
                                     </form>
-                                    <style>
-                                        .like-event-btn{
-                                            background-color: transparent;
-                                            border: none;
-                                        }
-                                        .like-event-btn i{
-                                            font-size: .7em;
-                                        }
-                                    </style>
                                     <span class="material-symbols-outlined"> refresh </span>
                                     <span class="material-symbols-outlined"> more_vert </span>
                                 </div>
@@ -116,6 +70,71 @@
             
                     </div>
                 {% endfor %}
+                <hr>
+                <div class="container-fluid" style="padding: 0;">
+                    <div class="be-comment-block">
+                        <h1 class="comments-title">Comments {{ comments.count }}</h1>
+                        {% for comment in comments %}
+                            <div class="be-comment" style="padding: 1em 0;">
+                                <div class="be-img-comment">	
+                                    <a>
+                                        {% if not comment.author.sanitizer.is_verified %}
+                                            <div id="sphere_author_profile"><img src="{{comment.author.userprofile.profile_image.url}}" /></div>
+                                        {% else %}
+                                            <div id="sphere_author_profile"><img src="{{comment.author.sanitizer.profile_image.url}}" /></div>
+                                        {% endif %}
+                                    </a>
+                                </div>
+                                <div class="be-comment-content">
+                                    
+                                    <span class="be-comment-name">
+                                        {% if not comment.author.sanitizer.is_verified %}
+                                            <div>{{ comment.author.userprofile.name }} {{ comment.author.userprofile.surname }}</div>
+                                        {% else %}
+                                            <div>{{ comment.author.sanitizer.name }}</div>
+                                        {% endif %}
+                                    </span>
+                                    <span class="be-comment-time">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        {{ comment.created_at }}
+                                    </span>
+
+                                    <p class="be-comment-text">
+                                        {{ comment.text }}
+                                    </p>
+                                </div>
+                            </div>
+                            <hr>
+                        {% endfor %}
+
+                        <form class="form-block" method="post" action="{% url 'home:comment-create' event_id=post_id %}">
+                            {% csrf_token %}
+                            {{ comment_form.as_p }}
+                            <button class="comment-btn" type="submit">Add Comment</button>
+                        </form>
+                        <style>
+                            .form-block label{
+                                font-size: 1.2em;
+                                margin-top: 1em;
+                                color: var(--navbar-dark-primary);
+                            }
+                            #id_text{
+                                width: 100%;
+                                height: 9em;
+                                font-size: 1em;
+                                overflow-y: auto;
+                                border-radius: .5em;
+                                padding: .3em;
+                                border-color: var(--navbar-dark-primary);
+                                color: white;
+                                background: var(--navbar-dark-secondary);
+                            }
+                            #id_text::placeholder{
+                                color: aliceblue;
+                            }
+                        </style>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-4">

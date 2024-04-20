@@ -1,5 +1,5 @@
 from django import forms
-from home.models import spherepost
+from home.models import spherepost,sphereComment
 
 class sphereForm(forms.ModelForm):
     class Meta:
@@ -11,4 +11,16 @@ class sphereForm(forms.ModelForm):
         }
         labels = {
             'content': 'content',
+        }
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = sphereComment
+        fields = ['text']
+
+        widgets = {
+            'text': forms.Textarea(attrs={'rows': 4, 'cols': 50, 'placeholder': 'Enter your comment here...', 'style': 'color: white;'})
+        }
+        labels = {
+            'text': 'Comment'
         }

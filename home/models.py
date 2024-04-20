@@ -16,6 +16,7 @@ class Notification(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     is_read = models.BooleanField(default=False)
 
+
 class spherepost(models.Model):
     content=CKEditor5Field(config_name='extends')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sphere_author')
@@ -28,11 +29,14 @@ class spherepost(models.Model):
         else:
             self.likes.add(user)
 
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    comments = models.ManyToManyField('sphereComment', related_name='sphere_post_comments', blank=True)
 
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
+class sphereComment(models.Model):
+    post = models.ForeignKey(spherepost, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Comment by {self.author.username} on {self.post.title}"
+    

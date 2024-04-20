@@ -1,7 +1,7 @@
 from django.urls import path
 from home import views
 from plofile.context_process import send_message
-from .views import LikeEvent
+from .views import LikeEvent,CommentCreateView
 
 app_name="home"
 
@@ -13,6 +13,5 @@ urlpatterns=[
 
     # like dislike
     path('like/<int:event_id>/', LikeEvent.as_view(), name='like_event'),
-    
-    path('poll/vote/', views.poll_vote, name='poll-vote'),
+    path('post/<int:event_id>/comment/', CommentCreateView.as_view(), name='comment-create')
 ]
