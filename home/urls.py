@@ -6,12 +6,14 @@ from .views import LikeEvent,CommentCreateView
 app_name="home"
 
 urlpatterns=[
-    path('',views.index,name='index'),
+    path('',views.main,name='main'),
+    path('home/',views.index,name='index'),
     path('sphere/<int:event_id>/',views.sphere_comment,name='sphere_comment'),
     path('mark-all-as-read/', views.mark_all_as_read, name='mark_all_as_read'),
     path('send-message/', send_message, name='send_message'),
 
     # like dislike
     path('like/<int:event_id>/', LikeEvent.as_view(), name='like_event'),
-    path('post/<int:event_id>/comment/', CommentCreateView.as_view(), name='comment-create')
+    path('post/<int:event_id>/comment/', CommentCreateView.as_view(), name='comment-create'),
+    path('spherepost/<int:pk>/delete/', views.spherepost_delete_view, name='spherepost_delete'),
 ]

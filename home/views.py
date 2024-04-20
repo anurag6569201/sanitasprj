@@ -9,10 +9,13 @@ from home.forms import sphereForm,CommentForm
 from advertise.models import advertisement,sponsor,partnership
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseNotAllowed, HttpResponseRedirect
 from django.views import View
 
 from django.db.models import Sum
+
+def main(request):
+    return redirect(reverse('home:index'))
 
 @login_required(login_url='userauths:sign-in')
 def index(request):
@@ -97,3 +100,15 @@ class CommentCreateView(LoginRequiredMixin, View):
             comment.save()
         
         return redirect('home:sphere_comment', event_id=post.id)
+
+from django.shortcuts import get_object_or_404, redirect, HttpResponse
+from django.contrib import messages
+
+def spherepost_delete_view(request, pk):
+    if request.method == 'POST':
+        post = get_object_or_404(spherepost, pk=pk)
+        post.delete()
+        messages.success(request, 'Post deleted successfully!')
+        return redirect('plofile:index-profile')
+    else:
+        return HttpResponseNotAllowed(['POST'])

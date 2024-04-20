@@ -114,7 +114,10 @@
                                                     {% endif %}
                                                 </button>
                                             </form>
-                                            <a href="" style="color: #12372a;"><span class="material-symbols-outlined"> delete </span></a>
+                                            <form action="{% url 'home:spherepost_delete' pk=sphere.id %}" method="post" style="display: inline;">
+                                                {% csrf_token %}
+                                                <button type="submit" class="delete-post-btn" style="color: #12372a; background: none; border: none;"><span class="material-symbols-outlined"> delete </span></button>
+                                            </form>
                                             <span class="material-symbols-outlined"> refresh </span>
                                             <span class="material-symbols-outlined"> more_vert </span>
                                         </div>

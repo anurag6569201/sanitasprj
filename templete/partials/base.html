@@ -298,7 +298,7 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid" style="{% if '/' not in request.path or '/comment/' not in request.path %}overflow-x:hidden;{% endif %}">
+        <div class="container-fluid" style="{% if '/home/' not in request.path and '/sphere/' not in request.path %}overflow-x:hidden;{% endif %}">
             <div class="row home" style="{% if '/sphere' in request.path %}padding: 0;{% endif %}">
                 <div class="col-md-12 search-box" style="z-index: 999;{% if '/sphere' in request.path %}display: none;{% endif %}">
                     <form class="d-flex" role="search">
