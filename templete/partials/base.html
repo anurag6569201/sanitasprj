@@ -194,7 +194,7 @@
                     <hr />
                 </div>
                 <div id="nav-content">
-                    <div class="nav-button {% if request.path == '/' %}active{% endif %}"><a href="{% url 'home:index' %}"><i class="fas fa-home"></i><span>Home</span></a></div>
+                    <div class="nav-button {% if request.path == '/home/' %}active{% endif %}"><a href="{% url 'home:index' %}"><i class="fas fa-home"></i><span>Home</span></a></div>
                     <div class="nav-button {% if '/map/' in request.path %}active{% endif %}"><a href="{% url 'map:index-map' %}"><i class="fas fa-map"></i><span>Map</span></a></div>
                     <div class="nav-button {% if '/material/' in request.path %}active{% endif %}"><a href="{% url 'material:index-material' %}"><i class="fas fa-thumbtack"></i><span>Materials</span></a></div>
                     <div class="nav-button">

@@ -94,19 +94,19 @@ body {
     transition: all 0.3s ease;
 }
 .gif1{
-    background-image: url(../images/userauths/slide1.jpg);
+    background-image: url(../../images/userauths/slide1.jpg);
 }
 .gif2{
-    background-image: url(../images/userauths/slide2.jpg);
+    background-image: url(../../images/userauths/slide2.jpg);
 }
 .gif3{
-    background-image: url(../images/userauths/slide3.jpg);
+    background-image: url(../../images/userauths/slide3.jpg);
 }
 .gif4{
-    background-image: url(../images/userauths/slide4.jpg);
+    background-image: url(../../images/userauths/slide4.jpg);
 }
 .gif5{
-    background-image: url(../images/userauths/slide5.jpg);
+    background-image: url(../../images/userauths/slide5.jpg);
 }
 
 .computer img {

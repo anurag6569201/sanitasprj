@@ -8,7 +8,7 @@ app_name="home"
 urlpatterns=[
     path('',views.main,name='main'),
     path('home/',views.index,name='index'),
-    path('sphere/<int:event_id>/',views.sphere_comment,name='sphere_comment'),
+    path('home/sphere/<int:event_id>/',views.sphere_comment,name='sphere_comment'),
     path('mark-all-as-read/', views.mark_all_as_read, name='mark_all_as_read'),
     path('send-message/', send_message, name='send_message'),
 
