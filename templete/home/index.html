@@ -182,40 +182,39 @@
                                     <span class="material-symbols-outlined"> more_vert </span>
                                 </div>
                             </div>
+                            <div class="be-comment" style="padding: 1em 0;">
+                                <div class="be-img-comment">	
+                                    <a>
+                                        {% if not comment.author.sanitizer.is_verified %}
+                                            <div id="sphere_author_profile"><img src="{{comment.author.userprofile.profile_image.url}}" /></div>
+                                        {% else %}
+                                            <div id="sphere_author_profile"><img src="{{comment.author.sanitizer.profile_image.url}}" /></div>
+                                        {% endif %}
+                                    </a>
+                                </div>
+                                <div class="be-comment-content">
+                                    
+                                   <a href="{% url 'home:sphere_comment' event_id=sphere.id %}">
+                                        <span class="be-comment-name">
+                                            {% if not comment.author.sanitizer.is_verified %}
+                                                <div>{{ comment.author.userprofile.name }} {{ comment.author.userprofile.surname }}</div>
+                                            {% else %}
+                                                <div>{{ comment.author.sanitizer.name }}</div>
+                                            {% endif %}
+                                        </span>
+                                        <span class="be-comment-time">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            {{ comment.created_at }}
+                                        </span>
             
+                                        <p class="be-comment-text">
+                                            {{ comment.text }}
+                                        </p>
+                                   </a>
+                                </div>
+                            </div>
                         </div>
-                    {% for comment in sphere.sphere_post_comments %}
-                    <div class="be-comment" style="padding: 1em 0;">
-                        <div class="be-img-comment">	
-                            <a>
-                                {% if not comment.author.sanitizer.is_verified %}
-                                    <div id="sphere_author_profile"><img src="{{comment.author.userprofile.profile_image.url}}" /></div>
-                                {% else %}
-                                    <div id="sphere_author_profile"><img src="{{comment.author.sanitizer.profile_image.url}}" /></div>
-                                {% endif %}
-                            </a>
-                        </div>
-                        <div class="be-comment-content">
-                            
-                            <span class="be-comment-name">
-                                {% if not comment.author.sanitizer.is_verified %}
-                                    <div>{{ comment.author.userprofile.name }} {{ comment.author.userprofile.surname }}</div>
-                                {% else %}
-                                    <div>{{ comment.author.sanitizer.name }}</div>
-                                {% endif %}
-                            </span>
-                            <span class="be-comment-time">
-                                <i class="fas fa-calendar-alt"></i>
-                                {{ comment.created_at }}
-                            </span>
-
-                            <p class="be-comment-text">
-                                {{ comment.text }}
-                            </p>
-                        </div>
-                    </div>
-                    {% endfor %}
-
+            
                     </div>
                 {% endfor %}
             </div>

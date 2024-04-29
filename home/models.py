@@ -29,14 +29,12 @@ class spherepost(models.Model):
         else:
             self.likes.add(user)
 
-    comments = models.ManyToManyField('sphereComment', related_name='sphere_post_comments', blank=True)
-
 class sphereComment(models.Model):
-    post = models.ForeignKey(spherepost, on_delete=models.CASCADE)
+    post = models.ForeignKey(spherepost, on_delete=models.CASCADE, related_name='comments')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Comment by {self.author.username} on {self.post.title}"
+        return f"Comment by {self.author.username}"
     

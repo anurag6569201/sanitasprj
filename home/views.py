@@ -13,7 +13,6 @@ from django.http import HttpResponseNotAllowed, HttpResponseRedirect
 from django.views import View
 
 from django.db.models import Sum
-from django.db.models import Subquery, OuterRef
 
 def main(request):
     return redirect(reverse('home:index'))
@@ -35,9 +34,8 @@ def index(request):
     partner=partnership.objects.all()
     spnsr=sponsor.objects.all()
 
-    comments = sphereComment.objects.order_by('-created_at').all()
+    comments = spherepost.objects.filter(author=request.user).first()
     
-
     liked_events = []
     liked_events = spherepost.objects.filter(likes=request.user)
     
@@ -49,7 +47,7 @@ def index(request):
         'partner': partner,
         'sponsor': spnsr,
         'liked_events': liked_events,
-        'comments': comments, 
+        'comment': comments, 
     }
     return render(request, "home/index.html", context)
 
