@@ -56,7 +56,7 @@ class Sanitizer(models.Model):
 )
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='sanitizer')
-    name = models.CharField(max_length=100, default="Aims Hospital")
+    name = models.CharField(max_length=100, default="Aiims Hospital")
     street = models.CharField(max_length=255, default="Street 99")
     city = models.CharField(max_length=100, choices=CITY_CHOICES, default="City 99")
     state = models.CharField(max_length=100, choices=STATE_CHOICES, default="State 99")

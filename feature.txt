@@ -66,3 +66,17 @@ problems we will face:
 1. Data collection process may not be 100% accurate.
 2. If doctor become greedy if that model works well then probably hospitals will give us wrong information.
 3. There might be some fake data coming into system which will affect accuracy of results.
+
+
+what are the alternative platforms
+so thier is a 
+
+IDSP (Integrated Disease Surveillance Programme) and that platform is not for public thats data using by reseach facilities and  not for users
+IHIP (Integrated Health Information Platform):Thats also not for public and used by internal government agencies
+Social Analytics for Rapid Transformation in Health for India (SARTHI): 
+
+These platforms focus on data collection and government intervention. There's a gap in providing real-time, localized disease information directly to the public.
+
+By focusing on user-friendliness, hyper-local data, and actionable insights, Sanitas has the potential to bridge the gap between disease surveillance and public awareness. This could empower individuals and communities to take preventive measures and contribute to earlier detection of outbreaks, ultimately improving public health outcomes in India.
+
+loi
