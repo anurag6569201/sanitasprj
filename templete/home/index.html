@@ -182,7 +182,7 @@
                                     <span class="material-symbols-outlined"> more_vert </span>
                                 </div>
                             </div>
-                            <div class="be-comment" style="padding: 1em 0;">
+                            <div class="be-comment" style="padding: .4em 0;">
                                 <div class="be-img-comment">	
                                     <a>
                                         {% if not comment.author.sanitizer.is_verified %}
@@ -227,22 +227,6 @@
                 {% for partner in partner %}
                     <div class="advertisement">
                         <img class="img-fluid" src="{{partner.image.url}}" alt="">
-                    </div>
-                {% endfor %}
-                <div class="partnership">
-                    <span>Sponsors</span>
-                </div>
-                <div class="sponsors">
-                    {% for sponsor in sponsor %}
-                        <img class="img-fluid" src="{{sponsor.image.url}}" alt="">
-                    {% endfor %} 
-                </div>
-                <div class="partnership">
-                    <span>Advertisement</span>
-                </div>
-                {% for advertise in advertisement %}
-                    <div class="advertisement" style="margin-top: 1vw;">
-                        <img class="img-fluid" src="{{advertise.image.url}}" alt="">
                     </div>
                 {% endfor %}
             </div>
