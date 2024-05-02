@@ -10,9 +10,9 @@
         <br>
         {% if not sanitizer_obj.is_verified %}
         <div class="background-image">
-            <img src="{{userprofile.profile_image.url}}" alt="" class="profile-background">
+            <img loading="lazy" src="{{userprofile.profile_image.url}}" alt="" class="profile-background">
             <div class="profile-image">
-                <img src="{{userprofile.profile_image.url}}" alt="">
+                <img loading="lazy" src="{{userprofile.profile_image.url}}" alt="">
             </div>
             <div class="form-group choosingImage" style="margin-top: 1em;">
                 <input type="file" name="profile_image" accept="image/*" id="id_profile_image">
@@ -33,9 +33,9 @@
         </div>
         {% else %}
         <div class="background-image">
-            <img src="{{sanitizer_obj.profile_image.url}}" alt="" class="profile-background">
+            <img loading="lazy" src="{{sanitizer_obj.profile_image.url}}" alt="" class="profile-background">
             <div class="profile-image">
-                <img src="{{sanitizer_obj.profile_image.url}}" alt="">
+                <img loading="lazy" src="{{sanitizer_obj.profile_image.url}}" alt="">
             </div>
             <div class="form-group choosingImage" style="margin-top: 1em;">
                 <input type="file" name="profile_image" accept="image/*" id="id_profile_image">

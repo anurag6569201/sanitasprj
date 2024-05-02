@@ -86,12 +86,12 @@
     <span class="blogs_head">Sanitas Sphere</span><hr>
     <div class="row sphere_area">
         <div class="col-md-8">
-            <div style="background-color: #f5f6fa;padding-top: 1vw;box-shadow: 0 0 1vw 1vw #f5f6fa;">
+            <div style="background-color: #f5f6fa;padding-top: 1vw;box-shadow: 0 0 1vw 1vw #f5f6fa;position: sticky;top: 0;">
                 <div id="nav-footer-heading" style="background-color: #12372a;border-radius: .7em;">
                     {% if not sanitizer_obj.is_verified %}
-                        <div id="nav-footer-avatar"><img src="{{user_profile.profile_image.url}}" /></div>
+                        <div id="nav-footer-avatar"><img loading="lazy" src="{{user_profile.profile_image.url}}" /></div>
                     {% else %}
-                        <div id="nav-footer-avatar"><img src="{{sanitizer_obj.profile_image.url}}" /></div>
+                        <div id="nav-footer-avatar"><img loading="lazy" src="{{sanitizer_obj.profile_image.url}}" /></div>
                     {% endif %}
 
                     {% if not sanitizer_obj.is_verified %}
@@ -146,9 +146,9 @@
                     <div class="post">
                         <div class="post_profile-image">
                             {% if not sphere.author.sanitizer.is_verified %}
-                                <div id="sphere_author_profile"><img src="{{sphere.author.userprofile.profile_image.url}}" /></div>
+                                <div id="sphere_author_profile"><img loading="lazy" src="{{sphere.author.userprofile.profile_image.url}}" /></div>
                             {% else %}
-                                <div id="sphere_author_profile"><img src="{{sphere.author.sanitizer.profile_image.url}}" /></div>
+                                <div id="sphere_author_profile"><img loading="lazy" src="{{sphere.author.sanitizer.profile_image.url}}" /></div>
                             {% endif %}
                         </div>
             
@@ -186,9 +186,9 @@
                                 <div class="be-img-comment">	
                                     <a>
                                         {% if not comment.author.sanitizer.is_verified %}
-                                            <div id="sphere_author_profile"><img src="{{comment.author.userprofile.profile_image.url}}" /></div>
+                                            <div id="sphere_author_profile"><img loading="lazy" src="{{comment.author.userprofile.profile_image.url}}" /></div>
                                         {% else %}
-                                            <div id="sphere_author_profile"><img src="{{comment.author.sanitizer.profile_image.url}}" /></div>
+                                            <div id="sphere_author_profile"><img loading="lazy" src="{{comment.author.sanitizer.profile_image.url}}" /></div>
                                         {% endif %}
                                     </a>
                                 </div>
@@ -226,7 +226,7 @@
                 </div>
                 {% for partner in partner %}
                     <div class="advertisement">
-                        <img class="img-fluid" src="{{partner.image.url}}" alt="">
+                        <img loading="lazy" class="img-fluid" src="{{partner.image.url}}" alt="">
                     </div>
                 {% endfor %}
             </div>

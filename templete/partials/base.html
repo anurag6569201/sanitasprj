@@ -81,7 +81,7 @@
                                         <span class="direct-chat-name pull-left">Assistant</span>
                                     </div>
     
-                                    <img class="direct-chat-img"
+                                    <img loading="lazy" class="direct-chat-img"
                                         src="../../static/assets/images/userauths/bot.png"
                                         alt="message user image">
     
@@ -140,11 +140,11 @@
                         {% endif %}
                     </div>
                     {% if not sanitizer_obj.is_verified %}
-                    <img class="direct-chat-img"
+                    <img loading="lazy" class="direct-chat-img"
                         src="{{user_profile.profile_image.url}}"
                         alt="message user image">
                     {% else %}
-                    <img class="direct-chat-img"
+                    <img loading="lazy" class="direct-chat-img"
                         src="{{sanitizer_obj.profile_image.url}}"
                         alt="message user image">
                     {% endif %}
@@ -171,7 +171,7 @@
                         <span class="direct-chat-name pull-left">Assistant</span>
                     </div>
 
-                    <img class="direct-chat-img"
+                    <img loading="lazy" class="direct-chat-img"
                         src="../../static/assets/images/userauths/bot.png"
                         alt="message user image">
 
@@ -188,7 +188,7 @@
         <nav id="bignav">
             <div class="nav-bar">
                 <input id="nav-toggle" type="checkbox" />
-                <div id="nav-header"><span id="nav-title" href="#"><img src="../../static/assets/images/userauths/favicon.png"
+                <div id="nav-header"><span id="nav-title" href="#"><img loading="lazy" src="../../static/assets/images/userauths/favicon.png"
                             alt=""><span>Sanitas</span></span>
                     <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
                     <hr />
@@ -218,9 +218,9 @@
                 <div id="nav-footer">
                     <div id="nav-footer-heading">
                         {% if not sanitizer_obj.is_verified %}
-                        <div id="nav-footer-avatar"><img src="{{user_profile.profile_image.url}}" />
+                        <div id="nav-footer-avatar"><img loading="lazy" src="{{user_profile.profile_image.url}}" />
                         {% else %}
-                        <div id="nav-footer-avatar"><img src="{{sanitizer_obj.profile_image.url}}" />
+                        <div id="nav-footer-avatar"><img loading="lazy" src="{{sanitizer_obj.profile_image.url}}" />
                         {% endif %}
                         </div>
                         {% if not sanitizer_obj.is_verified %}
@@ -262,9 +262,9 @@
                         {% for notification in notify_24hr %}
                         <div id="nav-footer-heading" class="notify-msg" {% if not notification.is_read %} style="background-color: #adbc9f9a;" {% endif %}>
                             {% if not sanitizer_obj.is_verified %}
-                            <div id="nav-footer-avatar"><img src="{{user_profile.profile_image.url}}" />
+                            <div id="nav-footer-avatar"><img loading="lazy" src="{{user_profile.profile_image.url}}" />
                             {% else %}
-                            <div id="nav-footer-avatar"><img src="{{sanitizer_obj.profile_image.url}}" />
+                            <div id="nav-footer-avatar"><img loading="lazy" src="{{sanitizer_obj.profile_image.url}}" />
                             {% endif %}
                             </div>
                             <div id="nav-footer-titlebox">{{ notification.message }}<span id="nav-footer-subtitle">{{ notification.timestamp}}</span></div>

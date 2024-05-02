@@ -31,7 +31,7 @@
                     {% for food in calorie_data.foods %}
                         <tr class="col-md-12">
                             <div class="row">
-                                <td class="col-md-3"><img src="https://nix-tag-images.s3.amazonaws.com/{{ food.tags.tag_id }}_thumb.jpg" style="width: 70px;" alt=""></td>
+                                <td class="col-md-3"><img loading="lazy" src="https://nix-tag-images.s3.amazonaws.com/{{ food.tags.tag_id }}_thumb.jpg" style="width: 70px;" alt=""></td>
                                 <td class="col-md-5">{{ food.tags.item }}</td>
                                 <td class="col-md-2">{{ food.tags.measure }}</td>
                                 <td class="col-md-2">{{ food.tags.quantity }}</td>

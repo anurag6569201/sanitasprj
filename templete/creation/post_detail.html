@@ -10,7 +10,7 @@
         <article class="postcard light blue">
             <div class="postcard__text">
                 <div class="postcard__title blue">
-                    <img src="{{ post.authorProfile.profile_image.url }}" style="width: 40px;height: 40px;border-radius: 50%;">
+                    <img loading="lazy" src="{{ post.authorProfile.profile_image.url }}" style="width: 40px;height: 40px;border-radius: 50%;">
                     <p>
                         <span class="posttitle">{{ post.title }}</span><br><span class="timedate">{{ post.date_posted }}</span>
                     </p>
@@ -38,7 +38,7 @@
                 <div class="be-comment" style="padding: 1em 0;">
                     <div class="be-img-comment">	
                         <a>
-                            <img src="{{ comment.author.userprofile.profile_image.url }}" alt="" class="be-ava-comment">
+                            <img loading="lazy" src="{{ comment.author.userprofile.profile_image.url }}" alt="" class="be-ava-comment">
                         </a>
                     </div>
                     <div class="be-comment-content">
