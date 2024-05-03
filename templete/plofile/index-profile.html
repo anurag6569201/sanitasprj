@@ -48,11 +48,11 @@
             <br>
             <div class="col-md-12 col-12">
                 <div class="row postProfile px-3 gx-3">
-                    <div class="col-md-3 col-3 active postProfilesub">Basic Info</div>
-                    <div class="col-md-3 col-3 postProfilesub">Sphere ({{topsphere.count}})</div>
-                    <div class="col-md-3 col-3 postProfilesub">Post ({{userposts.count}})</div>
+                    <div class="col-md-3 col-4 active postProfilesub">Basic Info</div>
+                    <div class="col-md-3 col-4 postProfilesub">Sphere ({{topsphere.count}})</div>
+                    <div class="col-md-3 col-4 postProfilesub">Post ({{userposts.count}})</div>
                     {% if sanitizer_obj.is_verified %}
-                    <div class="col-md-3 col-6 postProfilesub">Data Submission</div>
+                    <div class="col-md-3 col-12 postProfilesub">Data Submission</div>
                     {% else %}
                     <div class="col-md-3" style="border: none;border-bottom: 1px solid #12372a;background-color: transparent;"></div>
                     {% endif %}
@@ -187,7 +187,7 @@
                             </div>
                         </div>
                         <br>
-                        <button style="padding: .2em 0em;" class="btn mb-3" type="submit">Submit</button>
+                        <button style="padding: .2em .5em;" class="btn mb-3" type="submit">Submit</button>
                     </form>
                 
                     {% else %}

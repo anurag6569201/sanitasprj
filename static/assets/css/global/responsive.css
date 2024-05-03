@@ -143,4 +143,15 @@
     .computer-frame{
         display: none;
     }
+
+    /* sphere */
+    .sphere_area {
+        font-size: .7em;
+    }
+    .head_void_area{
+        display: none;
+    }
+    .space-filler{
+        display: block;
+    }
 }

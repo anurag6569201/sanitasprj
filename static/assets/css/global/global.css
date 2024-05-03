@@ -22,3 +22,8 @@ body .navbar{
 .base-container{
     display: flex;
 }
+
+/* space */
+.space-filler{
+    display: none;
+}
