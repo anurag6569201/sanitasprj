@@ -1,5 +1,6 @@
 from django import forms
 from .models import Comment,Post
+from django_ckeditor_5.fields import CKEditor5Field
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -15,14 +16,10 @@ class CommentForm(forms.ModelForm):
 
 
 class PostForm(forms.ModelForm):
+    content = CKEditor5Field(config_name='extends')
     class Meta:
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, **kwargs)
-            self.fields["text"].required = False
-            
         model = Post
         fields = ['title', 'content', 'image']
-
         widgets = {
             'title': forms.TextInput(attrs={'placeholder': 'Enter the title of your post'}),
             'content': forms.Textarea(attrs={'rows': 10, 'cols': 50, 'placeholder': 'Write your post content here...'}),
