@@ -1,0 +1,21 @@
+{% load static %}
+<div class="col-md-4 mb-3">
+    <div class="item">
+        <div class="card">
+            <a href="{% url 'creation:blog-detail' p.id %}">
+                <img loading="lazy" src="../../static/assets/images/blogs/sample.jpeg" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <span class="cat">{{ p.title }}</span><br>
+                <time datetime="{{ p.date_posted }}">
+                    <i class="fas fa-calendar-alt mr-2"></i><span style="margin-left: .2em;">{{ p.date_posted }}</span>
+                </time>
+                <div class="col-md-12">
+                    <a href="{% url 'creation:blog-detail' p.id %}" class="btn">Read More</a>
+                    <a href="{% url 'creation:like-post' pk=p.id %}" class="btn"><i class="fa-solid fa-thumbs-up"></i><span style="margin-left: .2em;">{{ p.likes.count }}</span></a>
+                    <a href="{% url 'creation:blog-detail' p.id %}" class="btn"><i class="fa-solid fa-message"></i><span style="margin-left: .2em;">{{ comments.count }}</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

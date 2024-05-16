@@ -1,0 +1,28 @@
+{% load static %}
+<div class="be-comment" style="padding: 1em 0;">
+    <div class="be-img-comment">	
+        <a>
+            <img loading="lazy" src="{{ comment.author.userprofile.profile_image.url }}" alt="" class="be-ava-comment">
+        </a>
+    </div>
+    <div class="be-comment-content">
+        
+        <span class="be-comment-name">
+            <a>{{ comment.author }}</a>
+            </span>
+        <span class="be-comment-time">
+            <i class="fas fa-calendar-alt"></i>
+            {{ comment.created_at }}
+        </span>
+
+        <p class="be-comment-text">
+            {{ comment.text }}
+        </p>
+        <div class="comment-edit-dlt-btn">
+            {% if comment.author == request.user %}
+                <a class="comment-edit" href="{% url 'creation:comment-update' pk=post.id comment_pk=comment.id %}"><h2>Edit</h2></a>
+                <a class="comment-dlt" href="{% url 'creation:comment-delete' pk=post.id comment_pk=comment.id %}"><h2>Delete</h2></a>
+            {% endif %}
+        </div>
+    </div>
+</div>

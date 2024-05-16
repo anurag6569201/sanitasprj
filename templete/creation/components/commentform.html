@@ -1,0 +1,44 @@
+{% load static %}
+<form class="form-block" method="post" action="{% url 'creation:comment-create' pk=post.id %}">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button class="comment-btn" type="submit">Add Comment</button>
+</form>
+<style>
+    .form-block label{
+        font-size: 1.2em;
+        margin-top: 1em;
+        color: var(--navbar-dark-primary);
+    }
+    #id_text{
+        width: 100%;
+        height: 9em;
+        font-size: 1.2em;
+        overflow-y: auto;
+        border-radius: .5em;
+        padding: .3em;
+        border-color: var(--navbar-dark-primary);
+        color: white;
+        background: var(--navbar-dark-secondary);
+    }
+    .comment-btn{
+        font-size: 1em;
+        background: transparent;
+        color: var(--navbar-dark-primary);
+        padding: .2em 2em;
+        box-shadow: none;
+        border: 1px solid var(--navbar-dark-primary);
+        border-radius: .4em;
+    }
+    .comment-btn:hover {
+        background: var(--navbar-dark-secondary);
+    }
+    .comment-btn:focus{
+        background: var(--navbar-dark-secondary);
+        box-shadow: none
+    }
+    .comment-btn:active {
+        background: var(--navbar-dark-secondary);
+        box-shadow: none
+    }
+</style>

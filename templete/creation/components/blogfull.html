@@ -1,0 +1,24 @@
+{% load static %}
+<article class="postcard light blue">
+    <div class="postcard__text">
+        <div class="postcard__title blue">
+            <img loading="lazy" src="{{ post.authorProfile.profile_image.url }}" style="width: 40px;height: 40px;border-radius: 50%;">
+            <p>
+                <span class="posttitle">{{ post.title }}</span><br><span class="timedate">{{ post.date_posted }}</span>
+            </p>
+        </div>
+        <div class="maincontent my-3" style="overflow: hidden;">
+            <div class="ck ck-content">{{ post.content|safe }}</div>
+        </div>
+        <ul class="postcard__tagbox">
+            <li class="tag__item">
+                <span style="font-size:1.2em;" class="material-symbols-outlined">thumb_up</span>
+                <span style="font-size: 1.2em;">{{ post.likes.count }}</span>
+            </li>
+            <li class="tag__item">
+                <span style="font-size:1.2em;" class="material-symbols-outlined">comment</span>
+                <span style="font-size: 1.2em;">{{ comments.count }}</span>
+            </li>
+        </ul>
+    </div>
+</article>

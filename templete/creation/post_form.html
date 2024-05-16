@@ -78,40 +78,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         {% if userposts %}
-                        {% for p in userposts %}
-                        <article class="postcard light blue">
-                            <hr><br>
-                            <div class="postcard__text">
-                                <div class="postcard__title blue">
-                                    <img loading="lazy" src="{{ p.authorProfile.profile_image.url }}" style="width: 40px;height: 40px;border-radius: 50%;">
-                                    <p>
-                                        <span class="posttitle">{{ p.title }}</span><br><span class="timedate">{{ p.date_posted }}</span>
-                                    </p>
-                                </div>
-                                <div class="maincontent my-3">
-                                    <div class="ck ck-content">{{ p.content|safe }}</div>
-                                </div>
-                                <ul class="postcard__tagbox">
-                                    <li class="tag__item">
-                                        <span style="font-size:1.2em;" class="material-symbols-outlined">thumb_up</span>
-                                        <span style="font-size: 1.2em;">{{ p.likes.count }}</span>
-                                    </li>
-                                    <li class="tag__item">
-                                        <span style="font-size:1.2em;" class="material-symbols-outlined">comment</span>
-                                        <span style="font-size: 1.2em;">{{ comments.count }}</span>
-                                    </li>
-                                    <li class="tag__item play blue">
-                                        <a style="text-decoration: none;color: var(--navbar-dark-secondary);" href="{% url 'creation:blog-detail' p.id %}"><span><i style="margin-right: .2em;"class="fa-brands fa-readme"></i>Read</span></a>
-                                    </li>
-                                    <li class="tag__item play blue">
-                                        <a style="text-decoration: none;color: var(--navbar-dark-secondary);" href="{% url 'creation:blog-delete' p.id %}"><span><i style="margin-right: .2em;"class="fa-solid fa-trash"></i>Delete</span></a>
-                                    </li>
-                                    <li class="tag__item play blue">
-                                        <a style="text-decoration: none;color: var(--navbar-dark-secondary);" href="{% url 'creation:blog-update' p.id %}"><span><i style="margin-right: .2em;"class="fa-solid fa-pen-to-square"></i>Edit</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
+                        {% for post in userposts %}
+                            {% include 'creation/components/blogfull.html' %}
                         {% endfor %}
                         {% else %}
                         <br>
