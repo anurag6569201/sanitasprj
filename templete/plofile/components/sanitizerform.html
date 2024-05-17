@@ -1,0 +1,47 @@
+{% load static %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <style>
+        input{
+            width: 100%;
+        }
+        .checkTC{
+            display: flex;
+            align-items: center;
+            margin-top: 1em;
+        }
+        .checkTC input{
+            width: 1em;
+            height: 1em;
+            margin-right: .3em;
+        }
+        #certificate-upload {
+            display: none;
+        }
+    </style>
+    <label for="hospitalName"><b>Sanitizer Name:</b></label><br>
+    {{ sform.name }}<br>
+
+    <label for="address"><b>Address:</b></label><br>
+    <div style="display: flex;gap: .2em;">
+        {{ sform.street }}<br>
+        {{ sform.zip }}<br>
+        {{ sform.city }}<br>
+    </div>
+    {{ sform.state }}<br>
+    <label for="SanitizerContact"><b>Contact Person:</b></label><br>
+    {{ sform.contactperson }}<br>
+    <label for="contactEmail"><b>Sanitizer Email:</b></label><br>
+    {{ sform.email }}<br>
+    <label for="contactPhone"><b>Sanitizer Contact:</b></label><br>
+    {{ sform.phone }}<br>
+    <div class="certifiy">
+        <label for="certification"><b>Accreditation Certificate : </b></label>
+        <input type="file" name="certificate" accept="image/*" id="id_certificate">
+    </div>
+    <div class="checkTC">
+        {{ sform.isChecked }}
+        <label for="agreement">I have read and agreed to the data sharing agreement<a href="{% url 'plofile:t&c' %}" target="_blank">T&C</a>.</label><br>
+    </div>
+    <input type="submit" value="Submit">
+</form>

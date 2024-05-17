@@ -1,0 +1,46 @@
+{% load static %}
+<div class="post">
+    <div class="post_profile-image">
+        {% if not sphere.author.sanitizer.is_verified %}
+            <div id="sphere_author_profile"><img loading="lazy" src="{{sphere.author.userprofile.profile_image.url}}" /></div>
+        {% else %}
+            <div id="sphere_author_profile"><img loading="lazy" src="{{sphere.author.sanitizer.profile_image.url}}" /></div>
+        {% endif %}
+    </div>
+    <div class="post_body">
+        <div class="post_header">
+            <div class="post_header-text">
+                {% if not sphere.author.sanitizer.is_verified %}
+                    <div class="header-icon-section">{{ sphere.author.userprofile.name }} {{ sphere.author.userprofile.surname }}</div>
+                {% else %}
+                    <div class="header-icon-section">{{ sphere.author.sanitizer.name }}</div>
+                {% endif %}
+            </div>
+
+            <div class="post_header-discription">
+                <p style="margin: 0;">{{ sphere.content|safe }}</p>
+            </div>
+            
+            <div class="post_footer">
+                <a href="{% url 'home:sphere_comment' event_id=sphere.id %}"><span class="material-symbols-outlined" style="color: #12372a;"> comment </span></a>
+                <form class="like-form" action="{% url 'home:like_event' event_id=sphere.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="like-event-btn" data-event-id="{{ sphere.id }}">
+                        {% if sphere in liked_events %}
+                            <span><i class="fas fa-heart"></i> {{ sphere.likes.count }}</span>
+                        {% else %}
+                            <span><i class="far fa-heart" style="color:#12372a;"></i> {{ sphere.likes.count }}</span>
+                        {% endif %}
+                    </button>
+                </form>
+                <form action="{% url 'home:spherepost_delete' pk=sphere.id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="delete-post-btn" style="color: #12372a; background: none; border: none;"><span class="material-symbols-outlined"> delete </span></button>
+                </form>
+                <span class="material-symbols-outlined"> refresh </span>
+                <span class="material-symbols-outlined"> more_vert </span>
+            </div>
+        </div>
+
+    </div>
+</div>
