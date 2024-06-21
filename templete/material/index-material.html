@@ -93,7 +93,7 @@
                             </li>
                             <li>
                                 {% for page in paginator.page_range %}
-                                {% if page == paginator.number %}
+                                {% if page == .number %}
                                 <li class="page-item active"><a class="page-link">{{ page }}</a></li>
                                 {% else %}
                                 <li class="page-item"><a class="page-link" href="?page={{page}}">{{ page }}</a></li>

@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-d3l*-#0yg_^82fy5ob=%&x)#6sl-d-fb-b0%77+4m7@iyn5%4g
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://sanitas.azurewebsites.net/','*']
+CSRF_TRUSTED_ORIGINS = ['https://sanitas.azurewebsites.net','https://127.0.0.1']
 
 EMAIL_HOST = 'smtp-relay.brevo.com'
 EMAIL_HOST_USER = 'anurag6569201@gmail.com'
