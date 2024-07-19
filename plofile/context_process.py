@@ -12,6 +12,8 @@ from userauths.models import UserProfile
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 
+from gemini import get_gemini_response
+
 def sanitizer_glb(request):
     sanitizer_obj = None 
     userProf = None 
@@ -75,19 +77,8 @@ def send_message(request):
 
         if message:
             try:
-                api_key = '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'  # Replace this with your OpenAI API key
-                response = requests.post('https://api.openai.com/v1/chat/completions',
-                                         headers={'Authorization': f'Bearer {api_key}',
-                                                  'Content-Type': 'application/json'},
-                                         json={
-                                             'model': 'gpt-3.5-turbo-0125',
-                                             'messages': [
-                                                 {'role': 'system', 'content': 'Doctor'},
-                                                 {'role': 'user', 'content': message}
-                                             ]
-                                         })
-                data = response.json()
-                assistant_reply = data['choices'][0]['message']['content']
+                data = get_gemini_response(message)
+                assistant_reply = data.text
                 return JsonResponse({'reply': assistant_reply})
             except Exception as e:
                 return JsonResponse({'error': str(e)}, status=500)
