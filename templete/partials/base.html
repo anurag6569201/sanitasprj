@@ -126,8 +126,8 @@
             chatbtnToggle.style.display="block";
         }
         function sendMessage() {
-            const userInput = document.getElementById('user-input').value;
-            const userInputtext = document.getElementById('user-input');
+            let userInput = document.getElementById('user-input').value;
+            let userInputtext = document.getElementById('user-input');
             const chatDisplay = document.querySelector('.chat-display');
                 chatDisplay.innerHTML += `
                 <div class="direct-chat-msg right">
@@ -163,6 +163,9 @@
             })
             .then(response => response.json())
             .then(data => {
+                let assistantReply = data.reply.replace(/\n/g, '<br>');
+                assistantReply = assistantReply.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+
                 const chatDisplay = document.querySelector('.chat-display');
                 chatDisplay.innerHTML += `
                 <div class="direct-chat-msg">
@@ -175,12 +178,13 @@
                         alt="message user image">
 
                     <div class="chat-display">
-                        <div class="direct-chat-text">${data.reply}</div>
+                        <div class="direct-chat-text">${assistantReply}</div>
                     </div>
 
                 </div>`;
             })
             .catch(error => console.error('Error:', error));
+            document.getElementById('user-input').value = '';
         }
     </script>
     <div class="base-container">
