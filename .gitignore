@@ -1,0 +1,85 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+*.out
+*.err
+
+# Local development artifacts
+.DS_Store
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Node modules (if using npm/yarn)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.nyc_output/
+coverage/
+
+# Testing
+test-output/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.tox/
+
+# Virtual environment
+venv/
+ENV/
+env/
+env.bak/
+env.d/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local configuration files
+*.local
+*.env
+
+# Other IDEs and editors
+*.swp
+*.swo
+*~
+*.idea/
+.vscode/
+*.vscode/
+*.history/
+
+# Docker
+*.dockerfile
+docker-compose.yml
