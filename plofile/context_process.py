@@ -142,15 +142,23 @@ def location_context(request):
     }
 
 
-from .document import PostDocument
+from .document import UserDocument
 from elasticsearch_dsl.query import MultiMatch
 
 def elasticSearch(request):
-    q=request.GET.get('q')
-    if q:
-        query = MultiMatch(query=q,fields=['title','content','author'],fuzziness="AUTO")
-        search_res =PostDocument.search().query(query)[0:5]
-        context={
-            'es_search':search_res,
-        }
+    q = request.GET.get('q')
+    search_res = []
 
+    if q:
+        query = MultiMatch(query=q, fields=['title', 'content'], fuzziness="AUTO")
+        search_res = UserDocument.search().query(query)[0:5]
+
+    results = []
+    for result in search_res:
+        results.append({
+            'title': result.title,
+            'content': result.content,
+        })
+    print(results)
+
+    return JsonResponse(results, safe=False)

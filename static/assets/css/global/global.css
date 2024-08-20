@@ -27,3 +27,18 @@ body .navbar{
 .space-filler{
     display: none;
 }
+
+/* searching */
+.searching_results{
+    height: 0vh;
+    background-color: #adbc9f;
+    border-radius: 10px;
+    transition: height .25s ease-in-out;
+    overflow-y: scroll;
+}
+.query_results{
+    margin-bottom: 7px;
+}
+.search-box input:focus{
+    background-color: #adbc9f;
+}

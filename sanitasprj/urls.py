@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from plofile.context_process import elasticSearch
 
 urlpatterns = [
     # admin urls
@@ -31,6 +32,9 @@ urlpatterns = [
     path('profile/', include('plofile.urls')),
     path('material/', include('material.urls')),
 
+    # Elastic search urls
+    path('ajax/search/', elasticSearch, name='elasticSearch'),
+    
     # authentication urls
     path('user/',include('userauths.urls')),
 

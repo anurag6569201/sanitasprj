@@ -52,7 +52,10 @@
     <!-- respnsive.css -->
     <link rel="stylesheet" href="{% static 'assets/css/global/responsive.css' %}">
 
-
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -303,13 +306,82 @@
         </nav>
         <div class="container-fluid" style="{% if '/home/' not in request.path and '/sphere/' not in request.path %}overflow-x:hidden;{% endif %}">
             <div class="row home" style="{% if '/sphere' in request.path %}padding: 0;{% endif %}">
-                <div class="col-md-12 search-box" style="z-index: 999;{% if '/sphere' in request.path %}display: none;{% endif %}">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                <div class="col-md-12 search-box" style="margin-bottom: 15px;z-index: 999;{% if '/sphere' in request.path %}display: none;{% endif %}">
+                    <form class="d-flex" role="search" id="searchForm">
+                        <input id="search_query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" onmouseenter="show_query()">
                         <button class="btn btn-outline-dark" type="submit">Search</button>
                         <a href="{% url 'creation:blog-new' %}" class="btn" style="display: flex;align-items: center;justify-content: center;"><i class="fa-solid fa-plus"></i></a>
                     </form>
                 </div>
+                <div class="col-md-12" style="padding: 0 12px;">
+                    <div class="row" style="margin: 0;">
+                        <div class="searching_results">
+                            <!-- AJAX-loaded results will appear here -->
+                        </div>
+                    </div>
+                </div>                
+                <script>
+                    var searching_results = document.querySelector(".searching_results");
+                    $(document).ready(function() {
+                        $('#searchForm').submit(function(event) {
+                            event.preventDefault(); 
+
+                            var query = $('#search_query').val();
+
+                            $.ajax({
+                                url: '{% url "elasticSearch" %}',  // Ensure the URL pattern is correct
+                                data: {
+                                    'q': query,
+                                },
+                                dataType: 'json',
+                                success: function(data) {
+                                    var resultsDiv = $('.searching_results');
+                                    resultsDiv.empty();
+
+                                    if (data.length > 0) {
+                                        $.each(data, function(index, item) {
+                                            var resultItem = '<div class="query_results" style="padding-top:10px;">';
+                                            resultItem += '<p>';
+                                            resultItem += '<span><b>' + item.title + '</b></span><br>';
+                                            resultItem += '<span>' + item.content + '</span><br>';
+                                            resultItem += '</p>'
+                                            resultItem += '</div>';
+
+                                            resultsDiv.append(resultItem);
+                                        });
+                                    } else {
+                                        resultsDiv.append('<p>No results found</p>');
+                                    }
+
+                                    show_query(); 
+                                }
+                            });
+                        });
+                    });
+                    document.addEventListener('click', function(event) {
+                        var searching_results = document.querySelector(".searching_results");
+                        var searchBox = document.querySelector(".search-box");
+                        
+                        // If the click is outside the search results or search box, close the search results
+                        if (!searching_results.contains(event.target) && !searchBox.contains(event.target)) {
+                            close_search_query();
+                        }
+                    });
+
+                    function close_search_query() {
+                        var searching_results = document.querySelector(".searching_results");
+                        searching_results.style.maxHeight = "0";
+                        searching_results.style.border = "none";
+                    }
+                    function show_query() {
+                        searching_results.style.height = "auto";
+                    }
+                    function close_search_query() {
+                        searching_results.style.height = "0";
+                        searching_results.style.border = "none";
+                    }
+
+                </script>
                 {% block content %}
                 {% endblock content %}
             </div>
