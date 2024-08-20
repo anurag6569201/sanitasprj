@@ -12,8 +12,12 @@ distro==1.9.0
 Django==5.0.2
 django-ckeditor==6.7.1
 django-ckeditor-5==0.2.11
+django-elasticsearch-dsl==8.0
 django-jazzmin==2.6.0
 django-js-asset==2.2.0
+elastic-transport==8.15.0
+elasticsearch==8.15.0
+elasticsearch-dsl==8.15.1
 fontawesomefree==6.5.1
 future==1.0.0
 fuzzywuzzy==0.18.0
@@ -46,6 +50,7 @@ pyasn1_modules==0.4.0
 pydantic==2.6.3
 pydantic_core==2.16.3
 pyparsing==3.1.2
+python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 ratelim==0.1.6
 requests==2.31.0
