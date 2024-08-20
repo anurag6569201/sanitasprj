@@ -38,6 +38,7 @@ EMAIL_PORT = '587'
 
 INSTALLED_APPS = [
     'jazzmin',
+    'django_elasticsearch_dsl',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -113,6 +114,12 @@ DATABASES = {
     }
 }
 
+ELASTICSEARCH_DSL ={
+    'default': {
+        'hosts': 'http://localhost:9200',
+        'verify_certs': False,
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

@@ -140,3 +140,17 @@ def location_context(request):
         'current_city': city,
         'current_state': state,
     }
+
+
+from .document import PostDocument
+from elasticsearch_dsl.query import MultiMatch
+
+def elasticSearch(request):
+    q=request.GET.get('q')
+    if q:
+        query = MultiMatch(query=q,fields=['title','content','author'],fuzziness="AUTO")
+        search_res =PostDocument.search().query(query)[0:5]
+        context={
+            'es_search':search_res,
+        }
+
