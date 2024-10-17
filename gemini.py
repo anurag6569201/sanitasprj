@@ -21,5 +21,3 @@ def get_gemini_vision_response(question,image):
 def get_gemini_response(question):
     response=model.generate_content(question)
     return response
-
-get_gemini_response("write about healthcare under 100 words")
