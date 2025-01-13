@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-google_gemini_api = "AIzaSyDXoJrtCEA4bR6h8KKm4FvGV"
+google_gemini_api =os.getenv('GOOGLE_API_KEY')
 
 if not google_gemini_api:
     raise EnvironmentError("Missing GOOGLE_API_KEY. Ensure it is set in the environment.")
