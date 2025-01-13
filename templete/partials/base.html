@@ -313,8 +313,8 @@
                         <a href="{% url 'creation:blog-new' %}" class="btn" style="display: flex;align-items: center;justify-content: center;"><i class="fa-solid fa-plus"></i></a>
                     </form>
                 </div>
-                <div class="col-md-12" style="padding: 0 12px;">
-                    <div class="row" style="margin: 0;">
+                <div class="col-md-12 mb-2" style="padding:0 12px;">
+                    <div class="row searching_results_row" style="margin: 0;">
                         <div class="searching_results">
                             <!-- AJAX-loaded results will appear here -->
                         </div>
@@ -329,19 +329,22 @@
                             var query = $('#search_query').val();
 
                             $.ajax({
-                                url: '{% url "elasticSearch" %}',  // Ensure the URL pattern is correct
+                                url: '{% url "search_updates" %}',
+                                method: 'GET',
                                 data: {
                                     'q': query,
                                 },
                                 dataType: 'json',
+                                contentType: 'application/json',
                                 success: function(data) {
                                     var resultsDiv = $('.searching_results');
                                     resultsDiv.empty();
-
+                                    
                                     if (data.length > 0) {
+                                        resultsDiv.append('<cite><i class="fa-solid fa-search"></i> Here the top Search results</cite>');
                                         $.each(data, function(index, item) {
-                                            var resultItem = '<div class="query_results" style="padding-top:10px;">';
-                                            resultItem += '<p>';
+                                            var resultItem = '<div class="query_results">';
+                                            resultItem += '<p style="margin-bottom:8px;">';
                                             resultItem += '<span><b>' + item.title + '</b></span><br>';
                                             resultItem += '<span>' + item.content + '</span><br>';
                                             resultItem += '</p>'
@@ -350,7 +353,7 @@
                                             resultsDiv.append(resultItem);
                                         });
                                     } else {
-                                        resultsDiv.append('<p>No results found</p>');
+                                        resultsDiv.append('<p><cite><i class="fa-solid fa-search"></i> No results found</cite></p>');
                                     }
 
                                     show_query(); 

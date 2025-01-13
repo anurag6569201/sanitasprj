@@ -31,10 +31,15 @@ body .navbar{
 /* searching */
 .searching_results{
     height: 0vh;
-    background-color: #adbc9f;
     border-radius: 10px;
-    transition: height .25s ease-in-out;
+    transition: height .45s ease;
     overflow-y: scroll;
+}
+.predefualt_searchtag_show{
+    display: none;
+}
+.searching_results::-webkit-scrollbar{
+    width: 0px !important;
 }
 .query_results{
     margin-bottom: 7px;

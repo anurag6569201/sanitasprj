@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,7 +98,7 @@ TEMPLATES = [
                 'plofile.context_process.dataCalculation',
                 'plofile.context_process.notification',
                 'plofile.context_process.location_context',
-                'plofile.context_process.elasticSearch',
+                'plofile.context_process.search_updates',
             ],
         },
     },
@@ -117,7 +119,7 @@ DATABASES = {
 
 ELASTICSEARCH_DSL ={
     'default': {
-        'hosts': 'http://localhost:9200',
+        'hosts': os.getenv('BONSAI_URL'),
         'verify_certs': False,
     }
 }

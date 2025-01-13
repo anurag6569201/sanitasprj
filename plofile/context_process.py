@@ -12,12 +12,11 @@ from userauths.models import UserProfile
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 
-from gemini import get_gemini_response
+from gemini import get_healthcare_response
 
 def sanitizer_glb(request):
     sanitizer_obj = None 
     userProf = None 
-    Chatapi="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"
     
     if request.user.is_authenticated:
         sanitizer_obj, created = Sanitizer.objects.get_or_create(user=request.user)
@@ -32,7 +31,6 @@ def sanitizer_glb(request):
     
     return {
         'sanitizer_obj': sanitizer_obj,
-        'Chatapi':Chatapi,
         'user_profile':userProf,
     }
 
@@ -77,8 +75,8 @@ def send_message(request):
 
         if message:
             try:
-                data = get_gemini_response(message)
-                assistant_reply = data.text
+                data = get_healthcare_response(message)
+                assistant_reply = data
                 return JsonResponse({'reply': assistant_reply})
             except Exception as e:
                 return JsonResponse({'error': str(e)}, status=500)
@@ -142,23 +140,24 @@ def location_context(request):
     }
 
 
-from .document import UserDocument
-from elasticsearch_dsl.query import MultiMatch
+from django.shortcuts import render
+from django.http import JsonResponse
+from home.models import recentUpdates
 
-def elasticSearch(request):
-    q = request.GET.get('q')
-    search_res = []
-
-    if q:
-        query = MultiMatch(query=q, fields=['title', 'content'], fuzziness="AUTO")
-        search_res = UserDocument.search().query(query)[0:5]
-
+def search_updates(request):
+    query = request.GET.get('q', '')
     results = []
-    for result in search_res:
-        results.append({
-            'title': result.title,
-            'content': result.content,
-        })
-    print(results)
 
-    return JsonResponse(results, safe=False)
+    if query:
+        results = recentUpdates.objects.filter(title__icontains=query) | recentUpdates.objects.filter(content__icontains=query)
+        results = results[:5]  # Limiting to top 5 results for now
+
+    results_data = [
+        {
+            'title': update.title,
+            'content': update.content,
+            'visitingLink': update.visitingLink,
+        }
+        for update in results
+    ]
+    return JsonResponse(results_data, safe=False)
