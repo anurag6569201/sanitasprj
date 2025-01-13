@@ -8,63 +8,24 @@ import logging
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-google_gemini_api =os.getenv('GOOGLE_API_KEY')
+load_dotenv() #laoding all the envs
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-if not google_gemini_api:
-    raise EnvironmentError("Missing GOOGLE_API_KEY. Ensure it is set in the environment.")
+model=genai.GenerativeModel("gemini-pro") #loading the generative model
+model1=genai.GenerativeModel("gemini-pro-vision") #loading the image based model
 
-# Initialize Generative Model with langchain-google-genai
-try:
-    text_model = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=google_gemini_api)
-except Exception as e:
-    raise ConnectionError(f"Failed to initialize Google Gemini model: {e}")
+# function for asking question with the image as well
+def get_gemini_vision_response(question,image):
+    if question!="":
+        response=model1.generate_content([question,image])
+        print(response.text)
+    else:
+        response=model1.generate_content(image)
+        print(response.text)
 
-# Define Prompt Template for Text-Based Queries
-text_prompt_template = PromptTemplate(
-    input_variables=["question"],
-    template=(
-        "You are a helpful and knowledgeable healthcare assistant for Sanitas, "
-        "a platform for tracking diseases and providing medical insights. "
-        "Please respond thoroughly and accurately to this query: {question} "
-        "under 100 words."
-    )
-)
+# function for generating the text contant
+def get_gemini_response(question):
+    response=model.generate_content(question)
+    return response
 
-# Memory for Conversation Context
-memory = ConversationBufferMemory()
-
-# LLMChain for Text Queries
-healthcare_chain = LLMChain(
-    llm=text_model,
-    prompt=text_prompt_template,
-    memory=memory
-)
-
-# Function to Handle Text-Based Queries
-def get_healthcare_response(question: str) -> str:
-    try:
-        # Validate input
-        if not question.strip():
-            return "Please provide a valid healthcare query."
-        
-        # Generate and return response
-        response = healthcare_chain.run(question)
-        return response.strip() if response else "No response received. Please try again."
-    
-    except ValueError as ve:
-        logging.error(f"ValueError encountered: {ve}")
-        return "There was an issue processing your query. Please refine your question."
-    
-    except ConnectionError as ce:
-        logging.error(f"Connection error: {ce}")
-        return "Unable to connect to the healthcare assistant service. Please try again later."
-    
-    except Exception as e:
-        logging.error(f"Unexpected error: {e}")
-        return "An unexpected error occurred. Please try again."
-
-# Example usage
-if __name__ == "__main__":
-    query = "What are the symptoms of dengue fever?"
-    print(get_healthcare_response(query))
+get_gemini_response("write about healthcare under 100 words")
