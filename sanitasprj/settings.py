@@ -59,7 +59,8 @@ INSTALLED_APPS = [
 
     # third party app
     'django_ckeditor_5',
-    'fontawesomefree'
+    'fontawesomefree',
+    'import_export',
 ]
 
 CRISPY_TEMPLATE_PACK = 'Bootstrap4'
