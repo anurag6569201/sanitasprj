@@ -1,0 +1,1647 @@
+id,trending_data,name,cases
+0,1,Fever with Rash,8
+1,2,Acute Diarrheal Disease,76
+2,3,Acute Diarrheal Disease,30
+3,57,Cholera,47
+4,58,Acute Diarrheal Disease,200
+5,59,Food Poisoning,81
+6,60,Malaria,39
+7,33,Acute Diarrheal Disease,28
+8,32,Acute Diarrheal Disease,44
+9,31,Cholera,61
+10,15,Acute Diarrheal Disease,10
+11,4,Acute Diarrheal Disease,24
+12,6,Food Poisoning,53
+13,21,Acute Diarrheal Disease,42
+14,22,Food Poisoning,17
+15,31,Acute Diarrheal Disease,14
+16,7,Acute Diarrheal Disease,20
+17,10,Acute Diarrheal Disease,9
+18,11,Acute Diarrheal Disease,25
+19,12,Acute Diarrheal Disease,17
+20,28,Acute Diarrheal Disease,48
+21,16,Acute Diarrheal Disease,82
+22,30,Cholera,71
+23,24,Food Poisoning,8
+24,25,Acute Diarrheal Disease,33
+25,23,Acute Diarrheal Disease,48
+26,14,Food Poisoning,48
+27,42,Acute Diarrheal Disease,24
+28,52,Acute Diarrheal Disease,32
+29,41,Acute Diarrheal Disease,51
+30,45,Acute Diarrheal Disease,230
+31,48,Cholera,28
+32,5,Acute Diarrheal Disease,11
+33,49,Cholera,17
+34,36,Food Poisoning,64
+35,63,Cholera,63
+36,8,Acute Diarrheal Disease,22
+37,37,Acute Diarrheal Disease,15
+38,35,Acute Diarrheal Disease,23
+39,17,Acute Diarrheal Disease,22
+40,34,Acute Diarrheal Disease,25
+41,43,Acute Diarrheal Disease,36
+42,44,Food Poisoning,61
+43,38,Acute Diarrheal Disease,14
+44,39,Acute Diarrheal Disease,20
+45,46,Acute Diarrheal Disease,18
+46,47,Cholera,77
+47,13,Cholera,31
+48,50,Fever,58
+49,51,Food Poisoning,13
+50,53,Food Poisoning,106
+51,9,Acute Diarrheal Disease,15
+52,18,Food Poisoning,31
+53,56,Food Poisoning,23
+54,71,Acute Diarrheal Disease,24
+55,40,Food Poisoning,38
+56,68,Acute Diarrheal Disease,64
+57,19,Acute Diarrheal Disease,18
+58,54,Food Poisoning,12
+59,67,Food Poisoning,135
+60,67,Food Poisoning,18
+61,62,Acute Diarrheal Disease,22
+62,72,Acute Diarrheal Disease,22
+63,69,Acute Diarrheal Disease,45
+64,70,Cholera,16
+65,25,Cholera,21
+66,24,Acute Diarrheal Disease,13
+67,29,Food Poisoning,42
+68,27,Food Poisoning,44
+69,20,Acute Diarrheal Disease,42
+70,66,Acute Diarrheal Disease,25
+71,55,Acute Diarrheal Disease,23
+72,26,Acute Diarrheal Disease,51
+73,61,Acute Diarrheal Disease,18
+74,77,Chickenpox,10
+75,85,Cholera,90
+76,93,Acute Diarrheal Disease,19
+77,92,Human Rabies,1
+78,73,Measles,5
+79,81,Cholera,78
+80,90,Measles,4
+81,89,Measles,5
+82,74,Acute Diarrheal Disease,16
+83,84,Shigellosis,29
+84,79,Mushroom Poisoning,7
+85,82,Mumps,115
+86,94,Human Rabies,1
+87,95,Measles,9
+88,83,Human Rabies,2
+89,78,Cholera,47
+90,86,Measles,8
+91,80,Measles,7
+92,91,Measles,2
+93,76,Chickenpox,17
+94,75,Measles,10
+95,88,Chickenpox,6
+96,87,Measles,11
+97,128,Hepatitis A,10
+98,219,Food Poisoning,47
+99,220,Acute Diarrheal Disease,6
+100,221,Acute Hepatitis-A,8
+101,222,Dengue,10
+102,223,Food Poisoning,12
+103,224,Food Poisoning,10
+104,225,Cholera,92
+105,227,Acute Diarrheal Disease,28
+106,208,Human Rabies,1
+107,187,Acute Encephalitic Syndrome,1
+108,207,Human Rabies,1
+109,105,Japanese Encephalitis,3
+110,154,Chickenpox,6
+111,98,Food Poisoning,9
+112,99,Human Rabies,1
+113,108,Acute Diarrheal Disease,13
+114,137,Measles,14
+115,138,Measles,17
+116,118,Malaria,1
+117,102,Typhoid,6
+118,190,Chickenpox,10
+119,183,Fever,14
+120,162,Human Rabies,1
+121,218,Human Rabies,1
+122,205,Animal Bite - Dog Bite,1
+123,191,Chickenpox,10
+124,206,Fever,15
+125,196,Japanese Encephalitis,7
+126,242,Malaria,7
+127,179,Human Rabies,1
+128,244,Human Rabies,1
+129,117,Chickenpox,8
+130,140,Acute Diarrheal Disease,8
+131,119,Acute Diarrheal Disease,12
+132,120,Shigellosis,12
+133,228,Malaria,24
+134,139,Human Rabies,1
+135,239,Acute Diarrheal Disease,4
+136,238,Food Poisoning,76
+137,252,Hepatitis A,15
+138,248,Acute Diarrheal Disease,13
+139,180,Acute Diarrheal Disease,35
+140,136,Measles,15
+141,134,Measles,9
+142,113,Acute Diarrheal Disease,12
+143,114,Food Poisoning,51
+144,186,Fever,16
+145,172,Acute Diarrheal Disease,14
+146,147,Typhoid,5
+147,143,Fever,30
+148,149,Malaria,23
+149,189,Acute Diarrheal Disease,13
+150,101,Food Poisoning,35
+151,121,Diphtheria,1
+152,122,Food Poisoning,7
+153,123,Fever with Rash,10
+154,124,Chickenpox,8
+155,110,Food Poisoning,10
+156,126,Acute Diarrheal Disease,20
+157,127,Food Poisoning,2
+158,159,Measles,47
+159,256,Chickenpox,6
+160,161,Leptospirosis,1
+161,113,Acute Diarrheal Disease,11
+162,184,Human Rabies,1
+163,131,Food Poisoning,17
+164,161,Hepatitis A,28
+165,135,Chickenpox,10
+166,192,Dengue,6
+167,260,Fever,14
+168,261,Malaria,5
+169,263,Food Poisoning,5
+170,268,Mumps,7
+171,251,Food Poisoning,5
+172,125,Food Poisoning,10
+173,130,Acute Gastroenteritis,30
+174,255,Food Poisoning,120
+175,182,Food Poisoning,164
+176,159,Diphtheria,1
+177,240,Fever with Rash,3
+178,188,Food Poisoning,189
+179,189,Food Poisoning,52
+180,103,Acute Diarrheal Disease,153
+181,155,Japanese Encephalitis,2
+182,112,Human Rabies,1
+183,193,Japanese Encephalitis,4
+184,160,Hepatitis A,25
+185,132,Japanese Encephalitis,1
+186,217,Mushroom Poisoning,14
+187,185,Animal Bite - Dog Bite,1
+188,215,Chickenpox,21
+189,175,Leptospirosis,20
+190,176,Food Poisoning,5
+191,269,Fever,20
+192,106,Acute Diarrheal Disease,13
+193,173,Human Rabies,1
+194,174,Typhoid,4
+195,177,Typhoid,6
+196,142,Food Poisoning,66
+197,243,Malaria,6
+198,233,Chickenpox,75
+199,237,Hepatitis A,11
+200,141,Acute Diarrheal Disease,27
+201,147,Japanese Encephalitis,3
+202,148,Acute Diarrheal Disease,48
+203,181,Acute Diarrheal Disease,21
+204,171,Acute Diarrheal Disease,175
+205,165,Acute Diarrheal Disease,11
+206,201,Dengue,24
+207,209,Acute Diarrheal Disease,15
+208,109,Food Poisoning,6
+209,145,Mumps,4
+210,170,Acute Diarrheal Disease,8
+211,168,Acute Diarrheal Disease,5
+212,111,Chickenpox,56
+213,129,Diphtheria,1
+214,152,Hepatitis A,40
+215,249,Acute Diarrheal Disease,27
+216,262,Food Poisoning,93
+217,253,Food Poisoning,93
+218,229,Chickenpox,6
+219,210,Malaria,333
+220,212,Malaria,624
+221,213,Food Poisoning,33
+222,214,Japanese Encephalitis,1
+223,211,Leptospirosis,4
+224,144,Human Rabies,1
+225,216,Dengue,6
+226,226,Japanese Encephalitis,4
+227,270,Food Poisoning,24
+228,133,Food Poisoning,52
+229,166,Food Poisoning,5
+230,167,Japanese Encephalitis,1
+231,169,Acute Diarrheal Disease,7
+232,151,Cholera,94
+233,202,Mumps,8
+234,146,Human Rabies,1
+235,150,Mushroom Poisoning,13
+236,116,Fever with Rash,13
+237,245,Measles,3
+238,153,Human Rabies,1
+239,247,Dengue,29
+240,115,Food Poisoning,14
+241,234,Chickenpox,8
+242,236,Chickenpox,6
+243,235,Cholera,12
+244,153,Chickenpox,8
+245,230,Acute Diarrheal Disease,86
+246,203,Measles,11
+247,254,Malaria,7
+248,231,Acute Diarrheal Disease,14
+249,232,Chickenpox,5
+250,200,Acute Encephalitic Syndrome,1
+251,199,Japanese Encephalitis,1
+252,195,Dengue,1
+253,194,Hepatitis A,9
+254,164,Mushroom Poisoning,5
+255,158,Dengue,27
+256,163,Measles,11
+257,250,Acute Encephalitic Syndrome,1
+258,178,Acute Diarrheal Disease,15
+259,149,Food Poisoning,18
+260,271,Cholera,10
+261,264,Cholera,10
+262,265,Food Poisoning,19
+263,156,Diphtheria,1
+264,157,Dysentry,30
+265,258,Measles,9
+266,97,Acute Diarrheal Disease,38
+267,241,Mushroom Poisoning,1
+268,100,Chickenpox,5
+269,104,Food Poisoning,136
+270,266,Shigellosis,50
+271,267,Dengue,56
+272,259,Acute Diarrheal Disease,32
+273,107,Food Poisoning (Mushroom Poisoning),1
+274,96,Acute Diarrheal Disease,6
+275,246,Dengue,28
+276,295,Dengue,11
+277,278,Fever with Rash,12
+278,276,Measles,5
+279,298,Acute Diarrheal Disease,82
+280,297,Acute Diarrheal Disease,22
+281,304,Fever with Rash,9
+282,303,Measles,5
+283,278,Fever with Rash,12
+284,277,Acute Diarrheal Disease,65
+285,288,Chickenpox,5
+286,300,Measles & Rubella,11
+287,343,Acute Diarrheal Disease,22
+288,280,Fever with Rash,21
+289,310,Food Poisoning,12
+290,342,Acute Diarrheal Disease,15
+291,314,Fever with Rash,11
+292,315,Acute Diarrheal Disease,67
+293,330,Typhoid,29
+294,329,Acute Diarrheal Disease,18
+295,325,Measles,9
+296,348,Acute Diarrheal Disease,30
+297,320,Food Poisoning,33
+298,345,Acute Diarrheal Disease,13
+299,347,Acute Diarrheal Disease,19
+300,336,Food Poisoning,29
+301,312,Acute Diarrheal Disease,24
+302,305,Cholera,25
+303,299,Fever with Rash,18
+304,289,Fever with Rash,20
+305,309,Acute Diarrheal Disease,15
+306,282,Fever with Rash,6
+307,287,Measles,4
+308,286,Fever with Rash,9
+309,285,Fever with Rash,18
+310,281,Fever with Rash,13
+311,290,Acute Diarrheal Disease,15
+312,301,Acute Diarrheal Disease,45
+313,302,Acute Diarrheal Disease,24
+314,291,Chickenpox,5
+315,292,Fever with Rash,8
+316,293,Fever with Rash,11
+317,294,Fever with Rash,8
+318,306,Measles,6
+319,307,Fever with Rash,13
+320,272,Fever of Unknown Origin,10
+321,274,Measles,9
+322,283,Acute Diarrheal Disease,7
+323,296,Chickenpox,13
+324,279,Acute Diarrheal Disease,11
+325,308,Food Poisoning,30
+326,284,Fever with Rash,27
+327,341,Fever with Rash,11
+328,326,Acute Encephalitic Syndrome,4
+329,339,Measles,16
+330,327,Fever with Rash,9
+331,328,Measles,11
+332,333,Chickenpox,8
+333,273,Acute Diarrheal Disease,14
+334,335,Fever with Rash,14
+335,316,Measles,11
+336,313,Measles,32
+337,319,Fever with Rash,29
+338,350,Food Poisoning,6
+339,311,Fever with Rash,7
+340,321,Acute Diarrheal Disease,15
+341,342,Typhoid,5
+342,337,Measles,18
+343,344,Chickenpox,11
+344,334,Measles,17
+345,318,Acute Diarrheal Disease,22
+346,317,Acute Diarrheal Disease,11
+347,348,Paratyphoid,65
+348,332,Acute Diarrheal Disease,0
+349,333,Fever with Rash,28
+350,324,Measles,8
+351,346,Measles,12
+352,344,Measles,5
+353,331,Measles,14
+354,323,Fever with Rash,9
+355,349,Measles,45
+356,415,Measles,93
+357,377,Acute Diarrheal Disease,31
+358,415,Fever with Rash,13
+359,359,Food Poisoning,16
+360,358,Food Poisoning,19
+361,379,Acute Diarrheal Disease,80
+362,378,Acute Diarrheal Disease,56
+363,383,Chickenpox,8
+364,435,Acute Diarrheal Disease,87
+365,401,Acute Diarrheal Disease,26
+366,382,Food Poisoning,14
+367,384,Acute Diarrheal Disease,8
+368,392,Japanese Encephalitis,5
+369,445,Acute Diarrheal Disease,14
+370,357,Food Poisoning,16
+371,421,Cholera,215
+372,366,Acute Diarrheal Disease,102
+373,422,Acute Diarrheal Disease,9
+374,387,Measles,40
+375,472,Cholera,225
+376,394,Acute Diarrheal Disease,16
+377,386,Acute Diarrheal Disease,41
+378,380,Hepatitis E,11
+379,356,Measles,5
+380,463,Acute Diarrheal Disease,66
+381,389,Acute Diarrheal Disease,98
+382,448,Acute Diarrheal Disease,82
+383,443,Mumps,12
+384,433,Acute Diarrheal Disease,113
+385,406,Acute Diarrheal Disease,63
+386,451,Acute Diarrhoeal Disease,24
+387,388,Food Poisoning,53
+388,389,Jaundice,13
+389,360,Acute Diarrheal Disease,151
+390,410,Acute Diarrheal Disease,109
+391,407,Acute Diarrheal Disease,38
+392,458,Acute Diarrheal Disease,42
+393,470,Measles,6
+394,416,Acute Diarrheal Disease,24
+395,364,Food Poisoning,80
+396,477,Measles,7
+397,476,Measles,31
+398,374,Acute Diarrheal Disease,37
+399,361,Acute Diarrheal Disease,36
+400,362,Acute Diarrheal Disease,34
+401,370,Acute Diarrheal Disease,33
+402,400,Cholera,43
+403,399,Cholera,50
+404,397,Acute Diarrheal Disease,135
+405,403,Acute Diarrheal Disease,41
+406,414,Acute Diarrheal Disease,28
+407,457,Acute Diarrheal Disease,97
+408,351,Acute Diarrheal Disease,30
+409,371,Acute Diarrheal Disease,21
+410,365,Acute Diarrheal Disease,59
+411,363,Acute Diarrheal Disease,87
+412,367,Acute Diarrheal Disease,47
+413,368,Acute Diarrheal Disease,51
+414,456,Acute Diarrheal Disease,76
+415,444,Measles,62
+416,385,Dengue,24
+417,413,Acute Diarrheal Disease,118
+418,408,Malaria,4
+419,453,Acute Diarrheal Disease,25
+420,460,Acute Diarrheal Disease,42
+421,464,Acute Diarrheal Disease,47
+422,465,Food Poisoning,24
+423,466,Acute Diarrheal Disease,31
+424,474,Cholera,225
+425,459,Mumps,10
+426,442,Chickenpox,5
+427,442,Measles,19
+428,423,Acute Diarrheal Disease,82
+429,417,Acute Diarrheal Disease,10
+430,418,Acute Diarrheal Disease,37
+431,419,Acute Diarrheal Disease,14
+432,420,Food Poisoning,72
+433,434,Measles,23
+434,455,Acute Diarrheal Disease,38
+435,454,Acute Diarrheal Disease,26
+436,473,Cholera,62
+437,461,Acute Diarrheal Disease,58
+438,452,Acute Diarrheal Disease,47
+439,446,Acute Diarrheal Disease,31
+440,447,Dengue,45
+441,469,Food Poisoning,107
+442,426,Measles,15
+443,405,Acute Diarrheal Disease,14
+444,462,Acute Diarrheal Disease,67
+445,478,Acute Diarrheal Disease,97
+446,471,Measles,22
+447,395,Acute Diarrheal Disease,85
+448,402,Measles,49
+449,353,Acute Diarrheal Disease,113
+450,373,Acute Diarrheal Disease,237
+451,475,Cholera,96
+452,376,Malaria,142
+453,409,Acute Diarrheal Disease,115
+454,391,Acute Diarrheal Disease,34
+455,393,Acute Diarrheal Disease,44
+456,388,Acute Diarrheal Disease,24
+457,369,Acute Diarrheal Disease,42
+458,390,Acute Diarrheal Disease,52
+459,396,Acute Diarrheal Disease,30
+460,449,Acute Diarrheal Disease,17
+461,450,Acute Diarrheal Disease,14
+462,430,Acute Diarrheal Disease,25
+463,372,Acute Diarrheal Disease,30
+464,436,Acute Diarrheal Disease,15
+465,438,Acute Diarrheal Disease,20
+466,440,Acute Diarrheal Disease,16
+467,441,Acute Diarrheal Disease,12
+468,355,Measles,6
+469,444,Acute Diarrheal Disease,36
+470,412,Measles,9
+471,437,Acute Diarrheal Disease,16
+472,427,Acute Diarrheal Disease,31
+473,411,Acute Diarrheal Disease,26
+474,428,Acute Diarrheal Disease,48
+475,424,Acute Gastroenteritis,33
+476,425,Dengue,17
+477,432,Jaundice,10
+478,468,Acute Diarrheal Disease,79
+479,404,Acute Diarrheal Disease,35
+480,352,Acute Diarrheal Disease,19
+481,431,Chikungunya,4
+482,354,Acute Diarrheal Disease,20
+483,375,Acute Diarrheal Disease,169
+484,429,Dengue,9
+485,439,Chickenpox,20
+486,467,Acute Diarrheal Disease,32
+487,479,Food Poisoning,24
+488,480,Mumps,6
+489,483,Acute Diarrheal Disease,6
+490,482,Food Poisoning,20
+491,481,Kyasanur Forest Disease,6
+492,493,Scrub Typhus,6
+493,512,Cholera,60
+494,587,Acute Diarrheal Disease,12
+495,569,Acute Diarrheal Disease,73
+496,511,Food Poisoning,8
+497,491,Cholera,29
+498,515,Acute Diarrheal Disease,58
+499,565,Measles,12
+500,501,Food Poisoning,29
+501,500,Acute Diarrheal Disease,27
+502,590,Acute Diarrheal Disease,86
+503,552,Acute Diarrheal Disease,222
+504,499,Acute Diarrheal Disease,812
+505,502,Food Poisoning,60
+506,503,Cholera,176
+507,519,Food Poisoning,22
+508,518,Acute Diarrheal Disease,115
+509,489,Cholera,6
+510,517,Acute Diarrheal Disease,75
+511,504,Dengue,16
+512,576,Food Poisoning,16
+513,544,Jaundice,55
+514,505,Cholera,30
+515,507,Cholera,46
+516,521,Cholera,5
+517,498,Cholera,11
+518,522,Chikungunya,7
+519,513,Food Poisoning,26
+520,510,Hepatitis A,29
+521,509,Typhoid,4
+522,578,Chikungunya,9
+523,497,Cholera,12
+524,496,Cholera,138
+525,495,Acute Diarrheal Disease,46
+526,525,Acute Diarrheal Disease,73
+527,584,Acute Diarrheal Disease,117
+528,506,Acute Diarrheal Disease,53
+529,580,Food Poisoning,38
+530,542,Acute Diarrheal Disease,6
+531,577,Hepatitis A,16
+532,556,Food Poisoning,79
+533,579,Acute Diarrheal Disease,86
+534,563,Food Poisoning,47
+535,543,Food Poisoning,12
+536,526,Acute Diarrheal Disease,10
+537,523,Acute Diarrheal Disease,78
+538,485,Cholera,200
+539,555,Hepatitis A,21
+540,487,Food Poisoning,68
+541,564,Food Poisoning,6
+542,545,Acute Diarrheal Disease,48
+543,546,Chikungunya,52
+544,486,Cholera,59
+545,488,Acute Diarrheal Disease,72
+546,597,Food Poisoning,127
+547,586,Cholera,83
+548,582,Mumps,19
+549,568,Hepatitis A,19
+550,520,Acute Diarrheal Disease,10
+551,562,Acute Diarrheal Disease,16
+552,574,Acute Diarrheal Disease,9
+553,570,Food Poisoning,48
+554,553,Food Poisoning,50
+555,554,Acute Diarrheal Disease,9
+556,514,Cholera,40
+557,516,Measles,8
+558,549,Acute Diarrheal Disease,50
+559,548,Measles,8
+560,547,Cholera,60
+561,557,Food Poisoning,22
+562,558,Jaundice,6
+563,559,Measles,10
+564,560,Typhoid,59
+565,550,Hepatitis A,13
+566,551,Cholera,17
+567,561,Acute Diarrheal Disease,17
+568,541,Cholera,3
+569,528,Acute Diarrheal Disease,17
+570,529,Acute Diarrheal Disease,39
+571,583,Cholera,129
+572,595,Food Poisoning,17
+573,527,Food Poisoning,42
+574,596,Acute Diarrheal Disease,68
+575,534,Food Poisoning,25
+576,535,Acute Diarrheal Disease,44
+577,536,Food Poisoning,204
+578,537,Food Poisoning,57
+579,566,Food Poisoning,4
+580,594,Measles,5
+581,493,Acute Diarrheal Disease,491
+582,575,Chikungunya,5
+583,573,Measles,7
+584,567,Acute Diarrheal Disease,41
+585,571,Food Poisoning,111
+586,490,Cholera,64
+587,508,Acute Diarrheal Disease,79
+588,494,Cholera,61
+589,581,Hepatitis A,22
+590,593,Measles,8
+591,591,Food Poisoning,37
+592,589,Food Poisoning,67
+593,540,Typhoid,5
+594,538,Food Poisoning,81
+595,592,Measles & Rubella,12
+596,597,Food Poisoning,23
+597,492,Cholera,112
+598,530,Food Poisoning,17
+599,531,Acute Diarrheal Disease,47
+600,539,Acute Diarrheal Disease,64
+601,532,Acute Diarrheal Disease,7
+602,603,Food Poisoning,60
+603,533,Cholera,216
+604,588,Cholera,33
+605,524,Acute Diarrheal Disease,19
+606,608,Food Poisoning,15
+607,606,Cholera,140
+608,611,Hepatitis A,51
+609,602,Cholera,369
+610,612,Diphtheria,3
+611,612,Chickenpox,15
+612,598,Acute Diarrheal Disease,34
+613,604,Acute Diarrheal Disease,141
+614,607,Cholera,459
+615,613,Measles,6
+616,610,Acute Diarrheal Disease,43
+617,605,Scrub Typhus,5
+618,600,Hepatitis A,127
+619,599,Hepatitis A & E,30
+620,601,Chickenpox,37
+621,609,Acute Diarrheal Disease,30
+622,618,Hepatitis A,88
+623,626,Acute Diarrheal Disease,45
+624,624,Acute Diarrheal Disease,47
+625,614,Acute Diarrheal Disease,290
+626,615,Acute Diarrheal Disease,105
+627,621,Jaundice,20
+628,623,Hepatitis A,11
+629,617,Acute Diarrheal Disease,186
+630,620,Acute Diarrheal Disease,26
+631,625,Hepatitis A,59
+632,616,Acute Diarrheal Disease,150
+633,619,Hepatitis A,41
+634,622,Acute Diarrheal Disease,115
+635,711,Human Rabies,1
+636,709,Acute Diarrheal Disease,41
+637,694,Hepatitis A,12
+638,629,Mumps,18
+639,704,Hepatitis A,12
+640,700,Hepatitis A,48
+641,651,Hepatitis A,18
+642,659,Cholera,27
+643,642,Chickenpox,12
+644,643,Hepatitis A,19
+645,644,Acute Diarrheal Disease,37
+646,645,Food Poisoning,134
+647,646,Cholera,41
+648,647,Human Rabies,1
+649,701,Acute Diarrheal Disease,142
+650,699,Hepatitis A,9
+651,702,Hepatitis A,8
+652,674,Hepatitis A,5
+653,698,Acute Diarrheal Disease,87
+654,676,Hepatitis A,10
+655,672,Acute Diarrheal Disease,38
+656,671,Mumps,10
+657,687,Hepatitis A,21
+658,661,Mumps,14
+659,691,Jaundice,46
+660,710,Chikungunya,8
+661,655,Hepatitis A,14
+662,658,Chickenpox,26
+663,660,Hepatitis A,14
+664,663,Hepatitis A,9
+665,632,Mumps,19
+666,684,Mumps,11
+667,677,Acute Diarrheal Disease,76
+668,678,Mumps,13
+669,670,Others,39
+670,690,Acute Diarrheal Disease,48
+671,693,Mumps,16
+672,697,Hepatitis A,10
+673,697,Hepatitis A,19
+674,676,Hepatitis A,15
+675,673,Cholera,23
+676,650,Food Poisoning,13
+677,670,Hepatitis A,11
+678,639,Hepatitis A,8
+679,708,Hepatitis A,30
+680,654,Hepatitis A,13
+681,696,Jaundice,15
+682,628,Human Rabies,1
+683,669,Hepatitis A,10
+684,668,Hepatitis A,28
+685,667,Hepatitis A,11
+686,653,Chickenpox,50
+687,652,Hepatitis A,10
+688,649,Measles,6
+689,666,Hepatitis A,27
+690,636,Jaundice,17
+691,631,Chickenpox,23
+692,630,Chickenpox,10
+693,635,Hepatitis A,18
+694,634,Hepatitis A,12
+695,657,Acute Diarrheal Disease,51
+696,640,Hepatitis A,18
+697,665,Chickenpox,17
+698,664,Hepatitis A,18
+699,656,Hepatitis A,9
+700,641,Cholera,23
+701,706,Dengue,5
+702,707,Hepatitis A,10
+703,679,Hepatitis A,10
+704,685,Cholera,47
+705,638,Hepatitis A,12
+706,648,Mumps,13
+707,639,Hepatitis A,10
+708,675,Hepatitis A,8
+709,627,Hepatitis A,25
+710,637,Cholera,59
+711,712,Hepatitis A,6
+712,681,Hepatitis A,16
+713,682,Mumps,10
+714,683,Acute Diarrheal Disease,27
+715,633,Chickenpox,14
+716,705,Hepatitis A,21
+717,692,Hepatitis A,20
+718,686,Mumps,8
+719,703,Hepatitis A,20
+720,695,Hepatitis A,27
+721,688,Hepatitis A,5
+722,680,Chickenpox,18
+723,689,Mumps,5
+724,749,Chickenpox,5
+725,724,Chickenpox,5
+726,779,Chickenpox,22
+727,788,Acute Diarrheal Disease,10
+728,722,Chickenpox,7
+729,721,Acute Diarrheal Disease,23
+730,720,Chickenpox,9
+731,769,Malaria,7
+732,752,Chickenpox,23
+733,730,Malaria,17
+734,728,Chickenpox,9
+735,747,Chickenpox,23
+736,745,Food Poisoning,87
+737,751,Measles,8
+738,716,Acute Diarrheal Disease,19
+739,750,Scrub Typhus,5
+740,715,Malaria,11
+741,771,Acute Diarrheal Disease,25
+742,793,Acute Diarrheal Disease,21
+743,778,Fever with Rash,12
+744,764,Chickenpox,10
+745,803,Acute Diarrheal Disease,7
+746,737,Chickenpox,12
+747,738,Measles,8
+748,809,Acute Diarrheal Disease,67
+749,765,Acute Diarrheal Disease,10
+750,782,Acute Diarrheal Disease,15
+751,754,Acute Diarrheal Disease,12
+752,757,Fever with Rash,10
+753,756,Acute Diarrheal Disease,16
+754,816,Chickenpox,15
+755,761,Chickenpox,10
+756,757,Malaria,43
+757,758,Malaria,30
+758,759,Food Poisoning,12
+759,760,Typhoid,8
+760,814,Acute Diarrheal Disease,12
+761,815,Scrub typhus,40
+762,810,Chickenpox,7
+763,781,Malaria,43
+764,719,Dengue,10
+765,783,Human Rabies,1
+766,717,Chickenpox,10
+767,776,Measles,4
+768,774,Mumps,23
+769,773,Chickenpox,9
+770,772,Chickenpox,5
+771,736,Food Poisoning,16
+772,802,Measles,9
+773,771,Measles,8
+774,786,Acute Diarrheal Disease,16
+775,806,Food Poisoning,67
+776,808,Chickenpox,5
+777,780,Acute Diarrheal Disease,43
+778,735,Acute Diarrheal Disease,12
+779,789,Acute Diarrheal Disease,17
+780,812,Measles,28
+781,792,Malaria,55
+782,791,Chickenpox,13
+783,742,Acute Diarrheal Disease,12
+784,770,Chickenpox,8
+785,801,Acute Diarrheal Disease,16
+786,790,Malaria,38
+787,804,Fever with Rash,6
+788,787,Fever with Rash,11
+789,784,Mumps,5
+790,741,Malaria,8
+791,740,Acute Diarrheal Disease,34
+792,755,Chickenpox,20
+793,732,Malaria,18
+794,813,Measles,30
+795,725,Malaria,6
+796,762,Malaria,40
+797,763,Acute Diarrheal Disease,16
+798,714,Acute Diarrheal Disease,20
+799,713,Acute Diarrheal Disease,9
+800,718,Acute Diarrheal Disease,45
+801,729,Chickenpox,13
+802,777,Acute Diarrheal Disease,39
+803,743,Chickenpox,13
+804,794,Measles,6
+805,727,Acute Diarrheal Disease,10
+806,733,Malaria,10
+807,811,Acute Diarrheal Disease,22
+808,760,Acute Diarrheal Disease,32
+809,731,Chickenpox,36
+810,800,Measles,11
+811,759,Acute Diarrheal Disease,57
+812,723,Measles,3
+813,739,Acute Diarrheal Disease,12
+814,758,Acute Diarrheal Disease,43
+815,734,Typhoid,8
+816,748,Malaria,13
+817,746,Malaria,31
+818,795,Acute Diarrheal Disease,11
+819,726,Dengue,45
+820,766,Measles,40
+821,767,Rubella,15
+822,744,Chikungunya,5
+823,797,Acute Diarrheal Disease,26
+824,768,Food Poisoning,202
+825,798,Malaria,32
+826,796,Acute Diarrheal Disease,4
+827,805,Chickenpox,7
+828,799,Mumps,23
+829,860,Hand Foot Mouth Disease (HFMD),241
+830,830,Acute Diarrheal Disease,48
+831,831,Acute Diarrheal Disease,23
+832,832,Dengue,31
+833,843,Cholera,5
+834,829,Chikungunya,23
+835,828,Zika Virus,7
+836,856,Food Poisoning,64
+837,855,Acute Diarrheal Disease,31
+838,871,Cholera,71
+839,874,Hepatitis A,24
+840,873,Acute Diarrheal Disease,50
+841,955,Fever,21
+842,857,Food Poisoning,56
+843,820,Chickenpox,26
+844,823,Cholera,21
+845,835,Food Poisoning,14
+846,836,Dengue,37
+847,870,Chikungunya,12
+848,827,Acute Diarrheal Disease,99
+849,833,Acute Diarrheal Disease,14
+850,869,Acute Diarrheal Disease,21
+851,854,Food Poisoning,61
+852,867,Acute Diarrheal Disease,94
+853,868,Measles,11
+854,825,Acute Diarrheal Disease,91
+855,822,Japanese Encephalitis,1
+856,819,Cholera,235
+857,817,Typhoid,18
+858,866,Acute Diarrheal Disease,27
+859,852,Acute Diarrheal Disease,48
+860,845,Cholera,8
+861,858,Acute Diarrheal Disease,38
+862,821,Mumps,24
+863,818,Food Poisoning,46
+864,824,Acute Diarrheal Disease,41
+865,859,Mumps,13
+866,826,Food Poisoning,64
+867,865,Acute Diarrheal Disease,22
+868,864,Chikungunya,73
+869,849,Food Poisoning,17
+870,846,Food Poisoning,17
+871,847,Acute Diarrheal Disease,89
+872,848,Dysentery,35
+873,861,Acute Diarrheal Disease,13
+874,862,Cholera,85
+875,844,Acute Diarrheal Disease,90
+876,837,Food Poisoning,33
+877,853,Food Poisoning,22
+878,838,Acute Diarrheal Disease,86
+879,839,Acute Diarrheal Disease,30
+880,840,Acute Diarrheal Disease,50
+881,850,Acute Diarrheal Disease,35
+882,851,Dengue,14
+883,841,Acute Diarrheal Disease,27
+884,863,Leptospirosis,15
+885,834,Food Poisoning,21
+886,842,Acute Diarrheal Disease,41
+887,941,Acute Diarrheal Disease,16
+888,909,Food Poisoning,27
+889,923,Food Poisoning,47
+890,922,Food Poisoning,43
+891,879,Cholera,133
+892,927,Acute Diarrheal Disease,65
+893,876,Kyasanur Forest Disease,139
+894,875,Kyasanur Forest Disease,133
+895,896,Cholera,97
+896,928,Acute Diarrheal Disease,5
+897,924,Cholera,47
+898,929,Dengue,45
+899,937,Chikungunya,53
+900,890,Shigellosis,39
+901,910,Food Poisoning,67
+902,930,Chikungunya,17
+903,945,Acute Diarrheal Disease,5
+904,946,Kyasanur Forest Disease,297
+905,895,Cholera,9
+906,949,Kyasanur Forest Disease,310
+907,902,Acute Diarrheal Disease,60
+908,888,Cholera,62
+909,878,Cholera,45
+910,926,Acute Diarrheal Disease,24
+911,894,Acute Diarrheal Disease,19
+912,893,Cholera,55
+913,893,Acute Diarrheal Disease,43
+914,880,Human Rabies,1
+915,881,Kyasanur Forest Disease,1
+916,882,Food Poisoning,24
+917,883,Mumps,20
+918,887,Cholera,150
+919,877,Food Poisoning,58
+920,903,Acute Diarrheal Disease,20
+921,934,Food Poisoning,13
+922,933,Food Poisoning,98
+923,932,Cholera,310
+924,931,Acute Diarrheal Disease,18
+925,898,Acute Diarrheal Disease,15
+926,899,Cholera,10
+927,900,Cholera,30
+928,901,Acute Diarrheal Disease,13
+929,904,Food Poisoning,104
+930,943,Acute Diarrheal Disease,34
+931,946,Kyasanur Forest Disease,53
+932,925,Food Poisoning,135
+933,906,Acute Diarrheal Disease,144
+934,938,Acute Diarrheal Disease,78
+935,944,Acute Diarrheal Disease,19
+936,889,Acute Diarrheal Disease,63
+937,891,Kyasanur Forest Disease,13
+938,950,Acute Diarrheal Disease,55
+939,951,Acute Diarrheal Disease,30
+940,892,Kyasanur Forest Disease,60
+941,897,Diphtheria,1
+942,917,Acute Gastroenteritis,79
+943,916,Cholera,5
+944,915,Food Poisoning,15
+945,905,Kyasanur Forest Disease,2
+946,907,Acute Diarrheal Disease,33
+947,908,Food Poisoning,46
+948,911,Cholera,16
+949,950,Kyasanur Forest Disease,81
+950,912,Food Poisoning,14
+951,913,Food Poisoning,82
+952,896,Human Rabies,1
+953,936,Acute Diarrheal Disease,54
+954,872,Acute Diarrheal Disease,15
+955,918,Food Poisoning,7
+956,914,Measles,34
+957,947,Food Poisoning,92
+958,886,Acute Diarrheal Disease,46
+959,885,Acute Diarrheal Disease,28
+960,919,Acute Diarrheal Disease,31
+961,920,Cholera,6
+962,935,Chikungunya,9
+963,942,Food Poisoning,47
+964,921,Food Poisoning,111
+965,884,Human Rabies,1
+966,948,Food Poisoning,32
+967,953,Zika Virus,3
+968,940,Acute Diarrheal Disease,12
+969,939,Acute Diarrheal Disease,21
+970,1098,Hepatitis A,9
+971,1011,Food Poisoning,20
+972,1066,Food Poisoning,141
+973,966,Mumps,18
+974,1095,Food Poisoning,16
+975,965,Hepatitis A,36
+976,1018,Acute Diarrheal Disease,29
+977,967,Mumps,16
+978,1010,Hepatitis A,4
+979,1097,Food Poisoning,41
+980,1017,Hepatitis A,254
+981,982,Mumps,9
+982,968,Food Poisoning,83
+983,1005,Hepatitis A,4
+984,999,Nipah Virus,1
+985,1000,Mpox,1
+986,996,Hepatitis A,38
+987,998,Dengue,19
+988,979,Mumps,18
+989,988,Food Poisoning,71
+990,984,Hepatitis A,27
+991,983,Hepatitis A,325
+992,976,Mumps,19
+993,1107,Food Poisoning,6
+994,1106,Hepatitis A,15
+995,1147,Jaundice,37
+996,1145,Food Poisoning,15
+997,1150,Food Poisoning,12
+998,999,Food Poisoning,19
+999,1099,Acute Diarrheal Disease,43
+1000,1001,Chickenpox,21
+1001,1002,Mumps,15
+1002,1019,Acute Diarrheal Disease,23
+1003,1020,Hepatitis A,14
+1004,1021,Hepatitis A,37
+1005,1022,Leptospirosis,11
+1006,1008,Mpox,1
+1007,1008,Mumps,8
+1008,1009,Mumps,5
+1009,1010,Acute Diarrheal Disease,43
+1010,1011,Hepatitis A,18
+1011,1012,Mumps,8
+1012,963,Acute Diarrheal Disease,27
+1013,992,Hepatitis A,20
+1014,993,Dengue,23
+1015,994,Food Poisoning,171
+1016,995,Dengue,10
+1017,1018,Mumps,20
+1018,963,Acute Diarrheal Disease,199
+1019,1105,Hepatitis A,80
+1020,972,Acute Hepatitis-A,409
+1021,1089,Acute Diarrheal Disease,29
+1022,1090,Mumps,12
+1023,1091,Mumps,16
+1024,1092,Mumps,38
+1025,1093,Hepatitis A,12
+1026,1058,Food Poisoning,74
+1027,1057,Mumps,9
+1028,1056,Chickenpox,12
+1029,1063,Dengue,22
+1030,1055,Mumps,20
+1031,1053,Mumps,18
+1032,1052,Mumps,17
+1033,1051,Chickenpox,176
+1034,1048,Acute Diarrheal Disease,18
+1035,1047,Hepatitis A,19
+1036,1025,Hepatitis A,10
+1037,1086,Acute Diarrheal Disease,30
+1038,1094,Mumps,26
+1039,1085,Mumps,8
+1040,1058,Hepatitis A,11
+1041,1059,Hepatitis A,23
+1042,1060,Food Poisoning,107
+1043,1060,Acute Diarrheal Disease,62
+1044,1032,Chickenpox,23
+1045,1035,Food Poisoning,86
+1046,1039,Food Poisoning,9
+1047,1040,Mumps,20
+1048,1041,Mumps,23
+1049,1042,Food Poisoning,20
+1050,1044,Hepatitis A,105
+1051,1065,Mumps,10
+1052,1084,Hepatitis A,39
+1053,1074,Hepatitis A,6
+1054,1087,Dengue,18
+1055,1088,Mumps,16
+1056,1088,Fever with Rash,6
+1057,1031,Chicken Pox,28
+1058,1030,Hepatitis A,27
+1059,1029,Melioidosis,1
+1060,1028,Melioidosis,1
+1061,1027,Acute Diarrheal Disease,123
+1062,1034,Mumps,9
+1063,1061,Acute Diarrheal Disease,31
+1064,1087,Chickenpox,5
+1065,1067,Mumps,7
+1066,1103,Food Poisoning,78
+1067,1096,Hepatitis A,13
+1068,973,Hepatitis A,5
+1069,974,Acute Diarrheal Disease,66
+1070,975,Hepatitis A,16
+1071,1038,Hepatitis A,6
+1072,1038,Dengue,39
+1073,978,Acute Diarrheal Disease,22
+1074,980,Dengue,16
+1075,1045,Acute Diarrheal Disease,72
+1076,1033,Mumps,9
+1077,1104,Dengue,12
+1078,1043,Mumps,12
+1079,1037,Scrub Typhus,3
+1080,958,Food Poisoning,172
+1081,959,Food Poisoning,70
+1082,960,Food Poisoning,101
+1083,961,Food Poisoning,16
+1084,981,Mumps,10
+1085,982,Hepatitis A,41
+1086,985,Chickenpox,28
+1087,986,Mumps,16
+1088,1036,Hepatitis A,20
+1089,962,Hepatitis A,18
+1090,1104,Hepatitis A,31
+1091,1082,Mumps,20
+1092,1101,Acute Diarrheal Disease,10
+1093,1102,Hepatitis A,47
+1094,1064,Hepatitis A,13
+1095,1049,Mumps,15
+1096,1050,Mumps,16
+1097,1062,Mumps,17
+1098,1046,Mumps,34
+1099,1054,Food Poisoning,16
+1100,1069,Mumps,77
+1101,1026,Acute Diarrheal Disease,32
+1102,1070,Mumps,41
+1103,1072,Mumps,65
+1104,1068,Typhoid,57
+1105,1083,Mumps,11
+1106,1076,Food Poisoning,22
+1107,1077,Hepatitis A,15
+1108,1078,Food Poisoning,60
+1109,1079,Hepatitis A,40
+1110,1080,Hepatitis A,26
+1111,1081,Hepatitis A,47
+1112,1071,Hepatitis A,28
+1113,987,Mumps,6
+1114,1115,Food Poisoning,26
+1115,1148,Hepatitis A,15
+1116,1122,Jaundice,24
+1117,989,Acute Gastroenteritis,41
+1118,990,Acute Gastroenteritis,28
+1119,1009,Hepatitis A,25
+1120,1013,Mumps,40
+1121,1012,Hepatitis A,12
+1122,1001,Hepatitis A,29
+1123,1002,Food Poisoning,21
+1124,1004,Acute Gastroenteritis,145
+1125,1006,Acute Diarrheal Disease,33
+1126,1139,Hepatitis A,24
+1127,1014,Food Poisoning,33
+1128,1024,Hepatitis A,95
+1129,1023,Mpox,1
+1130,1015,Food Poisoning,59
+1131,1007,Food Poisoning,285
+1132,997,Mpox,1
+1133,991,Monkey Pox,2
+1134,1123,Hepatitis A,61
+1135,991,Chickenpox,28
+1136,1124,Dengue,113
+1137,1125,Hepatitis A,11
+1138,1141,Acute Gastroenteritis,9
+1139,1144,Acute Diarrheal Disease,24
+1140,1115,Hepatitis A,45
+1141,1117,Hepatitis A,12
+1142,1140,Hepatitis A,6
+1143,1118,Dengue,23
+1144,1145,Dog Bite,9
+1145,956,Acute Gastroenteritis,105
+1146,1149,Hepatitis A,132
+1147,1116,Hepatitis A,19
+1148,1108,Food Poisoning,69
+1149,1016,Food Poisoning,22
+1150,1119,West Nile Fever,2
+1151,1129,Jaundice,55
+1152,1128,Mumps,23
+1153,1127,Hepatitis A,18
+1154,1127,Hepatitis A,31
+1155,1135,Acute Diarrheal Disease,17
+1156,1112,Food Poisoning,143
+1157,1143,Dengue,20
+1158,1143,Hepatitis A,71
+1159,1113,Hepatitis A,62
+1160,1126,Food Poisoning,34
+1161,1110,Acute Diarrheal Disease,10
+1162,1130,Leptospirosis,8
+1163,1114,Dengue,11
+1164,1111,Cholera,17
+1165,1131,Mumps,18
+1166,1132,Mumps,13
+1167,1120,Food Poisoning,130
+1168,1121,Food Poisoning,15
+1169,1109,Hepatitis A,55
+1170,1142,Hepatitis A,22
+1171,1138,Dengue,129
+1172,1133,Mumps,21
+1173,1136,Acute Diarrheal Disease,82
+1174,1146,Hepatitis A,12
+1175,1134,Mumps,11
+1176,1137,Acute Diarrheal Disease,26
+1177,1151,Mumps,49
+1178,1179,Chickenpox,6
+1179,1199,Food Poisoning,20
+1180,1166,Chickenpox,15
+1181,1173,Acute Diarrheal Disease,94
+1182,1183,Fever with Rash,8
+1183,1174,Acute Diarrheal Disease,7
+1184,1176,Acute Diarrheal Disease,33
+1185,1227,Scrub Typhus,5
+1186,1182,Chickenpox,9
+1187,1157,Dengue,101
+1188,1217,Chickenpox,21
+1189,1273,Acute Diarrheal Disease,16
+1190,1262,Acute Diarrheal Disease,0
+1191,1270,Chicken Pox,11
+1192,1192,Chikungunya,129
+1193,1269,Measles,7
+1194,1248,Chikungunya,65
+1195,1249,Mumps,29
+1196,1274,Acute Diarrheal Disease,11
+1197,1172,Acute Diarrheal Disease,19
+1198,1189,Mumps,18
+1199,1171,Acute Diarrheal Disease,27
+1200,1235,Mumps,31
+1201,1234,Fever with Rash,23
+1202,1233,Measles,18
+1203,1215,Fever with Rash,6
+1204,1216,Measles,2
+1205,1169,Mumps,15
+1206,1218,Measles,13
+1207,1193,Acute Diarrheal Disease,36
+1208,1210,Dengue,41
+1209,1178,Measles,20
+1210,1260,Chikungunya,50
+1211,1243,Typhoid,84
+1212,1268,Acute Diarrheal Disease,89
+1213,1275,Cholera,112
+1214,1229,Food Poisoning,64
+1215,1237,Chickenpox,7
+1216,1238,Mumps,7
+1217,1239,Chickenpox,8
+1218,1240,Mumps,39
+1219,1241,Mumps,27
+1220,1196,Acute Diarrheal Disease,53
+1221,1204,Acute Diarrheal Disease,35
+1222,1197,Dengue,69
+1223,1170,Cholera,63
+1224,1181,Cholera,251
+1225,1246,Food Poisoning,20
+1226,1247,Food Poisoning,45
+1227,1263,Cholera,25
+1228,1271,Mumps,12
+1229,1230,Cholera,115
+1230,1163,Acute Diarrheal Disease,91
+1231,1179,Measles,7
+1232,1159,Food Poisoning,10
+1233,1160,Measles,10
+1234,1184,Acute Diarrheal Disease,7
+1235,1161,Cholera,28
+1236,1162,Cholera,7
+1237,1205,Measles,9
+1238,1214,Mumps,13
+1239,1194,Typhoid,28
+1240,1177,Mumps,38
+1241,1185,Acute Diarrheal Disease,68
+1242,1167,Dengue,16
+1243,1200,Food Poisoning,88
+1244,1208,Cholera,28
+1245,1186,Dengue,109
+1246,1225,Acute Diarrheal Disease,5
+1247,1195,Measles,12
+1248,1213,Measles,12
+1249,1211,Dengue,23
+1250,1201,Chikungunya,57
+1251,1236,Mumps,33
+1252,1203,Measles,24
+1253,1228,Dengue,43
+1254,1232,Acute Diarrheal Disease,30
+1255,1226,Acute Diarrheal Disease,36
+1256,1187,Acute Diarrheal Disease,4
+1257,1168,Acute Diarrheal Disease,42
+1258,1261,Chickenpox,5
+1259,1231,Chickenpox,5
+1260,1152,Acute Diarrheal Disease,21
+1261,1153,Leptospirosis,17
+1262,1281,Fever of Unknown Origin,17
+1263,1259,Chikungunya,21
+1264,1242,Acute Diarrheal Disease,36
+1265,1154,Dengue,76
+1266,1155,Measles,8
+1267,1156,Acute Diarrheal Disease,40
+1268,1219,Acute Diarrheal Disease,16
+1269,1220,Acute Diarrheal Disease,26
+1270,1266,Animal Bite - Dog Bite,13
+1271,1265,Measles,12
+1272,1221,Acute Diarrheal Disease,19
+1273,1202,Measles,4
+1274,1280,Acute Diarrheal Disease,24
+1275,1276,Chikungunya,77
+1276,1277,Food Poisoning,14
+1277,1209,Acute Diarrheal Disease,6
+1278,1209,Acute Diarrheal Disease,7
+1279,1209,Acute Diarrheal Disease,8
+1280,1158,Dengue,6
+1281,1165,Acute Diarrheal Disease,24
+1282,1256,Acute Diarrheal Disease,31
+1283,1255,Acute Diarrheal Disease,8
+1284,1254,Acute Diarrheal Disease,10
+1285,1253,Acute Diarrheal Disease,47
+1286,1252,Dengue,10
+1287,1251,Dengue,18
+1288,1250,Acute Diarrheal Disease,27
+1289,1276,Acute Diarrheal Disease,15
+1290,1278,Dengue,26
+1291,1292,Fever,2
+1292,1258,Measles,47
+1293,1257,Scrub Typhus,2
+1294,1245,Dengue,27
+1295,1175,Acute Diarrheal Disease,11
+1296,1180,Dengue,171
+1297,1180,Measles,15
+1298,1222,Acute Diarrheal Disease,105
+1299,1223,Cholera,7
+1300,1244,Dengue,12
+1301,1207,Acute Diarrheal Disease,32
+1302,1267,Acute Diarrheal Disease,12
+1303,1191,Scrub Typhus,1
+1304,1190,Jaundice of < 4 weeks,10
+1305,1198,Leptospirosis,10
+1306,1264,Acute Diarrheal Disease,66
+1307,1206,Acute Diarrheal Disease,19
+1308,1224,Acute Diarrheal Disease,40
+1309,1188,Acute Diarrheal Disease,77
+1310,1279,Measles,44
+1311,1212,Acute Encephalitic Syndrome,1
+1312,1314,Dengue,12
+1313,1373,Malaria,385
+1314,1335,Food Poisoning,25
+1315,1356,Acute Diarrheal Disease,136
+1316,1334,Acute Diarrheal Disease,21
+1317,1333,Hepatitis A,22
+1318,1345,Scrub Typhus,1
+1319,1344,Hepatitis A,65
+1320,1343,Cholera,6
+1321,1371,Dengue,2
+1322,1304,Acute Diarrheal Disease,97
+1323,1332,Food Poisoning,48
+1324,1312,Acute Diarrheal Disease,29
+1325,1331,Acute Diarrheal Disease,18
+1326,1337,Acute Diarrheal Disease,76
+1327,1290,Acute Diarrheal Disease,21
+1328,1302,Dengue,31
+1329,1328,Malaria,41
+1330,1330,Hepatitis A,9
+1331,1379,Cholera,17
+1332,1355,Food Poisoning,93
+1333,1313,Cholera,5
+1334,1358,Acute Diarrheal Disease,146
+1335,1305,Dengue,22
+1336,1315,Acute Diarrheal Disease,61
+1337,1316,Dengue,23
+1338,1301,Dengue,16
+1339,1327,Cholera,9
+1340,1377,Dengue,35
+1341,1357,Acute Diarrheal Disease,30
+1342,1318,Malaria,28
+1343,1367,Acute Diarrheal Disease,28
+1344,1340,Acute Diarrheal Disease,67
+1345,1320,Acute Diarrheal Disease,20
+1346,1311,Acute Diarrheal Disease,26
+1347,1295,Acute Diarrheal Disease,16
+1348,1307,Hepatitis A&E,101
+1349,1346,Chikungunya,11
+1350,1306,Acute Diarrheal Disease,110
+1351,1352,Hepatitis-A,9
+1352,1353,Food Poisoning,106
+1353,1354,Scrub Typhus,9
+1354,1355,Dengue & Chikungunya,9
+1355,1356,Malaria,2
+1356,1342,Hepatitis A,9
+1357,1303,Dengue,13
+1358,1310,Dengue,29
+1359,1309,Cholera,15
+1360,1341,Dengue,5
+1361,1291,Chikungunya,14
+1362,1300,Mumps,5
+1363,1317,Malaria,8
+1364,1336,Acute Diarrheal Disease,170
+1365,1319,Cholera,5
+1366,1364,Acute Diarrheal Disease,23
+1367,1296,Zika Virus,1
+1368,1372,Food Poisoning,181
+1369,1366,Food Poisoning,6
+1370,1293,Zika Virus,1
+1371,1380,Acute Diarrheal Disease,165
+1372,1363,Food Poisoning,68
+1373,1321,Acute Diarrheal Disease,193
+1374,1326,Malaria,9
+1375,1322,Dengue,6
+1376,1325,Hepatitis A,18
+1377,1324,Chikungunya,14
+1378,1323,Leptospirosis,7
+1379,1329,Zika Virus,1
+1380,1362,Food Poisoning,208
+1381,1292,Hepatitis A,42
+1382,1383,Malaria,191
+1383,1354,Chikungunya,5
+1384,1381,Acute Diarrheal Disease,49
+1385,1370,Food Poisoning,22
+1386,1283,Dengue,24
+1387,1338,Hepatitis A,10
+1388,1285,Dengue,24
+1389,1284,Acute Diarrheal Disease,115
+1390,1360,Leptospirosis,3
+1391,1365,Dengue,16
+1392,1368,Acute Diarrheal Disease,129
+1393,1361,Food Poisoning,18
+1394,1349,Hepatitis A,12
+1395,1289,Chikungunya,27
+1396,1369,Zika Virus,8
+1397,1352,Dengue,5
+1398,1378,Chikungunya,12
+1399,1359,Dengue,5
+1400,1286,Acute Diarrheal Disease,1000
+1401,1287,Food Poisoning,629
+1402,1347,Hepatitis A,10
+1403,1348,Food Poisoning,42
+1404,1353,Hepatitis A,96
+1405,1350,Acute Diarrheal Disease,26
+1406,1294,Leptospirosis,1
+1407,1351,Chikungunya,9
+1408,1339,Dengue,9
+1409,1376,Cholera,65
+1410,1375,Cholera,89
+1411,1359,Chikungunya,12
+1412,1383,Chickenpox,10
+1413,1384,Human Rabies,1
+1414,1382,Food Poisoning,26
+1415,1392,Mushroom Poisoning,12
+1416,1395,Mushroom Poisoning,10
+1417,1391,Mushroom Poisoning,5
+1418,1390,Hepatitis A,4
+1419,1388,Measles,35
+1420,1386,Human Rabies,1
+1421,1394,Chickenpox,100
+1422,1387,Scrub Typhus,35
+1423,1393,Measles,66
+1424,1396,Measles,24
+1425,1398,Acute Gastroenteritis,15
+1426,1399,Mushroom Poisoning,5
+1427,1397,Measles,23
+1428,1385,Measles,15
+1429,1400,Measles,34
+1430,1401,Human Rabies,1
+1431,1387,Typhoid,86
+1432,1389,Measles,28
+1433,1402,Dengue,157
+1434,1425,Food Poisoning,34
+1435,1416,Acute Diarrheal Disease,16
+1436,1408,Food Poisoning,13
+1437,1435,Fever with Rash,15
+1438,1407,Food Poisoning,250
+1439,1414,Food Poisoning,10
+1440,1423,Acute Diarrheal Disease,39
+1441,1457,Hepatitis A,72
+1442,1403,Measles,43
+1443,1406,Acute Diarrheal Disease,11
+1444,1404,Hepatitis A,10
+1445,1420,Acute Diarrheal Disease,7
+1446,1415,Fever with Rash,18
+1447,1417,Acute Diarrheal Disease,30
+1448,1412,Acute Diarrheal Disease,19
+1449,1450,Food Poisoning,25
+1450,1451,Acute Diarrheal Disease,22
+1451,1421,Acute Diarrheal Disease,42
+1452,1424,Food Poisoning,27
+1453,1436,Food Poisoning,20
+1454,1475,Acute Diarrheal Disease,6
+1455,1474,Hepatitis A,12
+1456,1476,Acute Diarrheal Disease,12
+1457,1480,Acute Diarrheal Disease,19
+1458,1479,Acute Diarrheal Disease,12
+1459,1459,Anthrax,5
+1460,1469,Measles,16
+1461,1446,Acute Diarrheal Disease,20
+1462,1447,Acute Gastroenteritis,15
+1463,1450,Fever with Rash,8
+1464,1442,Food Poisoning,28
+1465,1441,Acute Diarrheal Disease,11
+1466,1428,Hepatitis A,12
+1467,1440,Food Poisoning,53
+1468,1430,Acute Diarrheal Disease,18
+1469,1427,Food Poisoning,49
+1470,1439,Cholera,72
+1471,1433,Acute Diarrheal Disease,29
+1472,1434,Acute Diarrheal Disease,22
+1473,1472,Acute Gastroenteritis,73
+1474,1478,Food Poisoning,19
+1475,1429,Fever with Rash,11
+1476,1431,Hepatitis A,101
+1477,1451,Scrub Typhus,27
+1478,1452,Acute Diarrheal Disease,54
+1479,1468,Acute Diarrheal Disease,1
+1480,1426,Acute Diarrheal Disease,35
+1481,1455,Hepatitis A,13
+1482,1454,Acute Diarrheal Disease,35
+1483,1453,Acute Diarrheal Disease,1
+1484,1438,Hepatitis A,3
+1485,1458,Acute Diarrheal Disease,20
+1486,1411,Diphtheria,1
+1487,1437,Hepatitis A,6
+1488,1422,Hepatitis A,8
+1489,1419,Anthrax,6
+1490,1467,Food Poisoning,11
+1491,1409,Food Poisoning,13
+1492,1473,Acute Diarrheal Disease,9
+1493,1470,Food Poisoning,6
+1494,1463,Food Poisoning,42
+1495,1464,Acute Diarrheal Disease,18
+1496,1444,Diphtheria,2
+1497,1465,Acute Diarrheal Disease,12
+1498,1445,Acute Diarrheal Disease,10
+1499,1462,Chickenpox,15
+1500,1461,Food Poisoning,42
+1501,1405,Food Poisoning,112
+1502,1443,Acute Diarrheal Disease,16
+1503,1456,Acute Diarrheal Disease,42
+1504,1460,Food Poisoning,347
+1505,1432,Chickenpox,20
+1506,1413,Hepatitis A,132
+1507,1448,Acute Diarrheal Disease,30
+1508,1449,Acute Diarrheal Disease,81
+1509,1418,Acute Diarrheal Disease,8
+1510,1466,Acute Diarrheal Disease,7
+1511,1410,Acute Diarrheal Disease,12
+1512,1483,Chickenpox,17
+1513,1482,Chikungunya,18
+1514,1481,Cholera,28
+1515,1486,Mumps,7
+1516,1490,Mumps,6
+1517,1484,Mumps,81
+1518,1489,Chickenpox,54
+1519,1491,Hepatitis A,40
+1520,1487,Measles,4
+1521,1488,Mumps,6
+1522,1492,Mumps,13
+1523,1485,Mumps,24
+1524,1494,Food Poisoning,104
+1525,1495,Mumps,76
+1526,1493,CCHF,1
+1528,1535,Mumps,8
+1529,1539,Mumps,6
+1530,1540,Dengue,12
+1531,1536,Measles,14
+1532,1550,Mumps,17
+1533,1518,Acute Diarrheal Disease,57
+1534,1542,Fever,10
+1535,1504,Acute Diarrheal Disease,15
+1536,1498,Mumps,34
+1537,1502,Acute Diarrheal Disease,25
+1538,1503,Chickenpox,12
+1539,1499,Acute Gastroenteritis,37
+1540,1549,Chikungunya,20
+1541,1546,Mumps,5
+1542,1554,Dengue & Chikungunya,12
+1543,1541,Mumps,17
+1544,1548,Acute Diarrheal Disease,14
+1545,1500,Acute Diarrheal Disease,15
+1546,1537,Acute Diarrheal Disease,21
+1547,1538,Food Poisoning,49
+1548,1552,Chickenpox,40
+1549,1547,Acute Diarrheal Disease,106
+1550,1507,Cholera,41
+1551,1552,Acute Diarrheal Disease,11
+1552,1553,Cholera,2
+1553,1508,Mumps,6
+1554,1501,Mumps,15
+1555,1533,Mumps,17
+1556,1523,Mumps,22
+1557,1528,Food Poisoning,4
+1558,1521,Mumps,6
+1559,1543,Chickenpox,12
+1560,1529,Mumps,40
+1561,1530,Chickenpox,18
+1562,1520,Mumps,8
+1563,1551,Mumps,9
+1564,1527,Mumps,17
+1565,1524,Acute Diarrheal Disease,131
+1566,1544,Mumps,18
+1567,1522,Leptospirosis,14
+1568,1517,Fever,7
+1569,1516,Food Poisoning,6
+1570,1526,Acute Diarrheal Disease,13
+1571,1525,Mumps,25
+1572,1531,Mumps,6
+1573,1512,Acute Diarrheal Disease,39
+1574,1519,Acute Diarrheal Disease,34
+1575,1510,Mumps,29
+1576,1497,Mumps,12
+1577,1509,Mumps,9
+1578,1515,Hepatitis A,18
+1579,1514,Mumps,7
+1580,1545,Leptospirosis,21
+1581,1532,Dengue,88
+1582,1513,Mumps,5
+1583,1534,Chickenpox,64
+1584,1511,Human Rabies,1
+1585,1553,Chickenpox,14
+1586,1555,Acute Diarrheal Disease,48
+1587,1560,Food Poisoning,16
+1588,1558,Acute Diarrheal Disease,50
+1589,1557,Acute Diarrheal Disease,48
+1590,1559,Acute Diarrheal Disease,63
+1591,1556,Acute Diarrheal Disease,33
+1592,1579,Japanese Encephalitis,5
+1593,1576,Measles,43
+1594,1587,Fever with Rash,8
+1595,1586,Measles,9
+1596,1582,Food Poisoning,72
+1597,1585,Food Poisoning,21
+1598,1574,Japanese Encephalitis,6
+1599,1578,Measles,5
+1600,1577,Food Poisoning,30
+1601,1571,Acute Diarrheal Disease,876
+1602,1575,Leptospirosis,3
+1603,1573,Fever with Rash,5
+1604,1562,Acute Diarrheal Disease,111
+1605,1569,Measles,4
+1606,1566,Scrub Typhus,28
+1607,1570,Food Poisoning,112
+1608,1567,Acute Diarrheal Disease,36
+1609,1565,Food Poisoning,31
+1610,1572,Fever with Rash,11
+1611,1568,Chickenpox,18
+1612,1564,Acute Diarrheal Disease,15
+1613,1563,Fever with Rash,12
+1614,1581,Measles,5
+1615,1580,Dengue,8
+1616,1583,Acute Diarrheal Disease,55
+1617,1584,Measles,6
+1618,1561,Food Poisoning,61
+1619,1590,Food Poisoning,23
+1620,1588,Acute Diarrheal Disease,75
+1621,1591,Hepatitis A,11
+1622,1613,Mumps,51
+1623,1595,Acute Diarrheal Disease,14
+1624,1597,Food Poisoning,42
+1625,1592,Food Poisoning,42
+1626,1596,Acute Diarrheal Disease,38
+1627,1613,Acute Diarrheal Disease,32
+1628,1615,Acute Diarrheal Disease,26
+1629,1612,Food Poisoning,164
+1630,1593,Acute Diarrheal Disease,6
+1631,1606,Food Poisoning,72
+1632,1594,Acute Diarrheal Disease,31
+1633,1604,Food Poisoning,55
+1634,1609,Acute Diarrheal Disease,19
+1635,1610,Food Poisoning,32
+1636,1611,Cholera,20
+1637,1598,Food Poisoning,44
+1638,1599,Acute Diarrheal Disease,19
+1639,1608,Acute Diarrheal Disease,15
+1640,1607,Acute Diarrheal Disease,17
+1641,1601,Cholera,19
+1642,1603,Acute Diarrheal Disease,7
+1643,1614,Acute Diarrheal Disease,67
+1644,1600,Acute Diarrheal Disease,122
+1645,1605,Acute Diarrheal Disease,10
+1646,1602,Acute Diarrheal Disease,17

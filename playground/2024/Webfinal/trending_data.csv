@@ -1,0 +1,1616 @@
+id,state,city,created_at,user
+1,Andaman & Nicobar Islands,South Andamans,2024-10-07 00:00:00,3
+2,Andaman & Nicobar Islands,Nicobars,2024-06-08 00:00:00,3
+3,Andhra Pradesh,Nandamuri Taraka Rama Rao (NTR),2023-12-30 00:00:00,3
+4,Andhra Pradesh,Tirupati,2024-06-08 00:00:00,3
+5,Andhra Pradesh,Vizianagaram,2024-10-03 00:00:00,3
+6,Andhra Pradesh,Chittoor,2024-06-19 00:00:00,3
+7,Andhra Pradesh,Kakinada,2024-06-18 00:00:00,3
+8,Andhra Pradesh,Y.S.R.,2024-02-22 00:00:00,3
+9,Andhra Pradesh,Palnadu,2024-10-24 00:00:00,3
+10,Andhra Pradesh,Chittoor,2024-06-28 00:00:00,3
+11,Andhra Pradesh,Chittoor,2024-06-24 00:00:00,3
+12,Andhra Pradesh,Nandyal,2024-06-22 00:00:00,3
+13,Andhra Pradesh,Vizianagaram,2024-10-29 00:00:00,3
+14,Andhra Pradesh,Visakhapatanam,2024-11-11 00:00:00,3
+15,Andhra Pradesh,Chittoor,2024-06-15 00:00:00,3
+16,Andhra Pradesh,Srikakulam,2024-08-04 00:00:00,3
+17,Andhra Pradesh,Anantapur,2024-06-26 00:00:00,3
+18,Andhra Pradesh,Chittoor,2024-07-04 00:00:00,3
+19,Andhra Pradesh,Kakinada,2024-07-03 00:00:00,3
+20,Andhra Pradesh,Nandyal,2024-07-01 00:00:00,3
+21,Andhra Pradesh,SPSR Nellore,2024-11-18 00:00:00,3
+22,Andhra Pradesh,Tirupati,2024-11-19 00:00:00,3
+23,Andhra Pradesh,Visakhapatanam,2024-11-22 00:00:00,3
+24,Andhra Pradesh,Sri Sathya Sai,2024-12-17 00:00:00,3
+25,Andhra Pradesh,Prakasam,2024-07-27 00:00:00,3
+26,Andhra Pradesh,Krishna,2024-07-28 00:00:00,3
+27,Andhra Pradesh,Chittoor,2024-07-29 00:00:00,3
+28,Andhra Pradesh,Visakhapatanam,2024-11-26 00:00:00,3
+29,Andhra Pradesh,Chittoor,2024-07-12 00:00:00,3
+30,Andhra Pradesh,Chittoor,2024-08-06 00:00:00,3
+31,Andhra Pradesh,Chittoor,2024-06-11 00:00:00,3
+32,Andhra Pradesh,Bapatla,2024-06-15 00:00:00,3
+33,Andhra Pradesh,Annamayya,2024-06-11 00:00:00,3
+34,Andhra Pradesh,Tirupati,2024-05-05 00:00:00,3
+35,Andhra Pradesh,Anantapur,2024-05-06 00:00:00,3
+36,Andhra Pradesh,Sri Sathya Sai,2024-09-10 00:00:00,3
+37,Andhra Pradesh,Nandyal,2024-04-29 00:00:00,3
+38,Andhra Pradesh,Chittoor,2024-05-21 00:00:00,3
+39,Andhra Pradesh,SPSR Nellore,2024-05-22 00:00:00,3
+40,Andhra Pradesh,Chittoor,2024-07-22 00:00:00,3
+41,Andhra Pradesh,Nandyal,2024-09-13 00:00:00,3
+42,Andhra Pradesh,Visakhapatanam,2024-09-14 00:00:00,3
+43,Andhra Pradesh,Nandyal,2024-09-02 00:00:00,3
+44,Andhra Pradesh,Alluri Sitharama Raju,2024-08-30 00:00:00,3
+45,Andhra Pradesh,Sri Sathya Sai,2024-04-13 00:00:00,3
+46,Andhra Pradesh,Kurnool,2024-05-20 00:00:00,3
+47,Andhra Pradesh,NTR,2024-05-27 00:00:00,3
+48,Andhra Pradesh,Chittoor,2024-09-24 00:00:00,3
+49,Andhra Pradesh,Vizianagaram,2024-09-23 00:00:00,3
+50,Andhra Pradesh,Palnadu,2024-03-28 00:00:00,3
+51,Andhra Pradesh,Nandyal,2024-10-04 00:00:00,3
+52,Andhra Pradesh,Y. S. Rajasekhara Reddy,2024-10-03 00:00:00,3
+53,Andhra Pradesh,Kakinada,2024-08-27 00:00:00,3
+54,Andhra Pradesh,Tirupati,2024-03-25 00:00:00,3
+55,Andhra Pradesh,Bapatla,2024-01-26 00:00:00,3
+56,Andhra Pradesh,SPSR Nellore,2024-06-05 00:00:00,3
+57,Andhra Pradesh,Sri Sathya Sai,2024-08-20 00:00:00,3
+58,Andhra Pradesh,Chittoor,2024-08-21 00:00:00,3
+59,Andhra Pradesh,Anakapalli,2024-08-19 00:00:00,3
+60,Andhra Pradesh,Alluri Sitharama Raju,2024-06-10 00:00:00,3
+61,Andhra Pradesh,Chittoor,2024-07-10 00:00:00,3
+62,Andhra Pradesh,Nandyal,2024-07-09 00:00:00,3
+63,Andhra Pradesh,Chittoor,2024-09-15 00:00:00,3
+64,Andhra Pradesh,Alluri Sitharama Raju,,3
+65,Andhra Pradesh,Y.S.R. (Yeduguri Sandinti Rajasekhara Reddy),,3
+66,Andhra Pradesh,Anakapalli,2024-12-17 00:00:00,3
+67,Andhra Pradesh,Tirupati,2024-07-15 00:00:00,3
+68,Andhra Pradesh,Palnadu,2024-07-12 00:00:00,3
+69,Andhra Pradesh,Krishna,2024-07-20 00:00:00,3
+70,Andhra Pradesh,Prakasam,2024-07-24 00:00:00,3
+71,Andhra Pradesh,Vizianagaram,2024-12-22 00:00:00,3
+72,Andhra Pradesh,Visakhapatanam,2024-12-28 00:00:00,3
+73,Arunachal Pradesh,Papum Pare,2024-05-22 00:00:00,3
+74,Arunachal Pradesh,Leparada,2024-07-18 00:00:00,3
+75,Arunachal Pradesh,Tawang,2024-07-29 00:00:00,3
+76,Arunachal Pradesh,West Kameng,2024-11-26 00:00:00,3
+77,Arunachal Pradesh,Tawang,2024-06-11 00:00:00,3
+78,Arunachal Pradesh,Longding,2024-04-08 00:00:00,3
+79,Arunachal Pradesh,Upper Subansiri,2024-02-27 00:00:00,3
+80,Arunachal Pradesh,Upper Subansiri,2024-06-17 00:00:00,3
+81,Arunachal Pradesh,Longding,2024-06-18 00:00:00,3
+82,Arunachal Pradesh,Papumpare,2024-03-14 00:00:00,3
+83,Arunachal Pradesh,East Kameng,2024-02-16 00:00:00,3
+84,Arunachal Pradesh,Lohit,2024-07-18 00:00:00,3
+85,Arunachal Pradesh,Longding,2024-07-08 00:00:00,3
+86,Arunachal Pradesh,Tawang,2024-07-22 00:00:00,3
+87,Arunachal Pradesh,East Kameng,2024-01-25 00:00:00,3
+88,Arunachal Pradesh,West Siang,2024-11-30 00:00:00,3
+89,Arunachal Pradesh,Papum Pare,2024-05-13 00:00:00,3
+90,Arunachal Pradesh,Tawang,2024-05-18 00:00:00,3
+91,Arunachal Pradesh,Namsai,2024-09-16 00:00:00,3
+92,Arunachal Pradesh,East Kameng,2024-01-13 00:00:00,3
+93,Arunachal Pradesh,Papum Pare,2024-08-21 00:00:00,3
+94,Arunachal Pradesh,Papumpare,2024-03-04 00:00:00,3
+95,Arunachal Pradesh,Longding,2024-04-11 00:00:00,3
+96,Assam,Bongaigaon,2024-05-27 00:00:00,3
+97,Assam,Kamrup,2024-05-29 00:00:00,3
+98,Assam,Darrang,2024-02-26 00:00:00,3
+99,Assam,Goalpara,2024-02-24 00:00:00,3
+100,Assam,Dhemaji,2024-05-28 00:00:00,3
+101,Assam,Darrang,2024-09-19 00:00:00,3
+102,Assam,Dhemaji,2024-12-23 00:00:00,3
+103,Assam,Jorhat,2024-09-27 00:00:00,3
+104,Assam,Darrang,2024-05-28 00:00:00,3
+105,Assam,Chirang,2024-07-19 00:00:00,3
+106,Assam,Cachar,2024-12-20 00:00:00,3
+107,Assam,Charaideo,2024-05-27 00:00:00,3
+108,Assam,Jorhat,2024-02-28 00:00:00,3
+109,Assam,Kokrajhar,2024-06-14 00:00:00,3
+110,Assam,Karbi Anglong,2024-04-05 00:00:00,3
+111,Assam,Kamrup Metro,2024-06-18 00:00:00,3
+112,Assam,Udalguri,2024-04-16 00:00:00,3
+113,Assam,Jorhat,2024-04-17 00:00:00,3
+114,Assam,Biswanath,2024-04-16 00:00:00,3
+115,Assam,Tinsukia,2024-05-18 00:00:00,3
+116,Assam,Tinsukia,2024-05-17 00:00:00,3
+117,Assam,Cachar,2024-09-06 00:00:00,3
+118,Assam,Kokrajhar,2024-12-25 00:00:00,3
+119,Assam,Jorhat,2024-10-18 00:00:00,3
+120,Assam,Jorhat,2024-10-23 00:00:00,3
+121,Assam,Tinsukia,2024-04-09 00:00:00,3
+122,Assam,Tinsukia,2024-04-11 00:00:00,3
+123,Assam,Nagaon,2024-04-10 00:00:00,3
+124,Assam,Marigaon,2024-04-09 00:00:00,3
+125,Assam,Marigaon,2024-10-11 00:00:00,3
+126,Assam,Goalpara,2024-04-09 00:00:00,3
+127,Assam,Dibrugarh,2024-04-09 00:00:00,3
+128,Assam,Nagaon,2024-06-21 00:00:00,3
+129,Assam,Dhubri,2024-06-19 00:00:00,3
+130,Assam,Jorhat,2024-10-16 00:00:00,3
+131,Assam,Udalguri,2024-03-06 00:00:00,3
+132,Assam,Charaideo,2024-10-20 00:00:00,3
+133,Assam,Majuli,2024-03-30 00:00:00,3
+134,Assam,Kokrajhar,2024-03-27 00:00:00,3
+135,Assam,Biswanath,2024-03-14 00:00:00,3
+136,Assam,Dhubri,2024-03-16 00:00:00,3
+137,Assam,Dibrugarh,2024-03-11 00:00:00,3
+138,Assam,Goalpara,2024-03-11 00:00:00,3
+139,Assam,Jorhat,2024-03-11 00:00:00,3
+140,Assam,Sivasagar,2024-03-14 00:00:00,3
+141,Assam,Karbi Anglong,2024-03-27 00:00:00,3
+142,Assam,Kamrup,2024-03-28 00:00:00,3
+143,Assam,Sonitpur,2024-07-18 00:00:00,3
+144,Assam,Darrang,2024-03-28 00:00:00,3
+145,Assam,Sonitpur,2024-01-11 00:00:00,3
+146,Assam,Hojai,2024-01-12 00:00:00,3
+147,Assam,Bongaigaon,2024-08-19 00:00:00,3
+148,Assam,Dibrugarh,2024-08-20 00:00:00,3
+149,Assam,Nagaon,2024-12-18 00:00:00,3
+150,Assam,Biswanath,2024-06-05 00:00:00,3
+151,Assam,Dibrugarh,2024-06-08 00:00:00,3
+152,Assam,Goalpara,2024-03-21 00:00:00,3
+153,Assam,Kamrup,2024-03-18 00:00:00,3
+154,Assam,Lakhimpur,2024-03-19 00:00:00,3
+155,Assam,Karbi Anglong,2024-07-19 00:00:00,3
+156,Assam,Hojai,2024-08-31 00:00:00,3
+157,Assam,Lakhimpur,2024-08-26 00:00:00,3
+158,Assam,Lakhimpur,2024-10-01 00:00:00,3
+159,Assam,Barpeta,2024-10-17 00:00:00,3
+160,Assam,Biswanath,2024-03-02 00:00:00,3
+161,Assam,Goalpara,2024-03-05 00:00:00,3
+162,Assam,Udalguri,2024-02-22 00:00:00,3
+163,Assam,Goalpara,2024-04-02 00:00:00,3
+164,Assam,Charaideo,2024-04-04 00:00:00,3
+165,Assam,Charaideo,2024-10-04 00:00:00,3
+166,Assam,Sonitpur,2024-06-12 00:00:00,3
+167,Assam,Nalbari,2024-06-13 00:00:00,3
+168,Assam,Nalbari,2024-06-14 00:00:00,3
+169,Assam,Kokrajhar,2024-06-08 00:00:00,3
+170,Assam,Kokrajhar,2024-06-09 00:00:00,3
+171,Assam,Jorhat,2024-10-04 00:00:00,3
+172,Assam,Jorhat,2024-10-08 00:00:00,3
+173,Assam,Dibrugarh,2024-12-16 00:00:00,3
+174,Assam,Hailakandi,2024-12-20 00:00:00,3
+175,Assam,Goalpara,2024-06-11 00:00:00,3
+176,Assam,Darrang,2024-06-08 00:00:00,3
+177,Assam,Hailakandi,2024-12-17 00:00:00,3
+178,Assam,Kokrajhar,2024-12-20 00:00:00,3
+179,Assam,Goalpara,2024-07-18 00:00:00,3
+180,Assam,Goalpara,2024-07-17 00:00:00,3
+181,Assam,Lakhimpur,2024-10-05 00:00:00,3
+182,Assam,Golaghat,2024-10-20 00:00:00,3
+183,Assam,Sonitpur,2024-01-22 00:00:00,3
+184,Assam,Kokrajhar,2024-04-15 00:00:00,3
+185,Assam,Bongaigaon,2024-02-21 00:00:00,3
+186,Assam,Bajali,2024-07-04 00:00:00,3
+187,Assam,Cachar,2024-05-03 00:00:00,3
+188,Assam,Dhemaji,2024-09-08 00:00:00,3
+189,Assam,Lakhimpur,2024-09-15 00:00:00,3
+190,Assam,Goalpara,2024-02-22 00:00:00,3
+191,Assam,Biswanath,2024-05-15 00:00:00,3
+192,Assam,Nalbari,2024-07-28 00:00:00,3
+193,Assam,Goalpara,2024-07-28 00:00:00,3
+194,Assam,Dibrugarh,2024-05-13 00:00:00,3
+195,Assam,Jorhat,2024-05-18 00:00:00,3
+196,Assam,Bongaigaon,2024-08-04 00:00:00,3
+197,Assam,Hailakandi,,3
+198,Assam,Chirang,,3
+199,Assam,Jorhat,2024-05-15 00:00:00,3
+200,Assam,Kokrajhar,2024-05-15 00:00:00,3
+201,Assam,Goalpara,2024-11-10 00:00:00,3
+202,Assam,Charaideo,2024-11-12 00:00:00,3
+203,Assam,Kokrajhar,2024-08-07 00:00:00,3
+204,Assam,Barpeta,,3
+205,Assam,Bongaigaon,2024-05-17 00:00:00,3
+206,Assam,Bajali,2024-05-18 00:00:00,3
+207,Assam,Jorhat,2024-07-01 00:00:00,3
+208,Assam,Charaideo,2024-04-30 00:00:00,3
+209,Assam,Dhemaji,2024-05-12 00:00:00,3
+210,Assam,Kokrajhar,2024-11-16 00:00:00,3
+211,Assam,Lakhimpur,2023-12-22 00:00:00,3
+212,Assam,Kokrajhar,2024-01-23 00:00:00,3
+213,Assam,Darrang,2024-11-17 00:00:00,3
+214,Assam,Charaideo,2024-11-19 00:00:00,3
+215,Assam,Dhubri,2024-05-17 00:00:00,3
+216,Assam,Nalbari,2024-07-22 00:00:00,3
+217,Assam,Charaideo,2024-05-14 00:00:00,3
+218,Assam,Charaideo,2024-05-16 00:00:00,3
+219,Assam,Nagaon,2024-05-04 00:00:00,3
+220,Assam,Marigaon,2024-05-03 00:00:00,3
+221,Assam,Lakhimpur,2024-04-29 00:00:00,3
+222,Assam,Lakhimpur,2024-05-04 00:00:00,3
+223,Assam,Golaghat,2024-05-02 00:00:00,3
+224,Assam,Golaghat,2024-05-05 00:00:00,3
+225,Assam,Dibrugarh,2024-04-29 00:00:00,3
+226,Assam,Goalpara,2024-07-20 00:00:00,3
+227,Assam,Dibrugarh,2024-05-01 00:00:00,3
+228,Assam,Udalguri,2024-07-02 00:00:00,3
+229,Assam,Lakhimpur,2024-11-19 00:00:00,3
+230,Assam,Lakhimpur,2024-08-06 00:00:00,3
+231,Assam,Sonitpur,2024-05-17 00:00:00,3
+232,Assam,Marigaon,2024-05-16 00:00:00,3
+233,Assam,Kamrup Metro,2024-07-07 00:00:00,3
+234,Assam,Dhemaji,2024-02-17 00:00:00,3
+235,Assam,Dibrugarh,2024-05-25 00:00:00,3
+236,Assam,Kokrajhar,2024-05-20 00:00:00,3
+237,Assam,Nagaon,2024-07-11 00:00:00,3
+238,Assam,Golaghat,2024-05-10 00:00:00,3
+239,Assam,Hojai,2024-05-06 00:00:00,3
+240,Assam,Bajali,2024-04-26 00:00:00,3
+241,Assam,Majuli,2024-06-25 00:00:00,3
+242,Assam,Chirang,2024-12-06 00:00:00,3
+243,Assam,Chirang,2024-06-27 00:00:00,3
+244,Assam,Lakhimpur,2024-12-06 00:00:00,3
+245,Assam,Nalbari,2024-10-28 00:00:00,3
+246,Assam,Goalpara,2024-10-28 00:00:00,3
+247,Assam,Goalpara,2024-10-29 00:00:00,3
+248,Assam,Lakhimpur,2024-12-05 00:00:00,3
+249,Assam,Majuli,2024-08-11 00:00:00,3
+250,Assam,Karbi Anglong,2024-06-28 00:00:00,3
+251,Assam,Charaideo,2024-04-26 00:00:00,3
+252,Assam,Dibrugarh,2024-05-07 00:00:00,3
+253,Assam,Dhemaji,2024-08-15 00:00:00,3
+254,Assam,South Salmara Mancachar,2024-05-17 00:00:00,3
+255,Assam,Dhemaji,2024-09-09 00:00:00,3
+256,Assam,Darrang,2023-12-30 00:00:00,3
+257,Assam,Charaideo,,3
+258,Assam,Hailakandi,2024-11-29 00:00:00,3
+259,Assam,Sonitpur,2024-11-27 00:00:00,3
+260,Assam,Sonitpur,2024-04-22 00:00:00,3
+261,Assam,Karimganj,2024-04-22 00:00:00,3
+262,Assam,Kamrup,2024-08-05 00:00:00,3
+263,Assam,Karbi Anglong,2024-04-23 00:00:00,3
+264,Assam,Jorhat,2024-11-05 00:00:00,3
+265,Assam,Golaghat,2024-11-10 00:00:00,3
+266,Assam,Dibrugarh,2024-11-06 00:00:00,3
+267,Assam,Charaideo,2024-11-10 00:00:00,3
+268,Assam,Dibrugarh,2024-04-23 00:00:00,3
+269,Assam,Barpeta,2024-08-12 00:00:00,3
+270,Assam,Darrang,2024-08-12 00:00:00,3
+271,Assam,Jorhat,2024-10-30 00:00:00,3
+272,Bihar,Aurangabad,2024-05-03 00:00:00,3
+273,Bihar,Madhepura,2024-12-20 00:00:00,3
+274,Bihar,Saran,2024-05-04 00:00:00,3
+275,Bihar,Jehanabad,,3
+276,Bihar,Khagaria,2024-03-20 00:00:00,3
+277,Bihar,Buxar,2024-08-25 00:00:00,3
+278,Bihar,Samastipur,2024-04-06 00:00:00,3
+279,Bihar,Jamui,2024-08-27 00:00:00,3
+280,Bihar,Pashchim Champaran,2024-05-30 00:00:00,3
+281,Bihar,Begusarai,2024-01-16 00:00:00,3
+282,Bihar,Purbi Champaran,2024-05-23 00:00:00,3
+283,Bihar,Arwal,2024-09-01 00:00:00,3
+284,Bihar,Samastipur,2024-04-11 00:00:00,3
+285,Bihar,Madhepura,2024-04-08 00:00:00,3
+286,Bihar,Kishanganj,2024-04-08 00:00:00,3
+287,Bihar,Jehanabad,2024-04-08 00:00:00,3
+288,Bihar,Jehanabad,2024-04-10 00:00:00,3
+289,Bihar,Begusarai,2024-04-06 00:00:00,3
+290,Bihar,Gaya,2024-09-09 00:00:00,3
+291,Bihar,Gopalganj,2024-04-23 00:00:00,3
+292,Bihar,Jamui,2024-04-22 00:00:00,3
+293,Bihar,Madhubani,2024-04-22 00:00:00,3
+294,Bihar,Purbi Champaran,2024-04-22 00:00:00,3
+295,Bihar,Jehanabad,2024-09-17 00:00:00,3
+296,Bihar,Katihar,2024-05-11 00:00:00,3
+297,Bihar,Aurangabad,2024-09-20 00:00:00,3
+298,Bihar,Jamui,2024-09-22 00:00:00,3
+299,Bihar,Begusarai,2024-05-26 00:00:00,3
+300,Bihar,Madhubani,2024-05-28 00:00:00,3
+301,Bihar,Buxar,2024-09-11 00:00:00,3
+302,Bihar,Aurangabad,2024-09-13 00:00:00,3
+303,Bihar,Samastipur,2024-04-01 00:00:00,3
+304,Bihar,Patna,2024-04-03 00:00:00,3
+305,Bihar,Patna,2024-06-20 00:00:00,3
+306,Bihar,Jehanabad,2024-04-23 00:00:00,3
+307,Bihar,Patna,2024-04-29 00:00:00,3
+308,Bihar,Pashchim Champaran,2024-09-28 00:00:00,3
+309,Bihar,Gaya,2024-08-29 00:00:00,3
+310,Bihar,Purbi Champaran,2024-06-02 00:00:00,3
+311,Bihar,Sheohar,2024-03-15 00:00:00,3
+312,Bihar,Jehanabad,2024-07-13 00:00:00,3
+313,Bihar,Pashchim Champaran,2024-01-05 00:00:00,3
+314,Bihar,Bhojpur,2024-06-12 00:00:00,3
+315,Bihar,Saran,2024-06-10 00:00:00,3
+316,Bihar,Saharsa,2024-03-05 00:00:00,3
+317,Bihar,Bhojpur,2024-10-15 00:00:00,3
+318,Bihar,Gaya,2024-10-14 00:00:00,3
+319,Bihar,Katihar,2024-11-30 00:00:00,3
+320,Bihar,Patna,2024-07-28 00:00:00,3
+321,Bihar,Arwal,2024-02-10 00:00:00,3
+322,Bihar,Gaya,,3
+323,Bihar,Begusarai,2024-02-11 00:00:00,3
+324,Bihar,Jehanabad,2024-02-13 00:00:00,3
+325,Bihar,Purbi Champaran,2024-06-26 00:00:00,3
+326,Bihar,Kishanganj,2024-11-02 00:00:00,3
+327,Bihar,Begusarai,2024-02-19 00:00:00,3
+328,Bihar,Samastipur,2024-02-19 00:00:00,3
+329,Bihar,Jamui,2024-08-12 00:00:00,3
+330,Bihar,Madhepura,2024-08-14 00:00:00,3
+331,Bihar,Saharsa,2024-02-29 00:00:00,3
+332,Bihar,Bhojpur,2024-02-27 00:00:00,3
+333,Bihar,Samastipur,2024-03-21 00:00:00,3
+334,Bihar,Pashchim Champaran,2024-01-06 00:00:00,3
+335,Bihar,Purbi Champaran,2024-02-01 00:00:00,3
+336,Bihar,Patna,2024-07-23 00:00:00,3
+337,Bihar,Vaishali,2024-03-15 00:00:00,3
+338,Bihar,Madhepura,,3
+339,Bihar,Madhubani,2024-02-10 00:00:00,3
+340,Bihar,Vaishali,,3
+341,Bihar,Begusarai,2024-01-31 00:00:00,3
+342,Bihar,Aurangabad,2024-08-16 00:00:00,3
+343,Bihar,Madhubani,2024-08-24 00:00:00,3
+344,Bihar,Gaya,2024-03-20 00:00:00,3
+345,Bihar,Bhojpur,2024-06-28 00:00:00,3
+346,Bihar,Madhubani,2024-03-21 00:00:00,3
+347,Bihar,Jehanabad,2024-07-07 00:00:00,3
+348,Bihar,Jehanabad,2024-08-04 00:00:00,3
+349,Bihar,Vaishali,2024-11-11 00:00:00,3
+350,Bihar,Patna,2024-11-10 00:00:00,3
+351,Chhattisgarh,Kabirdham,2024-07-03 00:00:00,3
+352,Chhattisgarh,Surguja,2024-08-13 00:00:00,3
+353,Chhattisgarh,Kabirdham,2024-07-12 00:00:00,3
+354,Chhattisgarh,Rajnandgaon,2024-12-22 00:00:00,3
+355,Chhattisgarh,Sukma,2024-02-10 00:00:00,3
+356,Chhattisgarh,Sukma,2024-04-16 00:00:00,3
+357,Chhattisgarh,Kabirdham,2024-04-19 00:00:00,3
+358,Chhattisgarh,Bilaspur,2024-04-18 00:00:00,3
+359,Chhattisgarh,Baloda Bazar,2024-04-16 00:00:00,3
+360,Chhattisgarh,Baloda Bazar,2024-07-01 00:00:00,3
+361,Chhattisgarh,Gariyaband,2024-08-13 00:00:00,3
+362,Chhattisgarh,Durg,2024-08-12 00:00:00,3
+363,Chhattisgarh,Baloda Bazar,2024-06-30 00:00:00,3
+364,Chhattisgarh,Bemetara,2024-02-23 00:00:00,3
+365,Chhattisgarh,Bilaspur,2024-06-30 00:00:00,3
+366,Chhattisgarh,Durg,2024-07-22 00:00:00,3
+367,Chhattisgarh,Baloda Bazar,2024-08-11 00:00:00,3
+368,Chhattisgarh,Bemetara,2024-08-16 00:00:00,3
+369,Chhattisgarh,Baloda Bazar,2024-05-21 00:00:00,3
+370,Chhattisgarh,Bilaspur,2024-08-09 00:00:00,3
+371,Chhattisgarh,Bilaspur,2024-07-01 00:00:00,3
+372,Chhattisgarh,Bilaspur,2024-05-22 00:00:00,3
+373,Chhattisgarh,Janjgir-Champa,2024-07-16 00:00:00,3
+374,Chhattisgarh,Balod,2024-08-16 00:00:00,3
+375,Chhattisgarh,Balod,2024-08-06 00:00:00,3
+376,Chhattisgarh,Sukma,2024-01-17 00:00:00,3
+377,Chhattisgarh,Baloda Bazar,2024-05-13 00:00:00,3
+378,Chhattisgarh,Durg,2024-05-15 00:00:00,3
+379,Chhattisgarh,Kabirdham,2024-05-15 00:00:00,3
+380,Chhattisgarh,Rajnandgaon,2024-05-11 00:00:00,3
+381,Chhattisgarh,Janjgir-Champa,,3
+382,Chhattisgarh,Rajnandgaon,2024-05-16 00:00:00,3
+383,Chhattisgarh,Mahasamund,2024-05-02 00:00:00,3
+384,Chhattisgarh,Raipur,2024-04-01 00:00:00,3
+385,Chhattisgarh,Bijapur,2024-02-08 00:00:00,3
+386,Chhattisgarh,Gariyaband,2024-02-09 00:00:00,3
+387,Chhattisgarh,Sukma,2024-02-04 00:00:00,3
+388,Chhattisgarh,Baloda Bazar,2024-08-04 00:00:00,3
+389,Chhattisgarh,Durg,2024-07-28 00:00:00,3
+390,Chhattisgarh,Bemetara,2024-08-07 00:00:00,3
+391,Chhattisgarh,Janjgir-Champa,2024-08-10 00:00:00,3
+392,Chhattisgarh,Bijapur,2024-11-06 00:00:00,3
+393,Chhattisgarh,Raipur,2024-08-08 00:00:00,3
+394,Chhattisgarh,Baloda Bazar,2024-04-12 00:00:00,3
+395,Chhattisgarh,Balod,2024-11-17 00:00:00,3
+396,Chhattisgarh,Raipur,2024-10-26 00:00:00,3
+397,Chhattisgarh,Balod,2024-09-14 00:00:00,3
+398,Chhattisgarh,Bijapur,,3
+399,Chhattisgarh,Durg,2024-09-13 00:00:00,3
+400,Chhattisgarh,Durg,2024-09-09 00:00:00,3
+401,Chhattisgarh,Surguja,2024-09-11 00:00:00,3
+402,Chhattisgarh,Bemetara,2024-11-20 00:00:00,3
+403,Chhattisgarh,Bilaspur,2024-05-01 00:00:00,3
+404,Chhattisgarh,Surguja,2024-08-12 00:00:00,3
+405,Chhattisgarh,Raipur,2024-03-21 00:00:00,3
+406,Chhattisgarh,Mahasamund,2024-10-23 00:00:00,3
+407,Chhattisgarh,Raigarh,2024-09-03 00:00:00,3
+408,Chhattisgarh,Bijapur,2024-07-15 00:00:00,3
+409,Chhattisgarh,Balod,2024-08-24 00:00:00,3
+410,Chhattisgarh,Mungeli,2024-09-03 00:00:00,3
+411,Chhattisgarh,Dhamtari,2024-09-04 00:00:00,3
+412,Chhattisgarh,Bijapur,2024-09-04 00:00:00,3
+413,Chhattisgarh,Bilaspur,2024-07-12 00:00:00,3
+414,Chhattisgarh,Baloda Bazar,2024-06-14 00:00:00,3
+415,Chhattisgarh,Sukma,2024-03-01 00:00:00,3
+416,Chhattisgarh,Baloda Bazar,2024-06-10 00:00:00,3
+417,Chhattisgarh,Bilaspur,2024-04-02 00:00:00,3
+418,Chhattisgarh,Janjgir-Champa,2024-04-06 00:00:00,3
+419,Chhattisgarh,Rajnandgaon,2024-03-30 00:00:00,3
+420,Chhattisgarh,Sarangarh Bilaigarh,2024-04-03 00:00:00,3
+421,Chhattisgarh,Janjgir-Champa,2024-07-21 00:00:00,3
+422,Chhattisgarh,Raigarh,2024-01-05 00:00:00,3
+423,Chhattisgarh,Balod,2024-09-29 00:00:00,3
+424,Chhattisgarh,Baloda Bazar,2024-09-30 00:00:00,3
+425,Chhattisgarh,Bijapur,2024-10-03 00:00:00,3
+426,Chhattisgarh,Sukma,2024-03-19 00:00:00,3
+427,Chhattisgarh,Raipur,2024-08-24 00:00:00,3
+428,Chhattisgarh,Mahasamund,2024-08-24 00:00:00,3
+429,Chhattisgarh,Bijapur,2024-08-22 00:00:00,3
+430,Chhattisgarh,Kanker,2024-10-01 00:00:00,3
+431,Chhattisgarh,Bijapur,2024-10-01 00:00:00,3
+432,Chhattisgarh,Janjgir-Champa,2024-12-17 00:00:00,3
+433,Chhattisgarh,Bemetara,2024-10-16 00:00:00,3
+434,Chhattisgarh,Durg,2024-03-14 00:00:00,3
+435,Chhattisgarh,Kabirdham,2024-07-22 00:00:00,3
+436,Chhattisgarh,Mahasamund,2024-10-03 00:00:00,3
+437,Chhattisgarh,Mahasamund,2024-10-02 00:00:00,3
+438,Chhattisgarh,Mungeli,2024-10-02 00:00:00,3
+439,Chhattisgarh,Rajnandgaon,2024-02-23 00:00:00,3
+440,Chhattisgarh,Rajnandgaon,2024-10-02 00:00:00,3
+441,Chhattisgarh,Rajnandgaon,2024-10-01 00:00:00,3
+442,Chhattisgarh,Bilaspur,2024-03-13 00:00:00,3
+443,Chhattisgarh,Kanker,2024-10-16 00:00:00,3
+444,Chhattisgarh,Baloda Bazar,2024-05-28 00:00:00,3
+445,Chhattisgarh,Surajpur,2024-05-05 00:00:00,3
+446,Chhattisgarh,Sarangarh Bilaigarh,2024-08-28 00:00:00,3
+447,Chhattisgarh,Sukma,2024-08-28 00:00:00,3
+448,Chhattisgarh,Sukma,2024-10-16 00:00:00,3
+449,Chhattisgarh,Surguja,2024-09-20 00:00:00,3
+450,Chhattisgarh,Surajpur,2024-09-18 00:00:00,3
+451,Chhattisgarh,Raigarh,2024-02-28 00:00:00,3
+452,Chhattisgarh,Rajnandgaon,2024-08-28 00:00:00,3
+453,Chhattisgarh,Bemetara,2024-06-19 00:00:00,3
+454,Chhattisgarh,Baloda Bazar,2024-05-06 00:00:00,3
+455,Chhattisgarh,Kabirdham,2024-07-11 00:00:00,3
+456,Chhattisgarh,Bilaspur,2024-07-10 00:00:00,3
+457,Chhattisgarh,Mahasamund,2024-07-02 00:00:00,3
+458,Chhattisgarh,Durg,2024-11-28 00:00:00,3
+459,Chhattisgarh,Kanker,2024-10-19 00:00:00,3
+460,Chhattisgarh,Kabirdham,2024-06-22 00:00:00,3
+461,Chhattisgarh,Raigarh,2024-08-24 00:00:00,3
+462,Chhattisgarh,Kabirdham,2024-05-10 00:00:00,3
+463,Chhattisgarh,Bemetara,2024-08-28 00:00:00,3
+464,Chhattisgarh,Mungeli,2024-09-23 00:00:00,3
+465,Chhattisgarh,Jashpur,2024-09-21 00:00:00,3
+466,Chhattisgarh,Bemetara,2024-09-24 00:00:00,3
+467,Chhattisgarh,Baloda Bazar,2024-09-24 00:00:00,3
+468,Chhattisgarh,Balod,2024-09-22 00:00:00,3
+469,Chhattisgarh,Sakti,2024-05-01 00:00:00,3
+470,Chhattisgarh,Bijapur,2024-08-27 00:00:00,3
+471,Chhattisgarh,Rajnandgaon,2024-04-30 00:00:00,3
+472,Chhattisgarh,Janjgir-Champa,2024-07-28 00:00:00,3
+473,Chhattisgarh,Mahasamund,2024-05-08 00:00:00,3
+474,Chhattisgarh,Durg,2024-07-20 00:00:00,3
+475,Chhattisgarh,Durg,2024-07-18 00:00:00,3
+476,Chhattisgarh,Sukma,2024-02-27 00:00:00,3
+477,Chhattisgarh,Sukma,2024-02-28 00:00:00,3
+478,Chhattisgarh,Bastar,2024-08-30 00:00:00,3
+479,D&N Haveli And Daman And Diu,Daman,2024-01-23 00:00:00,3
+480,Dadra And Nagar Haveli And Daman And Diu,Dadra And Nagar Haveli,2024-03-05 00:00:00,3
+481,Goa,North Goa,2024-02-28 00:00:00,3
+482,Goa,South Goa,2024-12-26 00:00:00,3
+483,Goa,North Goa,2024-10-04 00:00:00,3
+484,Goa,North Goa,,3
+485,Gujarat,Anand,2024-07-11 00:00:00,3
+486,Gujarat,Ahmadabad,2024-07-20 00:00:00,3
+487,Gujarat,Ahmadabad,2024-07-12 00:00:00,3
+488,Gujarat,Kheda,2024-07-24 00:00:00,3
+489,Gujarat,Kachchh,2024-05-19 00:00:00,3
+490,Gujarat,Ahmadabad,2024-07-28 00:00:00,3
+491,Gujarat,Vadodara,2024-09-05 00:00:00,3
+492,Gujarat,Gandhinagar,2024-06-01 00:00:00,3
+493,Gujarat,Bhavnagar,2024-05-25 00:00:00,3
+494,Gujarat,Anand,2024-06-01 00:00:00,3
+495,Gujarat,Anand,2024-06-08 00:00:00,3
+496,Gujarat,Gandhinagar,2024-06-13 00:00:00,3
+497,Gujarat,Gandhinagar,2024-06-09 00:00:00,3
+498,Gujarat,Gandhinagar,2024-06-10 00:00:00,3
+499,Gujarat,Kheda,2024-06-16 00:00:00,3
+500,Gujarat,Kheda,2024-06-15 00:00:00,3
+501,Gujarat,Dohad,2024-08-29 00:00:00,3
+502,Gujarat,Ahmadabad,2024-06-21 00:00:00,3
+503,Gujarat,Anand,2024-06-21 00:00:00,3
+504,Gujarat,Gir Somnath,2024-06-20 00:00:00,3
+505,Gujarat,Kachchh,2024-06-20 00:00:00,3
+506,Gujarat,Kheda,2024-06-20 00:00:00,3
+507,Gujarat,Rajkot,2024-06-22 00:00:00,3
+508,Gujarat,Kheda,2024-07-28 00:00:00,3
+509,Gujarat,Amreli,2024-05-15 00:00:00,3
+510,Gujarat,Gandhinagar,2024-05-17 00:00:00,3
+511,Gujarat,Mahisagar,2024-06-29 00:00:00,3
+512,Gujarat,Anand,2024-06-27 00:00:00,3
+513,Gujarat,Gir Somnath,2024-05-12 00:00:00,3
+514,Gujarat,Vadodara,2024-07-16 00:00:00,3
+515,Gujarat,Kheda,2024-05-12 00:00:00,3
+516,Gujarat,Narmada,2024-07-18 00:00:00,3
+517,Gujarat,Anand,2024-05-19 00:00:00,3
+518,Gujarat,Kheda,2024-05-25 00:00:00,3
+519,Gujarat,Rajkot,2024-05-19 00:00:00,3
+520,Gujarat,Dohad,2024-08-17 00:00:00,3
+521,Gujarat,Vadodara,2024-06-22 00:00:00,3
+522,Gujarat,Morbi,2024-05-13 00:00:00,3
+523,Gujarat,Kheda,2024-07-10 00:00:00,3
+524,Gujarat,Junagadh,2024-04-19 00:00:00,3
+525,Gujarat,Valsad,2024-01-22 00:00:00,3
+526,Gujarat,Kachchh,2024-10-04 00:00:00,3
+527,Gujarat,Surendranagar,2024-10-10 00:00:00,3
+528,Gujarat,Arvalli,2024-03-05 00:00:00,3
+529,Gujarat,Anand,2024-03-06 00:00:00,3
+530,Gujarat,Junagadh,2024-02-28 00:00:00,3
+531,Gujarat,Gir Somnath,2024-02-26 00:00:00,3
+532,Gujarat,Gir Somnath,2024-03-01 00:00:00,3
+533,Gujarat,Gandhinagar,2024-02-27 00:00:00,3
+534,Gujarat,Bhavnagar,2024-10-16 00:00:00,3
+535,Gujarat,Surat,2024-10-16 00:00:00,3
+536,Gujarat,Surendranagar,2024-10-17 00:00:00,3
+537,Gujarat,Surendranagar,2024-10-14 00:00:00,3
+538,Gujarat,Gir Somnath,2024-04-19 00:00:00,3
+539,Gujarat,Navsari,2024-04-20 00:00:00,3
+540,Gujarat,Patan,2024-04-19 00:00:00,3
+541,Gujarat,Navsari,2024-04-02 00:00:00,3
+542,Gujarat,Valsad,2024-10-14 00:00:00,3
+543,Gujarat,Devbhumi Dwarka,2024-10-02 00:00:00,3
+544,Gujarat,Bharuch,2024-10-23 00:00:00,3
+545,Gujarat,Anand,2024-04-13 00:00:00,3
+546,Gujarat,Surendranagar,2024-01-11 00:00:00,3
+547,Gujarat,Surat,2024-03-29 00:00:00,3
+548,Gujarat,Devbhumi Dwarka,2024-03-30 00:00:00,3
+549,Gujarat,Chhotaudepur,2024-03-27 00:00:00,3
+550,Gujarat,Mahesana,2024-09-28 00:00:00,3
+551,Gujarat,Bharuch,2024-09-23 00:00:00,3
+552,Gujarat,Rajkot,2024-03-20 00:00:00,3
+553,Gujarat,Devbhumi Dwarka,2024-03-21 00:00:00,3
+554,Gujarat,Ahmedabad,2024-03-21 00:00:00,3
+555,Gujarat,Panchmahals,2024-09-20 00:00:00,3
+556,Gujarat,Jamnagar,2024-09-13 00:00:00,3
+557,Gujarat,Kheda,2024-03-10 00:00:00,3
+558,Gujarat,Kheda,2024-03-11 00:00:00,3
+559,Gujarat,Jamnagar,2024-03-11 00:00:00,3
+560,Gujarat,Bharuch,2024-03-12 00:00:00,3
+561,Gujarat,Ahmedabad,2024-03-08 00:00:00,3
+562,Gujarat,Ahmedabad,2023-12-01 00:00:00,3
+563,Gujarat,Amreli,2024-10-01 00:00:00,3
+564,Gujarat,Ahmedabad,2024-04-08 00:00:00,3
+565,Gujarat,Narmada,2024-10-25 00:00:00,3
+566,Gujarat,Valsad,2024-10-18 00:00:00,3
+567,Gujarat,Kheda,2024-04-29 00:00:00,3
+568,Gujarat,Sabarkantha,2024-11-07 00:00:00,3
+569,Gujarat,Valsad,2024-02-07 00:00:00,3
+570,Gujarat,Bharuch,2024-11-10 00:00:00,3
+571,Gujarat,Rajkot,2024-04-30 00:00:00,3
+572,Gujarat,Narmada,,3
+573,Gujarat,Devbhumi Dwarka,2024-04-29 00:00:00,3
+574,Gujarat,Navsari,2024-11-12 00:00:00,3
+575,Gujarat,Botad,2024-05-02 00:00:00,3
+576,Gujarat,Ahmedabad,2024-02-13 00:00:00,3
+577,Gujarat,Mahesana,2024-12-04 00:00:00,3
+578,Gujarat,Jamnagar,2024-02-08 00:00:00,3
+579,Gujarat,Vadodara,2024-02-02 00:00:00,3
+580,Gujarat,Surendranagar,2024-05-12 00:00:00,3
+581,Gujarat,Morbi,2024-01-16 00:00:00,3
+582,Gujarat,Anand,2024-01-31 00:00:00,3
+583,Gujarat,Ahmedabad,2024-02-03 00:00:00,3
+584,Gujarat,Gandhinagar,2024-01-23 00:00:00,3
+585,Gujarat,Junagadh,,3
+586,Gujarat,Jamnagar,2024-09-14 00:00:00,3
+587,Gujarat,Kheda,2024-11-30 00:00:00,3
+588,Gujarat,Ahmedabad,2024-04-26 00:00:00,3
+589,Gujarat,Ahmedabad,2024-04-21 00:00:00,3
+590,Gujarat,Anand,2024-11-19 00:00:00,3
+591,Gujarat,Navsari,2024-04-23 00:00:00,3
+592,Gujarat,Panchmahals,2024-04-23 00:00:00,3
+593,Gujarat,Rajkot,2024-04-22 00:00:00,3
+594,Gujarat,Sabar Kantha,2024-04-23 00:00:00,3
+595,Gujarat,Surendranagar,2024-04-26 00:00:00,3
+596,Gujarat,Amreli,2024-01-18 00:00:00,3
+597,Gujarat,Junagadh,2024-05-11 00:00:00,3
+598,Haryana,Yamunanagar,2024-09-05 00:00:00,3
+599,Haryana,Kurukshetra,2024-09-17 00:00:00,3
+600,Haryana,Yamunanagar,2024-08-22 00:00:00,3
+601,Haryana,Fatehabad,2024-05-18 00:00:00,3
+602,Haryana,Karnal,2024-08-05 00:00:00,3
+603,Haryana,Nuh,,3
+604,Haryana,Panchkula,2024-04-16 00:00:00,3
+605,Haryana,Karnal,2024-04-20 00:00:00,3
+606,Haryana,Fatehabad,2024-07-13 00:00:00,3
+607,Haryana,Panchkula,2024-05-24 00:00:00,3
+608,Haryana,Nuh,2024-02-09 00:00:00,3
+609,Haryana,Kurukshetra,2024-10-08 00:00:00,3
+610,Haryana,Karnal,2024-09-30 00:00:00,3
+611,Haryana,Yamunanagar,2024-08-06 00:00:00,3
+612,Haryana,Nuh,2024-10-28 00:00:00,3
+613,Haryana,Fatehabad,2024-04-03 00:00:00,3
+614,Himachal Pradesh,Hamirpur,2024-03-11 00:00:00,3
+615,Himachal Pradesh,Kangra,2024-03-11 00:00:00,3
+616,Himachal Pradesh,Kangra,2024-07-12 00:00:00,3
+617,Himachal Pradesh,Kinnaur,2024-06-26 00:00:00,3
+618,Himachal Pradesh,Mandi,2024-03-20 00:00:00,3
+619,Himachal Pradesh,Mandi,2024-06-12 00:00:00,3
+620,Himachal Pradesh,Mandi,2024-02-14 00:00:00,3
+621,Himachal Pradesh,Kangra,2024-11-13 00:00:00,3
+622,Himachal Pradesh,Kangra,2024-06-22 00:00:00,3
+623,Himachal Pradesh,Mandi,2024-03-05 00:00:00,3
+624,Himachal Pradesh,Hamirpur,2024-09-13 00:00:00,3
+625,Himachal Pradesh,Kangra,2024-05-14 00:00:00,3
+626,Himachal Pradesh,Mandi,2024-05-08 00:00:00,3
+627,Jammu and Kashmir,Ganderbal,2024-05-08 00:00:00,3
+628,Jammu and Kashmir,Kupwara,2024-05-01 00:00:00,3
+629,Jammu and Kashmir,Kupwara,2024-07-09 00:00:00,3
+630,Jammu and Kashmir,Doda,2024-05-22 00:00:00,3
+631,Jammu and Kashmir,Srinagar,2024-05-20 00:00:00,3
+632,Jammu and Kashmir,Kupwara,2024-07-28 00:00:00,3
+633,Jammu and Kashmir,Baramulla,2024-11-13 00:00:00,3
+634,Jammu and Kashmir,Shopian,2024-10-10 00:00:00,3
+635,Jammu and Kashmir,Pulwama,2024-10-04 00:00:00,3
+636,Jammu and Kashmir,Bandipora,2024-10-11 00:00:00,3
+637,Jammu and Kashmir,Kupwara,2024-09-25 00:00:00,3
+638,Jammu and Kashmir,Kulgam,2024-11-12 00:00:00,3
+639,Jammu and Kashmir,Shopian,2024-09-30 00:00:00,3
+640,Jammu and Kashmir,Baramulla,2024-04-24 00:00:00,3
+641,Jammu and Kashmir,Bandipora,2024-09-02 00:00:00,3
+642,Jammu and Kashmir,Baramulla,2024-08-16 00:00:00,3
+643,Jammu and Kashmir,Baramulla,2024-08-13 00:00:00,3
+644,Jammu and Kashmir,Kupwara,2024-08-14 00:00:00,3
+645,Jammu and Kashmir,Ramban,2024-08-16 00:00:00,3
+646,Jammu and Kashmir,Reasi,2024-08-13 00:00:00,3
+647,Jammu and Kashmir,Samba,2024-08-14 00:00:00,3
+648,Jammu and Kashmir,Baramulla,2024-05-10 00:00:00,3
+649,Jammu and Kashmir,Kupwara,2024-07-17 00:00:00,3
+650,Jammu and Kashmir,Poonch,2024-07-17 00:00:00,3
+651,Jammu and Kashmir,Bandipora,2024-06-12 00:00:00,3
+652,Jammu and Kashmir,Anantnag,2024-09-13 00:00:00,3
+653,Jammu and Kashmir,Baramulla,2024-09-11 00:00:00,3
+654,Jammu and Kashmir,Srinagar,2024-10-31 00:00:00,3
+655,Jammu and Kashmir,Baramulla,2024-06-25 00:00:00,3
+656,Jammu and Kashmir,Kulgam,2024-10-24 00:00:00,3
+657,Jammu and Kashmir,Rajauri,2024-05-17 00:00:00,3
+658,Jammu and Kashmir,Kupwara,2024-06-26 00:00:00,3
+659,Jammu and Kashmir,Bandipora,2024-08-17 00:00:00,3
+660,Jammu and Kashmir,Srinagar,2024-06-26 00:00:00,3
+661,Jammu and Kashmir,Kupwara,2024-06-20 00:00:00,3
+662,Jammu and Kashmir,Rajauri,,3
+663,Jammu and Kashmir,Anantnag,2024-08-05 00:00:00,3
+664,Jammu and Kashmir,Kulgam,2024-10-19 00:00:00,3
+665,Jammu and Kashmir,Baramulla,2024-10-16 00:00:00,3
+666,Jammu and Kashmir,Pulwama,2024-04-18 00:00:00,3
+667,Jammu and Kashmir,Baramulla,2024-09-07 00:00:00,3
+668,Jammu and Kashmir,Kulgam,2024-09-09 00:00:00,3
+669,Jammu and Kashmir,Ramban,2024-09-09 00:00:00,3
+670,Jammu and Kashmir,Srinagar,2024-09-09 00:00:00,3
+671,Jammu and Kashmir,Kathua,2024-06-10 00:00:00,3
+672,Jammu and Kashmir,Ganderbal,2024-06-12 00:00:00,3
+673,Jammu and Kashmir,Udhampur,2024-08-16 00:00:00,3
+674,Jammu and Kashmir,Shopian,2024-01-30 00:00:00,3
+675,Jammu and Kashmir,Anantnag,2024-09-28 00:00:00,3
+676,Jammu and Kashmir,Shopian,2024-01-31 00:00:00,3
+677,Jammu and Kashmir,Kupwara,2024-07-05 00:00:00,3
+678,Jammu and Kashmir,Udhampur,2024-06-26 00:00:00,3
+679,Jammu and Kashmir,Srinagar,2024-09-03 00:00:00,3
+680,Jammu and Kashmir,Baramulla,2024-08-20 00:00:00,3
+681,Jammu and Kashmir,Srinagar,2024-06-04 00:00:00,3
+682,Jammu and Kashmir,Samba,2024-05-31 00:00:00,3
+683,Jammu and Kashmir,Kathua,2024-06-06 00:00:00,3
+684,Jammu and Kashmir,Bandipora,2024-07-01 00:00:00,3
+685,Jammu and Kashmir,Udhampur,2024-09-02 00:00:00,3
+686,Jammu and Kashmir,Kathua,2024-03-27 00:00:00,3
+687,Jammu and Kashmir,Baramulla,2024-11-18 00:00:00,3
+688,Jammu and Kashmir,Jammu,2024-03-23 00:00:00,3
+689,Jammu and Kashmir,Jammu,2024-03-30 00:00:00,3
+690,Jammu and Kashmir,Rajauri,2024-07-22 00:00:00,3
+691,Jammu and Kashmir,Badgam,2024-01-24 00:00:00,3
+692,Jammu and Kashmir,Baramulla,2024-08-25 00:00:00,3
+693,Jammu and Kashmir,Kupwara,2024-07-21 00:00:00,3
+694,Jammu and Kashmir,Srinagar,2024-12-28 00:00:00,3
+695,Jammu and Kashmir,Pulwama,2024-03-12 00:00:00,3
+696,Jammu and Kashmir,Baramulla,2024-08-27 00:00:00,3
+697,Jammu and Kashmir,Shopian,2024-02-02 00:00:00,3
+698,Jammu and Kashmir,Anantnag,2024-01-29 00:00:00,3
+699,Jammu and Kashmir,Ganderbal,2024-07-16 00:00:00,3
+700,Jammu and Kashmir,Baramulla,2024-12-17 00:00:00,3
+701,Jammu and Kashmir,Anantnag,2024-07-20 00:00:00,3
+702,Jammu and Kashmir,Srinagar,2024-12-24 00:00:00,3
+703,Jammu and Kashmir,Shopian,2024-09-25 00:00:00,3
+704,Jammu and Kashmir,Srinagar,2024-12-27 00:00:00,3
+705,Jammu and Kashmir,Anantnag,2024-08-20 00:00:00,3
+706,Jammu and Kashmir,Kathua,2024-09-05 00:00:00,3
+707,Jammu and Kashmir,Shopian,2024-09-03 00:00:00,3
+708,Jammu and Kashmir,Bandipora,2024-05-27 00:00:00,3
+709,Jammu and Kashmir,Udhampur,2024-12-16 00:00:00,3
+710,Jammu and Kashmir,Udhampur,2024-11-27 00:00:00,3
+711,Jammu and Kashmir,Jammu,2024-12-12 00:00:00,3
+712,Jammu and Kashmir,Anantnag,2024-09-21 00:00:00,3
+713,Jharkhand,East Singhbum,2024-10-31 00:00:00,3
+714,Jharkhand,Bokaro,2024-11-01 00:00:00,3
+715,Jharkhand,Chatra,2024-11-25 00:00:00,3
+716,Jharkhand,Giridih,2024-09-03 00:00:00,3
+717,Jharkhand,Dhanbad,2024-07-20 00:00:00,3
+718,Jharkhand,East Singhbum,2024-10-27 00:00:00,3
+719,Jharkhand,Ranchi,2024-07-13 00:00:00,3
+720,Jharkhand,Saraikela Kharsawan,2024-04-24 00:00:00,3
+721,Jharkhand,Jamtara,2024-04-25 00:00:00,3
+722,Jharkhand,East Singhbum,2024-04-22 00:00:00,3
+723,Jharkhand,Khunti,2024-01-26 00:00:00,3
+724,Jharkhand,Dumka,2024-04-21 00:00:00,3
+725,Jharkhand,Koderma,2024-06-26 00:00:00,3
+726,Jharkhand,Hazaribagh,2024-08-08 00:00:00,3
+727,Jharkhand,West Singhbhum,2024-11-05 00:00:00,3
+728,Jharkhand,East Singhbum,2024-05-03 00:00:00,3
+729,Jharkhand,East Singhbum,2024-02-02 00:00:00,3
+730,Jharkhand,Chatra,2024-12-05 00:00:00,3
+731,Jharkhand,Dumka,2024-05-04 00:00:00,3
+732,Jharkhand,Sahebganj,2024-11-10 00:00:00,3
+733,Jharkhand,Godda,2024-11-11 00:00:00,3
+734,Jharkhand,Giridih,2024-11-14 00:00:00,3
+735,Jharkhand,Dumka,2024-11-15 00:00:00,3
+736,Jharkhand,Lohardaga,2024-07-05 00:00:00,3
+737,Jharkhand,Dhanbad,2024-07-28 00:00:00,3
+738,Jharkhand,Gumla,2024-07-08 00:00:00,3
+739,Jharkhand,Giridih,2024-09-02 00:00:00,3
+740,Jharkhand,Dumka,2024-11-18 00:00:00,3
+741,Jharkhand,Garhwa,2024-11-21 00:00:00,3
+742,Jharkhand,Dumka,2024-11-03 00:00:00,3
+743,Jharkhand,Dumka,2024-02-06 00:00:00,3
+744,Jharkhand,Hazaribagh,2024-11-16 00:00:00,3
+745,Jharkhand,Saraikela Kharsawan,2024-05-02 00:00:00,3
+746,Jharkhand,Simdega,2024-11-23 00:00:00,3
+747,Jharkhand,Godda,2024-04-25 00:00:00,3
+748,Jharkhand,Simdega,2024-11-20 00:00:00,3
+749,Jharkhand,Dumka,2024-04-22 00:00:00,3
+750,Jharkhand,Deoghar,2024-10-16 00:00:00,3
+751,Jharkhand,Deoghar,2024-04-19 00:00:00,3
+752,Jharkhand,Simdega,2024-01-17 00:00:00,3
+753,Jharkhand,West Singhbhum,,3
+754,Jharkhand,Godda,2024-10-04 00:00:00,3
+755,Jharkhand,Khunti,2024-05-22 00:00:00,3
+756,Jharkhand,Giridih,2024-04-12 00:00:00,3
+757,Jharkhand,Chatra,2024-04-08 00:00:00,3
+758,Jharkhand,Garhwa,2024-08-14 00:00:00,3
+759,Jharkhand,Hazaribagh,2024-08-14 00:00:00,3
+760,Jharkhand,Koderma,2024-08-13 00:00:00,3
+761,Jharkhand,East Singhbum,2024-01-12 00:00:00,3
+762,Jharkhand,West Singhbhum,2024-08-30 00:00:00,3
+763,Jharkhand,Pakur,2024-08-30 00:00:00,3
+764,Jharkhand,Dumka,2024-03-10 00:00:00,3
+765,Jharkhand,Garhwa,2024-09-18 00:00:00,3
+766,Jharkhand,West Singhbhum,2024-06-07 00:00:00,3
+767,Jharkhand,Simdega,2024-06-04 00:00:00,3
+768,Jharkhand,Hazaribagh,2024-06-01 00:00:00,3
+769,Jharkhand,Simdega,2024-09-28 00:00:00,3
+770,Jharkhand,East Singhbum,2024-06-01 00:00:00,3
+771,Jharkhand,East Singhbum,2024-03-26 00:00:00,3
+772,Jharkhand,Jamtara,2024-04-03 00:00:00,3
+773,Jharkhand,Jamtara,2024-03-30 00:00:00,3
+774,Jharkhand,Khunti,2024-04-01 00:00:00,3
+775,Jharkhand,Lohardaga,,3
+776,Jharkhand,West Singhbhum,2024-12-17 00:00:00,3
+777,Jharkhand,Jamtara,2024-08-21 00:00:00,3
+778,Jharkhand,West Singhbhum,2024-03-21 00:00:00,3
+779,Jharkhand,East Singhbum,2024-03-20 00:00:00,3
+780,Jharkhand,West Singhbhum,2024-09-19 00:00:00,3
+781,Jharkhand,Sahebganj,2024-09-13 00:00:00,3
+782,Jharkhand,Giridih,2024-09-18 00:00:00,3
+783,Jharkhand,Bokaro,2024-12-16 00:00:00,3
+784,Jharkhand,Hazaribagh,2024-05-18 00:00:00,3
+785,Jharkhand,Sahebganj,,3
+786,Jharkhand,East Singhbum,2024-10-09 00:00:00,3
+787,Jharkhand,Garhwa,2024-05-25 00:00:00,3
+788,Jharkhand,Saraikela Kharsawan,2024-10-14 00:00:00,3
+789,Jharkhand,West Singhbhum,2024-10-19 00:00:00,3
+790,Jharkhand,East Singhbum,2024-05-14 00:00:00,3
+791,Jharkhand,Dumka,2024-06-19 00:00:00,3
+792,Jharkhand,East Singhbum,2024-06-20 00:00:00,3
+793,Jharkhand,Garhwa,2024-10-14 00:00:00,3
+794,Jharkhand,Gumla,2024-06-14 00:00:00,3
+795,Jharkhand,Dumka,2024-10-20 00:00:00,3
+796,Jharkhand,East Singhbum,2024-10-23 00:00:00,3
+797,Jharkhand,Koderma,2024-10-21 00:00:00,3
+798,Jharkhand,Simdega,2024-10-24 00:00:00,3
+799,Jharkhand,Simdega,2024-10-21 00:00:00,3
+800,Jharkhand,West Singhbhum,2024-02-20 00:00:00,3
+801,Jharkhand,Chatra,2024-05-17 00:00:00,3
+802,Jharkhand,Garhwa,2024-04-06 00:00:00,3
+803,Jharkhand,Godda,2024-10-19 00:00:00,3
+804,Jharkhand,Hazaribagh,2024-05-14 00:00:00,3
+805,Jharkhand,East Singhbum,2024-05-08 00:00:00,3
+806,Jharkhand,Latehar,2024-10-07 00:00:00,3
+807,Jharkhand,Giridih,,3
+808,Jharkhand,Dumka,2024-02-26 00:00:00,3
+809,Jharkhand,Deoghar,2024-02-26 00:00:00,3
+810,Jharkhand,Chatra,2024-02-25 00:00:00,3
+811,Jharkhand,Giridih,2024-08-16 00:00:00,3
+812,Jharkhand,West Singhbhum,2024-06-10 00:00:00,3
+813,Jharkhand,West Singhbhum,2024-06-08 00:00:00,3
+814,Jharkhand,Pakur,2024-09-10 00:00:00,3
+815,Jharkhand,Latehar,2024-09-10 00:00:00,3
+816,Jharkhand,Saraikela Kharsawan,2024-04-09 00:00:00,3
+817,Karnataka,Mandya,2024-12-03 00:00:00,3
+818,Karnataka,Mandya,2024-11-21 00:00:00,3
+819,Karnataka,Mysuru,2024-12-05 00:00:00,3
+820,Karnataka,Hassan,2024-12-16 00:00:00,3
+821,Karnataka,Uttar Kannad,2024-11-28 00:00:00,3
+822,Karnataka,Udupi,2024-12-06 00:00:00,3
+823,Karnataka,Mandya,2024-12-17 00:00:00,3
+824,Karnataka,Haveri,2024-11-28 00:00:00,3
+825,Karnataka,Uttar Kannad,2024-09-02 00:00:00,3
+826,Karnataka,Chitradurga,2024-11-20 00:00:00,3
+827,Karnataka,Belagavi,2024-08-12 00:00:00,3
+828,Karnataka,Bengaluru Urban,2024-08-14 00:00:00,3
+829,Karnataka,Raichur,2024-08-12 00:00:00,3
+830,Karnataka,Haveri,2024-08-23 00:00:00,3
+831,Karnataka,Kalaburagi,2024-08-20 00:00:00,3
+832,Karnataka,Raichur,2024-08-19 00:00:00,3
+833,Karnataka,Raichur,2024-08-24 00:00:00,3
+834,Karnataka,Tumakuru,2024-08-19 00:00:00,3
+835,Karnataka,Raichur,2024-09-24 00:00:00,3
+836,Karnataka,Vijayapura,2024-09-17 00:00:00,3
+837,Karnataka,Chamarajanagar,2024-08-28 00:00:00,3
+838,Karnataka,Davangere,2024-08-29 00:00:00,3
+839,Karnataka,Davangere,2024-08-24 00:00:00,3
+840,Karnataka,Haveri,2024-08-26 00:00:00,3
+841,Karnataka,Mandya,2024-08-24 00:00:00,3
+842,Karnataka,Tumakuru,2024-08-26 00:00:00,3
+843,Karnataka,Udupi,2024-09-10 00:00:00,3
+844,Karnataka,Mysuru,2024-09-11 00:00:00,3
+845,Karnataka,Udupi,2024-09-04 00:00:00,3
+846,Karnataka,Bengaluru Rural,2024-10-03 00:00:00,3
+847,Karnataka,Kalaburagi,2024-09-30 00:00:00,3
+848,Karnataka,Udupi,2024-09-30 00:00:00,3
+849,Karnataka,Raichur,2024-10-09 00:00:00,3
+850,Karnataka,Mandya,2024-07-23 00:00:00,3
+851,Karnataka,Raichur,2024-07-22 00:00:00,3
+852,Karnataka,Belagavi,2024-11-19 00:00:00,3
+853,Karnataka,Mysuru,2024-11-14 00:00:00,3
+854,Karnataka,Mandya,2024-11-16 00:00:00,3
+855,Karnataka,Kalaburagi,2024-11-13 00:00:00,3
+856,Karnataka,Haveri,2024-11-11 00:00:00,3
+857,Karnataka,Bidar,2024-11-13 00:00:00,3
+858,Karnataka,Mandya,2024-07-28 00:00:00,3
+859,Karnataka,Uttar Kannad,2024-11-22 00:00:00,3
+860,Karnataka,Dakshin Kannad,2024-11-07 00:00:00,3
+861,Karnataka,Vijayanagar,2024-10-29 00:00:00,3
+862,Karnataka,Kalaburagi,2024-10-30 00:00:00,3
+863,Karnataka,Vijayanagar,2024-10-19 00:00:00,3
+864,Karnataka,Vijayanagar,2024-10-23 00:00:00,3
+865,Karnataka,Tumakuru,2024-10-23 00:00:00,3
+866,Karnataka,Hassan,2024-10-23 00:00:00,3
+867,Karnataka,Dharwad,2024-10-24 00:00:00,3
+868,Karnataka,Ballari,2024-10-22 00:00:00,3
+869,Karnataka,Raichur,2024-10-19 00:00:00,3
+870,Karnataka,Chitradurga,2024-11-04 00:00:00,3
+871,Karnataka,Yadgir,2024-07-20 00:00:00,3
+872,Karnataka,Raichur,2024-07-01 00:00:00,3
+873,Karnataka,Raichur,2024-07-20 00:00:00,3
+874,Karnataka,Udupi,2024-07-18 00:00:00,3
+875,Karnataka,Uttar Kannad,2024-02-27 00:00:00,3
+876,Karnataka,Uttar Kannad,2024-03-01 00:00:00,3
+877,Karnataka,Belagavi,2024-05-30 00:00:00,3
+878,Karnataka,Chamarajanagar,2024-05-24 00:00:00,3
+879,Karnataka,Mysuru,2024-05-28 00:00:00,3
+880,Karnataka,Vijayapura,2024-02-21 00:00:00,3
+881,Karnataka,Udupi,2024-02-24 00:00:00,3
+882,Karnataka,Haveri,2024-02-19 00:00:00,3
+883,Karnataka,Bagalkot,2024-02-22 00:00:00,3
+884,Karnataka,Chikballapur,2024-06-04 00:00:00,3
+885,Karnataka,Chitradurga,2024-06-02 00:00:00,3
+886,Karnataka,Gadag,2024-06-01 00:00:00,3
+887,Karnataka,Mysuru,2024-05-21 00:00:00,3
+888,Karnataka,Mysuru,2024-06-04 00:00:00,3
+889,Karnataka,Vijayanagar,2024-04-10 00:00:00,3
+890,Karnataka,Dakshin Kannad,2024-02-07 00:00:00,3
+891,Karnataka,Chikkamagaluru,2024-01-30 00:00:00,3
+892,Karnataka,Chikkamagaluru,2024-02-01 00:00:00,3
+893,Karnataka,Koppal,2024-06-16 00:00:00,3
+894,Karnataka,Mandya,2024-06-20 00:00:00,3
+895,Karnataka,Tumakuru,2024-06-20 00:00:00,3
+896,Karnataka,Tumakuru,2024-06-18 00:00:00,3
+897,Karnataka,Chamarajanagar,2024-01-30 00:00:00,3
+898,Karnataka,Ballari,2024-06-24 00:00:00,3
+899,Karnataka,Belagavi,2024-06-24 00:00:00,3
+900,Karnataka,Kolar,2024-06-24 00:00:00,3
+901,Karnataka,Raichur,2024-06-27 00:00:00,3
+902,Karnataka,Tumakuru,2024-02-08 00:00:00,3
+903,Karnataka,Mandya,2024-05-21 00:00:00,3
+904,Karnataka,Haveri,2024-05-22 00:00:00,3
+905,Karnataka,Uttar Kannad,2024-03-09 00:00:00,3
+906,Karnataka,Dakshin Kannad,2024-04-11 00:00:00,3
+907,Karnataka,Hassan,2024-04-19 00:00:00,3
+908,Karnataka,Kodagu,2024-04-17 00:00:00,3
+909,Karnataka,Tumakuru,2024-04-19 00:00:00,3
+910,Karnataka,Tumakuru,2024-04-18 00:00:00,3
+911,Karnataka,Vijayanagar,2024-04-15 00:00:00,3
+912,Karnataka,Chitradurga,2024-04-09 00:00:00,3
+913,Karnataka,Chamarajanagar,2024-04-10 00:00:00,3
+914,Karnataka,Ballari,2024-04-06 00:00:00,3
+915,Karnataka,Chitradurga,2024-04-22 00:00:00,3
+916,Karnataka,Kodagu,2024-04-20 00:00:00,3
+917,Karnataka,Mysuru,2024-04-25 00:00:00,3
+918,Karnataka,Raichur,2024-04-27 00:00:00,3
+919,Karnataka,Hassan,2024-05-02 00:00:00,3
+920,Karnataka,Ramanagara,2024-05-01 00:00:00,3
+921,Karnataka,Ramanagara,2024-05-10 00:00:00,3
+922,Karnataka,Chitradurga,2024-04-05 00:00:00,3
+923,Karnataka,Chikkamagaluru,2024-04-06 00:00:00,3
+924,Karnataka,Bengaluru Urban,2024-04-06 00:00:00,3
+925,Karnataka,Ramanagara,2024-05-06 00:00:00,3
+926,Karnataka,Haveri,2024-03-30 00:00:00,3
+927,Karnataka,Chikkamagaluru,2024-03-28 00:00:00,3
+928,Karnataka,Bengaluru Urban,2024-03-28 00:00:00,3
+929,Karnataka,Gadag,2024-03-22 00:00:00,3
+930,Karnataka,Chikballapur,2024-03-21 00:00:00,3
+931,Karnataka,Bagalkot,2024-05-23 00:00:00,3
+932,Karnataka,Belagavi,2024-05-21 00:00:00,3
+933,Karnataka,Bengaluru Rural,2024-05-20 00:00:00,3
+934,Karnataka,Bidar,2024-05-22 00:00:00,3
+935,Karnataka,Raichur,2024-01-25 00:00:00,3
+936,Karnataka,Haveri,2024-01-22 00:00:00,3
+937,Karnataka,Koppal,2024-02-09 00:00:00,3
+938,Karnataka,Tumakuru,2024-04-10 00:00:00,3
+939,Karnataka,Mandya,2024-07-03 00:00:00,3
+940,Karnataka,Udupi,2024-06-30 00:00:00,3
+941,Karnataka,Kalaburagi,2024-06-30 00:00:00,3
+942,Karnataka,Kalaburagi,2024-07-02 00:00:00,3
+943,Karnataka,Vijayanagar,2024-01-09 00:00:00,3
+944,Karnataka,Chamarajanagar,2024-01-05 00:00:00,3
+945,Karnataka,Chitradurga,2024-01-14 00:00:00,3
+946,Karnataka,Shivamogga,2024-01-18 00:00:00,3
+947,Karnataka,Belagavi,2024-01-11 00:00:00,3
+948,Karnataka,Raichur,2024-07-05 00:00:00,3
+949,Karnataka,Uttar Kannad,2024-01-18 00:00:00,3
+950,Karnataka,Koppal,2024-07-10 00:00:00,3
+951,Karnataka,Mandya,2024-07-09 00:00:00,3
+952,Karnataka,Vijayanagar,,3
+953,Karnataka,Shivamogga,2024-07-04 00:00:00,3
+954,Karnataka,Shivamogga,,3
+955,Karnataka,Mandya,2024-07-19 00:00:00,3
+956,Kerala,Ernakulam,2024-12-24 00:00:00,3
+957,Kerala,Palakkad,,3
+958,Kerala,Thrissur,2024-10-10 00:00:00,3
+959,Kerala,Thiruvananthapuram,2024-10-06 00:00:00,3
+960,Kerala,Thiruvananthapuram,2024-10-13 00:00:00,3
+961,Kerala,Idukki,2024-10-07 00:00:00,3
+962,Kerala,Palakkad,2024-02-26 00:00:00,3
+963,Kerala,Thiruvananthapuram,2024-03-02 00:00:00,3
+964,Kerala,Wayanad,,3
+965,Kerala,Malappuram,2024-03-06 00:00:00,3
+966,Kerala,Thrissur,2024-09-27 00:00:00,3
+967,Kerala,Thiruvananthapuram,2024-10-03 00:00:00,3
+968,Kerala,Kannur,2024-01-09 00:00:00,3
+969,Kerala,Palakkad,,3
+970,Kerala,Palakkad,,3
+971,Kerala,Kottayam,,3
+972,Kerala,Malappuram,2024-02-26 00:00:00,3
+973,Kerala,Ernakulam,2024-10-17 00:00:00,3
+974,Kerala,Alappuzha,2024-10-15 00:00:00,3
+975,Kerala,Alappuzha,2024-10-16 00:00:00,3
+976,Kerala,Idukki,2024-09-10 00:00:00,3
+977,Kerala,Kannur,,3
+978,Kerala,Alappuzha,2024-03-02 00:00:00,3
+979,Kerala,Alappuzha,2024-01-12 00:00:00,3
+980,Kerala,Ernakulam,2024-02-29 00:00:00,3
+981,Kerala,Kannur,2024-02-27 00:00:00,3
+982,Kerala,Kasaragod,2024-02-28 00:00:00,3
+983,Kerala,Kozhikode,2024-09-10 00:00:00,3
+984,Kerala,Kozhikode,2024-09-09 00:00:00,3
+985,Kerala,Kottayam,2024-02-28 00:00:00,3
+986,Kerala,Kozhikode,2024-03-01 00:00:00,3
+987,Kerala,Idukki,2024-02-28 00:00:00,3
+988,Kerala,Palakkad,2024-09-10 00:00:00,3
+989,Kerala,Thiruvananthapuram,2024-12-26 00:00:00,3
+990,Kerala,Palakkad,2024-12-26 00:00:00,3
+991,Kerala,Thrissur,2023-12-28 00:00:00,3
+992,Kerala,Ernakulam,2024-04-04 00:00:00,3
+993,Kerala,Idukki,2024-03-30 00:00:00,3
+994,Kerala,Kasaragod,2024-04-04 00:00:00,3
+995,Kerala,Kottayam,2024-04-04 00:00:00,3
+996,Kerala,Kozhikode,2024-03-04 00:00:00,3
+997,Kerala,Wayanad,2024-12-12 00:00:00,3
+998,Kerala,Thrissur,2024-04-01 00:00:00,3
+999,Kerala,Malappuram,2024-09-15 00:00:00,3
+1000,Kerala,Malappuram,2024-09-16 00:00:00,3
+1001,Kerala,Kasaragod,2024-12-23 00:00:00,3
+1002,Kerala,Kannur,2024-12-23 00:00:00,3
+1003,Kerala,Palakkad,,3
+1004,Kerala,Kannur,2024-12-26 00:00:00,3
+1005,Kerala,Palakkad,2024-09-20 00:00:00,3
+1006,Kerala,Ernakulam,2024-12-23 00:00:00,3
+1007,Kerala,Kannur,2024-12-15 00:00:00,3
+1008,Kerala,Ernakulam,2024-09-25 00:00:00,3
+1009,Kerala,Malappuram,2024-12-23 00:00:00,3
+1010,Kerala,Ernakulam,2024-09-30 00:00:00,3
+1011,Kerala,Malappuram,2024-02-29 00:00:00,3
+1012,Kerala,Kottayam,2024-12-20 00:00:00,3
+1013,Kerala,Alappuzha,2024-12-12 00:00:00,3
+1014,Kerala,Ernakulam,2024-12-21 00:00:00,3
+1015,Kerala,Kannur,2024-12-14 00:00:00,3
+1016,Kerala,Kasaragod,2024-12-26 00:00:00,3
+1017,Kerala,Malappuram,2024-03-26 00:00:00,3
+1018,Kerala,Palakkad,2024-03-26 00:00:00,3
+1019,Kerala,Palakkad,2024-09-26 00:00:00,3
+1020,Kerala,Malappuram,2024-09-25 00:00:00,3
+1021,Kerala,Kozhikode,2024-09-28 00:00:00,3
+1022,Kerala,Kasaragod,2024-09-22 00:00:00,3
+1023,Kerala,Kannur,2024-12-13 00:00:00,3
+1024,Kerala,Ernakulam,2024-12-18 00:00:00,3
+1025,Kerala,Ernakulam,2024-11-22 00:00:00,3
+1026,Kerala,Ernakulam,2024-10-16 00:00:00,3
+1027,Kerala,Ernakulam,2024-01-23 00:00:00,3
+1028,Kerala,Kannur,2024-01-25 00:00:00,3
+1029,Kerala,Kannur,2024-01-22 00:00:00,3
+1030,Kerala,Kozhikode,2024-01-24 00:00:00,3
+1031,Kerala,Palakkad,2024-01-23 00:00:00,3
+1032,Kerala,Thrissur,2024-01-15 00:00:00,3
+1033,Kerala,Malappuram,2024-12-03 00:00:00,3
+1034,Kerala,Alappuzha,2024-01-28 00:00:00,3
+1035,Kerala,Wayanad,2024-11-17 00:00:00,3
+1036,Kerala,Thrissur,2024-12-05 00:00:00,3
+1037,Kerala,Wayanad,2024-11-30 00:00:00,3
+1038,Kerala,Kottayam,2024-01-12 00:00:00,3
+1039,Kerala,Wayanad,2024-11-11 00:00:00,3
+1040,Kerala,Palakkad,2024-11-13 00:00:00,3
+1041,Kerala,Palakkad,2024-11-14 00:00:00,3
+1042,Kerala,Palakkad,2024-11-15 00:00:00,3
+1043,Kerala,Palakkad,2024-12-06 00:00:00,3
+1044,Kerala,Kozhikode,2024-11-13 00:00:00,3
+1045,Kerala,Ernakulam,2024-12-07 00:00:00,3
+1046,Kerala,Palakkad,2024-11-25 00:00:00,3
+1047,Kerala,Ernakulam,2024-11-28 00:00:00,3
+1048,Kerala,Wayanad,2024-01-09 00:00:00,3
+1049,Kerala,Malappuram,2024-11-29 00:00:00,3
+1050,Kerala,Palakkad,2024-11-27 00:00:00,3
+1051,Kerala,Thiruvananthapuram,2024-11-22 00:00:00,3
+1052,Kerala,Palakkad,2024-11-19 00:00:00,3
+1053,Kerala,Palakkad,2024-11-21 00:00:00,3
+1054,Kerala,Pathanamthitta,2024-11-25 00:00:00,3
+1055,Kerala,Palakkad,2024-11-23 00:00:00,3
+1056,Kerala,Kottayam,2024-11-15 00:00:00,3
+1057,Kerala,Kottayam,2024-11-19 00:00:00,3
+1058,Kerala,Kasaragod,2024-11-21 00:00:00,3
+1059,Kerala,Kannur,2024-11-16 00:00:00,3
+1060,Kerala,Ernakulam,2024-11-18 00:00:00,3
+1061,Kerala,Ernakulam,2024-11-24 00:00:00,3
+1062,Kerala,Palakkad,2024-11-29 00:00:00,3
+1063,Kerala,Kozhikode,2024-11-16 00:00:00,3
+1064,Kerala,Kottayam,2024-11-22 00:00:00,3
+1065,Kerala,Ernakulam,2024-11-12 00:00:00,3
+1066,Kerala,Kasaragod,2024-01-18 00:00:00,3
+1067,Kerala,Ernakulam,2024-10-29 00:00:00,3
+1068,Kerala,Kozhikode,2024-02-16 00:00:00,3
+1069,Kerala,Thiruvananthapuram,2024-10-20 00:00:00,3
+1070,Kerala,Palakkad,2024-10-25 00:00:00,3
+1071,Kerala,Kozhikode,2024-10-21 00:00:00,3
+1072,Kerala,Kottayam,2024-10-24 00:00:00,3
+1073,Kerala,Ernakulam,,3
+1074,Kerala,Ernakulam,2024-10-28 00:00:00,3
+1075,Kerala,Ernakulam,,3
+1076,Kerala,Kollam,2024-02-22 00:00:00,3
+1077,Kerala,Kozhikode,2024-02-19 00:00:00,3
+1078,Kerala,Thrissur,2024-02-21 00:00:00,3
+1079,Kerala,Malappuram,2024-10-14 00:00:00,3
+1080,Kerala,Kozhikode,2024-10-14 00:00:00,3
+1081,Kerala,Kozhikode,2024-10-18 00:00:00,3
+1082,Kerala,Idukki,2024-10-16 00:00:00,3
+1083,Kerala,Kannur,2024-02-15 00:00:00,3
+1084,Kerala,Ernakulam,2024-11-11 00:00:00,3
+1085,Kerala,Ernakulam,2024-10-26 00:00:00,3
+1086,Kerala,Pathanamthitta,2024-11-01 00:00:00,3
+1087,Kerala,Palakkad,2024-02-02 00:00:00,3
+1088,Kerala,Palakkad,2024-01-31 00:00:00,3
+1089,Kerala,Wayanad,2024-11-07 00:00:00,3
+1090,Kerala,Palakkad,2024-11-04 00:00:00,3
+1091,Kerala,Palakkad,2024-11-05 00:00:00,3
+1092,Kerala,Palakkad,2024-11-06 00:00:00,3
+1093,Kerala,Ernakulam,2024-11-05 00:00:00,3
+1094,Kerala,Palakkad,2024-10-28 00:00:00,3
+1095,Kerala,Thiruvananthapuram,2024-01-08 00:00:00,3
+1096,Kerala,Kozhikode,2024-02-03 00:00:00,3
+1097,Kerala,Palakkad,2024-01-12 00:00:00,3
+1098,Kerala,Palakkad,2024-01-11 00:00:00,3
+1099,Kerala,Kasaragod,2024-01-08 00:00:00,3
+1100,Kerala,Ernakulam,,3
+1101,Kerala,Malappuram,2024-02-09 00:00:00,3
+1102,Kerala,Malappuram,2024-02-08 00:00:00,3
+1103,Kerala,Kasaragod,2024-02-04 00:00:00,3
+1104,Kerala,Ernakulam,2024-10-14 00:00:00,3
+1105,Kerala,Malappuram,2024-12-16 00:00:00,3
+1106,Kerala,Kannur,2024-04-11 00:00:00,3
+1107,Kerala,Idukki,2024-04-12 00:00:00,3
+1108,Kerala,Kollam,2024-06-03 00:00:00,3
+1109,Kerala,Kannur,2024-06-01 00:00:00,3
+1110,Kerala,Ernakulam,2024-06-01 00:00:00,3
+1111,Kerala,Wayanad,2024-08-20 00:00:00,3
+1112,Kerala,Thrissur,2024-05-26 00:00:00,3
+1113,Kerala,Kozhikode,2024-05-29 00:00:00,3
+1114,Kerala,Idukki,2024-05-27 00:00:00,3
+1115,Kerala,Wayanad,2024-05-20 00:00:00,3
+1116,Kerala,Kasaragod,2024-05-18 00:00:00,3
+1117,Kerala,Kannur,2024-05-23 00:00:00,3
+1118,Kerala,Idukki,2024-05-21 00:00:00,3
+1119,Kerala,Thrissur,2024-05-03 00:00:00,3
+1120,Kerala,Thiruvananthapuram,2024-05-08 00:00:00,3
+1121,Kerala,Kollam,2024-05-09 00:00:00,3
+1122,Kerala,Palakkad,2024-06-03 00:00:00,3
+1123,Kerala,Kannur,2024-08-01 00:00:00,3
+1124,Kerala,Ernakulam,2024-06-23 00:00:00,3
+1125,Kerala,Idukki,2024-06-22 00:00:00,3
+1126,Kerala,Alappuzha,2024-07-19 00:00:00,3
+1127,Kerala,Kottayam,2024-07-18 00:00:00,3
+1128,Kerala,Kottayam,2024-07-17 00:00:00,3
+1129,Kerala,Kozhikode,2024-07-18 00:00:00,3
+1130,Kerala,Pathanamthitta,2024-07-19 00:00:00,3
+1131,Kerala,Wayanad,2024-07-08 00:00:00,3
+1132,Kerala,Wayanad,2024-06-26 00:00:00,3
+1133,Kerala,Idukki,2024-09-02 00:00:00,3
+1134,Kerala,Wayanad,2024-06-29 00:00:00,3
+1135,Kerala,Palakkad,2024-07-22 00:00:00,3
+1136,Kerala,Thiruvananthapuram,2024-07-02 00:00:00,3
+1137,Kerala,Kottayam,2024-07-05 00:00:00,3
+1138,Kerala,Ernakulam,2024-07-01 00:00:00,3
+1139,Kerala,Malappuram,2024-07-28 00:00:00,3
+1140,Kerala,Palakkad,2024-06-23 00:00:00,3
+1141,Kerala,Malappuram,2024-06-23 00:00:00,3
+1142,Kerala,Malappuram,2024-07-23 00:00:00,3
+1143,Kerala,Kozhikode,2024-09-04 00:00:00,3
+1144,Kerala,Kottayam,2024-05-25 00:00:00,3
+1145,Kerala,Palakkad,2024-04-12 00:00:00,3
+1146,Kerala,Kannur,2024-04-18 00:00:00,3
+1147,Kerala,Kozhikode,2024-04-09 00:00:00,3
+1148,Kerala,Ernakulam,2024-04-09 00:00:00,3
+1149,Kerala,Ernakulam,2024-04-18 00:00:00,3
+1150,Kerala,Pathanamthitta,2024-04-08 00:00:00,3
+1151,Ladakh,Leh Ladakh,2024-08-29 00:00:00,3
+1152,Madhya Pradesh,Betul,2024-05-21 00:00:00,3
+1153,Madhya Pradesh,Bhopal,2024-05-22 00:00:00,3
+1154,Madhya Pradesh,Indore,2024-05-24 00:00:00,3
+1155,Madhya Pradesh,Morena,2024-05-17 00:00:00,3
+1156,Madhya Pradesh,Tikamgarh,2024-05-21 00:00:00,3
+1157,Madhya Pradesh,Indore,2024-10-07 00:00:00,3
+1158,Madhya Pradesh,Shajapur,2024-09-04 00:00:00,3
+1159,Madhya Pradesh,Panna,2024-11-25 00:00:00,3
+1160,Madhya Pradesh,Datia,2024-11-29 00:00:00,3
+1161,Madhya Pradesh,Harda,2024-08-05 00:00:00,3
+1162,Madhya Pradesh,Gwalior,2024-08-06 00:00:00,3
+1163,Madhya Pradesh,Sagar,2024-07-28 00:00:00,3
+1164,Madhya Pradesh,Narsinghpur,,3
+1165,Madhya Pradesh,Satna,2024-09-05 00:00:00,3
+1166,Madhya Pradesh,Chhindwara,2023-12-05 00:00:00,3
+1167,Madhya Pradesh,Sehore,2024-06-24 00:00:00,3
+1168,Madhya Pradesh,Ashoknagar,2024-08-30 00:00:00,3
+1169,Madhya Pradesh,Chhatarpur,2024-10-10 00:00:00,3
+1170,Madhya Pradesh,Indore,2024-07-03 00:00:00,3
+1171,Madhya Pradesh,Khargone,2024-10-11 00:00:00,3
+1172,Madhya Pradesh,Sheopur,2024-10-12 00:00:00,3
+1173,Madhya Pradesh,Singrauli,2024-08-05 00:00:00,3
+1174,Madhya Pradesh,Shahdol,2024-08-08 00:00:00,3
+1175,Madhya Pradesh,Chhindwara,2024-09-14 00:00:00,3
+1176,Madhya Pradesh,Satna,2024-08-04 00:00:00,3
+1177,Madhya Pradesh,Alirajpur,2024-02-02 00:00:00,3
+1178,Madhya Pradesh,Sheopur,2024-11-29 00:00:00,3
+1179,Madhya Pradesh,Sagar,2024-11-21 00:00:00,3
+1180,Madhya Pradesh,Dhar,2024-09-17 00:00:00,3
+1181,Madhya Pradesh,Sagar,2024-07-05 00:00:00,3
+1182,Madhya Pradesh,Barwani,2023-12-23 00:00:00,3
+1183,Madhya Pradesh,Chhatarpur,,3
+1184,Madhya Pradesh,Rewa,2024-08-08 00:00:00,3
+1185,Madhya Pradesh,Satna,2024-06-27 00:00:00,3
+1186,Madhya Pradesh,Rewa,2024-10-28 00:00:00,3
+1187,Madhya Pradesh,Chhatarpur,2024-08-29 00:00:00,3
+1188,Madhya Pradesh,Betul,2024-08-23 00:00:00,3
+1189,Madhya Pradesh,Bhopal,2024-01-12 00:00:00,3
+1190,Madhya Pradesh,Betul,2024-05-27 00:00:00,3
+1191,Madhya Pradesh,Chhatarpur,2024-05-31 00:00:00,3
+1192,Madhya Pradesh,East Nimar,2024-10-22 00:00:00,3
+1193,Madhya Pradesh,Guna,2024-10-24 00:00:00,3
+1194,Madhya Pradesh,Singrauli,2024-10-22 00:00:00,3
+1195,Madhya Pradesh,Guna,2024-01-10 00:00:00,3
+1196,Madhya Pradesh,Harda,2024-07-02 00:00:00,3
+1197,Madhya Pradesh,Indore,2024-07-02 00:00:00,3
+1198,Madhya Pradesh,Chhindwara,2024-05-29 00:00:00,3
+1199,Madhya Pradesh,Mandla,2024-12-18 00:00:00,3
+1200,Madhya Pradesh,Indore,2024-12-15 00:00:00,3
+1201,Madhya Pradesh,East Nimar,2024-12-17 00:00:00,3
+1202,Madhya Pradesh,Dhar,2024-12-16 00:00:00,3
+1203,Madhya Pradesh,Alirajpur,2024-12-17 00:00:00,3
+1204,Madhya Pradesh,Harda,2024-07-01 00:00:00,3
+1205,Madhya Pradesh,Guna,2024-02-06 00:00:00,3
+1206,Madhya Pradesh,Rewa,2024-08-23 00:00:00,3
+1207,Madhya Pradesh,Satna,2024-08-18 00:00:00,3
+1208,Madhya Pradesh,Ratlam,2024-10-27 00:00:00,3
+1209,Madhya Pradesh,Umaria,2024-09-08 00:00:00,3
+1210,Madhya Pradesh,Morena,2024-10-31 00:00:00,3
+1211,Madhya Pradesh,Narsinghpur,2024-06-24 00:00:00,3
+1212,Madhya Pradesh,Alirajpur,2024-05-31 00:00:00,3
+1213,Madhya Pradesh,Guna,2024-01-08 00:00:00,3
+1214,Madhya Pradesh,Betul,2024-02-08 00:00:00,3
+1215,Madhya Pradesh,Umaria,2024-02-20 00:00:00,3
+1216,Madhya Pradesh,Shivpuri,2024-02-18 00:00:00,3
+1217,Madhya Pradesh,Satna,2024-02-17 00:00:00,3
+1218,Madhya Pradesh,Jhabua,2024-02-19 00:00:00,3
+1219,Madhya Pradesh,Umaria,2024-08-25 00:00:00,3
+1220,Madhya Pradesh,Singrauli,2024-08-21 00:00:00,3
+1221,Madhya Pradesh,Shivpuri,2024-08-19 00:00:00,3
+1222,Madhya Pradesh,Sheopur,2024-08-23 00:00:00,3
+1223,Madhya Pradesh,Shahdol,2024-08-21 00:00:00,3
+1224,Madhya Pradesh,Seoni,2024-08-22 00:00:00,3
+1225,Madhya Pradesh,Ujjain,2024-11-01 00:00:00,3
+1226,Madhya Pradesh,Chhindwara,2024-08-28 00:00:00,3
+1227,Madhya Pradesh,Mandla,2024-02-15 00:00:00,3
+1228,Madhya Pradesh,Harda,2024-08-28 00:00:00,3
+1229,Madhya Pradesh,Rewa,2024-01-26 00:00:00,3
+1230,Madhya Pradesh,Indore,2024-07-28 00:00:00,3
+1231,Madhya Pradesh,Narsinghpur,2024-03-30 00:00:00,3
+1232,Madhya Pradesh,Datia,2024-08-25 00:00:00,3
+1233,Madhya Pradesh,Shivpuri,2024-01-13 00:00:00,3
+1234,Madhya Pradesh,Sheopur,2024-01-20 00:00:00,3
+1235,Madhya Pradesh,Gwalior,2024-01-20 00:00:00,3
+1236,Madhya Pradesh,Burhanpur,2024-01-18 00:00:00,3
+1237,Madhya Pradesh,Narsinghpur,2024-01-31 00:00:00,3
+1238,Madhya Pradesh,Gwalior,2024-02-04 00:00:00,3
+1239,Madhya Pradesh,Guna,2024-01-31 00:00:00,3
+1240,Madhya Pradesh,Dhar,2024-02-01 00:00:00,3
+1241,Madhya Pradesh,Alirajpur,2024-02-01 00:00:00,3
+1242,Madhya Pradesh,Rewa,2024-09-29 00:00:00,3
+1243,Madhya Pradesh,Burhanpur,2024-12-23 00:00:00,3
+1244,Madhya Pradesh,Jhabua,2024-09-23 00:00:00,3
+1245,Madhya Pradesh,Dewas,2024-05-03 00:00:00,3
+1246,Madhya Pradesh,Gwalior,2024-11-12 00:00:00,3
+1247,Madhya Pradesh,Shivpuri,2024-11-09 00:00:00,3
+1248,Madhya Pradesh,Gwalior,2024-12-03 00:00:00,3
+1249,Madhya Pradesh,Jabalpur,2024-12-07 00:00:00,3
+1250,Madhya Pradesh,Barwani,2024-09-02 00:00:00,3
+1251,Madhya Pradesh,Guna,2024-09-06 00:00:00,3
+1252,Madhya Pradesh,Harda,2024-09-03 00:00:00,3
+1253,Madhya Pradesh,Mandla,2024-09-05 00:00:00,3
+1254,Madhya Pradesh,Rewa,2024-09-03 00:00:00,3
+1255,Madhya Pradesh,Rewa,2024-09-01 00:00:00,3
+1256,Madhya Pradesh,Satna,2024-09-06 00:00:00,3
+1257,Madhya Pradesh,Katni,2024-04-05 00:00:00,3
+1258,Madhya Pradesh,Shivpuri,2024-04-02 00:00:00,3
+1259,Madhya Pradesh,East Nimar,2024-09-25 00:00:00,3
+1260,Madhya Pradesh,Burhanpur,2024-12-28 00:00:00,3
+1261,Madhya Pradesh,Umaria,2024-03-27 00:00:00,3
+1262,Madhya Pradesh,Khargone,2024-06-03 00:00:00,3
+1263,Madhya Pradesh,Satna,2024-11-05 00:00:00,3
+1264,Madhya Pradesh,Chhindwara,2024-10-03 00:00:00,3
+1265,Madhya Pradesh,Guna,2024-01-06 00:00:00,3
+1266,Madhya Pradesh,Dhar,2024-01-11 00:00:00,3
+1267,Madhya Pradesh,East Nimar,2024-10-03 00:00:00,3
+1268,Madhya Pradesh,Sagar,2024-07-23 00:00:00,3
+1269,Madhya Pradesh,Sheopur,2024-06-06 00:00:00,3
+1270,Madhya Pradesh,Satna,2024-06-05 00:00:00,3
+1271,Madhya Pradesh,Datia,2024-11-06 00:00:00,3
+1272,Madhya Pradesh,Ratlam,,3
+1273,Madhya Pradesh,Datia,2024-06-04 00:00:00,3
+1274,Madhya Pradesh,Singrauli,2024-06-07 00:00:00,3
+1275,Madhya Pradesh,Indore,2024-07-21 00:00:00,3
+1276,Madhya Pradesh,Panna,2024-09-12 00:00:00,3
+1277,Madhya Pradesh,East Nimar,,3
+1278,Madhya Pradesh,Ratlam,2024-09-10 00:00:00,3
+1279,Madhya Pradesh,Sagar,2024-01-24 00:00:00,3
+1280,Madhya Pradesh,Raisen,2024-08-29 00:00:00,3
+1281,Madhya Pradesh,Morena,2024-08-29 00:00:00,3
+1282,Madhya Pradesh,Jhabua,,3
+1283,Maharashtra,Thane,2024-06-06 00:00:00,3
+1284,Maharashtra,Jalgaon,2024-06-18 00:00:00,3
+1285,Maharashtra,Kolhapur,2024-06-22 00:00:00,3
+1286,Maharashtra,Nanded,2024-02-07 00:00:00,3
+1287,Maharashtra,Parbhani,2024-02-07 00:00:00,3
+1288,Maharashtra,Palghar,,3
+1289,Maharashtra,Raigad,2024-11-09 00:00:00,3
+1290,Maharashtra,Nashik,2024-11-13 00:00:00,3
+1291,Maharashtra,Parbhani,2024-11-12 00:00:00,3
+1292,Maharashtra,Kolhapur,2024-01-12 00:00:00,3
+1293,Maharashtra,Pune,2024-08-03 00:00:00,3
+1294,Maharashtra,Sindhudurg,2024-11-14 00:00:00,3
+1295,Maharashtra,Nandurbar,2024-09-08 00:00:00,3
+1296,Maharashtra,Kolhapur,2024-06-03 00:00:00,3
+1297,Maharashtra,Nagpur,,3
+1298,Maharashtra,Kolhapur,,3
+1299,Maharashtra,Kolhapur,,3
+1300,Maharashtra,Buldhana,2024-01-25 00:00:00,3
+1301,Maharashtra,Palghar,2024-01-24 00:00:00,3
+1302,Maharashtra,Kolhapur,2024-07-28 00:00:00,3
+1303,Maharashtra,Thane,2023-12-29 00:00:00,3
+1304,Maharashtra,Thane,2024-10-28 00:00:00,3
+1305,Maharashtra,Palghar,2024-10-29 00:00:00,3
+1306,Maharashtra,Thane,2024-01-31 00:00:00,3
+1307,Maharashtra,Kolhapur,2024-02-03 00:00:00,3
+1308,Maharashtra,Gadchiroli,,3
+1309,Maharashtra,Nashik,2024-07-21 00:00:00,3
+1310,Maharashtra,Kolhapur,2024-07-22 00:00:00,3
+1311,Maharashtra,Buldhana,2024-09-07 00:00:00,3
+1312,Maharashtra,Bhandara,2024-01-09 00:00:00,3
+1313,Maharashtra,Pune,2024-05-20 00:00:00,3
+1314,Maharashtra,Nanded,2024-05-28 00:00:00,3
+1315,Maharashtra,Chandrapur,2024-11-05 00:00:00,3
+1316,Maharashtra,Ahmednagar,2024-11-06 00:00:00,3
+1317,Maharashtra,Gadchiroli,2024-06-06 00:00:00,3
+1318,Maharashtra,Gondia,2023-12-29 00:00:00,3
+1319,Maharashtra,Nagpur,2024-06-04 00:00:00,3
+1320,Maharashtra,Bhandara,2024-09-14 00:00:00,3
+1321,Maharashtra,Nandurbar,2024-02-21 00:00:00,3
+1322,Maharashtra,Raigad,2024-02-14 00:00:00,3
+1323,Maharashtra,Palghar,2024-11-23 00:00:00,3
+1324,Maharashtra,Nanded,2024-11-26 00:00:00,3
+1325,Maharashtra,Kolhapur,2024-11-25 00:00:00,3
+1326,Maharashtra,Osmanabad,2024-02-15 00:00:00,3
+1327,Maharashtra,Pune,2024-07-11 00:00:00,3
+1328,Maharashtra,Palghar,2024-08-28 00:00:00,3
+1329,Maharashtra,Pune,2024-11-25 00:00:00,3
+1330,Maharashtra,Beed,2024-08-28 00:00:00,3
+1331,Maharashtra,Nandurbar,2024-03-09 00:00:00,3
+1332,Maharashtra,Latur,2024-03-08 00:00:00,3
+1333,Maharashtra,Kolhapur,2024-03-05 00:00:00,3
+1334,Maharashtra,Hingoli,2024-03-08 00:00:00,3
+1335,Maharashtra,Dhule,2024-03-09 00:00:00,3
+1336,Maharashtra,Buldhana,2024-10-06 00:00:00,3
+1337,Maharashtra,Nandurbar,2024-03-08 00:00:00,3
+1338,Maharashtra,Sindhudurg,2024-11-30 00:00:00,3
+1339,Maharashtra,Washim,2024-11-30 00:00:00,3
+1340,Maharashtra,Amravati,2024-09-11 00:00:00,3
+1341,Maharashtra,Raigad,2024-04-03 00:00:00,3
+1342,Maharashtra,Sangli,2024-12-05 00:00:00,3
+1343,Maharashtra,Pune,2024-09-16 00:00:00,3
+1344,Maharashtra,Latur,2024-09-18 00:00:00,3
+1345,Maharashtra,Gadchiroli,2024-09-17 00:00:00,3
+1346,Maharashtra,Ahmednagar,2024-05-09 00:00:00,3
+1347,Maharashtra,Beed,2024-09-21 00:00:00,3
+1348,Maharashtra,Bhandara,2024-09-26 00:00:00,3
+1349,Maharashtra,Kolhapur,2024-09-27 00:00:00,3
+1350,Maharashtra,Nanded,2024-09-28 00:00:00,3
+1351,Maharashtra,Washim,2024-09-26 00:00:00,3
+1352,Maharashtra,Thane,2024-01-12 00:00:00,3
+1353,Maharashtra,Akola,2024-03-30 00:00:00,3
+1354,Maharashtra,Osmanabad,2024-12-22 00:00:00,3
+1355,Maharashtra,Buldhana,2024-12-24 00:00:00,3
+1356,Maharashtra,Nagpur,2024-10-11 00:00:00,3
+1357,Maharashtra,Parbhani,2024-10-05 00:00:00,3
+1358,Maharashtra,Sindhudurg,2024-03-08 00:00:00,3
+1359,Maharashtra,Pune,2024-06-19 00:00:00,3
+1360,Maharashtra,Bhandara,2024-12-19 00:00:00,3
+1361,Maharashtra,Yavatmal,2024-05-22 00:00:00,3
+1362,Maharashtra,Buldhana,2024-02-20 00:00:00,3
+1363,Maharashtra,Yavatmal,2024-02-20 00:00:00,3
+1364,Maharashtra,Sindhudurg,2024-05-19 00:00:00,3
+1365,Maharashtra,Nagpur,2024-05-22 00:00:00,3
+1366,Maharashtra,Amravati,2024-08-16 00:00:00,3
+1367,Maharashtra,Pune,2024-10-10 00:00:00,3
+1368,Maharashtra,Ahmednagar,2024-10-20 00:00:00,3
+1369,Maharashtra,Pune,2024-06-24 00:00:00,3
+1370,Maharashtra,Nandurbar,2024-12-11 00:00:00,3
+1371,Maharashtra,Raigad,2024-06-24 00:00:00,3
+1372,Maharashtra,Aurangabad,2024-08-17 00:00:00,3
+1373,Maharashtra,Gadchiroli,2023-12-27 00:00:00,3
+1374,Maharashtra,Gadchiroli,,3
+1375,Maharashtra,Jalgaon,2024-05-21 00:00:00,3
+1376,Maharashtra,Akola,2024-04-26 00:00:00,3
+1377,Maharashtra,Kolhapur,2024-07-12 00:00:00,3
+1378,Maharashtra,Amravati,2024-11-25 00:00:00,3
+1379,Maharashtra,Nashik,2024-07-28 00:00:00,3
+1380,Maharashtra,Kolhapur,2024-11-30 00:00:00,3
+1381,Maharashtra,Sangli,2024-12-17 00:00:00,3
+1382,Manipur,Noney,2024-09-23 00:00:00,3
+1383,Manipur,Senapati,2024-09-10 00:00:00,3
+1384,Manipur,Imphal West,2024-05-06 00:00:00,3
+1385,Meghalaya,West Khasi Hills,2024-06-26 00:00:00,3
+1386,Meghalaya,West Jaintia Hills,2024-01-17 00:00:00,3
+1387,Meghalaya,West Garo Hills,2024-11-06 00:00:00,3
+1388,Meghalaya,Eastern West Khasi Hills,2024-09-10 00:00:00,3
+1389,Meghalaya,East Khasi Hills,2024-06-07 00:00:00,3
+1390,Meghalaya,Eastern West Khasi Hills,2024-05-31 00:00:00,3
+1391,Meghalaya,Ri Bhoi,2024-06-04 00:00:00,3
+1392,Meghalaya,West Jaintia Hills,2024-06-01 00:00:00,3
+1393,Meghalaya,East Khasi Hills,2024-01-08 00:00:00,3
+1394,Meghalaya,East Khasi Hills,2024-06-06 00:00:00,3
+1395,Meghalaya,South West Khasi Hills,2024-06-03 00:00:00,3
+1396,Meghalaya,West Jaintia Hills,2024-01-15 00:00:00,3
+1397,Meghalaya,West Jaintia Hills,2024-02-22 00:00:00,3
+1398,Meghalaya,Ri Bhoi,2024-04-02 00:00:00,3
+1399,Meghalaya,East Khasi Hills,2024-06-23 00:00:00,3
+1400,Meghalaya,South Garo Hills,2024-11-28 00:00:00,3
+1401,Meghalaya,West Jaintia Hills,2024-02-17 00:00:00,3
+1402,Mizoram,Aizawl,2024-10-29 00:00:00,3
+1403,Odisha,Khordha,2024-12-06 00:00:00,3
+1404,Odisha,Kendujhar,2024-12-05 00:00:00,3
+1405,Odisha,Baleshwar,2024-08-08 00:00:00,3
+1406,Odisha,Bargarh,2024-12-04 00:00:00,3
+1407,Odisha,Deogarh,2024-01-08 00:00:00,3
+1408,Odisha,Balangir,2024-12-04 00:00:00,3
+1409,Odisha,Koraput,2024-07-28 00:00:00,3
+1410,Odisha,Puri,2024-06-25 00:00:00,3
+1411,Odisha,Koraput,2024-06-17 00:00:00,3
+1412,Odisha,Ganjam,2024-01-23 00:00:00,3
+1413,Odisha,Sambalpur,2024-06-17 00:00:00,3
+1414,Odisha,Khordha,2024-11-28 00:00:00,3
+1415,Odisha,Ganjam,2024-01-16 00:00:00,3
+1416,Odisha,Puri,2024-01-16 00:00:00,3
+1417,Odisha,Koraput,2024-01-20 00:00:00,3
+1418,Odisha,Malkangiri,2024-06-18 00:00:00,3
+1419,Odisha,Koraput,2024-06-19 00:00:00,3
+1420,Odisha,Cuttack,2024-01-14 00:00:00,3
+1421,Odisha,Boudh,2024-01-19 00:00:00,3
+1422,Odisha,Nayagarh,2024-05-26 00:00:00,3
+1423,Odisha,Balangir,2024-01-16 00:00:00,3
+1424,Odisha,Sundargarh,2024-01-27 00:00:00,3
+1425,Odisha,Cuttack,2024-01-25 00:00:00,3
+1426,Odisha,Ganjam,2024-09-16 00:00:00,3
+1427,Odisha,Deogarh,2024-06-07 00:00:00,3
+1428,Odisha,Khordha,2024-10-24 00:00:00,3
+1429,Odisha,Koraput,2024-04-04 00:00:00,3
+1430,Odisha,Balangir,2024-02-12 00:00:00,3
+1431,Odisha,Cuttack,2024-04-06 00:00:00,3
+1432,Odisha,Gajapati,2024-11-10 00:00:00,3
+1433,Odisha,Bhadrak,2024-02-23 00:00:00,3
+1434,Odisha,Dhenkanal,2024-02-20 00:00:00,3
+1435,Odisha,Baleshwar,2024-12-19 00:00:00,3
+1436,Odisha,Puri,2024-10-12 00:00:00,3
+1437,Odisha,Khordha,2024-10-08 00:00:00,3
+1438,Odisha,Bhadrak,2024-10-07 00:00:00,3
+1439,Odisha,Ganjam,2024-03-06 00:00:00,3
+1440,Odisha,Jharsuguda,2024-03-04 00:00:00,3
+1441,Odisha,Mayurbhanj,2024-10-24 00:00:00,3
+1442,Odisha,Malkangiri,2024-03-06 00:00:00,3
+1443,Odisha,Sundargarh,2024-03-09 00:00:00,3
+1444,Odisha,Koraput,2024-07-10 00:00:00,3
+1445,Odisha,Malkangiri,2024-07-11 00:00:00,3
+1446,Odisha,Anugul,2024-03-30 00:00:00,3
+1447,Odisha,Balangir,2024-03-27 00:00:00,3
+1448,Odisha,Sonepur,2024-09-26 00:00:00,3
+1449,Odisha,Balangir,2024-09-22 00:00:00,3
+1450,Odisha,Koraput,2024-03-27 00:00:00,3
+1451,Odisha,Bargarh,2024-09-13 00:00:00,3
+1452,Odisha,Bargarh,2024-09-18 00:00:00,3
+1453,Odisha,Koraput,2024-09-16 00:00:00,3
+1454,Odisha,Koraput,2024-09-15 00:00:00,3
+1455,Odisha,Ganjam,2024-09-14 00:00:00,3
+1456,Odisha,Sambalpur,2024-03-07 00:00:00,3
+1457,Odisha,Nayagarh,2024-12-04 00:00:00,3
+1458,Odisha,Balangir,2024-02-20 00:00:00,3
+1459,Odisha,Koraput,2024-05-28 00:00:00,3
+1460,Odisha,Bargarh,2024-01-31 00:00:00,3
+1461,Odisha,Deogarh,2024-01-30 00:00:00,3
+1462,Odisha,Deogarh,2024-01-29 00:00:00,3
+1463,Odisha,Jharsuguda,2024-02-02 00:00:00,3
+1464,Odisha,Koraput,2024-02-02 00:00:00,3
+1465,Odisha,Mayurbhanj,2024-02-02 00:00:00,3
+1466,Odisha,Sundargarh,2024-01-28 00:00:00,3
+1467,Odisha,Koraput,2024-07-22 00:00:00,3
+1468,Odisha,Bargarh,2024-09-16 00:00:00,3
+1469,Odisha,Gajapati,2024-06-01 00:00:00,3
+1470,Odisha,Kandhamal,2024-11-01 00:00:00,3
+1471,Odisha,Sundargarh,,3
+1472,Odisha,Sundargarh,2024-04-04 00:00:00,3
+1473,Odisha,Sambalpur,2024-11-04 00:00:00,3
+1474,Odisha,Puri,2024-11-01 00:00:00,3
+1475,Odisha,Deogarh,2024-11-02 00:00:00,3
+1476,Odisha,Mayurbhanj,2024-10-30 00:00:00,3
+1477,Odisha,Cuttack,,3
+1478,Odisha,Rayagada,2024-04-04 00:00:00,3
+1479,Odisha,Balangir,2024-10-30 00:00:00,3
+1480,Odisha,Bargarh,2024-10-31 00:00:00,3
+1481,Puducherry,Pondicherry,2024-03-27 00:00:00,3
+1482,Puducherry,Pondicherry,2024-01-19 00:00:00,3
+1483,Puducherry,Pondicherry,2024-02-20 00:00:00,3
+1484,Punjab,Fatehgarh Sahib,2024-02-12 00:00:00,3
+1485,Punjab,Fazilka,2024-09-26 00:00:00,3
+1486,Punjab,Fazilka,2024-02-21 00:00:00,3
+1487,Punjab,Firozepur,2024-01-25 00:00:00,3
+1488,Punjab,Pathankot,2024-05-04 00:00:00,3
+1489,Punjab,Gurdaspur,2024-05-08 00:00:00,3
+1490,Punjab,Ludhiana,2024-04-02 00:00:00,3
+1491,Punjab,Rupnagar,2024-12-28 00:00:00,3
+1492,Punjab,Shahid Bhagat Singh Nagar,2024-02-01 00:00:00,3
+1493,Rajasthan,Jodhpur,2024-10-09 00:00:00,3
+1494,Rajasthan,Kota,2024-03-06 00:00:00,3
+1495,Rajasthan,Sikar,2024-04-01 00:00:00,3
+1496,State/UT,District,,3
+1497,Tamil Nadu,Namakkal,2024-12-04 00:00:00,3
+1498,Tamil Nadu,Tirupathur,2024-12-21 00:00:00,3
+1499,Tamil Nadu,Thiruvarur,2024-06-27 00:00:00,3
+1500,Tamil Nadu,Mayiladuthurai,2024-12-16 00:00:00,3
+1501,Tamil Nadu,Virudhunagar,2024-01-12 00:00:00,3
+1502,Tamil Nadu,Thiruvarur,2024-12-25 00:00:00,3
+1503,Tamil Nadu,Mayiladuthurai,2024-12-21 00:00:00,3
+1504,Tamil Nadu,Tiruvannamalai,2024-07-12 00:00:00,3
+1505,Tamil Nadu,Tiruvannamalai,,3
+1506,Tamil Nadu,Thiruvallur,,3
+1507,Tamil Nadu,Thanjavur,2024-01-12 00:00:00,3
+1508,Tamil Nadu,Namakkal,2024-12-19 00:00:00,3
+1509,Tamil Nadu,Tirupathur,2024-12-07 00:00:00,3
+1510,Tamil Nadu,Madurai,2024-11-30 00:00:00,3
+1511,Tamil Nadu,Ranipet,2024-10-30 00:00:00,3
+1512,Tamil Nadu,Ariyalur,2024-12-03 00:00:00,3
+1513,Tamil Nadu,Namakkal,2024-11-05 00:00:00,3
+1514,Tamil Nadu,Namakkal,2024-11-07 00:00:00,3
+1515,Tamil Nadu,Dindigul,2024-11-04 00:00:00,3
+1516,Tamil Nadu,Ariyalur,2024-01-29 00:00:00,3
+1517,Tamil Nadu,Tiruppur,2024-01-31 00:00:00,3
+1518,Tamil Nadu,Dindigul,2024-04-02 00:00:00,3
+1519,Tamil Nadu,Chengalpattu,2024-12-05 00:00:00,3
+1520,Tamil Nadu,Villupuram,2024-11-01 00:00:00,3
+1521,Tamil Nadu,Erode,2024-10-30 00:00:00,3
+1522,Tamil Nadu,Madurai,2024-02-05 00:00:00,3
+1523,Tamil Nadu,Thanjavur,2024-02-06 00:00:00,3
+1524,Tamil Nadu,Thiruvallur,2024-02-08 00:00:00,3
+1525,Tamil Nadu,Virudhunagar,2024-10-21 00:00:00,3
+1526,Tamil Nadu,Kanchipuram,2024-10-19 00:00:00,3
+1527,Tamil Nadu,Salem,2024-11-08 00:00:00,3
+1528,Tamil Nadu,Ariyalur,2024-02-12 00:00:00,3
+1529,Tamil Nadu,Coimbatore,2024-02-20 00:00:00,3
+1530,Tamil Nadu,Kallakurichi,2024-02-23 00:00:00,3
+1531,Tamil Nadu,Krishnagiri,2024-03-06 00:00:00,3
+1532,Tamil Nadu,Perambalur,2024-03-07 00:00:00,3
+1533,Tamil Nadu,Tiruchirappalli,2024-03-04 00:00:00,3
+1534,Tamil Nadu,Tiruchirappalli,2024-03-05 00:00:00,3
+1535,Tamil Nadu,Tiruvannamalai,2024-03-05 00:00:00,3
+1536,Tamil Nadu,Krishnagiri,2024-02-21 00:00:00,3
+1537,Tamil Nadu,Kanniyakumari,2024-05-06 00:00:00,3
+1538,Tamil Nadu,Cuddalore,2024-05-06 00:00:00,3
+1539,Tamil Nadu,Mayiladuthurai,2024-09-25 00:00:00,3
+1540,Tamil Nadu,Cuddalore,2024-09-27 00:00:00,3
+1541,Tamil Nadu,Pudukkottai,2024-03-25 00:00:00,3
+1542,Tamil Nadu,Thiruvarur,2024-03-25 00:00:00,3
+1543,Tamil Nadu,Coimbatore,2024-02-21 00:00:00,3
+1544,Tamil Nadu,Tiruchirappalli,2024-11-06 00:00:00,3
+1545,Tamil Nadu,Madurai,2024-10-07 00:00:00,3
+1546,Tamil Nadu,Dharmapuri,2024-08-07 00:00:00,3
+1547,Tamil Nadu,Salem,2024-04-03 00:00:00,3
+1548,Tamil Nadu,Tiruvannamalai,2024-06-19 00:00:00,3
+1549,Tamil Nadu,Pudukkottai,2024-06-25 00:00:00,3
+1550,Tamil Nadu,Thanjavur,2024-01-24 00:00:00,3
+1551,Tamil Nadu,Perambalur,2024-01-19 00:00:00,3
+1552,Tamil Nadu,Sivaganga,2024-04-04 00:00:00,3
+1553,Tamil Nadu,Thiruvallur,2024-01-22 00:00:00,3
+1554,Tamil Nadu,Sivaganga,2024-08-10 00:00:00,3
+1555,Telangana,Suryapet,2024-10-20 00:00:00,3
+1556,Telangana,Peddapalli,2024-02-10 00:00:00,3
+1557,Telangana,Ranga Reddy,2024-06-26 00:00:00,3
+1558,Telangana,Nirmal,2024-04-04 00:00:00,3
+1559,Telangana,Kumuram Bheem Asifabad,2024-11-01 00:00:00,3
+1560,Telangana,Nirmal,2024-11-05 00:00:00,3
+1561,Uttar Pradesh,Unnao,2024-04-06 00:00:00,3
+1562,Uttar Pradesh,Kasganj,2024-07-24 00:00:00,3
+1563,Uttar Pradesh,Faizabad,2024-02-16 00:00:00,3
+1564,Uttar Pradesh,Lucknow,2024-10-06 00:00:00,3
+1565,Uttar Pradesh,Jalaun,2024-10-08 00:00:00,3
+1566,Uttar Pradesh,Jaunpur,2024-10-28 00:00:00,3
+1567,Uttar Pradesh,Fatehpur,2024-10-06 00:00:00,3
+1568,Uttar Pradesh,Fatehpur,2024-12-24 00:00:00,3
+1569,Uttar Pradesh,Mirzapur,2024-11-26 00:00:00,3
+1570,Uttar Pradesh,Bijnor,2024-10-04 00:00:00,3
+1571,Uttar Pradesh,Ghaziabad,2024-05-01 00:00:00,3
+1572,Uttar Pradesh,Jalaun,2024-05-04 00:00:00,3
+1573,Uttar Pradesh,Fatehpur,2024-02-23 00:00:00,3
+1574,Uttar Pradesh,Gorakhpur,2024-07-28 00:00:00,3
+1575,Uttar Pradesh,Ballia,2024-03-01 00:00:00,3
+1576,Uttar Pradesh,Chandauli,2024-01-01 00:00:00,3
+1577,Uttar Pradesh,Kannauj,2024-07-11 00:00:00,3
+1578,Uttar Pradesh,Jalaun,2024-01-08 00:00:00,3
+1579,Uttar Pradesh,Gorakhpur,2024-07-20 00:00:00,3
+1580,Uttar Pradesh,Hapur,2024-10-19 00:00:00,3
+1581,Uttar Pradesh,Ballia,2024-02-13 00:00:00,3
+1582,Uttar Pradesh,Gonda,2024-10-28 00:00:00,3
+1583,Uttar Pradesh,Rae Bareli,2024-10-20 00:00:00,3
+1584,Uttar Pradesh,Bhadohi,2024-01-09 00:00:00,3
+1585,Uttar Pradesh,Kannauj,2024-06-24 00:00:00,3
+1586,Uttar Pradesh,Siddharth Nagar,2024-01-29 00:00:00,3
+1587,Uttar Pradesh,Farrukhabad,2024-10-28 00:00:00,3
+1588,Uttarakhand,Nainital,2024-06-18 00:00:00,3
+1589,Uttarakhand,Haridwar,,3
+1590,Uttarakhand,Nainital,2024-02-16 00:00:00,3
+1591,Uttarakhand,Rudraprayag,2024-06-27 00:00:00,3
+1592,West Bengal,Hooghly,2024-06-25 00:00:00,3
+1593,West Bengal,Purulia,2024-06-20 00:00:00,3
+1594,West Bengal,Purulia,2024-11-27 00:00:00,3
+1595,West Bengal,Purulia,2024-11-05 00:00:00,3
+1596,West Bengal,Hooghly,2024-11-04 00:00:00,3
+1597,West Bengal,Hooghly,2024-07-22 00:00:00,3
+1598,West Bengal,Hooghly,2024-07-28 00:00:00,3
+1599,West Bengal,24 Paraganas South,2024-04-03 00:00:00,3
+1600,West Bengal,Birbhum,2024-02-01 00:00:00,3
+1601,West Bengal,Hooghly,2024-05-27 00:00:00,3
+1602,West Bengal,Purba Bardhaman,2024-05-08 00:00:00,3
+1603,West Bengal,Howrah,2024-05-27 00:00:00,3
+1604,West Bengal,Hooghly,2024-07-10 00:00:00,3
+1605,West Bengal,Nadia,2024-04-02 00:00:00,3
+1606,West Bengal,Purba Bardhaman,2024-01-03 00:00:00,3
+1607,West Bengal,Purulia,2024-05-07 00:00:00,3
+1608,West Bengal,Purulia,2024-10-24 00:00:00,3
+1609,West Bengal,Purulia,2024-10-06 00:00:00,3
+1610,West Bengal,Purba Bardhaman,2024-02-16 00:00:00,3
+1611,West Bengal,Murshidabad,2024-02-16 00:00:00,3
+1612,West Bengal,Purba Bardhaman,2024-01-06 00:00:00,3
+1613,West Bengal,Birbhum,2024-11-02 00:00:00,3
+1614,West Bengal,Howrah,2024-01-30 00:00:00,3
+1615,West Bengal,24 Parganas South,2024-11-06 00:00:00,3
