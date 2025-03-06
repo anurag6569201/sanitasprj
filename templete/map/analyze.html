@@ -7,25 +7,45 @@
     <div class="col-md-12">
         <br>
         <span class="blogs_head">Today's Cases of Top 7 Diseases!!</span><hr><span class="blogs_head cityLocate" style="display: flex;align-items: center;font-size: .7em;"><i class="material-symbols-outlined" style="font-size: 1em;">Location_on</i>{{current_city}}</span>
-        <form id="cityStateForm" method="GET" style="display: flex;align-items: center;gap: .3em;">
-            <label for="city" style="font-weight: 500;">Select City:</label>
-            <select id="city" name="city" style="border: 1px solid #12372a;border-radius: .3em;">
-                <option id="cityyy" value="">Select City</option>
-                {% for city in sanitizer_obj.CITY_CHOICES %}
-                <option value="{{ city.0 }}">{{ city.0 }}</option>
-                {% endfor %}
-            </select>
-            
+        <form id="cityStateForm" method="GET" style="display: flex; align-items: center; gap: .3em;">
             <label for="state" style="font-weight: 500;">Select State:</label>
-            <select id="state" name="state" style="width: 10em;border:1px solid #12372a;border-radius: .3em;">
-                <option id="stateee" value="">Select State</option>
+            <select id="state" name="state" style="width: 10em; border: 1px solid #12372a; border-radius: .3em;">
+                <option value="">Select State</option>
                 {% for state in sanitizer_obj.STATE_CHOICES %}
-                <option value="{{ state.0 }}">{{ state.0 }}</option>
+                    <option value="{{ state.0 }}">{{ state.0 }}</option>
                 {% endfor %}
             </select>
-            
-            <button type="submit" class="btn" style="width: auto;padding: 0em .5em;">Show results</button>
+        
+            <label for="city" style="font-weight: 500;">Select City:</label>
+            <select id="city" name="city" style="border: 1px solid #12372a; border-radius: .3em;">
+                <option value="">Select City</option>
+            </select>
+        
+            <button type="submit" class="btn" style="width: auto; padding: 0em .5em;">Show results</button>
         </form>
+        
+        <script>
+        document.getElementById("state").addEventListener("change", function() {
+            var state = this.value;
+            var cityDropdown = document.getElementById("city");
+        
+            cityDropdown.innerHTML = '<option value="">Select City</option>'; // Reset city options
+        
+            if (state) {
+                fetch(`get-cities/?state=${encodeURIComponent(state)}`)
+                .then(response => response.json())
+                .then(data => {
+                    data.cities.forEach(city => {
+                        var option = document.createElement("option");
+                        option.value = city;
+                        option.textContent = city;
+                        cityDropdown.appendChild(option);
+                    });
+                })
+                .catch(error => console.error("Error fetching cities:", error));
+            }
+        });
+        </script>               
         <br>
         
         <script>
@@ -131,8 +151,9 @@
             });
         </script>
     </div>
+    <br><br>
     <div style="position: relative;">
-        <span class="blogs_head">Last 7 Days Cases of Top 7 Diseases!!</span><hr><br>
+        <span class="blogs_head">Last 7 Days Cases of Top 7 Diseases In India!!</span><hr><br>
         <canvas id="secondChart"></canvas>
         <script>
             const ctx5 = document.getElementById('secondChart').getContext('2d');
@@ -167,18 +188,40 @@
         </script>
     </div><br>
     <br>
-    <span class="blogs_head">Analytics!!</span><hr><br>
-    <canvas id="firstChart"></canvas><br>
+    <div style="position: relative;">
+        <span class="blogs_head">Analytics!!</span><hr><br>
+        <canvas id="firstChart"></canvas><br>
+        <select id="diseaseSelect" onchange="updateChart()">
+            <option value="">Select Disease</option>
+        </select>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var diseaseDropdown = document.getElementById("diseaseSelect");
+        
+                fetch("/map/get-disease/")
+                    .then(response => response.json())
+                    .then(data => {
+                        diseaseDropdown.innerHTML = '<option value="">Select Disease</option>'; // Reset options
+                        
+                        data.disease.forEach(disease => {
+                            var option = document.createElement("option");
+                            option.value = disease;
+                            option.textContent = disease;
+                            diseaseDropdown.appendChild(option);
+                        });
+                    })
+                    .catch(error => console.error("Error fetching diseases:", error));
+            });
+        </script>
+         
+    </div>
     <br>
     <div style="position: relative;">
         <span class="blogs_head">States Analytics!!</span><hr><br>
         <canvas id="horizontalChart"></canvas>
-        <select id="diseaseSelect" onchange="updateChart()">
-            <option value="dengue">Dengue</option>
-            <option value="malaria">Malaria</option>
-            <option value="chikungunya">Chikungunya</option>
-        </select>
     </div>
+    <br>
 </div>
 
 {% endblock content %}
