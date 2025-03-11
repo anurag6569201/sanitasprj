@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_elasticsearch_dsl',
     'django.contrib.admin',
     'django.contrib.auth',
+    'rest_framework',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',

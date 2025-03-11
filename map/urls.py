@@ -13,4 +13,6 @@ urlpatterns=[
     path('get-cities/', views.get_cities, name='get-cities'),
     path('get-disease/', views.get_disease, name='get-disease'),
     path("testing/",views.testing,name="testing"),
+
+    path('api/diseases/', views.disease_data, name="disease-data"),
 ]

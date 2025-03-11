@@ -7,6 +7,12 @@ from django.http import JsonResponse
 from collections import defaultdict
 from plofile.models import Disease
 from django.utils.timezone import localtime
+from django.db.models import Sum
+from django.utils import timezone
+from plofile.models import Sanitizer,Disease,TrendingData
+from django.utils import timezone
+from django.db.models import Sum
+from django.http import JsonResponse
 # Create your views here.
 
 @login_required(login_url='userauths:sign-in')
@@ -228,4 +234,35 @@ def testing(request):
             'states': list(state_data.keys()),
             'cases': list(state_data.values())
         }
+    })
+
+
+
+def disease_data(request):
+    city = request.GET.get('city', "Bhubaneswar")
+    state = request.GET.get('state', "Odisha")
+
+    last_24_hours = timezone.now() - timezone.timedelta(hours=24)
+
+    unique_disease_24hr = Disease.objects.filter(
+        trending_data__created_at__gte=last_24_hours, 
+        trending_data__city=city, 
+        trending_data__state=state
+    ).values('name').annotate(total_cases=Sum('cases'))
+
+    disease_dict = {disease_case['name']: disease_case['total_cases'] for disease_case in unique_disease_24hr}
+    sorted_diseases = sorted(disease_dict.items(), key=lambda x: x[1], reverse=True)
+    top_diseases = sorted_diseases[:5]
+    top_diseases_sorted = sorted(top_diseases, key=lambda x: x[1])
+    others_cases = sum(count for _, count in sorted_diseases[5:])
+
+    diseases = [{"name": name, "cases": cases} for name, cases in top_diseases_sorted]
+    if others_cases > 0:
+        diseases.append({"name": "Others", "cases": others_cases})
+    total_cases = sum(disease["cases"] for disease in diseases)
+
+    # Return JSON response
+    return JsonResponse({
+        "top_diseases": diseases,
+        "total_cases": total_cases
     })

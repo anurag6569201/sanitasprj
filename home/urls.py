@@ -3,6 +3,8 @@ from home import views
 from plofile.context_process import send_message
 from .views import LikeEvent,CommentCreateView
 
+from home.api_views import SphereAPIView,SphereCommentsAPIView
+
 app_name="home"
 
 urlpatterns=[
@@ -16,4 +18,7 @@ urlpatterns=[
     path('like/<int:event_id>/', LikeEvent.as_view(), name='like_event'),
     path('post/<int:event_id>/comment/', CommentCreateView.as_view(), name='comment-create'),
     path('spherepost/<int:pk>/delete/', views.spherepost_delete_view, name='spherepost_delete'),
+
+    path('api/sphere/view/', SphereAPIView.as_view(), name='sphere-list'),
+    path('api/sphere/comments/<int:sphere_id>/', SphereCommentsAPIView.as_view(), name='sphere-comments-list'),
 ]

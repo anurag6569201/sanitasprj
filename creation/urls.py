@@ -2,6 +2,7 @@ from django.urls import path
 from creation import views
 from .views import PostListView, PostCreateView, PostDetailView, PostUpdateView, PostDeleteView, LikePostView, CommentCreateView, CommentUpdateView, CommentDeleteView
 
+from creation.api_views import BlogsAPIView
 app_name="creation"
 
 urlpatterns = [
@@ -14,4 +15,6 @@ urlpatterns = [
     path('post/<int:pk>/comment/', CommentCreateView.as_view(), name='comment-create'),
     path('post/<int:pk>/comment/<int:comment_pk>/update/', CommentUpdateView.as_view(), name='comment-update'),
     path('post/<int:pk>/comment/<int:comment_pk>/delete/', CommentDeleteView.as_view(), name='comment-delete'),
+
+    path('api/blogs/view/', BlogsAPIView.as_view(), name='blogs-list'),
 ]
