@@ -3,7 +3,7 @@ from home import views
 from plofile.context_process import send_message
 from .views import LikeEvent,CommentCreateView
 
-from home.api_views import SphereAPIView,SphereCommentsAPIView
+from home.api_views import SphereAPIView,SphereCommentsAPIView,RecentUpdateAPIView
 
 app_name="home"
 
@@ -21,4 +21,5 @@ urlpatterns=[
 
     path('api/sphere/view/', SphereAPIView.as_view(), name='sphere-list'),
     path('api/sphere/comments/<int:sphere_id>/', SphereCommentsAPIView.as_view(), name='sphere-comments-list'),
+    path('api/recent/updates/', RecentUpdateAPIView.as_view(), name='recent-updates'),
 ]

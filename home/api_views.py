@@ -2,13 +2,11 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from home.models import spherepost,sphereComment,recentUpdates
-from home.serializers import SphereSerializer,SphereCommentsSerializer
+from home.serializers import SphereSerializer,SphereCommentsSerializer,RecentUpdateSerializer
 
 class SphereAPIView(APIView):
     def get(self, request):
         sphere = spherepost.objects.all()
-        for img in sphere:
-            print(img.author.userprofile.profile_image.url)
         serializer = SphereSerializer(sphere, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -32,3 +30,10 @@ class SphereCommentsAPIView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class RecentUpdateAPIView(APIView):
+    def get(self, request):
+        recupdates = recentUpdates.objects.all()
+        serializer = RecentUpdateSerializer(recupdates, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
